@@ -10,6 +10,7 @@ import {
   Link,
   useColorModeValue as mode,
 } from '@chakra-ui/react'
+import Fade from 'react-reveal/Fade';
 import * as React from 'react'
 import * as Logos from './Brands'
 export const DualCol  = ( {preheading, heading, para1, para2, li1, li2, li3, img, action, actionLink} ) => {
@@ -36,6 +37,7 @@ export const DualCol  = ( {preheading, heading, para1, para2, li1, li2, li3, img
           justify="space-between"
           mb="20"
         >
+           <Fade>
           <Box
             flex="1"
             maxW={{
@@ -79,7 +81,7 @@ export const DualCol  = ( {preheading, heading, para1, para2, li1, li2, li3, img
               </Link>
             </Text>
           </Box>
-
+          </Fade>
           <Img
             margin="3rem auto"
             src={img}

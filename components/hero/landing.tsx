@@ -16,7 +16,8 @@ import { FaPlay } from 'react-icons/fa'
 
 export const Landing = ({ heading, description,cta1, cta2, image, logoImage, play, cta1link, cta2link }) => {
   return (
-    <Box>
+    <Box
+    bg="black">
       <Box as="section" bg="black" color="white" pt="7.5rem"  >
         <Box maxW={{ base: 'xl', md: '7xl' }} mx="auto" px={{ base: '6', md: '8' }}>
           <Box textAlign="center">
@@ -56,7 +57,7 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
                 as="a"
                 href={cta1link}
                 size="lg"
-                colorScheme="blue"
+                colorScheme="yellow"
                 px="8"
                 fontWeight="bold"
                 fontSize="md"
@@ -67,7 +68,7 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
                 as="a"
                 href={cta2link}
                 size="lg"
-                colorScheme="whiteAlpha"
+                colorScheme="blue"
                 px="8"
                 fontWeight="bold"
                 fontSize="md"

@@ -114,8 +114,9 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
               alt="Screenshot of Envelope App"
               src={image}
               width="100%"
-              maxW="70rem"
+              // maxW="70rem"
               m="0 auto"
+              mt="10rem"
             />
       </Box>
 

@@ -84,8 +84,7 @@ export const DualCol  = ( {preheading, heading, para1, para2, li1, li2, li3, img
             }}
           />
           <Img
-            marginEnd="-16rem"
-            w="50rem"
+            margin="3rem auto"
             src={img}
             alt="Counselorbot picture"
           />

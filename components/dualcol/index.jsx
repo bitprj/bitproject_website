@@ -28,6 +28,7 @@ export const DualCol  = ( {preheading, heading, para1, para2, li1, li2, li3, img
         mx="auto"
         
       >
+            <Fade>
         <Flex
           align="flex-start"
           direction={{
@@ -37,7 +38,6 @@ export const DualCol  = ( {preheading, heading, para1, para2, li1, li2, li3, img
           justify="space-between"
           mb="20"
         >
-           <Fade>
           <Box
             flex="1"
             maxW={{
@@ -81,7 +81,6 @@ export const DualCol  = ( {preheading, heading, para1, para2, li1, li2, li3, img
               </Link>
             </Text>
           </Box>
-          </Fade>
           <Img
             margin="3rem auto"
             src={img}
@@ -92,9 +91,11 @@ export const DualCol  = ( {preheading, heading, para1, para2, li1, li2, li3, img
             }}
           />
         </Flex>
-        
+        </Fade>
+
       </Box>
       </Container>
     </Box>
+
   )
 }

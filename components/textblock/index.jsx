@@ -19,6 +19,7 @@ import { LinkGrid } from './LinkGrid'
 // import { Logo } from './Logo'
 // import { SocialMediaLinks } from './SocialMediaLinks'
 // import { SubscribeForm } from './SubscribeForm'
+import Fade from 'react-reveal/Fade';
 
 
 export const Textblock = ({ title, para1, para2 }) => (
@@ -27,6 +28,7 @@ export const Textblock = ({ title, para1, para2 }) => (
     bg="black"
     color="white"
     >
+      <Fade>
     <Container
       maxW="container.lg"
       p="15px"
@@ -65,6 +67,7 @@ export const Textblock = ({ title, para1, para2 }) => (
     </Box>
     
     </Container>
+    </Fade>
   </Box>
 )
 

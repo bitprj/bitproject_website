@@ -15,11 +15,10 @@ import { HiPlay } from 'react-icons/hi'
 export const OverflowDualCol = ({ image, headerText, action, actionLink }) => {
   return (
 
-    <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white" border="2px solid blue">
+    <Box as="section" bg="#1D1E2B" pt="24" pb="12" overflow="hidden" color="white">
       <Container
       maxW="container.lg"
       p="15px"
-      border="3px solid yellow"
     >
       <Box
         // maxW={{
@@ -31,12 +30,8 @@ export const OverflowDualCol = ({ image, headerText, action, actionLink }) => {
         //   md: '8',
         // }}
         margin="0"
-        border="2px solid red"
-        display="flex"
-        alignContent="center"
       >
         <Stack
-        
           direction={{
             base: 'column',
             lg: 'row',
@@ -45,12 +40,11 @@ export const OverflowDualCol = ({ image, headerText, action, actionLink }) => {
             base: '1rem',
             lg: '2rem',
           }}
-          mt="8"
+
           align={{
             lg: 'center',
           }}
-          // justify="start"
-          border="2px solid green"
+          justify="start"
           display="flex"
         >
           <Img
@@ -88,7 +82,7 @@ export const OverflowDualCol = ({ image, headerText, action, actionLink }) => {
 
 
 
-              <Heading mt="4" fontSize="" fontWeight="medium" >
+              <Heading mt="4" as="h2" size="xl" mt="8" fontWeight="extrabold" lineHeight="3rem">
                 {headerText}
               </Heading>
 

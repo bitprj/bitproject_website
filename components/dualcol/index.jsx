@@ -12,7 +12,6 @@ import {
 } from '@chakra-ui/react'
 import Fade from 'react-reveal/Fade';
 import * as React from 'react'
-import * as Logos from './Brands'
 export const DualCol  = ( {preheading, heading, para1, para2, li1, li2, li3, img, action, actionLink} ) => {
   return (
     <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white">
@@ -41,7 +40,7 @@ export const DualCol  = ( {preheading, heading, para1, para2, li1, li2, li3, img
           <Box
             flex="1"
             maxW={{
-              lg: 'xl',
+              lg: 'xl'
             }}
             pt="6"
           >
@@ -76,7 +75,6 @@ export const DualCol  = ( {preheading, heading, para1, para2, li1, li2, li3, img
               <Link
                 color="#0095E9"
                 href={actionLink}
-                
               >{action}
               </Link>
             </Text>

@@ -70,7 +70,7 @@ export const DualCol  = ( {preheading, heading, para1, para2, li1, li2, li3, img
             fontSize="xl"
             >
               <Link
-                color="#86D3FF"
+                color="#0095E9"
                 href={actionLink}
                 
               >{action}

@@ -23,7 +23,7 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
           <Box textAlign="center">
 
           <Img
-              alt="Screenshot of Envelope App"
+              alt="Page icon"
               src={logoImage}
               width="10%"
               m="0 auto"
@@ -104,8 +104,7 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
                 transform: 'translate3d(-50%, -50%, 0) scale(1.05)',
               }}
             >
-              <VisuallyHidden>Play demo video</VisuallyHidden>
-              <FaPlay />
+              
             </Circle>
             }
           </Box>

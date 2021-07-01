@@ -6,6 +6,7 @@ import { Landing } from '../components/hero/landing.tsx'
 import { Hero } from '../components/hero'
 import { Textblock } from '../components/textblock'
 import { DualCol } from '../components/dualcol'
+import { OverflowDualCol } from '../components/overflowdualcol'
 
 
 export default function Home() {
@@ -29,6 +30,13 @@ export default function Home() {
         "
         para2="You just write your code and deploy it. Everything else which is necessary to run your application is done automatically.
         "
+      />
+
+      <OverflowDualCol
+        image="/emily.svg"
+        headerText="Emily built a file sharing app with Azure Functions and CosmosDB for AP exams"
+        action="Read Story &rarr;"
+        actionLink="ACTIONLINK"
       />
 
       <DualCol 

@@ -51,9 +51,54 @@ export default function Home() {
         action="Get Started &rarr;"
         actionLink="ACTIONLINK"
       />
-      {/* <Hero /> */}
-
-  
+      <DualCol 
+        preheading="week2"
+        heading="Git & Serverless Basics"
+        para1="Set up your development environment with developer tools like Github and Postman."
+        para2="Build projects to get started with Azure Functions, Cloud Engineering, and Javascript!"
+        li1="⚡ HackerVoice API"
+        li2="🐱 twoCatz API"
+        li3="🐸 [TOP SECRET] API"
+        img="/counselorbot.svg"
+        action="Get Started &rarr;"
+        actionLink="ACTIONLINK"
+      />
+       <DualCol 
+        preheading="week3"
+        heading="Git & Serverless Basics"
+        para1="Set up your development environment with developer tools like Github and Postman."
+        para2="Build projects to get started with Azure Functions, Cloud Engineering, and Javascript!"
+        li1="⚡ HackerVoice API"
+        li2="🐱 twoCatz API"
+        li3="🐸 [TOP SECRET] API"
+        img="/counselorbot.svg"
+        action="Get Started &rarr;"
+        actionLink="ACTIONLINK"
+      />
+       <DualCol 
+        preheading="week4"
+        heading="Git & Serverless Basics"
+        para1="Set up your development environment with developer tools like Github and Postman."
+        para2="Build projects to get started with Azure Functions, Cloud Engineering, and Javascript!"
+        li1="⚡ HackerVoice API"
+        li2="🐱 twoCatz API"
+        li3="🐸 [TOP SECRET] API"
+        img="/counselorbot.svg"
+        action="Get Started &rarr;"
+        actionLink="ACTIONLINK"
+      />
+     <DualCol 
+        preheading="week 5-8"
+        heading="Build your Own Project"
+        para1="Set up your development environment with developer tools like Github and Postman."
+        para2="Build projects to get started with Azure Functions, Cloud Engineering, and Javascript!"
+        li1="Dine the Distance"
+        li2="Bunnimage File Sharing"
+        li3="Ganning's Project"
+        img="/counselorbot.svg"
+        action="Example Final Projects &rarr;"
+        actionLink="ACTIONLINK"
+      />
 
     </div>
   )

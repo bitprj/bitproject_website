@@ -11,13 +11,15 @@ import {
   LightMode,
   Center
 } from '@chakra-ui/react'
+
 import * as React from 'react'
-import { FaPlay } from 'react-icons/fa'
+import Fade from 'react-reveal/Fade';
 
 export const Landing = ({ heading, description,cta1, cta2, image, logoImage, play, cta1link, cta2link }) => {
   return (
     <Box
     bg="black">
+      <Fade>
       <Box as="section" bg="black" color="white" pt="7.5rem"  >
         <Box maxW={{ base: 'xl', md: '7xl' }} mx="auto" px={{ base: '6', md: '8' }}>
           <Box textAlign="center">
@@ -116,11 +118,11 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
               // maxW="70rem"
               m="0 auto"
               mt="10rem"
+              maxH="50vh"
+              maxW ="60vw"
             />
       </Box>
-
-      <Box as="section" pt={{ base: '16', md: '40' }} >
-      </Box>
+      </Fade>
     </Box>
     
   )

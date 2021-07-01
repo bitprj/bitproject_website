@@ -42,10 +42,10 @@ export const Textblock = ({ title, para1, para2 }) => (
     <Grid 
     templateColumns="repeat(5, 1fr)" 
     gap={4}
-    mt="1rem"
+    mt="2rem"
     >
       <GridItem colSpan={2}>{para1}</GridItem>
-      <GridItem colStart={4} colEnd={6}>{para2}</GridItem>
+      <GridItem colStart={3} colEnd={6}>{para2}</GridItem>
     </Grid>
       {/* <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, error! Eaque quia natus ipsa suscipit cumque, praesentium cupiditate delectus architecto?</p> */}
     </Container>

@@ -1,17 +1,15 @@
 import {
   Box,
-  Button,
   Heading,
   Img,
   Link,
   Stack,
   Text,
-  Center,
   Container,
   useColorModeValue as mode,
 } from '@chakra-ui/react'
 import * as React from 'react'
-import { HiPlay } from 'react-icons/hi'
+
 export const OverflowDualCol = ({ image, headerText, action, actionLink }) => {
   return (
 
@@ -21,14 +19,6 @@ export const OverflowDualCol = ({ image, headerText, action, actionLink }) => {
       p="15px"
     >
       <Box
-        // maxW={{
-        //   base: 'xl',
-        //   md: '7xl',
-        // }}
-        // px={{
-        //   base: '6',
-        //   md: '8',
-        // }}
         margin="0"
       >
         <Stack
@@ -59,7 +49,6 @@ export const OverflowDualCol = ({ image, headerText, action, actionLink }) => {
 
           
           <Box
-            // pos="relative"
             w={{
               base: 'full',
               lg: '560px',
@@ -68,8 +57,8 @@ export const OverflowDualCol = ({ image, headerText, action, actionLink }) => {
               base: 'auto',
               lg: '560px',
             }}
-
-            display="flex" alignItems="center"
+            display="flex"
+            alignItems="center"
           >
 
 
@@ -79,10 +68,7 @@ export const OverflowDualCol = ({ image, headerText, action, actionLink }) => {
                 lg: '520px',
               }}
             >
-
-
-
-              <Heading mt="4" as="h2" size="xl" mt="8" fontWeight="extrabold" lineHeight="3rem">
+              <Heading mt="4" as="h2" size="xl" fontWeight="extrabold" lineHeight="3rem">
                 {headerText}
               </Heading>
 

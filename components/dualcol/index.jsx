@@ -6,6 +6,7 @@ import {
   Img,
   Container,
   Text,
+  Badge,
   Link,
   useColorModeValue as mode,
 } from '@chakra-ui/react'
@@ -16,6 +17,7 @@ export const DualCol  = ( {preheading, heading, para1, para2, li1, li2, li3, img
     <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white">
       <Container
       maxW="container.lg"
+      p="15px"
     >
       <Box
         maxW={{
@@ -41,11 +43,11 @@ export const DualCol  = ( {preheading, heading, para1, para2, li1, li2, li3, img
             }}
             pt="6"
           >
-             <Text mt="5" fontSize="xl" color="#86D3FF">
+             <Badge px="2" fontSize="1em" colorScheme="blue">
               {preheading}
-            </Text>
+            </Badge>
 
-            <Heading as="h1" size="3xl" mt="8" fontWeight="extrabold">
+            <Heading as="h2" size="xl" mt="8" fontWeight="extrabold">
               {heading}
             </Heading>
             <Text mt="5" fontSize="xl">
@@ -77,16 +79,15 @@ export const DualCol  = ( {preheading, heading, para1, para2, li1, li2, li3, img
               </Link>
             </Text>
           </Box>
-          <Box
-            boxSize={{
-              base: '20',
-              lg: '8',
-            }}
-          />
+
           <Img
             margin="3rem auto"
             src={img}
             alt="Counselorbot picture"
+            maxW={{
+              lg: '50%',
+              md: '30%'
+            }}
           />
         </Flex>
         

@@ -13,7 +13,7 @@ import * as React from 'react'
 export const OverflowDualCol = ({ image, headerText, action, actionLink }) => {
   return (
 
-    <Box as="section" bg="#1D1E2B" pt="24" pb="12" overflow="hidden" color="white">
+    <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white">
       <Container
       maxW="container.lg"
       p="15px"
@@ -41,7 +41,7 @@ export const OverflowDualCol = ({ image, headerText, action, actionLink }) => {
 
             pos="relative"
             zIndex="1"
-            maxH="50vh"
+            maxH="40vh"
             objectFit="scale-down"
             src={image}
             alt="Screening talent"

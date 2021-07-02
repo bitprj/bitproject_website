@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
-import { Landing } from '../components/hero/landing.jsx'
+import { Landing } from '../components/landing.jsx'
 // import Layout from '../components/layout'
 import { Hero } from '../components/hero'
 import { Textblock } from '../components/textblock'

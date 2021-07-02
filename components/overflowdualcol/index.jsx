@@ -11,7 +11,6 @@ import {
   useColorModeValue as mode,
 } from '@chakra-ui/react'
 import * as React from 'react'
-import { HiPlay } from 'react-icons/hi'
 export const OverflowDualCol = ({ image, headerText, action, actionLink }) => {
   return (
 
@@ -48,7 +47,6 @@ export const OverflowDualCol = ({ image, headerText, action, actionLink }) => {
           display="flex"
         >
           <Img
-
             pos="relative"
             zIndex="1"
             maxH="50vh"
@@ -59,7 +57,6 @@ export const OverflowDualCol = ({ image, headerText, action, actionLink }) => {
 
           
           <Box
-            // pos="relative"
             w={{
               base: 'full',
               lg: '560px',

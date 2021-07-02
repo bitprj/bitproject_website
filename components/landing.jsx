@@ -9,7 +9,8 @@ import {
   VisuallyHidden,
   useColorModeValue as mode,
   LightMode,
-  Center
+  Center,
+  Container
 } from '@chakra-ui/react'
 
 import * as React from 'react'
@@ -17,8 +18,11 @@ import Fade from 'react-reveal/Fade';
 
 export const Landing = ({ heading, description,cta1, cta2, image, logoImage, play, cta1link, cta2link }) => {
   return (
-    <Box
-    bg="black">
+    <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white">
+      <Container
+      maxW="container.lg"
+      p="15px"
+    >
       <Fade>
       <Box as="section" bg="black" color="white" pt="7.5rem"  >
         <Box maxW={{ base: 'xl', md: '7xl' }} mx="auto" px={{ base: '6', md: '8' }}>
@@ -80,39 +84,10 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
             </LightMode>
           </Stack>
 
-          <Box
-            mb={{ base: '-20', md: '-40' }}
-            className="group"
-            cursor="pointer"
-            position="relative"
-            rounded="lg"
-            overflow="hidden"
-          >
-
-            {play == 0 &&
-            <Circle
-              size="20"
-              as="button"
-              bg="white"
-              shadow="lg"
-              color="blue.600"
-              position="absolute"
-              top="50%"
-              left="50%"
-              transform="translate3d(-50%, -50%, 0)"
-              fontSize="xl"
-              transition="all 0.2s"
-              _groupHover={{
-                transform: 'translate3d(-50%, -50%, 0) scale(1.05)',
-              }}
-            >
-              
-            </Circle>
-            }
-          </Box>
         </Box>
-        <Img
-              alt="Screenshot of Envelope App"
+        { image && 
+          
+          <Img 
               src={image}
               width="100%"
               // maxW="70rem"
@@ -120,9 +95,10 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
               mt="10rem"
               maxH="50vh"
               maxW ="60vw"
-            />
+            />}
       </Box>
       </Fade>
+      </Container>
     </Box>
     
   )

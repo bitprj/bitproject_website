@@ -1,13 +1,7 @@
-import Head from 'next/head'
-import Image from 'next/image'
-
 import { Landing } from '../components/landing.jsx'
-// import Layout from '../components/layout'
-import { Hero } from '../components/hero'
 import { Textblock } from '../components/textblock'
-import { DualCol } from '../components/dualcol'
 import { Carousel } from '../components/carousel'
-
+import { OverflowDualCol } from '../components/overflowdualcol'
 export default function Orchestration() {
   return (
     <div>
@@ -26,10 +20,23 @@ export default function Orchestration() {
         img1="/tech1.svg"
         img2="/tech2.svg"
         img3="/tech3.svg"
-        img4="/tech4.svg"
       />
         
-    
+        <Textblock
+        title="Learn. Code. Have Fun!"
+        para1="You just write your code and deploy it. Everything else which is necessary to run your application is done automatically.
+        "
+        para2="You just write your code and deploy it. Everything else which is necessary to run your application is done automatically.
+        "
+      />
+
+  <OverflowDualCol
+        categorylogo="/newRelicLogo.svg"
+        image="/newRelic.svg"
+        headerText="New Relic collaborated with Bit Project to make DevOps Accessible."
+        action="Read Story &rarr;"
+        actionLink="ACTIONLINK"
+      />
       
 
     

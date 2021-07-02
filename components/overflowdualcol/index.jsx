@@ -9,10 +9,7 @@ import {
   useColorModeValue as mode,
 } from '@chakra-ui/react'
 import * as React from 'react'
-<<<<<<< HEAD
-=======
 
->>>>>>> b91a1343a1c5e47fceba98c82fd99bef023b4672
 export const OverflowDualCol = ({ image, headerText, action, actionLink }) => {
   return (
 

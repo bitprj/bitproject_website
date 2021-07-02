@@ -1,33 +1,27 @@
 import {
   Box,
-  Button,
   Heading,
   Img,
   Link,
   Stack,
   Text,
-  Center,
   Container,
   useColorModeValue as mode,
 } from '@chakra-ui/react'
 import * as React from 'react'
+<<<<<<< HEAD
+=======
+
+>>>>>>> b91a1343a1c5e47fceba98c82fd99bef023b4672
 export const OverflowDualCol = ({ image, headerText, action, actionLink }) => {
   return (
 
-    <Box as="section" bg="#1D1E2B" pt="24" pb="12" overflow="hidden" color="white">
+    <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white">
       <Container
       maxW="container.lg"
       p="15px"
     >
       <Box
-        // maxW={{
-        //   base: 'xl',
-        //   md: '7xl',
-        // }}
-        // px={{
-        //   base: '6',
-        //   md: '8',
-        // }}
         margin="0"
       >
         <Stack
@@ -49,7 +43,7 @@ export const OverflowDualCol = ({ image, headerText, action, actionLink }) => {
           <Img
             pos="relative"
             zIndex="1"
-            maxH="50vh"
+            maxH="40vh"
             objectFit="scale-down"
             src={image}
             alt="Screening talent"
@@ -65,8 +59,8 @@ export const OverflowDualCol = ({ image, headerText, action, actionLink }) => {
               base: 'auto',
               lg: '560px',
             }}
-
-            display="flex" alignItems="center"
+            display="flex"
+            alignItems="center"
           >
 
 
@@ -76,10 +70,7 @@ export const OverflowDualCol = ({ image, headerText, action, actionLink }) => {
                 lg: '520px',
               }}
             >
-
-
-
-              <Heading mt="4" as="h2" size="xl" mt="8" fontWeight="extrabold" lineHeight="3rem">
+              <Heading mt="4" as="h2" size="xl" fontWeight="extrabold" lineHeight="3rem">
                 {headerText}
               </Heading>
 

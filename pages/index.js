@@ -10,7 +10,7 @@ import { OverflowDualCol } from '../components/overflowdualcol'
 import { CenterDualCol } from '../components/dualcol/center'
 import { Carousel } from '../components/carousel'
 import { DescDualCol } from '../components/dualcol/descriptive'
-
+import { ProfileIcon } from '../components/profileicon'
 export default function Serverless() {
   return (
     <div>
@@ -32,6 +32,12 @@ export default function Serverless() {
         "
         para2="You just write your code and deploy it. Everything else which is necessary to run your application is done automatically.
         "
+      />
+
+      <ProfileIcon 
+        pic="/emily.svg"
+        name="Emily Chen"
+        title="11th Grade"
       />
 
       <OverflowDualCol

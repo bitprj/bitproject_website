@@ -11,6 +11,7 @@ import { CenterDualCol } from '../components/dualcol/center'
 import { Carousel } from '../components/carousel'
 import { DescDualCol } from '../components/dualcol/descriptive'
 import { TriCol } from '../components/tricol'
+import { GraphicTab } from '../components/graphictab'
 
 export default function HomePage() {
   return (
@@ -37,7 +38,32 @@ export default function HomePage() {
         para3="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
      />
 
-      
+      <GraphicTab
+        heading="We empower students
+        to ship their first projects"
+        desc="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+        pic1="/emily.svg"
+        name1="Emily Chen"
+        title1="11th Grade"
+        graphic1="/bizman.svg"
+
+
+        pic2="/emily.svg"
+        name2="Emily Chen"
+        title2="Junior, CS"
+        graphic2="/feature.svg"
+
+
+        pic3="/emily.svg"
+        name3="Emily Chen"
+        title3="11th Grade"
+        graphic3="/livecode.png"
+
+        pic4="/emily.svg"
+        name4="Emily Chen"
+        title4="11th Grade"
+        graphic4="/counselorbot.svg"
+      />
 
     </div>
   )

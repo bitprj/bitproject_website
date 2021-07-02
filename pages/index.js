@@ -8,7 +8,6 @@ import { Textblock } from '../components/textblock'
 import { DualCol } from '../components/dualcol'
 import { OverflowDualCol } from '../components/overflowdualcol'
 
-
 export default function Home() {
   return (
     <div>

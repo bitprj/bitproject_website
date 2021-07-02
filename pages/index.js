@@ -11,7 +11,7 @@ import { CenterDualCol } from '../components/dualcol/center'
 import { Carousel } from '../components/carousel'
 import { DescDualCol } from '../components/dualcol/descriptive'
 
-export default function Home() {
+export default function Serverless() {
   return (
     <div>
   

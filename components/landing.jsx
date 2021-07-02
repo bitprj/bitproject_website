@@ -10,13 +10,16 @@ import {
   useColorModeValue as mode,
   LightMode,
   Center,
-  Container
+  Container,
+  FormControl,
+  FormLabel,
+  Input
 } from '@chakra-ui/react'
 
 import * as React from 'react'
 import Fade from 'react-reveal/Fade';
 
-export const Landing = ({ heading, description,cta1, cta2, image, logoImage, play, cta1link, cta2link }) => {
+export const Landing = ({ heading, description,cta1, cta2, image, logoImage, play, cta1link, cta2link, formActionButton, formActionButtonLink }) => {
   return (
     <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white">
       <Container
@@ -28,12 +31,12 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
         <Box maxW={{ base: 'xl', md: '7xl' }} mx="auto" px={{ base: '6', md: '8' }}>
           <Box textAlign="center">
 
-          <Img
+          {logoImage && <Img
               alt="Page icon"
               src={logoImage}
               width="10%"
               m="0 auto"
-            />
+            />}
 
             <Heading
               as="h1"
@@ -59,7 +62,7 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
             spacing="4"
           >
             <LightMode>
-              <Button
+              {cta1 && <Button
                 as="a"
                 href={cta1link}
                 size="lg"
@@ -69,8 +72,8 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
                 fontSize="md"
               >
                 {cta1}
-              </Button>
-              <Button
+              </Button>}
+              {cta2 && <Button
                 as="a"
                 href={cta2link}
                 size="lg"
@@ -80,7 +83,25 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
                 fontSize="md"
               >
                 {cta2}
+              </Button>}
+
+              {formActionButton && <Box display="flex" alignItems="center">
+              <FormControl id="email" mr="1rem" isRequired>
+                <Input placeholder="email" border="none" bg="grey" />
+
+              </FormControl>
+              <Button
+                as="a"
+                href={formActionButtonLink}
+                colorScheme="blue"
+                px="8"
+                fontWeight="bold"
+                fontSize="md"
+              >
+                {formActionButton}
               </Button>
+              
+              </Box>}
             </LightMode>
           </Stack>
 

@@ -17,7 +17,7 @@ import {
   import * as React from 'react'
   import Fade from 'react-reveal/Fade';
   
-  export const CenterDualCol = ({ heading, description,cta1, cta2, image, logoImage, play, cta1link, cta2link }) => {
+  export const CenterDualCol = ({ heading, description,cta1, cta2, cta1link, cta2link }) => {
     return (
       <Box as="section" bg="black" pb="12" overflow="hidden" color="white">
         <Container

@@ -9,7 +9,7 @@ import { DualCol } from '../components/dualcol'
 import { OverflowDualCol } from '../components/overflowdualcol'
 import { CenterDualCol } from '../components/dualcol/center'
 import { Carousel } from '../components/carousel'
-
+import { DescDualCol } from '../components/dualcol/descriptive'
 
 export default function Home() {
   return (
@@ -41,6 +41,18 @@ export default function Home() {
         actionLink="ACTIONLINK"
       />
 
+      <DescDualCol
+        categoryLogo="/serverlessLogo.svg"
+        heading="How Fifi saved money shopping on Amazon with Serverless"
+        desc="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+        profileLogo="/emily.svg"
+        profile="Fifi Gupta"
+        cta1="Github Repo"
+        cta2="Landing Page"
+        cta1Link="GITHUB LINK"
+        cta2Link="LANDING LINK"
+        pic="/fifi.svg"
+      />
       <DualCol 
         preheading="week1"
         heading="Git & Serverless Basics"

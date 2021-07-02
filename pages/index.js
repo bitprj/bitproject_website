@@ -7,6 +7,8 @@ import { Hero } from '../components/hero'
 import { Textblock } from '../components/textblock'
 import { DualCol } from '../components/dualcol'
 import { OverflowDualCol } from '../components/overflowdualcol'
+import { CenterDualCol } from '../components/dualcol/center'
+import { Carousel } from '../components/carousel'
 
 
 export default function Home() {
@@ -87,17 +89,21 @@ export default function Home() {
         action="Get Started &rarr;"
         actionLink="ACTIONLINK"
       />
-     <DualCol 
-        preheading="week 5-8"
-        heading="Build your Own Project"
-        para1="Set up your development environment with developer tools like Github and Postman."
-        para2="Build projects to get started with Azure Functions, Cloud Engineering, and Javascript!"
-        li1="Dine the Distance"
-        li2="Bunnimage File Sharing"
-        li3="Ganning's Project"
-        img="/counselorbot.svg"
-        action="Example Final Projects &rarr;"
-        actionLink="ACTIONLINK"
+    <CenterDualCol
+      heading="Build your Own Project"
+      description="Set up your development environment with developer tools like Github and Postman."
+      cta1="Sample Projects"
+      cta2="Learn More"
+      image="/feature.svg"
+      logoImage="/serverlessLogo.svg"
+      cta1link={' https://www.notion.so/bitproject/Welcome-to-Serverless-Camp-e218f86daf4248509350709cd9fa8017'}
+      cta2link={'https://airtable.com/shr9hT8pEXpAAM00Z'}
+      />
+    <Carousel 
+        img1="/tech1.svg"
+        img2="/tech2.svg"
+        img3="/tech3.svg"
+        img4="/tech4.svg"
       />
 
     </div>

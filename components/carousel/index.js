@@ -7,7 +7,6 @@ import {
 } from '@chakra-ui/react'
 
 import * as React from 'react'
-import Fade from 'react-reveal/Fade';
 
 export const Carousel = ({ img1, img2, img3, img4 }) => {
   var bkg1 = { background: `linear-gradient(0deg, rgb(0,0,0) 10%, rgba(0, 0, 0, 0)), url(${img1})` };
@@ -50,16 +49,6 @@ export const Carousel = ({ img1, img2, img3, img4 }) => {
             </Text>
 
           </Box>
-
-          {/* <Box w="100%"
-          style={bkg4}>
-
-            <Text fontSize="2xl" fontWeight="800" my="2rem" maxW="xl" mx="1rem" color="white">
-              Dev ops for beginners
-            </Text>
-
-          </Box> */}
-
       </SimpleGrid>
       </Container>
     </Box>

@@ -1,0 +1,11 @@
+
+
+@media (max-width: 600px) {
+  .pfp {
+   display: none;
+  }
+  .textBox {
+    margin-left: 0 !important;
+  }
+
+}

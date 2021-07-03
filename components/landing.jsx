@@ -1,18 +1,14 @@
 import {
   Box,
   Button,
-  Circle,
   Heading,
   Img,
   Stack,
   Text,
-  VisuallyHidden,
   useColorModeValue as mode,
   LightMode,
-  Center,
   Container,
   FormControl,
-  FormLabel,
   Input
 } from '@chakra-ui/react'
 

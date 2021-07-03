@@ -50,37 +50,32 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
                 </Text>
 
                 <Tabs
-                    orientation="vertical"
-                    mt="5rem"
-                    variant=""
+                    orientation={{ base: "vertical", lg: "horizontal" }}
+                    mt="2rem"
+                    align="center"
+                    border="0px"
                 >
-                    <TabList>
-                        <Tab p="0.5rem" borderRadius="15px" mb="2rem" _selected={{ color: "white", bg: "#1C1D25" }}
+                    <TabList border="0px" mx="1rem">
+                        <Tab p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
                         ><ProfileIcon
                                 pic={pic1}
                                 name={name1}
                                 title={title1}
                             /></Tab>
-                        <Tab p="0.5rem" borderRadius="15px" mb="2rem" _selected={{ color: "white", bg: "#1C1D25" }}
+                        <Tab p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
                         ><ProfileIcon
                                 pic={pic2}
                                 name={name2}
                                 title={title2}
                             /></Tab>
-                        <Tab p="0.5rem" borderRadius="15px" mb="2rem" _selected={{ color: "white", bg: "#1C1D25" }}><ProfileIcon
+                        <Tab p="0.5rem" borderRadius="15x" mb="2rem" _selected={{ bg: "#1C1D25" }}><ProfileIcon
                             pic={pic3}
                             name={name3}
                             title={title3}
                         /></Tab>
-                        <Tab p="0.5rem" borderRadius="15px" mb="2rem" _selected={{ color: "white", bg: "#1C1D25" }}
-                        ><ProfileIcon
-                                pic={pic4}
-                                name={name4}
-                                title={title4}
-                            /></Tab>
                     </TabList>
 
-                    <TabPanels width="100%">
+                    <TabPanels mt="5">
                         <TabPanel>
                         <ReactPlayer
                                 url={graphic1}
@@ -88,6 +83,9 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
                                 volume="0"
                                 controls="true"
                                 width="100%"
+                                // maxW="70rem"
+                                m="0 auto"
+                                maxH="20rem"
                             />
                         </TabPanel>
                         <TabPanel>

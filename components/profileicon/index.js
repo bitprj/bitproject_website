@@ -31,7 +31,7 @@ export const ProfileIcon = ({ pic, name, title }) => {
                 <Text fontSize="xl" maxW="xl" mx="auto" fontWeight="bold">
                     {name}
                 </Text>
-                <Text fontSize="md" maxW="xl" mx="auto" >
+                <Text fontSize="md" maxW="xl" mx="auto" textAlign="left">
                     {title}
                 </Text>
             </Box>

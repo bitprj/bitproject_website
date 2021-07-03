@@ -57,9 +57,11 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
 
 
                 <Tabs
+                    colorScheme="whiteAlpha"
                     orientation="vertical"
                     mt="5"
-                    variant=""
+                    variant="unstyled"
+                    isFitted={true}
                     
                 >
                     <TabList>
@@ -85,14 +87,14 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
                         /></Tab>
                     </TabList>
 
-                    <TabPanels>
+                    <TabPanels mt="5">
                         <TabPanel>
                             <Img
                                 src={graphic1}
                                 width="100%"
                                 // maxW="70rem"
                                 m="0 auto"
-                                h="20rem"
+                                maxH="20rem"
                             />
                         </TabPanel>
                         <TabPanel>

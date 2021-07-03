@@ -2,17 +2,14 @@ import React, { useEffect, useState } from 'react'
 import { parseISO, format } from 'date-fns'
 import {
     useColorMode,
-    Heading,
-    Text,
     Flex,
     Stack,
-    Avatar,
     Link,
     Box,
-    Image,
-    Icon
+    Container
 } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
+import { DescDualCol } from '../components/dualcol/descriptive'
 
 const editUrl = (slug) =>
     `https://github.com/bjcarlson42/benjamincarlson.io/edit/main/pages/blog${slug}.mdx`
@@ -52,7 +49,13 @@ export default function BlogLayout({ children, frontMatter }) {
 
     return (
         <>
-            <Box h={1} as="div" bgGradient="linear(to-r, green.200, pink.500)" position="sticky" top={0} zIndex={100} w={`${width}%`}></Box>
+        <Box h={1}  as="div" bgGradient="linear(to-r, green.200, pink.500)" position="sticky" top={0} zIndex={100} w={`${width}%`} ></Box>
+        <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white">
+            <Container
+            maxW="container.lg"
+            p="15px"
+            >
+            
                 <Stack
                     as="article"
                     spacing={8}
@@ -62,6 +65,7 @@ export default function BlogLayout({ children, frontMatter }) {
                     maxWidth="700px"
                     w="100%"
                     px={2}
+                    
                 >
                     <Flex
                         flexDirection="column"
@@ -70,8 +74,17 @@ export default function BlogLayout({ children, frontMatter }) {
                         maxWidth="700px"
                         w="100%"
                     >
+                        <DescDualCol 
+                            // categoryLogo, heading, desc, profile, profileLogo, cta1, cta1Link, cta2Link, cta2, pic
+                            heading={frontMatter.title}
+                            profile={frontMatter.by}
+                            desc={frontMatter.summary}
+                            pic={frontMatter.Image}
+                            
+                            // cta1={frontMatter}
+                        />
                         
-                        <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
+                        {/* <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
                             {frontMatter.title}
                         </Heading>
                         <Flex
@@ -99,7 +112,8 @@ export default function BlogLayout({ children, frontMatter }) {
                             {frontMatter.readingTime.text}
                         </Text>
                         </Flex>
-                        {frontMatter.Image != '' ? <Image src={frontMatter.image} alt={frontMatter.alt} /> : null}
+                        {frontMatter.Image != '' ? <Image src={frontMatter.image} alt={frontMatter.alt} /> : null} */}
+
                     </Flex>
                     {children}
                     <Box>
@@ -113,6 +127,8 @@ export default function BlogLayout({ children, frontMatter }) {
                     </Box>
                 
                 </Stack>
+                </Container>
+        </Box>
         </>
     )
 }

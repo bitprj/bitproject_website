@@ -42,14 +42,14 @@ export const DescDualCol = ({ categoryLogo, heading, desc, profile, profileLogo,
                         justify="start"
                         display="flex"
                     >
+                         { pic && 
                         <Img
                             pos="relative"
                             zIndex="1"
                             maxH="50vh" // change this line for the image height
                             objectFit="scale-down"
                             src={pic}
-                            alt="Screening talent"
-                        />
+                        />}
 
 
                         <Box
@@ -72,11 +72,11 @@ export const DescDualCol = ({ categoryLogo, heading, desc, profile, profileLogo,
                                     lg: '520px',
                                 }}
                             >
-                                <Wrap>
+                                {categoryLogo && <Wrap>
                                     <WrapItem>
                                         <Avatar src={categoryLogo} bg="transparent" />
                                     </WrapItem>
-                                </Wrap>
+                                </Wrap>}
                                 <Heading mt="4" as="h2" size="xl" fontWeight="extrabold" lineHeight="3rem">
                                     {heading}
                                 </Heading>
@@ -86,10 +86,12 @@ export const DescDualCol = ({ categoryLogo, heading, desc, profile, profileLogo,
                                 </Text>
                                 <Wrap>
                                     <WrapItem>
-                                        <Avatar src={profileLogo} bg="transparent"  />
-                                        <Text fontSize="xl" my="2" ml="2" color="#CDCDD2">
+                                        {profileLogo && 
+                                            <Avatar src={profileLogo} bg="transparent"  />}
+                                        
+                                        {profile && <Text fontSize="xl" my="2" ml="2" color="#CDCDD2">
                                             {profile}
-                                        </Text>
+                                        </Text>}
                                     </WrapItem>
                                 </Wrap>
 
@@ -102,16 +104,17 @@ export const DescDualCol = ({ categoryLogo, heading, desc, profile, profileLogo,
                                     mt="8"
                                 >
                                     <Stack direction="row">
-                                        <Badge bg="#575757" color="#FFFFFF" px="3" py="2">
-                                        <Link href={cta1Link}isExternal>
-                                            {cta1}
-                                        </Link>
-                                        </Badge>
-                                        <Badge bg="#575757" color="#FFFFFF" px="3" py="2">
-                                        <Link href={cta2Link}isExternal>
-                                            {cta2}
-                                        </Link>
-                                        </Badge>
+                                        {cta1 && <Badge bg="#575757" color="#FFFFFF" px="3" py="2">
+                                            <Link href={cta1Link}isExternal>
+                                                {cta1}
+                                            </Link>
+                                        </Badge>}
+
+                                        {cta2 && <Badge bg="#575757" color="#FFFFFF" px="3" py="2">
+                                            <Link href={cta2Link}isExternal>
+                                                {cta2}
+                                            </Link>
+                                        </Badge>}
                                     </Stack>
                                 </Stack>
                             </Box>

@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react'
 import * as React from 'react'
 
-export const OverflowDualCol = ({ image, headerText, action, actionLink }) => {
+export const OverflowDualCol = ({ image, headerText, action, actionLink, categoryLogo }) => {
   return (
 
     <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white">
@@ -43,7 +43,6 @@ export const OverflowDualCol = ({ image, headerText, action, actionLink }) => {
             maxH="40vh"
             objectFit="scale-down"
             src={image}
-            alt="Screening talent"
           />
 
           
@@ -67,6 +66,17 @@ export const OverflowDualCol = ({ image, headerText, action, actionLink }) => {
                 lg: '520px',
               }}
             >
+              { categoryLogo && 
+
+              <Img 
+                src={categoryLogo}
+                width="100%"
+                // maxW="70rem"
+                m="0 auto"
+                mt="10rem"
+                maxH="10rem"
+              />}
+
               <Heading mt="4" as="h2" size="xl" fontWeight="extrabold" lineHeight="3rem">
                 {headerText}
               </Heading>

@@ -46,18 +46,6 @@ export default function Serverless() {
         actionLink="ACTIONLINK"
       />
 
-      <DescDualCol
-        categoryLogo="/serverlessLogo.svg"
-        heading="How Fifi saved money shopping on Amazon with Serverless"
-        desc="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
-        profileLogo="/emily.svg"
-        profile="Fifi Gupta"
-        cta1="Github Repo"
-        cta2="Landing Page"
-        cta1Link="GITHUB LINK"
-        cta2Link="LANDING LINK"
-        pic="/fifi.svg"
-      />
       <DualCol 
         preheading="week 1"
         heading="Git & Serverless Basics"

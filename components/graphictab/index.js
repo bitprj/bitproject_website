@@ -48,41 +48,35 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
                     {desc}
                 </Text>
 
-
-
-
-
-
-
-
-
                 <Tabs
                     orientation="vertical"
-                    mt="5"
+                    mt="5rem"
                     variant=""
-                    
                 >
                     <TabList>
-                        <Tab><ProfileIcon
-                            pic={pic1}
-                            name={name1}
-                            title={title1}
-                        /></Tab>
-                        <Tab><ProfileIcon
-                            pic={pic2}
-                            name={name2}
-                            title={title2}
-                        /></Tab>
-                        <Tab><ProfileIcon
+                        <Tab p="0.5rem" borderRadius="15px" mb="1rem" _selected={{ color: "white", bg: "#1C1D25" }}
+                        ><ProfileIcon
+                                pic={pic1}
+                                name={name1}
+                                title={title1}
+                            /></Tab>
+                        <Tab p="0.5rem" borderRadius="15px" mb="1rem" _selected={{ color: "white", bg: "#1C1D25" }}
+                        ><ProfileIcon
+                                pic={pic2}
+                                name={name2}
+                                title={title2}
+                            /></Tab>
+                        <Tab p="0.5rem" borderRadius="15px" mb="1rem" _selected={{ color: "white", bg: "#1C1D25" }}><ProfileIcon
                             pic={pic3}
                             name={name3}
                             title={title3}
                         /></Tab>
-                        <Tab><ProfileIcon
-                            pic={pic4}
-                            name={name4}
-                            title={title4}
-                        /></Tab>
+                        <Tab p="0.5rem" borderRadius="15px" mb="1rem" _selected={{ color: "white", bg: "#1C1D25" }}
+                        ><ProfileIcon
+                                pic={pic4}
+                                name={name4}
+                                title={title4}
+                            /></Tab>
                     </TabList>
 
                     <TabPanels>
@@ -96,7 +90,7 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
                             />
                         </TabPanel>
                         <TabPanel>
-                        <Img
+                            <Img
                                 src={graphic2}
                                 width="100%"
                                 // maxW="70rem"
@@ -105,7 +99,7 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
                             />
                         </TabPanel>
                         <TabPanel>
-                        <Img
+                            <Img
                                 src={graphic3}
                                 width="100%"
                                 // maxW="70rem"
@@ -114,7 +108,7 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
                             />
                         </TabPanel>
                         <TabPanel>
-                        <Img
+                            <Img
                                 src={graphic4}
                                 width="100%"
                                 // maxW="70rem"

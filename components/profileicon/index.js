@@ -15,7 +15,7 @@ import * as React from 'react'
 export const ProfileIcon = ({ pic, name, title }) => {
     return (
 
-        <Flex color="white" bg="#1C1D25" w="220px" p="3" borderRadius="15px" alignItems="center"> 
+        <Flex color="white" alignItems="center" textAlign="left"> 
             <Square size="">
                 <Img 
                     src={pic}
@@ -27,7 +27,7 @@ export const ProfileIcon = ({ pic, name, title }) => {
                 />
             </Square>
 
-            <Box ml="2">
+            <Box ml="2" width="10rem">
                 <Text fontSize="xl" maxW="xl" mx="auto" fontWeight="bold">
                     {name}
                 </Text>

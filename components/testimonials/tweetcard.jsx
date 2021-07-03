@@ -1,17 +1,9 @@
 import {
   Box,
-  Center,
-  Flex,
-  Heading,
   Img,
-  Container,
   Text,
-  Square,
-  Stack,
   useColorModeValue as mode,
 } from '@chakra-ui/react'
-import Fade from 'react-reveal/Fade';
-import { useEffect, useState } from "react";
 import * as React from 'react'
 
 export const Card = ({ name, quote, image }) => {

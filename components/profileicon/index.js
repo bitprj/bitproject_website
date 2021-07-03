@@ -18,20 +18,20 @@ import styles from './ProfileIcon.module.css';
 export const ProfileIcon = ({ pic, name, title }) => {
 
    
-    var direct;
-    useEffect(() => {
+    // var direct;
+    // useEffect(() => {
         
-        window.addEventListener('resize', () => {
-            const myWidth = window.innerWidth;
-            if (myWidth <= 600) {
-                direct = "column"
-            }
-            else {
-                direct = "row"
-            }
+    //     window.addEventListener('resize', () => {
+    //         const myWidth = window.innerWidth;
+    //         if (myWidth <= 600) {
+    //             direct = "column"
+    //         }
+    //         else {
+    //             direct = "row"
+    //         }
 
-        })
-    })
+    //     })
+    // })
 
     return (
 
@@ -41,6 +41,7 @@ export const ProfileIcon = ({ pic, name, title }) => {
                 <Square size="">
                     <Img
                         className={styles.pfp}
+                        mr="1.2rem"
                         src={pic}
                         boxSize="50px"
                         objectFit="cover"
@@ -48,7 +49,8 @@ export const ProfileIcon = ({ pic, name, title }) => {
                     />
                 </Square>
             </Box>
-            <Box textAlign="left" ml="1.2rem" className={styles.textBox}>
+            {/* <Box textAlign="left" ml="1.2rem" className={styles.textBox}> */}
+            <Box textAlign="left">
                 <Text fontSize="xl" mx="auto" fontWeight="bold">
                     {name}
                 </Text>

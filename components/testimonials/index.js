@@ -1,14 +1,12 @@
 import {
   Box,
   Heading,
-  Img,
   Text,
   useColorModeValue as mode,
   Container,
 } from '@chakra-ui/react'
 
 import * as React from 'react'
-import { useRouter } from 'next/router'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -16,12 +14,10 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Card } from './tweetcard.jsx'
 import SwiperCore, { Autoplay } from 'swiper';
 
-import Examples from './tweets.json'
-// Import Swiper styles
+import Quotes from './quotes.json'
 import 'swiper/swiper.min.css'
 import 'swiper/components/navigation/navigation.min.css'
 import 'swiper/components/pagination/pagination.min.css'
-import Link from 'next/link'
 
 export const Testimonials = ({ heading, desc }) => {
 
@@ -62,6 +58,7 @@ export const Testimonials = ({ heading, desc }) => {
               autoplay={{ delay: 1000 }}
 
 
+
               breakpoints={{
                 320: {
                   slidesPerView: 1,
@@ -73,20 +70,21 @@ export const Testimonials = ({ heading, desc }) => {
                   slidesPerView: 3,
                 },
                 1024: {
-                  slidesPerView: 4,
+                  slidesPerView: 3,
                 },
                 1208: {
-                  slidesPerView: 5,
+                  slidesPerView: 3,
                 },
               }}
             >
-              {Examples.map((tweet, i) => {
+              {Quotes.map((quote, i) => {
                 return (
                   <SwiperSlide key={i}>
                     <Card
-                      name={tweet.handle}
-                      quote={tweet.text}
-                      image="https://i.pinimg.com/474x/dc/e6/c0/dce6c0923a316554572841bb6f857c31.jpg"
+                      name={quote.name}
+                      quote={quote.text}
+                      title={quote.title}
+                      image={quote.img_url}
                     />
                   </SwiperSlide>
                 )

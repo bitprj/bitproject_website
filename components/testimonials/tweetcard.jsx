@@ -6,11 +6,11 @@ import {
 } from '@chakra-ui/react'
 import * as React from 'react'
 
-export const Card = ({ name, quote, image }) => {
+export const Card = ({ name, quote, title, image  }) => {
 
   return (
 
-    <Box mx="3" mt="5" bg="#404040" borderRadius="20px">
+    <Box mx="3" mt="5" border="1px solid #7F7F7F" borderRadius="20px">
 
       <Box p="6">
         <Box alignItems="baseline">
@@ -21,10 +21,12 @@ export const Card = ({ name, quote, image }) => {
               src={image}
               // maxW="70rem"
               h="40px"
+              w="40px"
+              objectFit="cover"
               borderRadius="15px"
             />}
           <Text fontSize="sm" color="grey" mx="auto" mt="2" fontWeight="bold">
-            {`${name}, 11th Grade`}
+            {`${name}, ${title}`}
           </Text>
         </Box>
 

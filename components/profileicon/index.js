@@ -27,11 +27,11 @@ export const ProfileIcon = ({ pic, name, title }) => {
                 />
             </Square>
 
-            <Box ml="2">
-                <Text fontSize="xl" maxW="xl" mx="auto" fontWeight="bold">
+            <Box ml="2" width="8rem">
+                <Text fontSize="xl" mx="auto" fontWeight="bold">
                     {name}
                 </Text>
-                <Text fontSize="md" maxW="xl" mx="auto" textAlign="left">
+                <Text fontSize="md" mx="auto" >
                     {title}
                 </Text>
             </Box>

@@ -33,13 +33,7 @@ export default function Serverless() {
         para2="You just write your code and deploy it. Everything else which is necessary to run your application is done automatically.
         "
       />
-
-      <ProfileIcon 
-        pic="/emily.svg"
-        name="Emily Chen"
-        title="11th Grade"
-      />
-
+      
       <OverflowDualCol
         image="/emily.svg"
         headerText="Emily built a file sharing app with Azure Functions and CosmosDB for AP exams"

@@ -20,6 +20,7 @@ import {
     TabPanel
 } from '@chakra-ui/react'
 
+import ReactPlayer from "react-player"
 import * as React from 'react'
 import Fade from 'react-reveal/Fade';
 import { ProfileIcon } from '../profileicon'
@@ -54,24 +55,24 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
                     variant=""
                 >
                     <TabList>
-                        <Tab p="0.5rem" borderRadius="15px" mb="1rem" _selected={{ color: "white", bg: "#1C1D25" }}
+                        <Tab p="0.5rem" borderRadius="15px" mb="2rem" _selected={{ color: "white", bg: "#1C1D25" }}
                         ><ProfileIcon
                                 pic={pic1}
                                 name={name1}
                                 title={title1}
                             /></Tab>
-                        <Tab p="0.5rem" borderRadius="15px" mb="1rem" _selected={{ color: "white", bg: "#1C1D25" }}
+                        <Tab p="0.5rem" borderRadius="15px" mb="2rem" _selected={{ color: "white", bg: "#1C1D25" }}
                         ><ProfileIcon
                                 pic={pic2}
                                 name={name2}
                                 title={title2}
                             /></Tab>
-                        <Tab p="0.5rem" borderRadius="15px" mb="1rem" _selected={{ color: "white", bg: "#1C1D25" }}><ProfileIcon
+                        <Tab p="0.5rem" borderRadius="15px" mb="2rem" _selected={{ color: "white", bg: "#1C1D25" }}><ProfileIcon
                             pic={pic3}
                             name={name3}
                             title={title3}
                         /></Tab>
-                        <Tab p="0.5rem" borderRadius="15px" mb="1rem" _selected={{ color: "white", bg: "#1C1D25" }}
+                        <Tab p="0.5rem" borderRadius="15px" mb="2rem" _selected={{ color: "white", bg: "#1C1D25" }}
                         ><ProfileIcon
                                 pic={pic4}
                                 name={name4}
@@ -79,41 +80,41 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
                             /></Tab>
                     </TabList>
 
-                    <TabPanels>
+                    <TabPanels width="100%">
                         <TabPanel>
-                            <Img
-                                src={graphic1}
+                        <ReactPlayer
+                                url={graphic1}
+                                playing="true"
+                                volume="0"
+                                controls="true"
                                 width="100%"
-                                // maxW="70rem"
-                                m="0 auto"
-                                h="20rem"
                             />
                         </TabPanel>
                         <TabPanel>
-                            <Img
-                                src={graphic2}
+                            <ReactPlayer
+                                url={graphic2}
+                                playing="true"
+                                volume="0"
+                                controls="true"
                                 width="100%"
-                                // maxW="70rem"
-                                m="0 auto"
-                                h="20rem"
                             />
                         </TabPanel>
                         <TabPanel>
-                            <Img
-                                src={graphic3}
+                            <ReactPlayer
+                                url={graphic3}
+                                playing="true"
+                                volume="0"
+                                controls="true"
                                 width="100%"
-                                // maxW="70rem"
-                                m="0 auto"
-                                h="20rem"
                             />
                         </TabPanel>
                         <TabPanel>
-                            <Img
-                                src={graphic4}
+                            <ReactPlayer
+                                url={graphic4}
+                                playing="true"
+                                volume="0"
+                                controls="true"
                                 width="100%"
-                                // maxW="70rem"
-                                m="0 auto"
-                                h="20rem"
                             />
                         </TabPanel>
                     </TabPanels>

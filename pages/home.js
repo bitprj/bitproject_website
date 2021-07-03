@@ -45,24 +45,24 @@ export default function HomePage() {
         pic1="/emily.svg"
         name1="Emily Chen"
         title1="11th Grade"
-        graphic1="/bizman.svg"
+        graphic1="https://vimeo.com/342823339"
 
 
         pic2="/emily.svg"
         name2="Emily Chen"
         title2="Junior, CS"
-        graphic2="/feature.svg"
+        graphic2="https://vimeo.com/342823339"
 
 
         pic3="/emily.svg"
         name3="Emily Chen"
         title3="11th Grade"
-        graphic3="/livecode.png"
+        graphic3="https://vimeo.com/342823339"
 
         pic4="/emily.svg"
         name4="Emily Chen"
         title4="11th Grade"
-        graphic4="/counselorbot.svg"
+        graphic4="https://vimeo.com/342823339"
       />
 
     </div>

@@ -20,8 +20,7 @@ export default function Orchestration() {
         img1="/tech1.svg"
         img2="/tech2.svg"
         img3="/tech3.svg"
-        img4="/tech4.svg"
       />
     </div>
   )
-}
+}g

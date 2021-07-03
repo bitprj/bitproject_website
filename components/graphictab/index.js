@@ -20,6 +20,7 @@ import {
     TabPanel
 } from '@chakra-ui/react'
 
+import ReactPlayer from "react-player"
 import * as React from 'react'
 import Fade from 'react-reveal/Fade';
 import { ProfileIcon } from '../profileicon'
@@ -76,8 +77,11 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
 
                     <TabPanels mt="5">
                         <TabPanel>
-                            <Img
-                                src={graphic1}
+                        <ReactPlayer
+                                url={graphic1}
+                                playing="true"
+                                volume="0"
+                                controls="true"
                                 width="100%"
                                 // maxW="70rem"
                                 m="0 auto"
@@ -85,30 +89,30 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
                             />
                         </TabPanel>
                         <TabPanel>
-                        <Img
-                                src={graphic2}
+                            <ReactPlayer
+                                url={graphic2}
+                                playing="true"
+                                volume="0"
+                                controls="true"
                                 width="100%"
-                                // maxW="70rem"
-                                m="0 auto"
-                                h="20rem"
                             />
                         </TabPanel>
                         <TabPanel>
-                        <Img
-                                src={graphic3}
+                            <ReactPlayer
+                                url={graphic3}
+                                playing="true"
+                                volume="0"
+                                controls="true"
                                 width="100%"
-                                // maxW="70rem"
-                                m="0 auto"
-                                h="20rem"
                             />
                         </TabPanel>
                         <TabPanel>
-                        <Img
-                                src={graphic4}
+                            <ReactPlayer
+                                url={graphic4}
+                                playing="true"
+                                volume="0"
+                                controls="true"
                                 width="100%"
-                                // maxW="70rem"
-                                m="0 auto"
-                                h="20rem"
                             />
                         </TabPanel>
                     </TabPanels>

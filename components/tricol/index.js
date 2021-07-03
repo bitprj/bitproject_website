@@ -19,7 +19,7 @@ export const TriCol = ({ heading1, para1, heading2, para2, heading3, para3 }) =>
                     <Box>
                         <Heading
                             as="h1"
-                            size="lg"
+                            size="md"
                             fontWeight="extrabold"
                             maxW="48rem"
                             mx="auto"
@@ -35,7 +35,7 @@ export const TriCol = ({ heading1, para1, heading2, para2, heading3, para3 }) =>
                     <Box>
                         <Heading
                             as="h1"
-                            size="lg"
+                            size="md"
                             fontWeight="extrabold"
                             maxW="48rem"
                             mx="auto"
@@ -51,7 +51,7 @@ export const TriCol = ({ heading1, para1, heading2, para2, heading3, para3 }) =>
                     <Box>
                         <Heading
                             as="h1"
-                            size="lg"
+                            size="md"
                             fontWeight="extrabold"
                             maxW="48rem"
                             mx="auto"

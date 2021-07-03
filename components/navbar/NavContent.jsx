@@ -17,10 +17,6 @@ const links = [
     href: '/serverless',
   },
   {
-    label: 'Orchestration',
-    href: '/orchestration',
-  },
-  {
     label: 'Workshops',
     href: '/technicalworkshops',
   },

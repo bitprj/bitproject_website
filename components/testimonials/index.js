@@ -72,12 +72,12 @@ export const Testimonials = ({ heading, desc }) => {
             >
               {Quotes.map((quote, i) => {
                 return (
-                  <SwiperSlide
+                  <SwiperSlide key={i}
                     alignItems="center"
                     display="flex"
                     className={styles.swiperWrapper}
                     >
-                    <Card
+                    <Card 
                       name={quote.name}
                       quote={quote.text}
                       title={quote.title}

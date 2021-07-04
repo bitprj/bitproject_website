@@ -6,6 +6,7 @@ import {
 } from '@chakra-ui/react'
 import * as React from 'react'
 
+import { ProfileIcon } from './../profileicon'
 export const Card = ({ name, quote, title, image  }) => {
 
   return (
@@ -13,30 +14,16 @@ export const Card = ({ name, quote, title, image  }) => {
     <Box mx="6" mt="5" border="1px solid #7F7F7F" borderRadius="20px">
 
       <Box p="6">
-        <Box alignItems="baseline">
-
-          {image &&
-
-            <Img
-              src={image}
-              // maxW="70rem"
-              h="40px"
-              w="40px"
-              objectFit="cover"
-              borderRadius="15px"
-            />}
-          <Text fontSize="sm" color="grey" mx="auto" mt="2" fontWeight="bold">
-            {`${name}, ${title}`}
-          </Text>
-        </Box>
-
-        <Text fontSize="sm" color="white" mx="auto" mt="2" fontWeight="">
+      <Text fontSize="md" color="gray.200" mx="auto" mt="2" fontWeight="bold" mb="1rem">
           {quote}
         </Text>
-
-
-
-
+        <Box alignItems="baseline">
+          <ProfileIcon
+          pic={image}
+          name={name}
+          title={title}
+          />
+        </Box>
       </Box>
     </Box>
 

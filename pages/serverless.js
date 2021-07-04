@@ -11,24 +11,34 @@ import { CenterDualCol } from '../components/dualcol/center'
 import { Carousel } from '../components/carousel'
 import { DescDualCol } from '../components/dualcol/descriptive'
 import { Navbar } from '../components/navbar'
-
+import { GraphicTabBottom } from '../components/graphictab/bottom'
 export default function Serverless() {
   return (
     <div>
-      <Navbar
-      
-      />
+      <Navbar/>
+    <GraphicTabBottom
+        heading="Serverless Camp"
+        desc="In our 8-week boot camp, build awesome apps with Serverless functions, JavaScript, and APIs. From IoT heartbeat monitors to face mask detectors, you can build anything with Serverless!"
+        cta1="Apply Now"
+        cta2="Learn More"
+        logoImage="/serverlessLogo.svg"
+        cta1link={' https://www.notion.so/bitproject/Welcome-to-Serverless-Camp-e218f86daf4248509350709cd9fa8017'}
+        cta2link={'https://airtable.com/shr9hT8pEXpAAM00Z'}
+        pic1="/fifi.jpeg"
+        name1="Saving $ on Amazon"
+        title1="Fifi Teklemedhin"
+        graphic1="https://vimeo.com/570820559"
 
-      
-      <Landing
-      heading="Serverless Camp"
-      description="As a student, master serverless functions to help you to build projects that solve real-world problems by integrating APIs, constructing user interfaces, and analyzing data."
-      cta1="Apply Now"
-      cta2="Learn More"
-      image="/feature.svg"
-      logoImage="/serverlessLogo.svg"
-      cta1link={' https://www.notion.so/bitproject/Welcome-to-Serverless-Camp-e218f86daf4248509350709cd9fa8017'}
-      cta2link={'https://airtable.com/shr9hT8pEXpAAM00Z'}
+        pic2="/emily.svg"
+        name2="File Sharing for Exams"
+        title2="Emily Chen"
+        graphic2="/feature.svg"
+
+
+        pic3="/emily.svg"
+        name3="Predicting Power Usage"
+        title3="Evelyn Chin"
+        graphic3="/livecode.png"
       />
 
       <Textblock
@@ -36,14 +46,6 @@ export default function Serverless() {
         para1="Serverless involves harnessing the power of cloud computing and building large applications quickly without having to manage servers."
         para2="Camp is an 8-week interactive coding bootcamp designed to help you gain real-world technical skills through project-based learning and build awesome professional connections."
       />
-
-      <OverflowDualCol
-        image="/emily.svg"
-        headerText="Emily built a file sharing app with Azure Functions and Blob Storage for AP exams"
-        action="Read Story &rarr;"
-        actionLink="ACTIONLINK"
-      />
-
       <DualCol 
         preheading="week 1"
         heading="Git & Serverless Basics"
@@ -105,7 +107,7 @@ export default function Serverless() {
         img3="/tech3.svg"
         img4="/tech4.svg"
       />
-
+ 
     </div>
   )
 }

@@ -28,6 +28,7 @@ import { ProfileIcon } from '../profileicon'
 export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2, pic2, title2, graphic2, name3, pic3, title3, graphic3, name4, title4, pic4, graphic4 }) => {
     return (
         <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white">
+            <Fade>
             <Container
                 maxW="container.lg"
                 p="15px"
@@ -45,7 +46,7 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
                     {heading}
                 </Heading>
 
-                <Text fontSize="xl" mt="4" mx="auto" textAlign="center">
+                <Text fontSize="lg" mt="4" mx="auto" textAlign="center">
                     {desc}
                 </Text>
 
@@ -54,21 +55,22 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
                     mt="2rem"
                     align="center"
                     border="0px"
+    
                 >
-                    <TabList border="0px" mx="1rem">
-                        <Tab p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
+                    <TabList border="0px" >
+                        <Tab mx="1rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
                         ><ProfileIcon
                                 pic={pic1}
                                 name={name1}
                                 title={title1}
                             /></Tab>
-                        <Tab p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
+                        <Tab mx="1rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
                         ><ProfileIcon
                                 pic={pic2}
                                 name={name2}
                                 title={title2}
                             /></Tab>
-                        <Tab p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
+                        <Tab mx="1rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
                         ><ProfileIcon
                                 pic={pic3}
                                 name={name3}
@@ -86,7 +88,8 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
                                 width="100%"
                                 // maxW="70rem"
                                 m="0 auto"
-                                maxH="20rem"
+                                // maxH="20rem"
+                                loop="true"
                             />
                         </TabPanel>
                         <TabPanel>
@@ -96,6 +99,7 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
                                 volume="0"
                                 controls="true"
                                 width="100%"
+                                loop="true"
                             />
                         </TabPanel>
                         <TabPanel>
@@ -105,6 +109,7 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
                                 volume="0"
                                 controls="true"
                                 width="100%"
+                                loop="true"
                             />
                         </TabPanel>
                         <TabPanel>
@@ -114,14 +119,13 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
                                 volume="0"
                                 controls="true"
                                 width="100%"
+                                loop="true"
                             />
                         </TabPanel>
                     </TabPanels>
                 </Tabs>
-
-
             </Container>
+            </Fade>
         </Box>
-
     )
 }

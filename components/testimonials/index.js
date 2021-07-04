@@ -39,9 +39,10 @@ export const Testimonials = ({ heading, desc }) => {
           {heading}
         </Heading>
 
-        <Text fontSize="xl" mt="4" mx="auto" textAlign="center">
+        <Text fontSize="lg" mt="4" mx="auto" textAlign="center">
           {desc}
         </Text>
+
 
         <div className="mt-6" >
           <div  display="flex" alignSelf="center">
@@ -50,8 +51,6 @@ export const Testimonials = ({ heading, desc }) => {
               speed={300}
               loop={true}
               slidesPerColumnFill="row"
-
-
               breakpoints={{
                 320: {
                   slidesPerView: 1.5,
@@ -60,13 +59,13 @@ export const Testimonials = ({ heading, desc }) => {
                   slidesPerView: 2.5,
                 },
                 920: {
-                  slidesPerView: 3.5,
+                  slidesPerView: 3.2,
                 },
                 1024: {
-                  slidesPerView: 4.5,
+                  slidesPerView: 3.2,
                 },
                 1208: {
-                  slidesPerView: 5.5,
+                  slidesPerView: 3.2,
                 },
               }}
             >

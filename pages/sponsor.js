@@ -13,9 +13,11 @@ export default function Sponsor() {
     <div>
       <Navbar />
       <Landing
+        logoImage="/heart.svg"
         heading="Sponsor Bit Project"
         description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. 100% Free and Open Source"
-        cta2="Learn More"
+        cta1="Case Studies"
+        cta2="Github Sponsors"
         image="/livecode.png"
         cta1link={' https://www.notion.so/bitproject/Welcome-to-Serverless-Camp-e218f86daf4248509350709cd9fa8017'}
         cta2link={'https://airtable.com/shr9hT8pEXpAAM00Z'}

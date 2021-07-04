@@ -14,11 +14,6 @@ import {
 } from '@chakra-ui/react'
 
 import * as React from 'react'
-// import { Copyright } from './Copyright'
-import { LinkGrid } from './LinkGrid'
-// import { Logo } from './Logo'
-// import { SocialMediaLinks } from './SocialMediaLinks'
-// import { SubscribeForm } from './SubscribeForm'
 import Fade from 'react-reveal/Fade';
 
 
@@ -43,7 +38,7 @@ export const Textblock = ({ title, para1, para2 }) => (
       >
       <Heading
       as="h1"
-      size="3xl"
+      size="xl"
       fontWeight="extrabold"
       maxW="48rem"
       lineHeight="1.2"
@@ -60,8 +55,9 @@ export const Textblock = ({ title, para1, para2 }) => (
           justify="space-between"
           my="2rem"
         > 
-          <Text mt="5" fontSize="xl">{para1}</Text>
-          <Text mt="5" fontSize="xl">{para2}</Text>
+          <Text fontSize="lg" mr="3rem">{para1}</Text>
+          <br></br>
+          <Text fontSize="lg" mr="3rem">{para2}</Text>
       {/* <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, error! Eaque quia natus ipsa suscipit cumque, praesentium cupiditate delectus architecto?</p> */}
     </Flex>
     </Box>

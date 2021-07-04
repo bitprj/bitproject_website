@@ -21,10 +21,6 @@ const links = [
     href: '/technicalworkshops',
   },
   {
-    label: 'Data Science',
-    href: '/datascience',
-  },
-  {
     label: 'Mentor',
     href: '/mentor',
   },

@@ -52,7 +52,7 @@ export default function Serverless() {
         li1="⚡ HackerVoice API"
         li2="🐱 twoCatz API"
         li3="🐸 [TOP SECRET] API"
-        img="/counselorbot.svg"
+        img="/week1.gif"
         action="Get Started &rarr;"
         actionLink="ACTIONLINK"
       />
@@ -63,7 +63,7 @@ export default function Serverless() {
         para2="Build projects with awesome APIs from Twilio, Microsoft Cognitive Services, and Giphy!"
         li1="😊 Emotional Gifs"
         li2="🎶 Song4u.js"
-        img="/counselorbot.svg"
+        img="/week1.gif"
         action="Get Started &rarr;"
         actionLink="ACTIONLINK"
       />
@@ -74,7 +74,7 @@ export default function Serverless() {
         para2="Build projects with Blob Storage and a NoSQL database to store data received through your serverless function!"
         li1="🐰 Bunnimage API"
         li2="🤫 Deep Secrets API"
-        img="/counselorbot.svg"
+        img="/week1.gif"
         action="Get Started &rarr;"
         actionLink="ACTIONLINK"
       />
@@ -85,7 +85,7 @@ export default function Serverless() {
         para2="Build a frontend with HTML/CSS/JS to interact with your serverless functions!"
         li1="🐇 Bunnimage: The App"
         li2="🐈 twoCatz: The App"
-        img="/counselorbot.svg"
+        img="/week1.gif"
         action="Get Started &rarr;"
         actionLink="ACTIONLINK"
       />

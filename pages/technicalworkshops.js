@@ -1,6 +1,7 @@
 import { Landing } from '../components/landing.jsx'
 import { Carousel } from '../components/carousel'
 import { Navbar } from '../components/navbar'
+import { Footer } from '../components/footer'
 
 export default function Orchestration() {
   return (
@@ -18,9 +19,13 @@ export default function Orchestration() {
 
       <Carousel
         img1="/tech1.svg"
+        link1="LINK1"
         img2="/tech2.svg"
+        link2="LINK2"
         img3="/tech3.svg"
+        link3="LINK3"
       />
+      <Footer/>
     </div>
   )
 }

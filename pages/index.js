@@ -10,9 +10,7 @@ export default function HomePage() {
       <Navbar />
       <Landing
         heading="We equip students with technical superpowers"
-        description="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-        //   cta1="Apply Now"
-        //   cta2="Learn More"
+        description="We provide cutting-edge, open source learning experiences to prepare students for careers in tech."
         formActionButton="Sign Up"
         formActionButtonLink="ENTER SIGN UP PAGE"
         image="/main.gif"

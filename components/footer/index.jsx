@@ -18,7 +18,7 @@ import { SubscribeForm } from './SubscribeForm'
 import Fade from 'react-reveal/Fade';
 
 export const Footer = () => (
-  <Box as="footer" bg="black" color="white" bg="#181818">
+  <Box as="footer" color="white" bg="#181818">
     <Fade>
     <Box
       maxW={{
@@ -104,7 +104,7 @@ export const Footer = () => (
             Subscribe to our newsletter!
           </Text>
           <Text lineHeight="tall" fontSize="xl">
-          Stay up to date with all of our resources and opportunities. We promise we won't spam!
+          Stay up to date with all of our resources and opportunities. We promise we won&apos;t spam!
           </Text>
           <SubscribeForm />
         </Box>

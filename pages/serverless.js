@@ -16,7 +16,6 @@ export default function Serverless() {
   return (
     <div>
       <Navbar/>
-
     <GraphicTabBottom
         heading="Serverless Camp"
         desc="In our 8-week boot camp, build awesome apps with Serverless functions, JavaScript, and APIs. From IoT heartbeat monitors to face mask detectors, you can build anything with Serverless!"
@@ -43,13 +42,10 @@ export default function Serverless() {
       />
 
       <Textblock
-        title="Code. Deploy. That's it."
-        para1="You just write your code and deploy it. Everything else which is necessary to run your application is done automatically.
-        "
-        para2="You just write your code and deploy it. Everything else which is necessary to run your application is done automatically.
-        "
+        title="What is Serverless Camp?"
+        para1="Serverless involves harnessing the power of cloud computing and building large applications quickly without having to manage servers."
+        para2="Camp is an 8-week interactive coding bootcamp designed to help you gain real-world technical skills through project-based learning and build awesome professional connections."
       />
-
       <DualCol 
         preheading="week 1"
         heading="Git & Serverless Basics"
@@ -58,48 +54,46 @@ export default function Serverless() {
         li1="⚡ HackerVoice API"
         li2="🐱 twoCatz API"
         li3="🐸 [TOP SECRET] API"
-        img="/counselorbot.svg"
+        img="/week1.gif"
         action="Get Started &rarr;"
         actionLink="ACTIONLINK"
       />
       <DualCol 
         preheading="week 2"
         heading="Working with APIs"
-        para1="Build projects with awesome APIs from Twilio, Microsoft Cognitive Services, and Giphy! Learn how to read documentation, experiment, and most importantly Google!"
-        para2="Build projects to get started with Azure Functions, Cloud Engineering, and Javascript!"
+        para1="Learn how to read documentation, experiment, and most importantly Google."
+        para2="Build projects with awesome APIs from Twilio, Microsoft Cognitive Services, and Giphy!"
         li1="😊 Emotional Gifs"
         li2="🎶 Song4u.js"
-        img="/counselorbot.svg"
+        img="/week2.gif"
         action="Get Started &rarr;"
         actionLink="ACTIONLINK"
       />
        <DualCol 
         preheading="week3"
-        heading="Git & Serverless Basics"
-        para1="Set up your development environment with developer tools like Github and Postman."
-        para2="Build projects to get started with Azure Functions, Cloud Engineering, and Javascript!"
-        li1="⚡ HackerVoice API"
-        li2="🐱 twoCatz API"
-        li3="🐸 [TOP SECRET] API"
-        img="/counselorbot.svg"
+        heading="Storing & Retrieving Data"
+        para1="Learn how to interact with databases add exciting and functional features to your projects."
+        para2="Build projects with Blob Storage and a NoSQL database to store data received through your serverless function!"
+        li1="🐰 Bunnimage API"
+        li2="🤫 Deep Secrets API"
+        img="/week3.gif"
         action="Get Started &rarr;"
         actionLink="ACTIONLINK"
       />
        <DualCol 
         preheading="week4"
-        heading="Git & Serverless Basics"
-        para1="Set up your development environment with developer tools like Github and Postman."
-        para2="Build projects to get started with Azure Functions, Cloud Engineering, and Javascript!"
-        li1="⚡ HackerVoice API"
-        li2="🐱 twoCatz API"
-        li3="🐸 [TOP SECRET] API"
-        img="/counselorbot.svg"
+        heading="Building a Frontend"
+        para1="Learn how to build a webpage to accept, display, and retrieve user input."
+        para2="Build a frontend with HTML/CSS/JS to interact with your serverless functions!"
+        li1="🐇 Bunnimage: The App"
+        li2="🐈 twoCatz: The App"
+        img="/week4.gif"
         action="Get Started &rarr;"
         actionLink="ACTIONLINK"
       />
     <CenterDualCol
       heading="Build your Own Project"
-      description="Set up your development environment with developer tools like Github and Postman."
+      description="Demonstrate your new competence with cloud computing by developing your own project: it can solve problems, be fun, or do all of the above!"
       cta1="Sample Projects"
       cta2="Learn More"
       image="/feature.svg"

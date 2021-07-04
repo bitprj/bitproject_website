@@ -10,7 +10,7 @@ export const Card = ({ name, quote, title, image  }) => {
 
   return (
 
-    <Box mx="3" mt="5" border="1px solid #7F7F7F" borderRadius="20px">
+    <Box mx="6" mt="5" border="1px solid #7F7F7F" borderRadius="20px">
 
       <Box p="6">
         <Box alignItems="baseline">

@@ -18,17 +18,14 @@ import Quotes from './quotes.json'
 import 'swiper/swiper.min.css'
 import 'swiper/components/navigation/navigation.min.css'
 import 'swiper/components/pagination/pagination.min.css'
+import styles from './Testimonials.module.css';
 
 export const Testimonials = ({ heading, desc }) => {
 
-  SwiperCore.use([Autoplay])
 
   return (
     <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white">
-      <Container
-        maxW="container.lg"
-        p="15px"
-      >
+      
         <Heading
           as="h1"
           size="xl"
@@ -46,40 +43,40 @@ export const Testimonials = ({ heading, desc }) => {
           {desc}
         </Text>
 
-        <div className="mt-6">
-          <div className={'lg:-mr-32 lg:-ml-32'}>
+        <div className="mt-6" >
+          <div  display="flex" alignSelf="center">
             <Swiper
-
-              initialSlide={3}
-              spaceBetween={0}
-              slidesPerView={4}
+              centeredSlides={true}
               speed={300}
               loop={true}
-              autoplay={{ delay: 1000 }}
-
+              slidesPerColumnFill="row"
 
 
               breakpoints={{
                 320: {
-                  slidesPerView: 1,
+                  slidesPerView: 1.5,
                 },
                 720: {
-                  slidesPerView: 2,
+                  slidesPerView: 2.5,
                 },
                 920: {
-                  slidesPerView: 3,
+                  slidesPerView: 3.5,
                 },
                 1024: {
-                  slidesPerView: 3,
+                  slidesPerView: 4.5,
                 },
                 1208: {
-                  slidesPerView: 3,
+                  slidesPerView: 5.5,
                 },
               }}
             >
               {Quotes.map((quote, i) => {
                 return (
-                  <SwiperSlide key={i}>
+                  <SwiperSlide
+                    alignItems="center"
+                    display="flex"
+                    className={styles.swiperWrapper}
+                    >
                     <Card
                       name={quote.name}
                       quote={quote.text}
@@ -94,7 +91,7 @@ export const Testimonials = ({ heading, desc }) => {
           </div>
         </div>
 
-      </Container>
+
     </Box>
 
   )

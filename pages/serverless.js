@@ -11,24 +11,40 @@ import { CenterDualCol } from '../components/dualcol/center'
 import { Carousel } from '../components/carousel'
 import { DescDualCol } from '../components/dualcol/descriptive'
 import { Navbar } from '../components/navbar'
-
+import { GraphicTabBottom } from '../components/graphictab/bottom'
 export default function Serverless() {
   return (
     <div>
-      <Navbar
-      
-      />
+      <Navbar/>
 
-      
-      <Landing
-      heading="Serverless Camp"
-      description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. 100% Free and Open Source"
-      cta1="Apply Now"
-      cta2="Learn More"
-      image="/feature.svg"
-      logoImage="/serverlessLogo.svg"
-      cta1link={' https://www.notion.so/bitproject/Welcome-to-Serverless-Camp-e218f86daf4248509350709cd9fa8017'}
-      cta2link={'https://airtable.com/shr9hT8pEXpAAM00Z'}
+    <GraphicTabBottom
+        heading="Serverless Camp"
+        desc="In our 8-week boot camp, build awesome apps with Serverless functions, JavaScript, and APIs. From IoT heartbeat monitors to face mask detectors, you can build anything with Serverless!"
+        cta1="Apply Now"
+        cta2="Learn More"
+        logoImage="/serverlessLogo.svg"
+        cta1link={' https://www.notion.so/bitproject/Welcome-to-Serverless-Camp-e218f86daf4248509350709cd9fa8017'}
+        cta2link={'https://airtable.com/shr9hT8pEXpAAM00Z'}
+        pic1="/fifi.jpeg"
+        name1="Fifi Teklemedhin"
+        title1="11th Grade"
+        graphic1="https://vimeo.com/570820559"
+
+        pic2="/emily.svg"
+        name2="Emily Chen"
+        title2="Junior, CS"
+        graphic2="/feature.svg"
+
+
+        pic3="/emily.svg"
+        name3="Emily Chen"
+        title3="11th Grade"
+        graphic3="/livecode.png"
+
+        pic4="/emily.svg"
+        name4="Emily Chen"
+        title4="11th Grade"
+        graphic4="/counselorbot.svg"
       />
 
       <Textblock
@@ -37,13 +53,6 @@ export default function Serverless() {
         "
         para2="You just write your code and deploy it. Everything else which is necessary to run your application is done automatically.
         "
-      />
-
-      <OverflowDualCol
-        image="/emily.svg"
-        headerText="Emily built a file sharing app with Azure Functions and CosmosDB for AP exams"
-        action="Read Story &rarr;"
-        actionLink="ACTIONLINK"
       />
 
       <DualCol 

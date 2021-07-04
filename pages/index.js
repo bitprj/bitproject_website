@@ -33,11 +33,10 @@ export default function HomePage() {
         heading="We empower students
         to ship their first projects"
         desc="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
-        pic1="/emily.svg"
-        name1="Emily Chen"
+        pic1="/fifi.jpeg"
+        name1="Fifi Teklemedhin"
         title1="11th Grade"
-        graphic1="/bizman.svg"
-
+        graphic1="https://vimeo.com/570820559"
 
         pic2="/emily.svg"
         name2="Emily Chen"

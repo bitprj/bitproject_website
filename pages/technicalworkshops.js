@@ -11,7 +11,7 @@ export default function Orchestration() {
         description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. 100% Free and Open Source"
         cta1="Apply Now"
         cta2="Learn More"
-        logoImage="/serverlessLogo.svg"
+        logoImage="/tv.png"
         cta1link={' https://www.notion.so/bitproject/Welcome-to-Serverless-Camp-e218f86daf4248509350709cd9fa8017'}
         cta2link={'https://airtable.com/shr9hT8pEXpAAM00Z'}
       />

@@ -39,9 +39,10 @@ export const Testimonials = ({ heading, desc }) => {
           {heading}
         </Heading>
 
-        <Text fontSize="xl" mt="4" mx="auto" textAlign="center">
+        <Text fontSize="lg" mt="4" mx="auto" textAlign="center">
           {desc}
         </Text>
+
 
         <div className="mt-6" >
           <div  display="flex" alignSelf="center">

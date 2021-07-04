@@ -25,7 +25,7 @@ import * as React from 'react'
 import Fade from 'react-reveal/Fade';
 import { ProfileIcon } from '../profileicon'
 
-export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2, pic2, title2, graphic2, name3, pic3, title3, graphic3, name4, title4, pic4, graphic4 }) => {
+export const GraphicTabBottom = ({ heading, desc, logoImage, name1, pic1, title1, graphic1, name2, pic2, title2, graphic2, name3, pic3, title3, graphic3, name4, title4, pic4, graphic4, cta1, cta2, cta1link, cta2link}) => {
     return (
         <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white">
             <Fade>
@@ -33,6 +33,12 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
                 maxW="container.lg"
                 p="15px"
             >
+            {logoImage && <Img
+              alt="Page icon"
+              src={logoImage}
+              width="10%"
+              m="0 auto"
+            />}
                 <Heading
                     as="h1"
                     size="xl"
@@ -46,38 +52,49 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
                     {heading}
                 </Heading>
 
-                <Text fontSize="lg" mt="4" mx="auto" textAlign="center">
+                <Text fontSize="lg" mt="4" mx="auto" textAlign="center" maxW="40rem">
                     {desc}
                 </Text>
+
+                <Stack
+            justify="center"
+            direction={{ base: 'column', md: 'row' }}
+            mt="10"
+            mb="20"
+            spacing="4"
+          >
+            <LightMode>
+              {cta1 && <Button
+                as="a"
+                href={cta1link}
+                size="lg"
+                colorScheme="yellow"
+                px="8"
+                fontWeight="bold"
+                fontSize="md"
+              >
+                {cta1}
+              </Button>}
+              {cta2 && <Button
+                as="a"
+                href={cta2link}
+                size="lg"
+                colorScheme="blue"
+                px="8"
+                fontWeight="bold"
+                fontSize="md"
+              >
+                {cta2}
+              </Button>}
+            </LightMode>
+          </Stack>
 
                 <Tabs
                     orientation={{ base: "vertical", lg: "horizontal" }}
                     mt="2rem"
                     align="center"
                     border="0px"
-    
                 >
-                    <TabList border="0px" >
-                        <Tab mx="1rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
-                        ><ProfileIcon
-                                pic={pic1}
-                                name={name1}
-                                title={title1}
-                            /></Tab>
-                        <Tab mx="1rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
-                        ><ProfileIcon
-                                pic={pic2}
-                                name={name2}
-                                title={title2}
-                            /></Tab>
-                        <Tab mx="1rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
-                        ><ProfileIcon
-                                pic={pic3}
-                                name={name3}
-                                title={title3}
-                            /></Tab>
-                    </TabList>
-
                     <TabPanels mt="5">
                         <TabPanel>
                         <ReactPlayer
@@ -123,9 +140,32 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
                             />
                         </TabPanel>
                     </TabPanels>
+                    <TabList border="0px" >
+                        <Tab mx="1rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
+                        ><ProfileIcon
+                                pic={pic1}
+                                name={name1}
+                                title={title1}
+                            /></Tab>
+                        <Tab mx="1rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
+                        ><ProfileIcon
+                                pic={pic2}
+                                name={name2}
+                                title={title2}
+                            /></Tab>
+                        <Tab mx="1rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
+                        ><ProfileIcon
+                                pic={pic3}
+                                name={name3}
+                                title={title3}
+                            /></Tab>
+                    </TabList>
                 </Tabs>
+
+
             </Container>
             </Fade>
         </Box>
+
     )
 }

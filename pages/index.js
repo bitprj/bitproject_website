@@ -15,7 +15,7 @@ export default function HomePage() {
         //   cta2="Learn More"
         formActionButton="Sign Up"
         formActionButtonLink="ENTER SIGN UP PAGE"
-        image="/home.svg"
+        image="/main.gif"
         cta1link={' https://www.notion.so/bitproject/Welcome-to-Serverless-Camp-e218f86daf4248509350709cd9fa8017'}
         cta2link={'https://airtable.com/shr9hT8pEXpAAM00Z'}
       />

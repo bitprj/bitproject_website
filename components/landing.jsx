@@ -36,7 +36,7 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
 
             <Heading
               as="h1"
-              size="3xl"
+              size="xl"
               fontWeight="extrabold"
               maxW="48rem"
               mx="auto"
@@ -45,7 +45,7 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
             >
               {heading}
             </Heading>
-            <Text fontSize="xl" mt="4" maxW="xl" mx="auto" >
+            <Text fontSize="lg" mt="4" maxW="xl" mx="auto" >
               {description}
             </Text>
           </Box>

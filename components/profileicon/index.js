@@ -45,7 +45,7 @@ export const ProfileIcon = ({ pic, name, title }) => {
                         src={pic}
                         boxSize="50px"
                         objectFit="cover"
-                        borderRadius="15px"
+                        borderRadius="50px"
                     />
                 </Square>
             </Box>

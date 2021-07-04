@@ -50,8 +50,6 @@ export const Testimonials = ({ heading, desc }) => {
               speed={300}
               loop={true}
               slidesPerColumnFill="row"
-
-
               breakpoints={{
                 320: {
                   slidesPerView: 1.5,
@@ -60,13 +58,13 @@ export const Testimonials = ({ heading, desc }) => {
                   slidesPerView: 2.5,
                 },
                 920: {
-                  slidesPerView: 3.5,
+                  slidesPerView: 3.2,
                 },
                 1024: {
-                  slidesPerView: 4.5,
+                  slidesPerView: 3.2,
                 },
                 1208: {
-                  slidesPerView: 5.5,
+                  slidesPerView: 3.2,
                 },
               }}
             >

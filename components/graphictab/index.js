@@ -54,21 +54,22 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
                     mt="2rem"
                     align="center"
                     border="0px"
+    
                 >
-                    <TabList border="0px" mx="1rem">
-                        <Tab p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
+                    <TabList border="0px" >
+                        <Tab mx="1rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
                         ><ProfileIcon
                                 pic={pic1}
                                 name={name1}
                                 title={title1}
                             /></Tab>
-                        <Tab p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
+                        <Tab mx="1rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
                         ><ProfileIcon
                                 pic={pic2}
                                 name={name2}
                                 title={title2}
                             /></Tab>
-                        <Tab p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
+                        <Tab mx="1rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
                         ><ProfileIcon
                                 pic={pic3}
                                 name={name3}

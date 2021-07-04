@@ -31,13 +31,13 @@ export const GraphicTabBottom = ({ heading, desc, logoImage, name1, pic1, title1
             <Fade>
             <Container
                 maxW="container.lg"
-                p="15px"
             >
             {logoImage && <Img
               alt="Page icon"
               src={logoImage}
               width="10%"
               m="0 auto"
+              my="15px"
             />}
                 <Heading
                     as="h1"
@@ -45,6 +45,7 @@ export const GraphicTabBottom = ({ heading, desc, logoImage, name1, pic1, title1
                     fontWeight="extrabold"
                     maxW="32rem"
                     mx="auto"
+                    my="15px"
                     textAlign="center"
                     lineHeight="1.2"
                     letterSpacing="tight"
@@ -52,7 +53,7 @@ export const GraphicTabBottom = ({ heading, desc, logoImage, name1, pic1, title1
                     {heading}
                 </Heading>
 
-                <Text fontSize="lg" mt="4" mx="auto" textAlign="center" maxW="40rem">
+                <Text fontSize="lg" my="15px" mx="auto" textAlign="center" maxW="40rem">
                     {desc}
                 </Text>
 
@@ -60,7 +61,7 @@ export const GraphicTabBottom = ({ heading, desc, logoImage, name1, pic1, title1
             justify="center"
             direction={{ base: 'column', md: 'row' }}
             mt="10"
-            mb="20"
+            mb="10"
             spacing="4"
           >
             <LightMode>
@@ -88,14 +89,13 @@ export const GraphicTabBottom = ({ heading, desc, logoImage, name1, pic1, title1
               </Button>}
             </LightMode>
           </Stack>
-
                 <Tabs
                     orientation={{ base: "vertical", lg: "horizontal" }}
                     mt="2rem"
                     align="center"
                     border="0px"
                 >
-                    <TabPanels mt="5">
+                    <TabPanels mt="10">
                         <TabPanel>
                         <ReactPlayer
                                 url={graphic1}
@@ -140,20 +140,20 @@ export const GraphicTabBottom = ({ heading, desc, logoImage, name1, pic1, title1
                             />
                         </TabPanel>
                     </TabPanels>
-                    <TabList border="0px" >
-                        <Tab mx="1rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
+                    <TabList border="0px" my="15px">
+                        <Tab mx="0.3rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
                         ><ProfileIcon
                                 pic={pic1}
                                 name={name1}
                                 title={title1}
                             /></Tab>
-                        <Tab mx="1rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
+                        <Tab mx="0.3rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
                         ><ProfileIcon
                                 pic={pic2}
                                 name={name2}
                                 title={title2}
                             /></Tab>
-                        <Tab mx="1rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
+                        <Tab mx="0.3rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
                         ><ProfileIcon
                                 pic={pic3}
                                 name={name3}

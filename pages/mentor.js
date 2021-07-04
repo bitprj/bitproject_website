@@ -1,21 +1,34 @@
 import Head from 'next/head'
 import Image from 'next/image'
-
-import { Landing } from '../components/landing.jsx'
+import { GraphicTabBottom } from '../components/graphictab/bottom'
 import { Navbar } from '../components/navbar'
 
 export default function Mentor() {
   return (
     <div>
       <Navbar />
-      <Landing
-        heading="Mentor with Us"
-        description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. 100% Free and Open Source"
+      <GraphicTabBottom
+        heading="Make a Difference. Mentor."
+        desc="We pair awesome engineers with students to give back to their communities."
         cta1="Apply Now"
         cta2="Learn More"
-        image="/livecode.png"
+        logoImage="/counselor.png"
         cta1link={' https://www.notion.so/bitproject/Welcome-to-Serverless-Camp-e218f86daf4248509350709cd9fa8017'}
         cta2link={'https://airtable.com/shr9hT8pEXpAAM00Z'}
+        pic1="/fifi.jpeg"
+        name1="Anthony Chu"
+        title1="Microsoft"
+        graphic1="https://vimeo.com/570820559"
+
+        pic2="/emily.svg"
+        name2="Nočnica Fee"
+        title2="New Relic"
+        graphic2="/feature.svg"
+
+        pic3="/emily.svg"
+        name3="John Kilmister"
+        title3="PureGym"
+        graphic3="/livecode.png"
       />
     </div>
   )

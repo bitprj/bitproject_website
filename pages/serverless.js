@@ -26,25 +26,20 @@ export default function Serverless() {
         cta1link={' https://www.notion.so/bitproject/Welcome-to-Serverless-Camp-e218f86daf4248509350709cd9fa8017'}
         cta2link={'https://airtable.com/shr9hT8pEXpAAM00Z'}
         pic1="/fifi.jpeg"
-        name1="Fifi Teklemedhin"
-        title1="11th Grade"
+        name1="Saving $ on Amazon"
+        title1="Fifi Teklemedhin"
         graphic1="https://vimeo.com/570820559"
 
         pic2="/emily.svg"
-        name2="Emily Chen"
-        title2="Junior, CS"
+        name2="File Sharing for Exams"
+        title2="Emily Chen"
         graphic2="/feature.svg"
 
 
         pic3="/emily.svg"
-        name3="Emily Chen"
-        title3="11th Grade"
+        name3="Predicting Power Usage"
+        title3="Evelyn Chin"
         graphic3="/livecode.png"
-
-        pic4="/emily.svg"
-        name4="Emily Chen"
-        title4="11th Grade"
-        graphic4="/counselorbot.svg"
       />
 
       <Textblock
@@ -118,7 +113,7 @@ export default function Serverless() {
         img3="/tech3.svg"
         img4="/tech4.svg"
       />
-
+ 
     </div>
   )
 }

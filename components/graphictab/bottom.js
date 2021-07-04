@@ -125,17 +125,7 @@ export const GraphicTabBottom = ({ heading, desc, logoImage, name1, pic1, title1
                                 playing="true"
                                 volume="0"
                                 controls="true"
-                                width="100%"
-                                loop="true"
-                            />
-                        </TabPanel>
-                        <TabPanel>
-                            <ReactPlayer
-                                url={graphic4}
-                                playing="true"
-                                volume="0"
-                                controls="true"
-                                width="100%"
+                                width="100vw"
                                 loop="true"
                             />
                         </TabPanel>

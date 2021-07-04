@@ -20,10 +20,9 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
     <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white">
       <Container
       maxW="container.lg"
-      p="15px"
     >
       <Fade>
-      <Box as="section" bg="black" color="white" pt="7.5rem"  >
+      <Box as="section" bg="black"  pb="12" overflow="hidden" color="white">
         <Box maxW={{ base: 'xl', md: '7xl' }} mx="auto" px={{ base: '6', md: '8' }}>
           <Box textAlign="center">
 
@@ -109,7 +108,7 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
               width="100%"
               // maxW="70rem"
               m="0 auto"
-              mt="10rem"
+              mt="2rem"
               maxH="50vh"
               maxW ="60vw"
             />}

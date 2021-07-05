@@ -30,8 +30,8 @@ export const GraphicTabBottom = ({ heading, desc, logoImage, name1, pic1, title1
         <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white">
             <Fade>
                 <Container
-                    maxW="container.lg"
-                >
+                    maxW="container.lg">
+      
                     {logoImage && <Img
                         alt="Page icon"
                         src={logoImage}

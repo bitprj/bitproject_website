@@ -14,8 +14,33 @@ import {
 
 import * as React from 'react'
 import Fade from 'react-reveal/Fade';
+import * as fetch from 'node-fetch'
 
-export const Landing = ({ heading, description,cta1, cta2, image, logoImage, play, cta1link, cta2link, formActionButton, formActionButtonLink }) => {
+export const Landing = ({ heading, description,cta1, cta2, image, logoImage, play, cta1link, cta2link, formResponse, formActionButton, formActionButtonLink }) => {
+  const subscribeEmail = async event => {
+    let email = document.getElementById('email').value
+    console.log(`Subscribing ${email} to newsletter...`)
+
+    const res = await fetch(`/api/subscribe`,
+      {
+        body: JSON.stringify({
+          email: email
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        method: 'POST'
+      }
+    )
+
+    let result = await res.json()
+    document.getElementById('formResponse').innerText = formResponse
+    document.getElementById('email').remove()
+    document.getElementById('signup').remove()
+    console.log(result)
+  }
+
   return (
     <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white">
       <Container
@@ -35,7 +60,7 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
 
             <Heading
               as="h1"
-              size="xl"
+              size="2xl"
               fontWeight="extrabold"
               maxW="48rem"
               mx="auto"
@@ -86,8 +111,10 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
 
               </FormControl>
               <Button
+                id="signup"
                 as="a"
-                href={formActionButtonLink}
+                // href={formActionButtonLink}
+                onClick={subscribeEmail}
                 colorScheme="blue"
                 px="8"
                 fontWeight="bold"
@@ -97,6 +124,10 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
               </Button>
               
               </Box>}
+            <Box textAlign="center">
+              <Text id="formResponse" fontSize="lg" mt="4" maxW="xl" mx="auto" >
+              </Text>
+            </Box>
             </LightMode>
           </Stack>
 
@@ -116,6 +147,5 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
       </Fade>
       </Container>
     </Box>
-    
   )
 }

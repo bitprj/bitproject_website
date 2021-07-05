@@ -1,6 +1,7 @@
 import { Landing } from '../components/landing.jsx'
 import { Carousel } from '../components/carousel'
 import { Navbar } from '../components/navbar'
+import { DualBox } from '../components/dualcol/dualbox'
 import { Footer } from '../components/footer'
 
 export default function Orchestration() {
@@ -25,7 +26,19 @@ export default function Orchestration() {
         img3="/tech3.svg"
         link3="LINK3"
       />
-      <Footer/>
+
+    <DualBox
+      title1="Error in Prod: Adventure in DevOps"
+      companyLogo1 = "/newRelicLogo.svg"
+      image1="/adventure.svg"
+      link1="LINK1"
+      title2="Building a PurrFect API with Serverless"
+      companyLogo2 = "/awsLogo.svg"
+      image2="/cats.png"
+      link2="LINK2"
+    />
+         <Footer/>
+
     </div>
   )
 }

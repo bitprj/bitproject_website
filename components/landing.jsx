@@ -16,7 +16,7 @@ import * as React from 'react'
 import Fade from 'react-reveal/Fade';
 import * as fetch from 'node-fetch'
 
-export const Landing = ({ heading, description,cta1, cta2, image, logoImage, play, cta1link, cta2link, formActionButton, formActionButtonLink }) => {
+export const Landing = ({ heading, description,cta1, cta2, image, logoImage, play, cta1link, cta2link, formResponse, formActionButton, formActionButtonLink }) => {
   const subscribeEmail = async event => {
     let email = document.getElementById('email').value
     console.log(`Subscribing ${email} to newsletter...`)
@@ -35,8 +35,10 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
     )
 
     let result = await res.json()
+    document.getElementById('formResponse').innerText = formResponse
+    document.getElementById('email').remove()
+    document.getElementById('signup').remove()
     console.log(result)
-    location.reload()
   }
 
   return (
@@ -109,6 +111,7 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
 
               </FormControl>
               <Button
+                id="signup"
                 as="a"
                 // href={formActionButtonLink}
                 onClick={subscribeEmail}
@@ -121,6 +124,10 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
               </Button>
               
               </Box>}
+            <Box textAlign="center">
+              <Text id="formResponse" fontSize="lg" mt="4" maxW="xl" mx="auto" >
+              </Text>
+            </Box>
             </LightMode>
           </Stack>
 

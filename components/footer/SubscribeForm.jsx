@@ -53,9 +53,9 @@ export const SubscribeForm = () => {
           </Text>
         </Box>
 
-        <FormControl id="emailFooter" isRequired>
+        <FormControl  isRequired>
           <Input
-            id="email"
+            id="emailFooter"
             roundedEnd={{
               md: '0',
             }}
@@ -65,7 +65,7 @@ export const SubscribeForm = () => {
             }}
             flex="1"
             bg="{mode('white', 'gray.900')}"
-            placeholder="Your email"
+            placeholder="email"
             color="grey"
           />
         </FormControl>

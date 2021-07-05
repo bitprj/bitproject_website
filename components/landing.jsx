@@ -60,7 +60,7 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
 
             <Heading
               as="h1"
-              size="xl"
+              size="2xl"
               fontWeight="extrabold"
               maxW="48rem"
               mx="auto"

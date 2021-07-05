@@ -8,11 +8,9 @@ import {
 } from '@chakra-ui/react'
 
 import * as React from 'react'
+import { HighlightBox } from '../dualcol/_box'
 
-export const Carousel = ({ img1, img2, img3, link1, link2, link3 }) => {
-  var bkg1 = { background: `linear-gradient(0deg, rgb(0,0,0) 10%, rgba(0, 0, 0, 0)), url(${img1})` };
-  var bkg2 = { background: `linear-gradient(0deg, rgb(0,0,0) 10%, rgba(0, 0, 0, 0)), url(${img2})` };
-  var bkg3 = { background: `linear-gradient(0deg, rgb(0,0,0) 10%, rgba(0, 0, 0, 0)), url(${img3})` };
+export const Carousel = ({ title1, link1, companyLogo1, img1, title2, link2, companyLogo2, img2, title3, link3, companyLogo3, img3 }) => {
   
   return (
     <Box as="section" bg="black" color="white">
@@ -20,43 +18,31 @@ export const Carousel = ({ img1, img2, img3, link1, link2, link3 }) => {
         maxW="container.lg"
         p="15px"
       >
-        <SimpleGrid minChildWidth="180px" spacing="40px" bg="black">
-        <Link href={link1} _hover="none">
-          <Box w="100%"
-              style={bkg1} pt="2rem" pb="5.5rem" maxW="xl" px="1rem">
-              <Text fontSize="2xl" fontWeight="800" color="white">
-                Dev ops for beginners
-              </Text>
-              <Text fontSize="md" mt="4" maxW="xl" mx="auto" color="white">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              </Text>
-            </Box>
+        <SimpleGrid minChildWidth="200px" spacing="20px" bg="black">
+          <Link href={link1} _hover="none">
+            <HighlightBox 
+              title={title1}
+              companyLogo = {companyLogo1}
+              image = {img1}
+            />
           </Link>
 
-          <Link href={link2} _hover="none">
-            <Box w="100%"
-              style={bkg2} pt="2rem" pb="5.5rem" maxW="xl" px="1rem">
-              <Text fontSize="2xl" fontWeight="800" color="white">
-                Dev ops for beginners
-              </Text>
-              <Text fontSize="md" mt="4" maxW="xl" mx="auto" color="white">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              </Text>
-            </Box>
-          </Link>
+            <Link href={link2} _hover="none">
+            <HighlightBox 
+              title={title2}
+              companyLogo = {companyLogo2}
+              image = {img2}
+            />
+            </Link>
 
-          <Link href={link3} _hover="none">
-            <Box w="100%"
-              style={bkg3} pt="2rem" pb="5.5rem" maxW="xl" px="1rem">
-              <Text fontSize="2xl" fontWeight="800" color="white">
-                Dev ops for beginners
-              </Text>
-              <Text fontSize="md" mt="4" maxW="xl" mx="auto" color="white">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              </Text>
-            </Box>
-          </Link>
-        </SimpleGrid>
+            <Link href={link3} _hover="none">
+            <HighlightBox 
+              title={title3}
+              companyLogo = {companyLogo3}
+              image = {img3}
+            />
+            </Link>
+          </SimpleGrid>
       </Container>
     </Box>
 

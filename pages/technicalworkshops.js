@@ -19,12 +19,20 @@ export default function Orchestration() {
       />
 
       <Carousel
-        img1="/tech1.svg"
+        title1="Building a purrfect thingy"
         link1="LINK1"
-        img2="/tech2.svg"
-        link2="LINK2"
-        img3="/tech3.svg"
-        link3="LINK3"
+        companyLogo1="/newRelicLogo.svg"
+        img1="/cats.png"
+
+        title2="Building a purrfect thingy"
+        link2="LINK1"
+        companyLogo2="/awsLogo.svg"
+        img2="/adventure.svg"
+
+        title3="Building a purrfect thingy"
+        link3="LINK1"
+        companyLogo3="/newRelicLogo.svg"
+        img3="/cats.png"
       />
 
     <DualBox

@@ -102,7 +102,7 @@ export const Footer = () => {
               >
                 Subscribe to our newsletter!
           </Text>
-              <Text lineHeight="tall" fontSize="xl">
+              <Text mb="3" lineHeight="tall" fontSize="xl">
                 Stay up to date with all of our resources and opportunities. We promise we won&apos;t spam!
           </Text>
               <SubscribeForm />

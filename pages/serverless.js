@@ -1,15 +1,8 @@
-import Head from 'next/head'
-import Image from 'next/image'
 
-import { Landing } from '../components/landing.jsx'
-// import Layout from '../components/layout'
-import { Hero } from '../components/hero'
 import { Textblock } from '../components/textblock'
 import { DualCol } from '../components/dualcol'
-import { OverflowDualCol } from '../components/overflowdualcol'
 import { CenterDualCol } from '../components/dualcol/center'
 import { Carousel } from '../components/carousel'
-import { DescDualCol } from '../components/dualcol/descriptive'
 import { Navbar } from '../components/navbar'
 import { GraphicTabBottom } from '../components/graphictab/bottom'
 import { Footer } from '../components/footer'
@@ -72,7 +65,7 @@ export default function Serverless() {
         actionLink="ACTIONLINK"
       />
        <DualCol 
-        preheading="week3"
+        preheading="week 3"
         heading="Storing & Retrieving Data"
         para1="Learn how to interact with databases add exciting and functional features to your projects."
         para2="Build projects with Blob Storage and a NoSQL database to store data received through your serverless function!"
@@ -83,7 +76,7 @@ export default function Serverless() {
         actionLink="ACTIONLINK"
       />
        <DualCol 
-        preheading="week4"
+        preheading="week 4"
         heading="Building a Frontend"
         para1="Learn how to build a webpage to accept, display, and retrieve user input."
         para2="Build a frontend with HTML/CSS/JS to interact with your serverless functions!"

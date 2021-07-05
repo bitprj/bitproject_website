@@ -1,5 +1,3 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import { GraphicTabBottom } from '../components/graphictab/bottom'
 import { Navbar } from '../components/navbar'
 import { Footer } from '../components/footer'

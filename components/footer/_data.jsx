@@ -7,7 +7,7 @@ export const links = [
     title: 'GET INVOLVED',
     links: [
       {
-        label: 'Student Application',
+        label: 'Students',
         href: '#',
       },
       {

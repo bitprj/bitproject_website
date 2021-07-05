@@ -16,14 +16,13 @@ export const LinkGroup = (props) => {
           letterSpacing="wide"
           color="#585858"
           fontSize="xl"
-          // border="2px solid yellow"
-          w="20rem"
+          w="10rem"
         >
           {title}
         </Text>
       <Stack
         as="ul"
-        w="20rem"
+        w="10rem"
         spacing={{
           base: 2,
           md: 4,

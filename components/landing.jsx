@@ -14,8 +14,30 @@ import {
 
 import * as React from 'react'
 import Fade from 'react-reveal/Fade';
+import * as fetch from 'node-fetch'
 
 export const Landing = ({ heading, description,cta1, cta2, image, logoImage, play, cta1link, cta2link, formActionButton, formActionButtonLink }) => {
+  const subscribeEmail = async event => {
+    let email = document.getElementById('email').value
+    console.log(`Subscribing ${email} to newsletter...`)
+
+    const res = await fetch(`/api/subscribe`,
+      {
+        body: JSON.stringify({
+          email: email
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        method: 'POST'
+      }
+    )
+
+    let result = await res.json()
+    location.reload()
+  }
+
   return (
     <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white">
       <Container
@@ -87,7 +109,8 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
               </FormControl>
               <Button
                 as="a"
-                href={formActionButtonLink}
+                // href={formActionButtonLink}
+                onClick={subscribeEmail}
                 colorScheme="blue"
                 px="8"
                 fontWeight="bold"
@@ -116,6 +139,5 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
       </Fade>
       </Container>
     </Box>
-    
   )
 }

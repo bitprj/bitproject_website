@@ -3,6 +3,7 @@ import { TriCol } from '../components/tricol'
 import { GraphicTab } from '../components/graphictab'
 import { Testimonials } from '../components/testimonials'
 import { Navbar } from '../components/navbar'
+import { Footer } from '../components/footer'
 
 export default function HomePage() {
   return (
@@ -58,6 +59,8 @@ export default function HomePage() {
         heading="We make a difference"
         desc="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
       />
+
+      <Footer/>
 
     </div>
   )

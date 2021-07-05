@@ -12,6 +12,8 @@ import { Carousel } from '../components/carousel'
 import { DescDualCol } from '../components/dualcol/descriptive'
 import { Navbar } from '../components/navbar'
 import { GraphicTabBottom } from '../components/graphictab/bottom'
+import { Footer } from '../components/footer'
+
 export default function Serverless() {
   return (
     <div>
@@ -107,6 +109,7 @@ export default function Serverless() {
         img3="/tech3.svg"
         img4="/tech4.svg"
       />
+      <Footer/>
  
     </div>
   )

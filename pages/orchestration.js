@@ -7,6 +7,7 @@ import { Hero } from '../components/hero'
 import { Textblock } from '../components/textblock'
 import { DualCol } from '../components/dualcol'
 import { Navbar } from '../components/navbar'
+import { Footer } from '../components/footer'
 
 export default function Orchestration() {
   return (
@@ -22,6 +23,7 @@ export default function Orchestration() {
         cta1link={' https://www.notion.so/bitproject/Welcome-to-Serverless-Camp-e218f86daf4248509350709cd9fa8017'}
         cta2link={'https://airtable.com/shr9hT8pEXpAAM00Z'}
       />
+      <Footer/>
     </div>
   )
 }

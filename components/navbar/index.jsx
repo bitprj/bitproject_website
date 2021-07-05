@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from '@chakra-ui/react'
+import { Box, Flex, Text, Img } from '@chakra-ui/react'
 import * as React from 'react'
 import { NavContent } from './NavContent'
 
@@ -25,12 +25,20 @@ export const Navbar = () => (
           height="100%"
         >
           <Box as="a" href="/" rel="home">
+            <Img
+              src="/logo.png"
+              h="9"
+              display="inline"
+              mr="3"
+              mt="-1"
+            />
             <Text 
               as="h1"
               // size="3xl"
               fontSize="xl"
               fontWeight="extrabold"
               maxW="48rem"
+              display="inline"
               >Bit Project</Text>
           </Box>
           

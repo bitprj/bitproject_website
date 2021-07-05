@@ -10,8 +10,9 @@ import {
 import * as React from 'react'
 
 export const SubscribeForm = () => {
+
   const subscribeEmail = async event => {
-    let email = document.getElementById('email').value
+    let email = document.getElementById('emailFooter').value
     console.log(`Subscribing ${email} to newsletter...`)
 
     const res = await fetch(`/api/subscribe`,
@@ -28,9 +29,9 @@ export const SubscribeForm = () => {
     )
 
     let result = await res.json()
-    document.getElementById('formResponse').innerText = "Thanks! See you soon 👋"
-    document.getElementById('email').remove()
-    document.getElementById('signup').remove()
+    document.getElementById('formResponseFooter').innerText = "Thanks! See you soon 👋"
+    document.getElementById('emailFooter').remove()
+    document.getElementById('signupFooter').remove()
     console.log(result)
   }
 
@@ -47,16 +48,14 @@ export const SubscribeForm = () => {
         }}
         maxW="xl"
       >
-        <Box textAlign="center" w="100%" ml="-1.5">
-              <Text id="formResponse" fontSize="lg" mt="4">
-              </Text>
-            </Box>
-        <FormControl id="email" marginEnd="-1px">
-          
-          <FormLabel srOnly>Enter your email</FormLabel>
-          <Input
-          id="email"
+        <Box textAlign="center" >
+          <Text id="formResponseFooter" fontSize="lg" mt="4">
+          </Text>
+        </Box>
 
+        <FormControl id="emailFooter" isRequired>
+          <Input
+            id="email"
             roundedEnd={{
               md: '0',
             }}
@@ -67,10 +66,11 @@ export const SubscribeForm = () => {
             flex="1"
             bg="{mode('white', 'gray.900')}"
             placeholder="Your email"
+            color="grey"
           />
         </FormControl>
         <Button
-          id="signup"
+          id="signupFooter"
           onClick={subscribeEmail}
           w={{
             base: 'full',
@@ -88,7 +88,7 @@ export const SubscribeForm = () => {
         >
           Subscribe
       </Button>
-      
+
       </Box>
     </form>
   )

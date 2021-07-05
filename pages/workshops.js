@@ -3,8 +3,23 @@ import { Carousel } from '../components/carousel'
 import { Navbar } from '../components/navbar'
 import { DualBox } from '../components/dualcol/dualbox'
 import { Footer } from '../components/footer'
+import { HighlightBox } from '../components/dualcol/_box'
+import { getFiles, getFileBySlug, getAllFilesFrontMatter } from '../lib/mdx'
 
-export default function Orchestration() {
+export default function Workshops() {
+
+  const filteredBlogPosts = posts
+    .sort(
+      (a, b) =>
+        Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
+    )
+    .filter((frontMatter) =>
+      frontMatter.title.toLowerCase().includes(searchValue.toLowerCase()) ||
+      frontMatter.summary.toLowerCase().includes(searchValue.toLowerCase())
+    )
+
+
+
   return (
     <div>
       <Navbar />
@@ -35,18 +50,24 @@ export default function Orchestration() {
         img3="/cats.png"
       />
 
-    <DualBox
-      title1="Error in Prod: Adventure in DevOps"
-      companyLogo1 = "/newRelicLogo.svg"
-      image1="/adventure.svg"
-      link1="LINK1"
-      title2="Building a PurrFect API with Serverless"
-      companyLogo2 = "/awsLogo.svg"
-      image2="/cats.png"
-      link2="LINK2"
-    />
-         <Footer/>
+      <SimpleGrid minChildWidth="400px" spacing="40px">
+
+      {filteredBlogPosts.map((frontMatter) => (
+        <HighlightBox title={frontMatter.title} companyLogo={frontMatter.image} image={frontMatter.image}/>
+      ))}
+
+      </SimpleGrid>
+
+
+      <Footer />
 
     </div>
   )
+}
+
+
+export async function getStaticProps() {
+  const posts = await getAllFilesFrontMatter('workshops')
+
+  return { props: { posts } }
 }

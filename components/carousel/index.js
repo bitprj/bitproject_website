@@ -18,7 +18,7 @@ export const Carousel = ({ title1, link1, companyLogo1, img1, title2, link2, com
         maxW="container.lg"
         p="15px"
       >
-        <SimpleGrid minChildWidth="200px" spacing="20px" bg="black">
+        <SimpleGrid minChildWidth="300px" spacing="20px" bg="black">
           <Link href={link1} _hover="none">
             <HighlightBox 
               title={title1}
@@ -32,6 +32,22 @@ export const Carousel = ({ title1, link1, companyLogo1, img1, title2, link2, com
               title={title2}
               companyLogo = {companyLogo2}
               image = {img2}
+            />
+            </Link>
+
+            <Link href={link3} _hover="none">
+            <HighlightBox 
+              title={title3}
+              companyLogo = {companyLogo3}
+              image = {img3}
+            />
+            </Link>
+
+            <Link href={link3} _hover="none">
+            <HighlightBox 
+              title={title3}
+              companyLogo = {companyLogo3}
+              image = {img3}
             />
             </Link>
 

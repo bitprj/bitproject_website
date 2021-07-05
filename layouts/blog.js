@@ -51,7 +51,7 @@ export default function BlogLayout({ children, frontMatter }) {
         <>
         <Box h={1}  as="div" bgGradient="linear(to-r, green.200, pink.500)" position="sticky" top={0} zIndex={100} w={`${width}%`} ></Box>
         <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white">
-            <Container
+        <Container
             maxW="container.lg"
             p="15px"
             >
@@ -79,10 +79,11 @@ export default function BlogLayout({ children, frontMatter }) {
                             heading={frontMatter.title}
                             profile={frontMatter.by}
                             desc={frontMatter.summary}
-                            pic={frontMatter.Image}
+                            pic={frontMatter.image}
                             
                             // cta1={frontMatter}
                         />
+                        
                         
                         {/* <Heading letterSpacing="tight" mb={2} as="h1" size="2xl">
                             {frontMatter.title}

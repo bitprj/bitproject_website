@@ -35,6 +35,7 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
     )
 
     let result = await res.json()
+    console.log(result)
     location.reload()
   }
 

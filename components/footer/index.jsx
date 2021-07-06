@@ -15,6 +15,7 @@ import { links, socialLinks } from './_data'
 import { LinkGroup } from './LinkGroup'
 import { SubscribeForm } from './SubscribeForm'
 import Fade from 'react-reveal/Fade';
+import Image from 'next/image'
 
 export const Footer = () => {
   return (
@@ -148,9 +149,10 @@ export const Footer = () => {
               }}
             >
               <Link href="/" w="4rem" mr="-2rem">
-                <Img
+                <Image
                   src="/logo.png"
-                  h="3rem"
+                  height={43.51}
+                  width={48}
                 />
               </Link>
               <HStack

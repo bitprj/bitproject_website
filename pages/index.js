@@ -13,10 +13,7 @@ export default function HomePage() {
         heading="We equip students with technical superpowers"
         description="We provide cutting-edge, open source learning experiences to prepare students for careers in tech."
         formActionButton="Sign Up"
-        // formActionButtonLink="ENTER SIGN UP PAGE"
         image="/main.gif"
-        cta1link={' https://www.notion.so/bitproject/Welcome-to-Serverless-Camp-e218f86daf4248509350709cd9fa8017'}
-        cta2link={'https://airtable.com/shr9hT8pEXpAAM00Z'}
         formResponse="Thanks! See you soon 👋"
       />
 

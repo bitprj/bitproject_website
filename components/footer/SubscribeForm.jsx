@@ -7,6 +7,7 @@ import {
   useColorModeValue as mode,
 } from '@chakra-ui/react'
 import * as React from 'react'
+import { motion } from "framer-motion"
 
 export const SubscribeForm = () => {
 
@@ -69,30 +70,39 @@ export const SubscribeForm = () => {
               lg: '0',
             }}
             flex="1"
-            bg="{mode('white', 'gray.900')}"
             placeholder="email"
-            color="grey"
+            border="1px solid"
+            borderColor="grey"
+            _placeholder={{ color: '#9e9d9d' }}
+            color="#9e9d9d"
+            _focus=""
+            _hover=""
           />
         </FormControl>
-        <Button
-          id="signupFooter"
-          onClick={subscribeEmail}
-          w={{
-            base: 'full',
-            md: 'auto',
-          }}
-          fontSize="sm"
-          px="8"
-          roundedStart={{
-            md: '0',
-          }}
-          bg="#03A1EE"
-          textTransform="uppercase"
-          fontWeight="bold"
-          letterSpacing="wide"
-        >
-          Subscribe
-      </Button>
+        <motion.a whileHover={{ scale: 1.1 }}>
+          <Button 
+            id="signupFooter"
+            onClick={subscribeEmail}
+            w={{
+              base: 'full',
+              md: 'auto',
+            }}
+            fontSize="sm"
+            px="8"
+            roundedStart={{
+              md: '0',
+            }}
+            bg="grey"
+            color="white"
+            border="1px solid grey"
+            fontWeight="bold"
+            letterSpacing="wide"
+            _hover=""
+            _highlighted=""
+          >
+            SUBSCRIBE
+        </Button>
+      </motion.a>
 
       </Box>
       <Box textAlign="center" w="100%">

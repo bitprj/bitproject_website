@@ -1,4 +1,4 @@
-
+import React, { useState } from 'react'
 import { Textblock } from '../components/textblock'
 import { DualCol } from '../components/dualcol'
 import { CenterDualCol } from '../components/dualcol/center'
@@ -6,12 +6,33 @@ import { Carousel } from '../components/carousel'
 import { Navbar } from '../components/navbar'
 import { GraphicTabBottom } from '../components/graphictab/bottom'
 import { Footer } from '../components/footer'
+import { HighlightBox } from '../components/dualcol/_box'
+import { getAllFilesFrontMatter } from '../lib/mdx'
+import {
+  SimpleGrid,
+  Container,
+  Box,
+} from '@chakra-ui/react'
+import BlogLayout from '../layouts/blog'
 
-export default function Serverless() {
+export default function Serverless({ posts }) {
+
+  const [searchValue] = useState('')
+  const filteredBlogPosts = posts
+    .sort(
+      (a, b) =>
+        Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
+    )
+    .filter((frontMatter) =>
+      frontMatter.title.toLowerCase().includes(searchValue.toLowerCase()) ||
+      frontMatter.summary.toLowerCase().includes(searchValue.toLowerCase())
+    )
+
+
   return (
     <div>
-      <Navbar/>
-    <GraphicTabBottom
+      <Navbar />
+      <GraphicTabBottom
         heading="Serverless Camp"
         desc="In our 8-week boot camp, build awesome apps with Serverless functions, JavaScript, and APIs. From IoT heartbeat monitors to face mask detectors, you can build anything with Serverless!"
         cta1="Apply Now"
@@ -41,7 +62,7 @@ export default function Serverless() {
         para1="Serverless involves harnessing the power of cloud computing and building large applications quickly without having to manage servers."
         para2="Camp is an 8-week interactive coding bootcamp designed to help you gain real-world technical skills through project-based learning and build awesome professional connections."
       />
-      <DualCol 
+      <DualCol
         preheading="week 1"
         heading="Git & Serverless Basics"
         para1="Set up your development environment with developer tools like Github and Postman."
@@ -51,7 +72,7 @@ export default function Serverless() {
         li3="🐸 [TOP SECRET] API"
         img="/week1.gif"
       />
-      <DualCol 
+      <DualCol
         preheading="week 2"
         heading="Working with APIs"
         para1="Learn how to read documentation, experiment, and most importantly Google."
@@ -60,7 +81,7 @@ export default function Serverless() {
         li2="🎶 Song4u.js"
         img="/week2.gif"
       />
-       <DualCol 
+      <DualCol
         preheading="week 3"
         heading="Storing & Retrieving Data"
         para1="Learn how to interact with databases add exciting and functional features to your projects."
@@ -69,7 +90,7 @@ export default function Serverless() {
         li2="🤫 Deep Secrets API"
         img="/week3.gif"
       />
-       <DualCol 
+      <DualCol
         preheading="week 4"
         heading="Building a Frontend"
         para1="Learn how to build a webpage to accept, display, and retrieve user input."
@@ -78,24 +99,44 @@ export default function Serverless() {
         li2="🐈 twoCatz: The App"
         img="/week4.gif"
       />
-    <CenterDualCol
-      heading="Build your Own Project"
-      description="Demonstrate your new competence with cloud computing by developing your own project: it can solve problems, be fun, or do all of the above!"
-      cta1="Sample Projects"
-      cta2="Learn More"
-      image="/feature.svg"
-      logoImage="/serverlessLogo.svg"
-      cta1link={' https://www.notion.so/bitproject/Welcome-to-Serverless-Camp-e218f86daf4248509350709cd9fa8017'}
-      cta2link={'https://airtable.com/shr9hT8pEXpAAM00Z'}
+      <CenterDualCol
+        heading="Build your Own Project"
+        description="Demonstrate your new competence with cloud computing by developing your own project: it can solve problems, be fun, or do all of the above!"
+        cta1="Sample Projects"
+        cta2="Learn More"
+        image="/feature.svg"
+        logoImage="/serverlessLogo.svg"
+        cta1link={' https://www.notion.so/bitproject/Welcome-to-Serverless-Camp-e218f86daf4248509350709cd9fa8017'}
+        cta2link={'https://airtable.com/shr9hT8pEXpAAM00Z'}
       />
-    <Carousel 
-        img1="/tech1.svg"
-        img2="/tech2.svg"
-        img3="/tech3.svg"
-        img4="/tech4.svg"
-      />
-      <Footer/>
- 
+      <Box as="section" bg="black" color="white">
+        <Container
+          maxW="container.xl"
+        >
+          <SimpleGrid minChildWidth="350px" spacing="40px" bg="black" justify="center" >
+            {filteredBlogPosts.map((frontMatter) => (
+              <HighlightBox key={frontMatter.title} title={frontMatter.title} companyLogo={frontMatter.companyLogo} image={frontMatter.image} link={`projects/${frontMatter.slug}`} mx="auto" />
+            ))}
+          </SimpleGrid>
+        </Container>
+      </Box>
+
+      <Footer />
+
+
     </div>
   )
+}
+
+export function Blog({ mdxSource, frontMatter }) {
+  const content = hydrate(mdxSource, {
+    components: MDXComponents
+  })
+
+  return <BlogLayout frontMatter={frontMatter}>{content}</BlogLayout>
+}
+
+export async function getStaticProps() {
+  const posts = await getAllFilesFrontMatter('workshops')
+  return { props: { posts } }
 }

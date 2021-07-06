@@ -6,19 +6,26 @@ import {
 } from '@chakra-ui/react'
 import * as React from 'react'
 
-export const HighlightBox = ({ title, companyLogo, image }) => {
+export const HighlightBox = ({ title, companyLogo, image, link }) => {
     let bkgUrl = `url(${image})`
     return (
-        <Box border="2px solid #343539" overflow="hidden" bg="black" mx="auto">
+        <Box  
+            overflow="hidden" 
+            bg="black" 
+            mx="auto"
+            as="a"
+            href={link}
+            transition="all 0.2s"
+            _hover={{ backgroundColor: "#222326" }}
+        >
             <Box p="6">
                 <Box
                     mt="1"
                     fontWeight="semibold"
-                    as="h4"
                     lineHeight="tight"
-                    h="12rem"
+                    h="8rem"
                 >
-                    <Text fontSize="3xl" fontWeight="800" color="white">
+                    <Text fontSize="2xl" fontWeight="800" color="white">
                         {title}
                     </Text>
                     {companyLogo && <>

@@ -49,9 +49,7 @@ export default function Workshops({ posts }) {
       <SimpleGrid minChildWidth="350px" spacing="40px" bg="black" justify="center" >
         {filteredBlogPosts.map((frontMatter) => (
           // <Link href={`blog/${slug}`}>
-          <Link href={`workshops/${frontMatter.slug}`} key={frontMatter.title}>
-            <HighlightBox  title={frontMatter.title} companyLogo={frontMatter.companyLogo} image={frontMatter.image} mx="auto"/>
-          </Link>
+            <HighlightBox  title={frontMatter.title} companyLogo={frontMatter.companyLogo} image={frontMatter.image} link={`workshops/${frontMatter.slug}`} mx="auto"/>
         ))}
       </SimpleGrid>
       </Container>

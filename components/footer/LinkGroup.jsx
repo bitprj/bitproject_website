@@ -1,5 +1,6 @@
 import { Box, Stack, Text } from '@chakra-ui/react'
 import * as React from 'react'
+import { motion } from "framer-motion"
 
 export const LinkGroup = (props) => {
   const { data } = props
@@ -14,7 +15,7 @@ export const LinkGroup = (props) => {
           }}
           fontWeight="bold"
           letterSpacing="wide"
-          color="#585858"
+          color="white"
           fontSize="xl"
           w="10rem"
         >
@@ -30,14 +31,11 @@ export const LinkGroup = (props) => {
         listStyleType="none"
       >
         {links.map((link, idx) => (
-          <Box as="li" key={idx}>
+          <motion.div as="li" key={idx} whileHover={{ scale: 1.1 }}>
             <Text
               as="a"
               href={link.href}
               fontSize="lg"
-              _hover={{
-                textDecoration: 'underline',
-              }}
             >
               <span>{link.label}</span>
               {link.badge && (
@@ -46,7 +44,7 @@ export const LinkGroup = (props) => {
                 </Box>
               )}
             </Text>
-          </Box>
+          </motion.div>
         ))}
       </Stack>
     </Box>

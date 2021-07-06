@@ -81,7 +81,7 @@ const DesktopNavContent = (props) => {
         // </NavLink.Desktop>
         
         // <motion.a key={index} whileHover={{ scale: 1.1  }}>
-          <NavLink.Desktop  href={link.href} fontSize="xl" fontWeight="bold" _hover="">
+          <NavLink.Desktop key={index} href={link.href} fontSize="xl" fontWeight="bold" _hover="">
                 {link.label}
           </NavLink.Desktop>
         // </motion.a>

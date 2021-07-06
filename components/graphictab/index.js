@@ -1,18 +1,9 @@
 import {
     Box,
-    Button,
-    Circle,
     Heading,
-    Img,
-    Stack,
     Text,
-    VisuallyHidden,
     useColorModeValue as mode,
-    LightMode,
-    Center,
     Container,
-    FormControl,
-    FormLabel,
     Tabs,
     TabList,
     Tab,
@@ -24,6 +15,7 @@ import ReactPlayer from "react-player"
 import * as React from 'react'
 import Fade from 'react-reveal/Fade';
 import { ProfileIcon } from '../profileicon'
+import { motion } from "framer-motion"
 
 export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2, pic2, title2, graphic2, name3, pic3, title3, graphic3, name4, title4, pic4, graphic4 }) => {
     return (
@@ -58,24 +50,31 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
     
                 >
                     <TabList border="0px" >
-                        <Tab mx="1rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
-                        ><ProfileIcon
-                                pic={pic1}
-                                name={name1}
-                                title={title1}
-                            /></Tab>
-                        <Tab mx="1rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
-                        ><ProfileIcon
-                                pic={pic2}
-                                name={name2}
-                                title={title2}
-                            /></Tab>
+                        <motion.div whileHover={{ scale: 1.1 }}>
+                            <Tab mx="1rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
+                            ><ProfileIcon
+                                    pic={pic1}
+                                    name={name1}
+                                    title={title1}
+                                /></Tab>
+                        </motion.div>
+                        <motion.div whileHover={{ scale: 1.1 }}>
+                            <Tab mx="1rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
+                            ><ProfileIcon
+                                    pic={pic2}
+                                    name={name2}
+                                    title={title2}
+                                /></Tab>
+                        </motion.div>
+
+                        <motion.div whileHover={{ scale: 1.1 }}>
                         <Tab mx="1rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
                         ><ProfileIcon
                                 pic={pic3}
                                 name={name3}
                                 title={title3}
                             /></Tab>
+                        </motion.div>
                     </TabList>
 
                     <TabPanels mt="5">

@@ -23,7 +23,7 @@ export const HighlightBox = ({ title, companyLogo, image, link }) => {
                     mt="1"
                     fontWeight="semibold"
                     lineHeight="tight"
-                    h="8rem"
+                    h="10rem"
                 >
                     <Text fontSize="2xl" fontWeight="800" color="white">
                         {title}

@@ -50,7 +50,7 @@ export default function Workshops({ posts }) {
         {filteredBlogPosts.map((frontMatter) => (
           // <Link href={`blog/${slug}`}>
           <Box key={frontMatter.title}>
-            <HighlightBox  title={frontMatter.title} companyLogo={frontMatter.companyLogo} image={frontMatter.image} link=={`workshops/${frontMatter.slug}`} mx="auto"/>
+            <HighlightBox  title={frontMatter.title} companyLogo={frontMatter.companyLogo} image={frontMatter.image} link={`workshops/${frontMatter.slug}`} mx="auto"/>
           </Box>
         ))}
       </SimpleGrid>

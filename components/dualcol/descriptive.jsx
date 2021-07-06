@@ -52,11 +52,9 @@ export const DescDualCol = ({ categoryLogo, heading, desc, profile, profileLogo,
                         <Box
                             w={{
                                 base: 'full',
-                                lg: '560px',
                             }}
                             h={{
                                 base: 'auto',
-                                lg: '560px',
                             }}
                             display="flex"
                             alignItems="center"
@@ -64,10 +62,7 @@ export const DescDualCol = ({ categoryLogo, heading, desc, profile, profileLogo,
 
 
                             <Box
-                                flex="1"
-                                maxW={{
-                                    lg: '520px',
-                                }}
+                                
                             >
                                 {categoryLogo && <Wrap>
                                     <WrapItem>
@@ -84,7 +79,7 @@ export const DescDualCol = ({ categoryLogo, heading, desc, profile, profileLogo,
                                 <Wrap>
                                     <WrapItem>
                                         {profileLogo && 
-                                            <Avatar src={profileLogo} bg="transparent"  />}
+                                            <Avatar src={profileLogo} bg="transparent" />}
                                         
                                         {profile && <Text fontSize="xl" my="2" ml="2" color="#CDCDD2">
                                             {profile}

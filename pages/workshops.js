@@ -11,8 +11,10 @@ import {
   Container,
   Box,
   Grid,
+  Link,
   GridItem
 } from '@chakra-ui/react'
+import BlogLayout from '../layouts/blog'
 
 export default function Workshops({ posts }) {
   const [searchValue, setSearchValue] = useState('')
@@ -39,31 +41,16 @@ export default function Workshops({ posts }) {
         cta2link={'https://airtable.com/shr9hT8pEXpAAM00Z'}
       />
 
-      {/* <Carousel
-        title1="Building a purrfect thingy"
-        link1="LINK1"
-        companyLogo1="/newRelicLogo.svg"
-        img1="/cats.png"
-
-        title2="Building a purrfect thingy"
-        link2="LINK1"
-        companyLogo2="/awsLogo.svg"
-        img2="/adventure.svg"
-
-        title3="Building a purrfect thingy"
-        link3="LINK1"
-        companyLogo3="/newRelicLogo.svg"
-        img3="/cats.png"
-      /> */}
-
-      <Box as="section" bg="black" color="white" border="2px solid red">
+      <Box as="section" bg="black" color="white">
             <Container
               maxW="container.xl"
-              border="2px solid yellow"
             >
       <SimpleGrid minChildWidth="350px" spacing="40px" bg="black" justify="center" >
         {filteredBlogPosts.map((frontMatter) => (
-            <HighlightBox key={frontMatter.title} title={frontMatter.title} companyLogo={frontMatter.companyLogo} image={frontMatter.image} mx="auto"/>
+          // <Link href={`blog/${slug}`}>
+          <Link href={`workshops/${frontMatter.slug}`} key={frontMatter.title}>
+            <HighlightBox  title={frontMatter.title} companyLogo={frontMatter.companyLogo} image={frontMatter.image} mx="auto"/>
+          </Link>
         ))}
       </SimpleGrid>
       </Container>
@@ -84,22 +71,7 @@ export function Blog({ mdxSource, frontMatter }) {
   return <BlogLayout frontMatter={frontMatter}>{content}</BlogLayout>
 }
 
-
-// export async function getStaticPaths() {
-//   const posts = await getFiles('workshops')
-
-//   return {
-//       paths: posts.map((p) => ({
-//           params: {
-//               slug: p.replace(/\.mdx/, '')
-//           }
-//       })),
-//       fallback: false
-//   }
-// }
-
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('workshops')
-
   return { props: {posts} }
 }

@@ -1,13 +1,21 @@
+import React, { useState } from 'react'
 import { Landing } from '../components/landing.jsx'
 import { Carousel } from '../components/carousel'
 import { Navbar } from '../components/navbar'
 import { DualBox } from '../components/dualcol/dualbox'
 import { Footer } from '../components/footer'
 import { HighlightBox } from '../components/dualcol/_box'
-import { getFiles, getFileBySlug, getAllFilesFrontMatter } from '../lib/mdx'
+import { getAllFilesFrontMatter } from '../lib/mdx'
+import {
+  SimpleGrid,
+  Container,
+  Box,
+  Grid,
+  GridItem
+} from '@chakra-ui/react'
 
-export default function Workshops() {
-
+export default function Workshops({ posts }) {
+  const [searchValue, setSearchValue] = useState('')
   const filteredBlogPosts = posts
     .sort(
       (a, b) =>
@@ -17,8 +25,6 @@ export default function Workshops() {
       frontMatter.title.toLowerCase().includes(searchValue.toLowerCase()) ||
       frontMatter.summary.toLowerCase().includes(searchValue.toLowerCase())
     )
-
-
 
   return (
     <div>
@@ -33,7 +39,7 @@ export default function Workshops() {
         cta2link={'https://airtable.com/shr9hT8pEXpAAM00Z'}
       />
 
-      <Carousel
+      {/* <Carousel
         title1="Building a purrfect thingy"
         link1="LINK1"
         companyLogo1="/newRelicLogo.svg"
@@ -48,16 +54,20 @@ export default function Workshops() {
         link3="LINK1"
         companyLogo3="/newRelicLogo.svg"
         img3="/cats.png"
-      />
+      /> */}
 
-      <SimpleGrid minChildWidth="400px" spacing="40px">
-
-      {filteredBlogPosts.map((frontMatter) => (
-        <HighlightBox title={frontMatter.title} companyLogo={frontMatter.image} image={frontMatter.image}/>
-      ))}
-
+      <Box as="section" bg="black" color="white" border="2px solid red">
+            <Container
+              maxW="container.xl"
+              border="2px solid yellow"
+            >
+      <SimpleGrid minChildWidth="350px" spacing="40px" bg="black" justify="center" >
+        {filteredBlogPosts.map((frontMatter) => (
+            <HighlightBox key={frontMatter.title} title={frontMatter.title} companyLogo={frontMatter.companyLogo} image={frontMatter.image} mx="auto"/>
+        ))}
       </SimpleGrid>
-
+      </Container>
+      </Box>
 
       <Footer />
 
@@ -66,8 +76,30 @@ export default function Workshops() {
 }
 
 
+export function Blog({ mdxSource, frontMatter }) {
+  const content = hydrate(mdxSource, {
+      components: MDXComponents
+  })
+
+  return <BlogLayout frontMatter={frontMatter}>{content}</BlogLayout>
+}
+
+
+// export async function getStaticPaths() {
+//   const posts = await getFiles('workshops')
+
+//   return {
+//       paths: posts.map((p) => ({
+//           params: {
+//               slug: p.replace(/\.mdx/, '')
+//           }
+//       })),
+//       fallback: false
+//   }
+// }
+
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('workshops')
 
-  return { props: { posts } }
+  return { props: {posts} }
 }

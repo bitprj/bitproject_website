@@ -1,0 +1,44 @@
+---
+title: 'How I have no idea what im doing'
+publishedAt: '2020-12-20'
+summary: "With the power of cloud computing, Fifi built an application that helps you save money through alerting you about fluctuations in proudct price."
+image: "/emily.svg"
+---
+
+Amazon is a service known for convenience and efficiency. *However, it is often frustrating to buy a product on Amazon only to find out that another site was selling it for less, or that the item was sold at a discount shortly after.*
+
+Recently, I gained skills related to serverless functions through BitProject, and found the **PERFECT** way to save myself lots money and frustration! Through serverless computing, automating the task of observing a product's price becomes a fun and affordable challenge. 
+
+#### Thats how I started developing PriceScraper, a web app that takes in an Amazon link and some basic information and sends a message if an item fluctuates in price.
+
+## About me
+My name is Fifi Teklemedhin (she/her), and I am a rising senior at West High School in Salt Lake City. I enjoy Computer programming, robotics, cheerleading, and participating in HOSA! Advocacy for equitable access to CS and humanitarian technologies are two of my interests.
+
+## Technologies & More
+![](https://i.imgur.com/Lb4zDge.png)
+
+### The program interface is a basic form with fields for:
+A link to a product, a phone number, the number of days the user wants to receive notifications, and a baseline discount percentage for the item
+
+![](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/83d7c950-cc7d-455f-a8ba-467f70091fde/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210702%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210702T131657Z&X-Amz-Expires=86400&X-Amz-Signature=4a2a5e5dd7b10b44ad4a5a31eec8b19efcedbffb502dadc740baaaa53478fbde&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
+
+## What did I use?
+### **Azure Function HTTP Trigger:** 
+The website triggers an Azure Function HTTP trigger, which inputs the user input and scraped data into a SQL database. *After learning so much about using APIs, HTTP Triggers were a great way to build one myself.*
+
+### **Azure Timer Trigger:** 
+Checks the price of the item every day, updates the database, and sends a text message to the user under three conditions. *Timer Triggers provide an easy solution if you need to run your code on a set interval, and helped me understand "triggers" in serverless better.*
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--F-uAZiJk--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/0hw5g3njd02y4qv84msn.gif)
+
+### **Twilio API:** 
+The user is sent a text message if an item's price increases from the time the user submits the form, the price decreases to the desired discount value, or the notification period is reached. *Through Twilio, I was able to learn how to integrate SMS into my projects to communicate with users.*
+
+### **SQL Database:** 
+The database communicates with the Timer Trigger to store data. The data stored in the database is then queried to evaluate when to send alerts to the user. *In almost any project, storing data is always key to making it functional; learning SQL helped immensely.*
+![](https://i.imgur.com/C0LUNFE.png)
+
+## Thoughts & what's next...
+Through the power of **Azure Functions**, PriceScraper is able to help you save plenty of money and frustration when it comes to shopping on Amazon. Take a look at my [Github Repository](https://github.com/FifiTeklemedhin/BitcampServerlessProjectFinal/tree/main/Bitcamp%20Serverless%20Final%20Project) for the source code!
+
+### Special Thanks:
+I would also like to thank BitProject and Microsoft, who inspired me to create this project! I am grateful to have learned about cloud computing and Azure in such a fun and engaging way.

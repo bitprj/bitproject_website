@@ -12,13 +12,13 @@ import {
     Wrap,
     WrapItem,
     Avatar,
-    Stack
+    Stack,
 } from '@chakra-ui/react'
 import Fade from 'react-reveal/Fade';
 import * as React from 'react'
 export const DescDualCol = ({ categoryLogo, heading, desc, profile, profileLogo, cta1, cta1Link, cta2Link, cta2, pic }) => {
     return (
-        <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white" w="100%">
+        <Box as="section" bg="black" pt="5px" pb="0px" overflow="hidden" color="white" w="100%">
             
                 <Box
                     margin="0"
@@ -73,7 +73,7 @@ export const DescDualCol = ({ categoryLogo, heading, desc, profile, profileLogo,
                                     {heading}
                                 </Heading>
 
-                                <Text my="5" fontSize="xl" color="#CDCDD2 ">
+                                <Text mt="15px" fontSize="xl" color="#CDCDD2 ">
                                     {desc}
                                 </Text>
                                 <Wrap>

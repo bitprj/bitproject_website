@@ -5,8 +5,11 @@ import {
     Flex,
     Stack,
     Link,
+    Img,
     Box,
-    Container
+    Container,
+    Text,
+    Divider
 } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 import { DescDualCol } from '../components/dualcol/descriptive'
@@ -83,11 +86,18 @@ export default function BlogLayout({ children, frontMatter }) {
                             desc={frontMatter.summary}
                             pic={frontMatter.image}
                             
-                            // cta1={frontMatter}
                         />
-                    
+                        <Flex>
+                        {frontMatter.companyLogo && <>
+                            <Text fontSize="md" color="#CCCDCE" mt="3" display="inline" mr="3">
+                                In Collaboration with
+                            </Text>
+                            <Img src={frontMatter.companyLogo} h="50px" display="inline"/>
+                        </>}
+                        </Flex>
 
                     </Flex>
+                    <Divider />
                     {children}              
                 </Stack>
                 </Container>

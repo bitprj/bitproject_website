@@ -37,6 +37,7 @@ export default function Workshops({ posts }) {
         cta1="Apply Now"
         cta2="Learn More"
         logoImage="/tv.png"
+        image="/workshop.gif"
         cta1link={' https://www.notion.so/bitproject/Welcome-to-Serverless-Camp-e218f86daf4248509350709cd9fa8017'}
         cta2link={'https://airtable.com/shr9hT8pEXpAAM00Z'}
       />

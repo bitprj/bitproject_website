@@ -1,74 +1,26 @@
 [
     {
-      "text": "When I first started the camp, I didn't know about APIs. During t",
-      "title": "Junior, H.S.",
-      "name": "Lisa Leung",
-      "img_url": "https://cataas.com/cat"
+      "text": "Through the Serverless Camp, I have gained valuable experiences with JavaScript, learned about the concept of Serverless, and gotten to write and use HTTP trigger functions. I have especially valued my time with my mentor - having a professional engineer answer questions about career paths and really explain the curriculum is super helpful and interesting.",
+      "title": "Student, Case Western Reserve University",
+      "name": "Grace",
+      "img_url": "/grace.jpg"
     },
     {
-      "text": "Reply enjoying building on @supabase_io for a project with @lasnindrek - allows ",
-      "title": "Junior, CS",
-      "name": "David Dobrik",
-      "img_url": "https://cataas.com/cat"
+      "text": "The Serverless Camp helped me connect with other students/instructors, finish the homework, and understand the basics of serverless. The program encourages other students to test their knowledge and get feedback from the instructors. It is such a fantastic program!",
+      "title": "Student, Pierce College",
+      "name": "Beatrix",
+      "img_url": "/beatrix.jpg"
     },
     {
-      "text": "OKAY OKAY FINE I'LL LOOK AT SUPABASE PROPERLY",
-      "title": "Junior, CS",
-      "name": "Ganning Xu",
-      "img_url": "https://cataas.com/cat"
+      "text": "The instructors really took our feedback to heart. Github itself is very tricky, but again, the instructors really made sure that we practiced the commands in our course over and over and over; repetition is the best teacher.",
+      "title": "Student, Western Governor's University",
+      "name": "Parys",
+      "img_url": "/parys.jpg"
     },
     {
-      "text": "Been trying out this new stack. Loving it so far. ",
-      "title": "Junior, CS",
-      "name": "Dave Bob",
-      "img_url": "https://cataas.com/cat"
-    },
-    {
-      "text": "DB/Backend: @supabase_io Reason: Takes care of Auth, DB hosting, API. Open source, easy to eje",
-      "title": "Junior, CS",
-      "name": "Daniel Kim",
-      "img_url": "https://cataas.com/cat"
-    },
-    {
-      "text": "Looking for a Firebase alternative? Consider using the open-source @supab.",
-      "title": "Junior, CS",
-      "name": "John Doe",
-      "img_url": "https://cataas.com/cat"
-    },
-    {
-      "text": "big props to the @supabase_io team - open source is a two way street and they’re super responsive & community oriented",
-      "title": "Junior, CS",
-      "name": "Jane Doe",
-      "img_url": "https://cataas.com/cat"
-    },
-    {
-      "text": "Been actively working on Quill. It's been rapid, thanks to @supabase_io and @tailwindui",
-      "title": "Junior, CS",
-      "name": "John Smith",
-      "img_url": "https://cataas.com/cat"
-    },
-    {
-      "text": "@supabase_io not only is it Firebase alternative, but it has SQL and it uses #elixirlang for handling realtime 😍😍😍 @josevalim did you know that? That's power of your creation 😎",
-      "title": "Junior, CS",
-      "name": "Arthur Jons",
-      "img_url": "https://cataas.com/cat"
-    },
-    {
-      "text": "Using @supabase_io with SWR by @vercel is something else Fire",
-      "title": "Junior, CS",
-      "name": "Eunjae Lee",
-      "img_url": "https://cataas.com/cat"
-    },
-    {
-      "text": "Another month, another impressive @supabase_io release. It’s rare to see a startup ship in public so consistently.",
-      "title": "Junior, CS",
-      "name": "Dave Darwin",
-      "img_url": "https://cataas.com/cat"
-    },
-    {
-      "text": "There are a lot of indie hackers building in public,",
-      "title": "Junior, CS",
-      "name": "Robert Subliki",
-      "img_url": "https://cataas.com/cat"
+      "text": "Bit Project has been an amazing learning experience. The GitHub course is packed with learning material that has expanded my understanding of Azure, building projects, using VS Code, and more. All of the instructors and my mentor have been extremely helpful and always ready to lend a helping hand when needed. They're always there to offer advice along with extra resources so that I can learn even more. Paired with the scheduled events we have, like socials and livestreams, my experience with Bit Project has been both enjoyable and rewarding.",
+      "title": "Student, CUNY Hunter College",
+      "name": "Christina",
+      "img_url": "/christina.jpg"
     }
   ]

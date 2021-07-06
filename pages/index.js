@@ -57,7 +57,7 @@ export default function HomePage() {
 
       <Testimonials
         heading="We make a difference"
-        desc="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+        desc="Take a look at what our students have to say."
       />
 
       <Footer/>

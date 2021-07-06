@@ -49,8 +49,9 @@ export const Testimonials = ({ heading, desc }) => {
             <Swiper
               centeredSlides={true}
               speed={300}
-              loop={true}
-              slidesPerColumnFill="row"
+              // loop={true}
+              initialSlide="2"
+
               breakpoints={{
                 320: {
                   slidesPerView: 1.5,
@@ -80,6 +81,7 @@ export const Testimonials = ({ heading, desc }) => {
                       name={quote.name}
                       quote={quote.text}
                       title={quote.title}
+                      // image={console.log(quote.img_url)}
                       image={quote.img_url}
                     />
                   </SwiperSlide>

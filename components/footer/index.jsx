@@ -15,10 +15,11 @@ import { links, socialLinks } from './_data'
 import { LinkGroup } from './LinkGroup'
 import { SubscribeForm } from './SubscribeForm'
 import Fade from 'react-reveal/Fade';
+import { motion } from "framer-motion"
 
 export const Footer = () => {
   return (
-    <Box as="footer" color="white" bg="#181818">
+    <Box as="footer" color="#9e9d9d" bg="#181818">
       <Fade>
         <Box
           maxW={{
@@ -97,12 +98,12 @@ export const Footer = () => {
                 }}
                 fontWeight="bold"
                 letterSpacing="wide"
-                color="#585858"
+                color="white"
                 fontSize="xl"
               >
                 Subscribe to our newsletter!
           </Text>
-              <Text mb="3" lineHeight="tall" fontSize="xl">
+              <Text mb="3" lineHeight="tall" fontSize="xl" color="#9e9d9d">
                 Stay up to date with all of our resources and opportunities. We promise we won&apos;t spam!
           </Text>
               <SubscribeForm />
@@ -147,12 +148,15 @@ export const Footer = () => {
                 md: 'center',
               }}
             >
-              <Link href="/" w="4rem" mr="-2rem">
+              <motion.a whileHover={{
+                scale: [1, 1.5, 1.5, 1, 1],
+                rotate: [0, 0, 270, 270, 0],
+              }} href="/" w="4rem" mr="-2rem">
                 <Img
                   src="/logo.png"
                   h="3rem"
                 />
-              </Link>
+              </motion.a>
               <HStack
                 spacing="2"
                 mt={{
@@ -162,12 +166,14 @@ export const Footer = () => {
                 listStyleType="none"
               >
                 {socialLinks.map((link, idx) => (
-                  <Box as="li" key={idx}>
-                    <SocialLink href={link.href} color="#585858" _hover="" fontSize="2rem">
+                  <motion.a as="li" key={idx} whileHover={{ scale: 1.2 }}>
+                    <SocialLink href={link.href} color="white" _hover={{
+                      color: "#9e9d9d",
+                    }} fontSize="2rem">
                       <Box srOnly>{link.label}</Box>
                       {link.icon}
                     </SocialLink>
-                  </Box>
+                  </motion.a>
                 ))}
               </HStack>
             </Stack>

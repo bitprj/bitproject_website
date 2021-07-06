@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import { Landing } from '../components/landing.jsx'
-import { Carousel } from '../components/carousel'
 import { Navbar } from '../components/navbar'
-import { DualBox } from '../components/dualcol/dualbox'
 import { Footer } from '../components/footer'
 import { HighlightBox } from '../components/dualcol/_box'
 import { getAllFilesFrontMatter } from '../lib/mdx'

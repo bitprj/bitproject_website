@@ -43,7 +43,8 @@ export const ProfileIcon = ({ pic, name, title }) => {
                         className={styles.pfp}
                         mr="1.2rem"
                         src={pic}
-                        boxSize="50px"
+                        h="50px"
+                        w="50px"
                         objectFit="cover"
                         borderRadius="50px"
                     />

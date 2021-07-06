@@ -15,6 +15,7 @@ import {
 import * as React from 'react'
 import Fade from 'react-reveal/Fade';
 import * as fetch from 'node-fetch'
+import { motion } from "framer-motion"
 
 export const Landing = ({ heading, description,cta1, cta2, image, logoImage, play, cta1link, cta2link, formResponse, formActionButton, formActionButtonLink }) => {
   const subscribeEmail = async event => {
@@ -115,17 +116,23 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
 
               {formActionButton && <Box display="flex" alignItems="center">
               <FormControl mr="1rem" isRequired>
-                <Input id="email" placeholder="email" border="none" bg="grey" />
+                <Input id="email" placeholder="email" border="1px" borderColor="#FEE761" bg="transparent" _hover=""
+                 _focus="" color="#FEE761" _placeholder={{ color: '#FEE761' }}/>
 
               </FormControl>
               <Button
                 id="signup"
-                as="a"
                 onClick={subscribeEmail}
-                colorScheme="blue"
+                bg="transparent"
+                border="1px solid #2B6CB0"
                 px="8"
+                color="#2B6CB0"
                 fontWeight="bold"
                 fontSize="md"
+                _hover={{
+                  color: "white",
+                  background: "#2B6CB0"
+                }}
               >
                 {formActionButton}
               </Button>

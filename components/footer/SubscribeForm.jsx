@@ -73,6 +73,8 @@ export const SubscribeForm = () => {
             placeholder="email"
             border="1px solid"
             borderColor="grey"
+            _placeholder={{ color: '#9e9d9d' }}
+            color="#9e9d9d"
             _focus=""
             _hover=""
           />
@@ -96,6 +98,7 @@ export const SubscribeForm = () => {
             fontWeight="bold"
             letterSpacing="wide"
             _hover=""
+            _highlighted=""
           >
             SUBSCRIBE
         </Button>

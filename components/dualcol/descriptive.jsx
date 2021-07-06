@@ -36,7 +36,7 @@ export const DescDualCol = ({ categoryLogo, heading, desc, profile, profileLogo,
                         align={{
                             lg: 'center',
                         }}
-                        justify="start"
+                        justify="center"
                         display="flex"
                     >
                          { pic && 

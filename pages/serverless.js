@@ -137,6 +137,6 @@ export function Blog({ mdxSource, frontMatter }) {
 }
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('workshops')
+  const posts = await getAllFilesFrontMatter('projects')
   return { props: { posts } }
 }

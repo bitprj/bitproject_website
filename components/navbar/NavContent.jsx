@@ -80,11 +80,11 @@ const DesktopNavContent = (props) => {
         //       {link.label}
         // </NavLink.Desktop>
         
-        <motion.a key={index} whileHover={{ scale: 1.1  }}>
+        // <motion.a key={index} whileHover={{ scale: 1.1  }}>
           <NavLink.Desktop  href={link.href} fontSize="xl" fontWeight="bold" _hover="">
                 {link.label}
           </NavLink.Desktop>
-        </motion.a>
+        // </motion.a>
       ))}
     </HStack>
   )

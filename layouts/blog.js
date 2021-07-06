@@ -14,6 +14,7 @@ import {
 import { useRouter } from 'next/router'
 import { DescDualCol } from '../components/dualcol/descriptive'
 import { Navbar } from '../components/navbar'
+import { Footer } from '../components/footer'
 
 const editUrl = (slug) =>
     `https://github.com/bjcarlson42/benjamincarlson.io/edit/main/pages/blog${slug}.mdx`
@@ -53,9 +54,9 @@ export default function BlogLayout({ children, frontMatter }) {
 
     return (
         <>
-        <Box h={1}  as="div" bgGradient="linear(to-r, green.200, pink.500)" position="sticky" top={0} zIndex={100} w={`${width}%`} ></Box>
+        
         <Navbar />
-        <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white">
+        <Box as="section" bg="black" pt="24" overflow="hidden" color="white">
         <Container
             maxW="container.lg"
             p="15px"
@@ -101,6 +102,7 @@ export default function BlogLayout({ children, frontMatter }) {
                     {children}              
                 </Stack>
                 </Container>
+                <Footer />
         </Box>
         </>
     )

@@ -50,8 +50,6 @@ export default function Serverless() {
         li2="🐱 twoCatz API"
         li3="🐸 [TOP SECRET] API"
         img="/week1.gif"
-        action="Get Started &rarr;"
-        actionLink="ACTIONLINK"
       />
       <DualCol 
         preheading="week 2"
@@ -61,8 +59,6 @@ export default function Serverless() {
         li1="😊 Emotional Gifs"
         li2="🎶 Song4u.js"
         img="/week2.gif"
-        action="Get Started &rarr;"
-        actionLink="ACTIONLINK"
       />
        <DualCol 
         preheading="week 3"
@@ -72,8 +68,6 @@ export default function Serverless() {
         li1="🐰 Bunnimage API"
         li2="🤫 Deep Secrets API"
         img="/week3.gif"
-        action="Get Started &rarr;"
-        actionLink="ACTIONLINK"
       />
        <DualCol 
         preheading="week 4"
@@ -83,8 +77,6 @@ export default function Serverless() {
         li1="🐇 Bunnimage: The App"
         li2="🐈 twoCatz: The App"
         img="/week4.gif"
-        action="Get Started &rarr;"
-        actionLink="ACTIONLINK"
       />
     <CenterDualCol
       heading="Build your Own Project"

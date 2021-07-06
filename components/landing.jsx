@@ -130,11 +130,11 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
                 {formActionButton}
               </Button>
               
+
               </Box>}
-            <Box textAlign="center">
-              <Text id="formResponse" fontSize="lg" mt="4" maxW="xl" mx="auto" >
-              </Text>
-            </Box>
+              <Box textAlign="center">
+                <Text id="formResponse" fontSize="lg" mt="4" maxW="xl" mx="auto" />
+              </Box>
             </LightMode>
           </Stack>
 

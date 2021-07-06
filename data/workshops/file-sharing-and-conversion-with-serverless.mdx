@@ -1,0 +1,48 @@
+---
+title: 'How I built a serverless file-sharing and conversion app 🗂'
+publishedAt: '2020-12-12'
+summary: 'Through various triggers, APIs, and functions, Emily built an alternate solution to AirDrop (file conversion included!) that anyone with a web browser can use.'
+companyLogo: ''
+image: '/main.gif'
+---
+
+If you or someone you know participated in this year's AP Collegeboard Exams, you probably recognize the stress of submitting handwritten work within a small time constraint.
+
+![](https://i.imgur.com/4RVmwc2.png)
+
+**Bunnimage** aims to help alleviate that stress for students and others working at home. *This solves a big issue if you don't have AirDrop: almost everyone has a web browser!*
+
+#### This web application takes an image as an input on an upload page and converts it into a PDF that is available at a download page.
+
+## About me
+My name is Emily Chen (she/her), and I am a rising senior at Panther Creek High School. Outside of school and working on solutions in tech, I enjoy biking and re-reading my favorite books. I'm interested in ethical hacking, OSINT, and building tech projects that can positively impact my community.
+
+## Behind the scenes
+![](https://i.imgur.com/80t0rVh.png)
+
+### The application has a "upload" page and a "download" page:
+Navigate to the **"upload" page** to upload an image. Additionally, provide a code that gives your file a unique name! Navigate to the **"download" page** on any device you wish to download the PDF on. Enter your unique name and get your converted image.
+
+![](https://i.imgur.com/WAsrvyY.png)
+
+## The Technologies
+### **Azure Function HTTP Triggers:** 
+The two upload/download pages both trigger a function: one uploads an image to blob storage with the specified name, and the other queries blob storage to provide a link for download. *Previously, I had no understanding of what a "backend" was - HTTP Triggers were my first introduction to code running on the cloud.*
+### **Azure EventGrid Trigger:** 
+This was configured to trigger whenever a new blob was uploaded. Once one was, the trigger used an API to convert the image into a PDF and stored it in a new container. *This trigger helped me realize there are multiple possible solutions to any technical issue.*
+
+![](https://i.imgur.com/gY9BoXv.png)
+### **Blob Storage:** 
+All the users' images and converted PDFs are stored in blob storage. The HTTP Triggers uploaded blobs and queried for correct ones. *As someone who had already worked with databases, blob storage was an interesting technology to work with.*
+
+![](https://i.imgur.com/dKr5PYX.png)
+### **Online Convert API:** 
+This API was used to convert images (png or jpeg) to PDF file format. *Because images were not converted instantly, I learned how to continually check for a job to complete.*
+
+## Moving forward with Bunnimage
+After harnessing the full power of serverless triggers, Bunnimage is able to provide a web solution to file sharing or scanning worries. You can find a sample of the final product at [my Github repository](https://github.com/emsesc/bunnimage).
+
+### Thank you!
+Thanks to BitProject for providing me an opportunity to learn more about cloud computing, a previously obscure concept to me. (Honestly, what is the cloud?) Nevertheless, I have gained skills that are vital to building both professional and leisurely projects.
+
+![](https://i.imgur.com/JkECEQQ.png)

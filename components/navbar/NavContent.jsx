@@ -18,7 +18,7 @@ const links = [
   },
   {
     label: 'Workshops',
-    href: '/technicalworkshops',
+    href: '/workshops',
   },
   {
     label: 'Mentor',

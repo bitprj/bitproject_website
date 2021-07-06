@@ -18,22 +18,19 @@ import Fade from 'react-reveal/Fade';
 import * as React from 'react'
 export const DescDualCol = ({ categoryLogo, heading, desc, profile, profileLogo, cta1, cta1Link, cta2Link, cta2, pic }) => {
     return (
-        <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white">
-            <Container
-                maxW="container.lg"
-                p="15px"
-            >
+        <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white" w="100%">
+            
                 <Box
                     margin="0"
                 >
                     <Stack
                         direction={{
                             base: 'column',
-                            lg: 'row',
+                            lg: 'column',
                         }}
                         spacing={{
                             base: '1rem',
-                            lg: '2rem',
+                            lg: '0rem',
                         }}
 
                         align={{
@@ -46,7 +43,7 @@ export const DescDualCol = ({ categoryLogo, heading, desc, profile, profileLogo,
                         <Img
                             pos="relative"
                             zIndex="1"
-                            maxH="50vh" // change this line for the image height
+                            maxH="45vh" // change this line for the image height
                             objectFit="scale-down"
                             src={pic}
                         />}
@@ -55,11 +52,9 @@ export const DescDualCol = ({ categoryLogo, heading, desc, profile, profileLogo,
                         <Box
                             w={{
                                 base: 'full',
-                                lg: '560px',
                             }}
                             h={{
                                 base: 'auto',
-                                lg: '560px',
                             }}
                             display="flex"
                             alignItems="center"
@@ -67,10 +62,7 @@ export const DescDualCol = ({ categoryLogo, heading, desc, profile, profileLogo,
 
 
                             <Box
-                                flex="1"
-                                maxW={{
-                                    lg: '520px',
-                                }}
+                                
                             >
                                 {categoryLogo && <Wrap>
                                     <WrapItem>
@@ -87,7 +79,7 @@ export const DescDualCol = ({ categoryLogo, heading, desc, profile, profileLogo,
                                 <Wrap>
                                     <WrapItem>
                                         {profileLogo && 
-                                            <Avatar src={profileLogo} bg="transparent"  />}
+                                            <Avatar src={profileLogo} bg="transparent" />}
                                         
                                         {profile && <Text fontSize="xl" my="2" ml="2" color="#CDCDD2">
                                             {profile}
@@ -127,7 +119,7 @@ export const DescDualCol = ({ categoryLogo, heading, desc, profile, profileLogo,
 
                     </Stack>
                 </Box>
-            </Container>
+
         </Box>
 
     )

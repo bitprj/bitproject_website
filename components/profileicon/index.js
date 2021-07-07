@@ -1,19 +1,14 @@
 import {
     Box,
-    Center,
     Flex,
-    Heading,
     Img,
-    Container,
     Text,
     Square,
-    Stack,
     useColorModeValue as mode,
 } from '@chakra-ui/react'
-import Fade from 'react-reveal/Fade';
-import { useEffect, useState } from "react";
 import * as React from 'react'
 import styles from './ProfileIcon.module.css';
+import Image from 'next/image'
 
 export const ProfileIcon = ({ pic, name, title }) => {
 
@@ -37,14 +32,13 @@ export const ProfileIcon = ({ pic, name, title }) => {
 
         // <Stack color="white" px="0.5rem" borderRadius="15px" alignItems="center" direction={undefined}>
          <Flex color="white" px="0.5rem" borderRadius="15px" alignItems="center">
-            <Box>
+            <Box className={styles.pfp}>
                 <Square size="">
                     <Img
-                        className={styles.pfp}
                         mr="1.2rem"
                         src={pic}
-                        h="50px"
-                        w="50px"
+                        height="50px"
+                        width="50px"
                         objectFit="cover"
                         borderRadius="50px"
                     />

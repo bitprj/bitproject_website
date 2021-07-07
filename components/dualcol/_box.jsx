@@ -5,6 +5,7 @@ import {
     useColorModeValue as mode,
 } from '@chakra-ui/react'
 import * as React from 'react'
+import Image from 'next/image'
 
 export const HighlightBox = ({ title, companyLogo, image, link }) => {
     let bkgUrl = `url(${image})`
@@ -32,7 +33,7 @@ export const HighlightBox = ({ title, companyLogo, image, link }) => {
                         <Text fontSize="md" color="#CCCDCE" mt="3" display="inline" mr="3">
                             In Collaboration with
                         </Text>
-                        <Img src={companyLogo} h="40px" display="inline"/>
+                        <Img src={companyLogo} h="40px" w="40px" display="inline"/>
                     </>}
                 </Box>
                 <Box h="15rem" bgImage={bkgUrl} bgPosition="center"

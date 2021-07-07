@@ -15,6 +15,7 @@ import {
 import * as React from 'react'
 import Fade from 'react-reveal/Fade';
 import * as fetch from 'node-fetch'
+import Image from 'next/image'
 import { motion } from "framer-motion"
 
 export const Landing = ({ heading, description,cta1, cta2, image, logoImage, play, cta1link, cta2link, formResponse, formActionButton, formActionButtonLink }) => {
@@ -63,7 +64,7 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
           {logoImage && <Img
               alt="Page icon"
               src={logoImage}
-              width="10%"
+              width="100px"
               m="0 auto"
             />}
 
@@ -147,15 +148,18 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
 
         </Box>
         { image && 
-          
-          <Img 
+          <Image 
+              // src={image}
+              // width="100%"
+              // // maxW="70rem"
+              // m="0 auto"
+              // mt="2rem"
+              // maxH="50vh"
+              // maxW ="60vw"
+
               src={image}
-              width="100%"
-              // maxW="70rem"
-              m="0 auto"
-              mt="2rem"
-              maxH="50vh"
-              maxW ="60vw"
+              width={1000}
+              height={400}
             />}
       </Box>
       </Fade>

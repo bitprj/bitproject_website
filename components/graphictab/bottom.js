@@ -42,9 +42,8 @@ export const GraphicTabBottom = ({ heading, desc, logoImage, name1, pic1, title1
                     />}
                     <Heading
                         as="h1"
-                        size="xl"
+                        size="2xl"
                         fontWeight="extrabold"
-                        maxW="32rem"
                         mx="auto"
                         my="15px"
                         textAlign="center"

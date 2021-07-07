@@ -36,6 +36,9 @@ export const LinkGroup = (props) => {
               as="a"
               href={link.href}
               fontSize="lg"
+              _hover={{
+                color:"#FEE761"
+              }}
             >
               <span>{link.label}</span>
               {link.badge && (

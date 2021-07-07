@@ -4,41 +4,28 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from 'react-icons/fa'
 
 export const links = [
   {
-    title: 'GET INVOLVED',
+    title: 'USEFUL LINKS',
     links: [
       {
-        label: 'Students',
-        href: '#',
+        label: 'Serverless',
+        href: '/serverless',
       },
       {
-        label: 'Sponsor',
-        href: '#',
-      },
-      {
-        label: 'Mentor',
-        href: '#',
+        label: 'Workshops',
+        href: '/workshops',
         // badge: (
         //   <Badge colorScheme="blue" variant="solid" fontSize="0.625rem">
         //     New
         //   </Badge>
         // ),
       },
-    ],
-  },
-  {
-    title: 'Courses',
-    links: [
       {
-        label: 'Serverless',
-        href: '#',
+        label: 'Mentor',
+        href: '/mentor',
       },
       {
-        label: 'DevOps School',
-        href: '#',
-      },
-      {
-        label: 'Data Science',
-        href: '#',
+        label: 'Blog',
+        href: '/blog',
       },
     ],
   },

@@ -19,16 +19,15 @@ export default function HomePage() {
 
       <TriCol
         heading1="Free & Open Source"
-        para1="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-        heading2="Free & Open Source"
-        para2="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-        heading3="Free & Open Source"
-        para3="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+        para1="Our courses are open source and free for all because we believe in the power of accessible technical education."
+        heading2="Built with the Industry"
+        para2="Engineers mentor our students through pair programming sessions. They share insights on job search and engineering best practices."
+        heading3="Built for students, by students"
+        para3="We are a global student organization developing interactive, engaging technical content for other students."
       />
 
       <GraphicTab
-        heading="We empower students
-        to ship their first projects"
+        heading="We empower students to ship their first projects"
         desc="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
         pic1="/fifi.jpeg"
         name1="Fifi Teklemedhin"

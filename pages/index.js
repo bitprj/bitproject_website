@@ -34,21 +34,17 @@ export default function HomePage() {
         title1="11th Grade"
         graphic1="https://vimeo.com/570820559"
 
-        pic2="/emily.svg"
-        name2="Emily Chen"
-        title2="Junior, CS"
-        graphic2="/feature.svg"
+        pic2="/anita.jpeg"
+        name2="Anita Padman"
+        title2="Junior at UIUC"
+        graphic2="https://vimeo.com/572033757"
 
 
-        pic3="/emily.svg"
+        pic3="/emily.png"
         name3="Emily Chen"
         title3="11th Grade"
         graphic3="/livecode.png"
 
-        pic4="/emily.svg"
-        name4="Emily Chen"
-        title4="11th Grade"
-        graphic4="/counselorbot.svg"
       />
 
       <Testimonials

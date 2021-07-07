@@ -27,8 +27,8 @@ const links = [
     href: '/mentor',
   },
   {
-    label: 'Sponsor',
-    href: '/sponsor',
+    label: 'Blog',
+    href: '/blog',
   },
 ]
 

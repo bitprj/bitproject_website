@@ -108,7 +108,8 @@ export const Landing = ({ heading, description, cta1, cta2, image, logoImage, pl
                         fontSize="md"
                         _hover={{
                           color: "black",
-                          background: "#fee761"
+                          background: "#fee761",
+                          px: "12"
                         }}
                       >
                         {cta1}
@@ -130,7 +131,8 @@ export const Landing = ({ heading, description, cta1, cta2, image, logoImage, pl
                         fontSize="md"
                         _hover={{
                           color: "white",
-                          background: "#3583CE"
+                          background: "#3583CE",
+                          px: "12"
                         }}
                       >
                         {cta2}
@@ -145,7 +147,6 @@ export const Landing = ({ heading, description, cta1, cta2, image, logoImage, pl
                         _focus="" color="#FEE761" _placeholder={{ color: '#FEE761' }} />
 
                     </FormControl>
-                    <motion.span whileHover={{ scale: 1.1 }}>
                       <Button
                         id="signup"
                         onClick={subscribeEmail}
@@ -157,13 +158,13 @@ export const Landing = ({ heading, description, cta1, cta2, image, logoImage, pl
                         fontSize="md"
                         _hover={{
                           color: "white",
-                          background: "#2B6CB0"
+                          background: "#2B6CB0",
+                          px: "12"
                         }}
 
                       >
                         {formActionButton}
                       </Button>
-                    </motion.span>
                   </Box>
                     <Box textAlign="center">
                       <Text id="formResponse" fontSize="lg" mt="4" maxW="xl" mx="auto" />

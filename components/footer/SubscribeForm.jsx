@@ -79,7 +79,6 @@ export const SubscribeForm = () => {
             _hover=""
           />
         </FormControl>
-        <motion.a whileHover={{ scale: 1.1 }}>
           <Button 
             id="signupFooter"
             onClick={subscribeEmail}
@@ -97,12 +96,11 @@ export const SubscribeForm = () => {
             border="1px solid grey"
             fontWeight="bold"
             letterSpacing="wide"
-            _hover=""
+            _hover={{px: "50px"}}
             _highlighted=""
           >
             SUBSCRIBE
         </Button>
-      </motion.a>
 
       </Box>
       <Box textAlign="center" w="100%">

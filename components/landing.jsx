@@ -95,9 +95,8 @@ export const Landing = ({ heading, description, cta1, cta2, image, logoImage, pl
                 <LightMode>
                   {cta1 &&
 
-                    <motion.span whileHover={{ scale: 1.1 }}>
+                    // <motion.div whileHover={{ scale: 1.1 }} textAlign="center" width="100rem">
                       <Button
-                        w="10rem"
                         as="a"
                         href={cta1link}
                         size="lg"
@@ -114,13 +113,12 @@ export const Landing = ({ heading, description, cta1, cta2, image, logoImage, pl
                       >
                         {cta1}
                       </Button>
-                    </motion.span>
+                    // </motion.div>
 
                   }
                   {cta2 &&
-                    <motion.span whileHover={{ scale: 1.1 }}>
+                    // <motion.span whileHover={{ scale: 1.1 }}>
                       <Button
-                        w="10rem"
                         as="a"
                         href={cta2link}
                         size="lg"
@@ -137,7 +135,7 @@ export const Landing = ({ heading, description, cta1, cta2, image, logoImage, pl
                       >
                         {cta2}
                       </Button>
-                    </motion.span>
+                    // </motion.span>
 
                   }
 

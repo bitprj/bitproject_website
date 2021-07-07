@@ -37,7 +37,7 @@ export const HighlightBox = ({ title, companyLogo, image, link }) => {
                     </>}
                 </Box>
                 <Box h="15rem" bgImage={bkgUrl} bgPosition="center"
-  bgRepeat="no-repeat" backgroundSize="contain">
+  bgRepeat="no-repeat" backgroundSize="cover">
                 </Box>
             </Box>
         </Box>

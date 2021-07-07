@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { GraphicTabBottom } from '../components/graphictab/bottom'
 import { Navbar } from '../components/navbar'
 import { Footer } from '../components/footer'
@@ -5,6 +6,11 @@ import { Footer } from '../components/footer'
 export default function Mentor() {
   return (
     <div>
+      <Head>
+        <title>Mentor</title>
+        <meta name="description" content="We pair awesome engineers with students to give back to their communities." />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Navbar />
       <GraphicTabBottom
         heading="Make a Difference. Mentor."

@@ -11,7 +11,7 @@ export default function HomePage() {
     <div>
       <Head>
         <title>Bit Project</title>
-        {/* <meta name="description" content="We are a virtual conference for students, by students learning serverless" /> */}
+        <meta name="description" content="We provide cutting-edge, open source learning experiences to prepare students for careers in tech." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />

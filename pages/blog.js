@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import React, { useState } from 'react'
 import { Landing } from '../components/landing.jsx'
 import { Navbar } from '../components/navbar'
@@ -25,6 +26,11 @@ export default function Workshops({ posts }) {
 
     return (
         <div>
+            <Head>
+                <title>Blog</title>
+                <meta name="description" content="Like reading? Feel free to explore all of our awesome blogs!" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
             <Navbar />
             <Landing
                 heading="Blogs"
@@ -67,7 +73,7 @@ export async function getStaticProps() {
     const categories = ['projects', 'workshops'];
     const finalPosts = [];
 
-    for (var i=0; i<categories.length; i++) {
+    for (var i = 0; i < categories.length; i++) {
         const retrievedPosts = await getAllFilesFrontMatter(categories[i])
         finalPosts.push(...retrievedPosts)
     }

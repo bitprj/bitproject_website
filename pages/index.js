@@ -49,7 +49,7 @@ export default function HomePage() {
         pic3="/emily.png"
         name3="Emily Chen"
         title3="11th Grade"
-        graphic3="/livecode.png"
+        graphic3="https://vimeo.com/572255574"
 
       />
 

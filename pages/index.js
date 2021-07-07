@@ -28,7 +28,7 @@ export default function HomePage() {
 
       <GraphicTab
         heading="We empower students to ship their first projects"
-        desc="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+        desc="Getting started with a project is hard! Bit Project teaches students how to code by building."
         pic1="/fifi.jpeg"
         name1="Fifi Teklemedhin"
         title1="11th Grade"

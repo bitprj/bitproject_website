@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { parseISO, format } from 'date-fns'
+import Head from 'next/head'
 import {
     useColorMode,
     Flex,
@@ -54,6 +54,10 @@ export default function BlogLayout({ children, frontMatter }) {
 
     return (
         <>
+        <Head>
+        <title>{frontMatter.title}</title>
+        <link rel="icon" href="/favicon.ico" />
+        </Head>
         <Navbar />
         <Box as="section" bg="black" pt="24" overflow="hidden" color="white">
         <Container

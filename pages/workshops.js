@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import React, { useState } from 'react'
 import { Landing } from '../components/landing.jsx'
 import { Navbar } from '../components/navbar'
@@ -28,16 +29,20 @@ export default function Workshops({ posts }) {
 
   return (
     <div>
+      <Head>
+                <title>Workshops</title>
+                <meta name="description" content="We make fun, interactive workshops to give students hands-on experience with cutting edge tools." />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
       <Navbar />
       <Landing
         heading="Technical Workshops"
-        description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. 100% Free and Open Source"
-        cta1="Apply Now"
-        cta2="Learn More"
+        description="We make fun, interactive workshops to give students hands-on experience with cutting edge tools."
         logoImage="/tv.png"
         image="/workshop.gif"
-        cta1link={' https://www.notion.so/bitproject/Welcome-to-Serverless-Camp-e218f86daf4248509350709cd9fa8017'}
-        cta2link={'https://airtable.com/shr9hT8pEXpAAM00Z'}
+        formActionButton="Get Notified"
+        formResponse="See you soon ❤️"
+        formDesc="Get notified about future workshops below!"
       />
 
       <Box as="section" bg="black" color="white">

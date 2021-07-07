@@ -1,8 +1,8 @@
+import Head from 'next/head'
 import React, { useState } from 'react'
 import { Textblock } from '../components/textblock'
 import { DualCol } from '../components/dualcol'
 import { CenterDualCol } from '../components/dualcol/center'
-import { Carousel } from '../components/carousel'
 import { Navbar } from '../components/navbar'
 import { GraphicTabBottom } from '../components/graphictab/bottom'
 import { Footer } from '../components/footer'
@@ -31,6 +31,11 @@ export default function Serverless({ posts }) {
 
   return (
     <div>
+      <Head>
+                <title>Serverless</title>
+                <meta name="description" content="In our 8-week boot camp, build awesome apps with Serverless functions, JavaScript, and APIs. From IoT heartbeat monitors to face mask detectors, you can build anything with Serverless!" />
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
       <Navbar />
       <GraphicTabBottom
         heading="Serverless Camp"

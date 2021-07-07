@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { Landing } from '../components/landing.jsx'
 import { TriCol } from '../components/tricol'
 import { GraphicTab } from '../components/graphictab'
@@ -8,6 +9,11 @@ import { Footer } from '../components/footer'
 export default function HomePage() {
   return (
     <div>
+      <Head>
+        <title>Bit Project</title>
+        {/* <meta name="description" content="We are a virtual conference for students, by students learning serverless" /> */}
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Navbar />
       <Landing
         heading="We equip students with technical superpowers"

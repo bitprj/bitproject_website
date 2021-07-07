@@ -15,6 +15,7 @@ import { links, socialLinks } from './_data'
 import { LinkGroup } from './LinkGroup'
 import { SubscribeForm } from './SubscribeForm'
 import Fade from 'react-reveal/Fade';
+import Image from 'next/image'
 import { motion } from "framer-motion"
 
 export const Footer = () => {
@@ -152,9 +153,10 @@ export const Footer = () => {
                 scale: [1, 1.5, 1.5, 1, 1],
                 rotate: [0, 0, 270, 270, 0],
               }} href="/" w="4rem" mr="-2rem">
-                <Img
+                <Image
                   src="/logo.png"
-                  h="3rem"
+                  height={43.51}
+                  width={48}
                 />
               </motion.a>
               <HStack

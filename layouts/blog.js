@@ -54,7 +54,6 @@ export default function BlogLayout({ children, frontMatter }) {
 
     return (
         <>
-        
         <Navbar />
         <Box as="section" bg="black" pt="24" overflow="hidden" color="white">
         <Container
@@ -81,7 +80,6 @@ export default function BlogLayout({ children, frontMatter }) {
                         w="100%"
                     >
                         <DescDualCol 
-                            // categoryLogo, heading, desc, profile, profileLogo, cta1, cta1Link, cta2Link, cta2, pic
                             heading={frontMatter.title}
                             profile={frontMatter.by}
                             desc={frontMatter.summary}

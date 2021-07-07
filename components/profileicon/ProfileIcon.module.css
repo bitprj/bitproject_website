@@ -3,5 +3,6 @@
 @media (max-width: 600px) {
   .pfp {
    display: none;
+   border: 2px solid red;
   }
 }

@@ -48,9 +48,8 @@ export const CenterDualCol = ({ heading, description, cta1, cta2, cta1link, cta2
                 <LightMode>
                   {cta1 &&
 
-                    <motion.span whileHover={{ scale: 1.1 }}>
+                    // <motion.span whileHover={{ scale: 1.1 }}>
                       <Button
-                        w="10rem"
                         as="a"
                         href={cta1link}
                         size="lg"
@@ -67,13 +66,12 @@ export const CenterDualCol = ({ heading, description, cta1, cta2, cta1link, cta2
                       >
                         {cta1}
                       </Button>
-                    </motion.span>
+                    // </motion.span>
 
                   }
                   {cta2 &&
-                    <motion.span whileHover={{ scale: 1.1 }}>
+                    // <motion.span whileHover={{ scale: 1.1 }}>
                       <Button
-                        w="10rem"
                         as="a"
                         href={cta2link}
                         size="lg"
@@ -90,7 +88,7 @@ export const CenterDualCol = ({ heading, description, cta1, cta2, cta1link, cta2
                       >
                         {cta2}
                       </Button>
-                    </motion.span>
+                    // </motion.span>
 
                   }
                 </LightMode>

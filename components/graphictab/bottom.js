@@ -62,9 +62,8 @@ export const GraphicTabBottom = ({ heading, desc, logoImage, name1, pic1, title1
                         <LightMode>
                             {cta1 &&
 
-                                <motion.span whileHover={{ scale: 1.1 }}>
+                                // <motion.span whileHover={{ scale: 1.1 }}>
                                     <Button
-                                        w="10rem"
                                         as="a"
                                         href={cta1link}
                                         size="lg"
@@ -81,13 +80,12 @@ export const GraphicTabBottom = ({ heading, desc, logoImage, name1, pic1, title1
                                     >
                                         {cta1}
                                     </Button>
-                                </motion.span>
+                                // </motion.span>
 
                             }
                             {cta2 &&
-                                <motion.span whileHover={{ scale: 1.1 }}>
+                                // <motion.span whileHover={{ scale: 1.1 }}>
                                     <Button
-                                        w="10rem"
                                         as="a"
                                         href={cta2link}
                                         size="lg"
@@ -104,7 +102,7 @@ export const GraphicTabBottom = ({ heading, desc, logoImage, name1, pic1, title1
                                     >
                                         {cta2}
                                     </Button>
-                                </motion.span>
+                                // </motion.span>
 
                             }
                         </LightMode>

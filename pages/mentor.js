@@ -14,6 +14,7 @@ export default function Mentor() {
         logoImage="/counselor.png"
         cta1link={' https://www.notion.so/bitproject/Welcome-to-Serverless-Camp-e218f86daf4248509350709cd9fa8017'}
         cta2link={'https://airtable.com/shr9hT8pEXpAAM00Z'}
+
         pic1="/mentor/anthony.jpeg"
         name1="Anthony Chu"
         title1="Microsoft"
@@ -22,12 +23,12 @@ export default function Mentor() {
         pic2="/mentor/nica.jpeg"
         name2="Nočnica Fee"
         title2="New Relic"
-        graphic2="/feature.svg"
+        graphic2="https://vimeo.com/572023206"
 
         pic3="/mentor/john.jpeg"
         name3="John Kilmister"
         title3="PureGym"
-        graphic3="/livecode.png"
+        graphic3="https://vimeo.com/570824340"
       />
       <Footer/>
     </div>

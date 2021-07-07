@@ -1,18 +1,13 @@
 import {
     Box,
     Button,
-    Circle,
     Heading,
     Img,
     Stack,
     Text,
-    VisuallyHidden,
     useColorModeValue as mode,
     LightMode,
-    Center,
     Container,
-    FormControl,
-    FormLabel,
     Tabs,
     TabList,
     Tab,
@@ -32,7 +27,7 @@ export const GraphicTabBottom = ({ heading, desc, logoImage, name1, pic1, title1
             <Fade>
                 <Container
                     maxW="container.lg">
-      
+
                     {logoImage && <Img
                         alt="Page icon"
                         src={logoImage}
@@ -65,28 +60,53 @@ export const GraphicTabBottom = ({ heading, desc, logoImage, name1, pic1, title1
                         spacing="4"
                     >
                         <LightMode>
-                            {cta1 && <Button
-                                as="a"
-                                href={cta1link}
-                                size="lg"
-                                colorScheme="yellow"
-                                px="8"
-                                fontWeight="bold"
-                                fontSize="md"
-                            >
-                                {cta1}
-                            </Button>}
-                            {cta2 && <Button
-                                as="a"
-                                href={cta2link}
-                                size="lg"
-                                colorScheme="blue"
-                                px="8"
-                                fontWeight="bold"
-                                fontSize="md"
-                            >
-                                {cta2}
-                            </Button>}
+                            {cta1 &&
+
+                                <motion.span whileHover={{ scale: 1.1 }}>
+                                    <Button
+                                        w="10rem"
+                                        as="a"
+                                        href={cta1link}
+                                        size="lg"
+                                        color="#fee761"
+                                        border="1px solid #fee761"
+                                        bg="transparent"
+                                        px="8"
+                                        fontWeight="bold"
+                                        fontSize="md"
+                                        _hover={{
+                                            color: "black",
+                                            background: "#fee761"
+                                        }}
+                                    >
+                                        {cta1}
+                                    </Button>
+                                </motion.span>
+
+                            }
+                            {cta2 &&
+                                <motion.span whileHover={{ scale: 1.1 }}>
+                                    <Button
+                                        w="10rem"
+                                        as="a"
+                                        href={cta2link}
+                                        size="lg"
+                                        border="1px solid #3583CE"
+                                        color="#3583CE"
+                                        bg="transparent"
+                                        px="8"
+                                        fontWeight="bold"
+                                        fontSize="md"
+                                        _hover={{
+                                            color: "white",
+                                            background: "#3583CE"
+                                        }}
+                                    >
+                                        {cta2}
+                                    </Button>
+                                </motion.span>
+
+                            }
                         </LightMode>
                     </Stack>
                     <Tabs
@@ -131,33 +151,33 @@ export const GraphicTabBottom = ({ heading, desc, logoImage, name1, pic1, title1
                             </TabPanel>
                         </TabPanels>
                         <TabList border="0px" my="15px">
-                        <motion.div whileHover={{ scale: 1.1 }}>
-                            <Tab mx="0.3rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
-                            ><ProfileIcon
-                                    pic={pic1}
-                                    name={name1}
-                                    title={title1}
-                                /></Tab>
-                        </motion.div>
+                            <motion.div whileHover={{ scale: 1.1 }}>
+                                <Tab mx="0.3rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
+                                ><ProfileIcon
+                                        pic={pic1}
+                                        name={name1}
+                                        title={title1}
+                                    /></Tab>
+                            </motion.div>
 
-                        <motion.div whileHover={{ scale: 1.1 }}>
-                            <Tab mx="0.3rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
-                            ><ProfileIcon
-                                    pic={pic2}
-                                    name={name2}
-                                    title={title2}
-                                /></Tab>
+                            <motion.div whileHover={{ scale: 1.1 }}>
+                                <Tab mx="0.3rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
+                                ><ProfileIcon
+                                        pic={pic2}
+                                        name={name2}
+                                        title={title2}
+                                    /></Tab>
 
-                        </motion.div>
+                            </motion.div>
 
-                        <motion.div whileHover={{ scale: 1.1 }}>
-                            <Tab mx="0.3rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
-                            ><ProfileIcon
-                                    pic={pic3}
-                                    name={name3}
-                                    title={title3}
-                                /></Tab>
-                        </motion.div>
+                            <motion.div whileHover={{ scale: 1.1 }}>
+                                <Tab mx="0.3rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
+                                ><ProfileIcon
+                                        pic={pic3}
+                                        name={name3}
+                                        title={title3}
+                                    /></Tab>
+                            </motion.div>
                         </TabList>
                     </Tabs>
 

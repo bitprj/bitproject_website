@@ -18,7 +18,7 @@ import * as fetch from 'node-fetch'
 import Image from 'next/image'
 import { motion } from "framer-motion"
 
-export const Landing = ({ heading, description,cta1, cta2, image, logoImage, play, cta1link, cta2link, formResponse, formActionButton, formActionButtonLink }) => {
+export const Landing = ({ heading, description, cta1, cta2, image, logoImage, play, cta1link, cta2link, formResponse, formActionButton, formActionButtonLink }) => {
   const subscribeEmail = async event => {
     let email = document.getElementById('email').value
     let emailRegex = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/
@@ -54,115 +54,145 @@ export const Landing = ({ heading, description,cta1, cta2, image, logoImage, pla
   return (
     <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white">
       <Container
-      maxW="container.lg"
-    >
-      <Fade>
-      <Box as="section" bg="black"  pb="12" overflow="hidden" color="white">
-        <Box maxW={{ base: 'xl', md: '7xl' }} mx="auto" px={{ base: '6', md: '8' }}>
-          <Box textAlign="center">
-
-          {logoImage && <Img
-              alt="Page icon"
-              src={logoImage}
-              width="100px"
-              m="0 auto"
-            />}
-
-            <Heading
-              as="h1"
-              size="2xl"
-              fontWeight="extrabold"
-              maxW="48rem"
-              mx="auto"
-              lineHeight="1.2"
-              letterSpacing="tight"
-            >
-              {heading}
-            </Heading>
-            <Text fontSize="lg" mt="4" maxW="xl" mx="auto" >
-              {description}
-            </Text>
-          </Box>
-
-          <Stack
-            justify="center"
-            direction={{ base: 'column', md: 'row' }}
-            mt="10"
-            mb="20"
-            spacing="4"
-          >
-            <LightMode>
-              {cta1 && <Button
-                as="a"
-                href={cta1link}
-                size="lg"
-                colorScheme="yellow"
-                px="8"
-                fontWeight="bold"
-                fontSize="md"
-              >
-                {cta1}
-              </Button>}
-              {cta2 && <Button
-                as="a"
-                href={cta2link}
-                size="lg"
-                colorScheme="blue"
-                px="8"
-                fontWeight="bold"
-                fontSize="md"
-              >
-                {cta2}
-              </Button>}
-
-              {formActionButton && <Box display="flex" alignItems="center">
-              <FormControl mr="1rem" isRequired>
-                <Input id="email" placeholder="email" border="1px" borderColor="#FEE761" bg="transparent" _hover=""
-                 _focus="" color="#FEE761" _placeholder={{ color: '#FEE761' }}/>
-
-              </FormControl>
-              <Button
-                id="signup"
-                onClick={subscribeEmail}
-                bg="transparent"
-                border="1px solid #2B6CB0"
-                px="8"
-                color="#2B6CB0"
-                fontWeight="bold"
-                fontSize="md"
-                _hover={{
-                  color: "white",
-                  background: "#2B6CB0"
-                }}
-              >
-                {formActionButton}
-              </Button>
-              
-
-              </Box>}
+        maxW="container.lg"
+      >
+        <Fade>
+          <Box as="section" bg="black" pb="12" overflow="hidden" color="white">
+            <Box maxW={{ base: 'xl', md: '7xl' }} mx="auto" px={{ base: '6', md: '8' }}>
               <Box textAlign="center">
-                <Text id="formResponse" fontSize="lg" mt="4" maxW="xl" mx="auto" />
+
+                {logoImage && <Img
+                  alt="Page icon"
+                  src={logoImage}
+                  width="100px"
+                  m="0 auto"
+                />}
+
+                <Heading
+                  as="h1"
+                  size="2xl"
+                  fontWeight="extrabold"
+                  maxW="48rem"
+                  mx="auto"
+                  lineHeight="1.2"
+                  letterSpacing="tight"
+                >
+                  {heading}
+                </Heading>
+                <Text fontSize="lg" mt="4" maxW="xl" mx="auto" >
+                  {description}
+                </Text>
               </Box>
-            </LightMode>
-          </Stack>
 
-        </Box>
-        { image && 
-          <Image 
-              // src={image}
-              // width="100%"
-              // // maxW="70rem"
-              // m="0 auto"
-              // mt="2rem"
-              // maxH="50vh"
-              // maxW ="60vw"
+              <Stack
+                justify="center"
+                padding="0"
+                direction={{ base: 'column', md: 'row' }}
+                mt="10"
+                mb="20"
+                spacing="4"
+              >
+                <LightMode>
+                  {cta1 &&
 
-              src={image}
-              width={1000}
-              height={400}
-            />}
-      </Box>
-      </Fade>
+                    <motion.span whileHover={{ scale: 1.1 }}>
+                      <Button
+                        w="10rem"
+                        as="a"
+                        href={cta1link}
+                        size="lg"
+                        color="#fee761"
+                        border="1px solid #fee761"
+                        bg="transparent"
+                        px="8"
+                        fontWeight="bold"
+                        fontSize="md"
+                        _hover={{
+                          color: "black",
+                          background: "#fee761"
+                        }}
+                      >
+                        {cta1}
+                      </Button>
+                    </motion.span>
+
+                  }
+                  {cta2 &&
+                    <motion.span whileHover={{ scale: 1.1 }}>
+                      <Button
+                        w="10rem"
+                        as="a"
+                        href={cta2link}
+                        size="lg"
+                        border="1px solid #3583CE"
+                        color="#3583CE"
+                        bg="transparent"
+                        px="8"
+                        fontWeight="bold"
+                        fontSize="md"
+                        _hover={{
+                          color: "white",
+                          background: "#3583CE"
+                        }}
+                      >
+                        {cta2}
+                      </Button>
+                    </motion.span>
+
+                  }
+
+                  {formActionButton && <> <Box display="flex" alignItems="center">
+                    <FormControl mr="1rem" isRequired>
+                      <Input id="email" placeholder="email" border="1px" borderColor="#FEE761" bg="transparent" _hover=""
+                        _focus="" color="#FEE761" _placeholder={{ color: '#FEE761' }} />
+
+                    </FormControl>
+                    <motion.span whileHover={{ scale: 1.1 }}>
+                      <Button
+                        id="signup"
+                        onClick={subscribeEmail}
+                        bg="transparent"
+                        border="1px solid #2B6CB0"
+                        px="8"
+                        color="#2B6CB0"
+                        fontWeight="bold"
+                        fontSize="md"
+                        _hover={{
+                          color: "white",
+                          background: "#2B6CB0"
+                        }}
+
+                      >
+                        {formActionButton}
+                      </Button>
+                    </motion.span>
+                  </Box>
+                    <Box textAlign="center">
+                      <Text id="formResponse" fontSize="lg" mt="4" maxW="xl" mx="auto" />
+                    </Box>
+                  </>
+                  }
+
+                </LightMode>
+              </Stack>
+
+            </Box>
+            {image &&
+              <Image
+                // src={image}
+                // width="100%"
+                // // maxW="70rem"
+                // m="0 auto"
+                // mt="2rem"
+                // maxH="50vh"
+                // maxW ="60vw"
+
+                src={image}
+                width={1000}
+                height={400}
+              />}
+          </Box>
+        </Fade>
       </Container>
     </Box>
   )

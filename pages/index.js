@@ -12,6 +12,12 @@ export default function HomePage() {
       <Head>
         <title>Bit Project</title>
         <meta name="description" content="We provide cutting-edge, open source learning experiences to prepare students for careers in tech." />
+        <meta property="og:title" content="Bit Project" />
+        <meta property="og:image" content="https://www.bitproject.org/_next/image?url=%livecode.png&w=2048&q=75" /> 
+        <meta property="og:description" content="We provide cutting-edge, open source learning experiences to prepare students for careers in tech." />
+        <meta property="og:url" content="https://www.bitproject.org/" />
+        <meta property="og:site_name" content="bitproject.org" />
+        <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
@@ -41,7 +47,7 @@ export default function HomePage() {
         graphic1="https://vimeo.com/570820559"
 
         pic2="/anita.jpeg"
-        name2="Anita Padman"
+        name2="Anita Padman" // need to change to promo video. this one is about serverless
         title2="Junior at UIUC"
         graphic2="https://vimeo.com/572033757"
 

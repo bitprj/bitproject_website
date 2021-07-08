@@ -1,11 +1,4 @@
-import Head from 'next/head'
-import Image from 'next/image'
-
 import { Landing } from '../components/landing.jsx'
-// import Layout from '../components/layout'
-import { Hero } from '../components/hero'
-import { Textblock } from '../components/textblock'
-import { DualCol } from '../components/dualcol'
 import { Navbar } from '../components/navbar'
 import { Footer } from '../components/footer'
 

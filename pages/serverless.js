@@ -34,6 +34,12 @@ export default function Serverless({ posts }) {
       <Head>
                 <title>Serverless</title>
                 <meta name="description" content="In our 8-week boot camp, build awesome apps with Serverless functions, JavaScript, and APIs. From IoT heartbeat monitors to face mask detectors, you can build anything with Serverless!" />
+                <meta property="og:title" content="Serverless - Bit Project" />
+                <meta property="og:image" content="https://www.bitproject.org/_next/image?url=%livecode.png&w=2048&q=75" /> 
+                <meta property="og:description" content="Build awesome apps with Serverless functions, JavaScript, and APIs." />
+                <meta property="og:url" content="https://www.bitproject.org/serverless" />
+                <meta property="og:site_name" content="bitproject.org" />
+                <meta property="og:type" content="website" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
       <Navbar />
@@ -45,21 +51,23 @@ export default function Serverless({ posts }) {
         logoImage="/serverlessLogo.svg"
         cta1link={' https://www.notion.so/bitproject/Welcome-to-Serverless-Camp-e218f86daf4248509350709cd9fa8017'}
         cta2link={'https://airtable.com/shr9hT8pEXpAAM00Z'}
+
+
         pic1="/fifi.jpeg"
         name1="Saving $ on Amazon"
         title1="Fifi Teklemedhin"
-        graphic1="https://vimeo.com/570820559"
+        graphic1="https://vimeo.com/570820559" // we need to change fifi's
 
-        pic2="/emily.svg"
+        pic2="/emily.png"
         name2="File Sharing for Exams"
         title2="Emily Chen"
-        graphic2="/feature.svg"
+        graphic2="https://vimeo.com/572255574"
 
 
-        pic3="/emily.svg"
-        name3="Predicting Power Usage"
-        title3="Evelyn Chin"
-        graphic3="/livecode.png"
+        pic3="/anita.jpeg"
+        name3="Dine the Distance"
+        title3="Anita Padman"
+        graphic3="https://vimeo.com/572033757"
       />
 
       <Textblock

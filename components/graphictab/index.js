@@ -85,42 +85,31 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
                                 volume="0"
                                 controls="true"
                                 width="100%"
-                                // maxW="70rem"
                                 m="0 auto"
-                                // maxH="20rem"
-                                loop="true"
+                                // loop="true"
                             />
                         </TabPanel>
                         <TabPanel>
                             <ReactPlayer
                                 url={graphic2}
-                                playing="true"
+                                // playing="true"
                                 volume="0"
                                 controls="true"
                                 width="100%"
-                                loop="true"
+                                // loop="true"
                             />
                         </TabPanel>
                         <TabPanel>
                             <ReactPlayer
                                 url={graphic3}
-                                playing="true"
+                                // playing="true"
                                 volume="0"
                                 controls="true"
                                 width="100%"
-                                loop="true"
+                                // loop="true"
                             />
                         </TabPanel>
-                        <TabPanel>
-                            <ReactPlayer
-                                url={graphic4}
-                                playing="true"
-                                volume="0"
-                                controls="true"
-                                width="100%"
-                                loop="true"
-                            />
-                        </TabPanel>
+                        
                     </TabPanels>
                 </Tabs>
             </Container>

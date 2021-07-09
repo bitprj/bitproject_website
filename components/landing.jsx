@@ -98,6 +98,7 @@ export const Landing = ({ heading, description, cta1, cta2, image, logoImage, pl
                       <Button
                         as="a"
                         href={cta1link}
+                        target="_blank"
                         size="lg"
                         color="#fee761"
                         border="1px solid #fee761"
@@ -121,6 +122,7 @@ export const Landing = ({ heading, description, cta1, cta2, image, logoImage, pl
                       <Button
                         as="a"
                         href={cta2link}
+                        target="_blank"
                         size="lg"
                         border="1px solid #3583CE"
                         color="#3583CE"

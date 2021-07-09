@@ -7,6 +7,7 @@ export const SocialLink = (props) => (
     w="10"
     h="10"
     fontSize="xl"
+    target="_blank"
     display="flex"
     alignItems="center"
     justifyContent="center"

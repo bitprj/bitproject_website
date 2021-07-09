@@ -24,8 +24,8 @@ export default function Mentor() {
         cta1="Apply Now"
         cta2="Learn More"
         logoImage="/counselor.png"
-        cta1link={' https://www.notion.so/bitproject/Welcome-to-Serverless-Camp-e218f86daf4248509350709cd9fa8017'}
-        cta2link={'https://airtable.com/shr9hT8pEXpAAM00Z'}
+        cta1link={' mailto:info@bitproject.org'}
+        cta2link={'https://www.notion.so/For-Mentors-78a1066a384d4ad397e7b39166959579'}
 
         pic1="/mentor/anthony.jpeg"
         name1="Anthony Chu"

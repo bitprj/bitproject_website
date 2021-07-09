@@ -61,45 +61,47 @@ export const GraphicTabBottom = ({ heading, desc, logoImage, name1, pic1, title1
                     >
                         <LightMode>
                             {cta1 &&
-                                    <Button
-                                        as="a"
-                                        href={cta1link}
-                                        size="lg"
-                                        color="#fee761"
-                                        border="1px solid #fee761"
-                                        bg="transparent"
-                                        px="8"
-                                        fontWeight="bold"
-                                        fontSize="md"
-                                        _hover={{
-                                            color: "black",
-                                            background: "#fee761",
-                                            px: "12"
-                                        }}
-                                    >
-                                        {cta1}
-                                    </Button>
+                                <Button
+                                    as="a"
+                                    href={cta1link}
+                                    target="_blank"
+                                    size="lg"
+                                    color="#fee761"
+                                    border="1px solid #fee761"
+                                    bg="transparent"
+                                    px="8"
+                                    fontWeight="bold"
+                                    fontSize="md"
+                                    _hover={{
+                                        color: "black",
+                                        background: "#fee761",
+                                        px: "12"
+                                    }}
+                                >
+                                    {cta1}
+                                </Button>
 
                             }
                             {cta2 &&
-                                    <Button
-                                        as="a"
-                                        href={cta2link}
-                                        size="lg"
-                                        border="1px solid #3583CE"
-                                        color="#3583CE"
-                                        bg="transparent"
-                                        px="8"
-                                        fontWeight="bold"
-                                        fontSize="md"
-                                        _hover={{
-                                            color: "white",
-                                            background: "#3583CE",
-                                            px: "12"
-                                        }}
-                                    >
-                                        {cta2}
-                                    </Button>
+                                <Button
+                                    as="a"
+                                    href={cta2link}
+                                    target="_blank"
+                                    size="lg"
+                                    border="1px solid #3583CE"
+                                    color="#3583CE"
+                                    bg="transparent"
+                                    px="8"
+                                    fontWeight="bold"
+                                    fontSize="md"
+                                    _hover={{
+                                        color: "white",
+                                        background: "#3583CE",
+                                        px: "12"
+                                    }}
+                                >
+                                    {cta2}
+                                </Button>
 
                             }
                         </LightMode>

@@ -34,6 +34,12 @@ export default function Serverless({ posts }) {
       <Head>
                 <title>Serverless</title>
                 <meta name="description" content="In our 8-week boot camp, build awesome apps with Serverless functions, JavaScript, and APIs. From IoT heartbeat monitors to face mask detectors, you can build anything with Serverless!" />
+                <meta property="og:title" content="Serverless - Bit Project" />
+                <meta property="og:image" content="https://www.bitproject.org/_next/image?url=%livecode.png&w=2048&q=75" /> 
+                <meta property="og:description" content="Build awesome apps with Serverless functions, JavaScript, and APIs." />
+                <meta property="og:url" content="https://www.bitproject.org/serverless" />
+                <meta property="og:site_name" content="bitproject.org" />
+                <meta property="og:type" content="website" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
       <Navbar />
@@ -43,23 +49,24 @@ export default function Serverless({ posts }) {
         cta1="Apply Now"
         cta2="Learn More"
         logoImage="/serverlessLogo.svg"
-        cta1link={' https://airtable.com/shrdXQvSljJYIpbHy'}
+        cta1link={'https://airtable.com/shrdXQvSljJYIpbHy'}
         cta2link={'https://www.notion.so/Serverless-Camp-adfa3d82f8f540039035b4259a6c4430'}
+
         pic1="/fifi.jpeg"
         name1="Saving $ on Amazon"
         title1="Fifi Teklemedhin"
-        graphic1="https://vimeo.com/570820559"
+        graphic1="https://vimeo.com/570820559" // we need to change fifi's
 
-        pic2="/emily.svg"
+        pic2="/emily.png"
         name2="File Sharing for Exams"
         title2="Emily Chen"
-        graphic2="/feature.svg"
+        graphic2="https://vimeo.com/572255574"
 
 
-        pic3="/emily.svg"
-        name3="Predicting Power Usage"
-        title3="Evelyn Chin"
-        graphic3="/livecode.png"
+        pic3="/anita.jpeg"
+        name3="Dine the Distance"
+        title3="Anita Padman"
+        graphic3="https://vimeo.com/572033757"
       />
 
       <Textblock

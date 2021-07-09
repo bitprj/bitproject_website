@@ -9,6 +9,12 @@ export default function Mentor() {
       <Head>
         <title>Mentor</title>
         <meta name="description" content="We pair awesome engineers with students to give back to their communities." />
+        <meta property="og:title" content="Mentor - Bit Project" />
+        <meta property="og:image" content="https://www.bitproject.org/_next/image?url=%livecode.png&w=2048&q=75" /> 
+        <meta property="og:description" content="We pair awesome engineers with students to give back to their communities." />
+        <meta property="og:url" content="https://www.bitproject.org/mentor" />
+        <meta property="og:site_name" content="bitproject.org" />
+        <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />

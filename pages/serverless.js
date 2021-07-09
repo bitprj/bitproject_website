@@ -43,8 +43,8 @@ export default function Serverless({ posts }) {
         cta1="Apply Now"
         cta2="Learn More"
         logoImage="/serverlessLogo.svg"
-        cta1link={' https://www.notion.so/bitproject/Welcome-to-Serverless-Camp-e218f86daf4248509350709cd9fa8017'}
-        cta2link={'https://airtable.com/shr9hT8pEXpAAM00Z'}
+        cta1link={' https://airtable.com/shrdXQvSljJYIpbHy'}
+        cta2link={'https://www.notion.so/Serverless-Camp-adfa3d82f8f540039035b4259a6c4430'}
         pic1="/fifi.jpeg"
         name1="Saving $ on Amazon"
         title1="Fifi Teklemedhin"

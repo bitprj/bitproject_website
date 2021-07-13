@@ -54,58 +54,64 @@ export default function BlogLayout({ children, frontMatter }) {
 
     return (
         <>
-        <Head>
-        <title>{frontMatter.title}</title>
-        <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <Navbar />
-        <Box as="section" bg="black" pt="24" overflow="hidden" color="white">
-        <Container
-            maxW="container.lg"
-            p="15px"
-            >
-            
-                <Stack
-                    as="article"
-                    spacing={8}
-                    justifyContent="center"
-                    alignItems="flex-start"
-                    m="0 auto 4rem auto"
-                    maxWidth="700px"
-                    w="100%"
-                    px={2}
-                    
+            <Head>
+                <title>Bit Project - {frontMatter.title}</title>
+                <meta property="og:title" content={`Bit Project - ${frontMatter.title}`} />
+                <meta property="og:image" content={frontMatter.image} />
+                <meta property="og:description" content={frontMatter.summary} />
+                <meta property="og:site_name" content="bitproject.org" />
+                <meta property="og:type" content="website" />
+
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+            <Navbar />
+            <Box as="section" bg="black" pt="24" overflow="hidden" color="white">
+                <Container
+                    maxW="container.lg"
+                    p="15px"
                 >
-                    <Flex
-                        flexDirection="column"
-                        justifyContent="flex-start"
+
+                    <Stack
+                        as="article"
+                        spacing={8}
+                        justifyContent="center"
                         alignItems="flex-start"
+                        m="0 auto 4rem auto"
                         maxWidth="700px"
                         w="100%"
-                    >
-                        <DescDualCol 
-                            heading={frontMatter.title}
-                            profile={frontMatter.by}
-                            desc={frontMatter.summary}
-                            pic={frontMatter.image}
-                            
-                        />
-                        <Flex>
-                        {frontMatter.companyLogo && <>
-                            <Text fontSize="md" color="#CCCDCE" mt="3" display="inline" mr="3">
-                                In Collaboration with
-                            </Text>
-                            <Img src={frontMatter.companyLogo} h="50px" display="inline"/>
-                        </>}
-                        </Flex>
+                        px={2}
 
-                    </Flex>
-                    <Divider />
-                    {children}              
-                </Stack>
+                    >
+                        <Flex
+                            flexDirection="column"
+                            justifyContent="flex-start"
+                            alignItems="flex-start"
+                            maxWidth="700px"
+                            w="100%"
+                        >
+                            <DescDualCol
+                                heading={frontMatter.title}
+                                profile={frontMatter.by}
+                                desc={frontMatter.summary}
+                                pic={frontMatter.image}
+
+                            />
+                            <Flex>
+                                {frontMatter.companyLogo && <>
+                                    <Text fontSize="md" color="#CCCDCE" mt="3" display="inline" mr="3">
+                                        In Collaboration with
+                            </Text>
+                                    <Img src={frontMatter.companyLogo} h="50px" display="inline" />
+                                </>}
+                            </Flex>
+
+                        </Flex>
+                        <Divider />
+                        {children}
+                    </Stack>
                 </Container>
                 <Footer />
-        </Box>
+            </Box>
         </>
     )
 }

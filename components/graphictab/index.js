@@ -109,7 +109,6 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
                                 // loop="true"
                             />
                         </TabPanel>
-                        
                     </TabPanels>
                 </Tabs>
             </Container>

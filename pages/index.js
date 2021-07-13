@@ -48,7 +48,7 @@ export default function HomePage() {
 
         pic2="/anita.jpeg"
         name2="Anita Padman" // need to change to promo video. this one is about serverless
-        title2="Junior at UIUC"
+        title2="Junior at UIC"
         graphic2="https://vimeo.com/572033757"
 
 

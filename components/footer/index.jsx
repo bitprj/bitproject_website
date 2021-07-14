@@ -20,7 +20,7 @@ import { motion } from "framer-motion"
 
 export const Footer = () => {
   return (
-    <Box as="footer" color="#9e9d9d" bg="#181818">
+    <Box as="footer" color="#9e9d9d" bg="#181818" color="red">
       <Fade>
         <Box
           maxW={{

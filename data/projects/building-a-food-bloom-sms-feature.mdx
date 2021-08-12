@@ -1,0 +1,55 @@
+---
+title: 'How Beatrix Built Food Bloom SMS Feature  🍔'
+publishedAt: '2020-08-12'
+summary: '6 out of 10 always eat instant noodles or instant foods because they have no idea what to cook or prepare. Food Bloom changes that.'
+category: 'projects'
+image: 'https://i.imgur.com/hlWwsLr.png'
+---
+
+## Introduction
+As a UX designer, tech writer, and international student that works or studies from home due to the pandemic, I need a product that can help me to generate a random recipe for daily cooking. Also, I need a reminder when it is time for me to eat lunch or breakfast. The reason is that I always focus on working without thinking about having a meal on the proper schedule. Before creating this idea or solution, I researched by asking ten people in my Discord group.
+
+> 6 out of 10 people always eat instant noodles or instant foods because they have no idea what to cook or prepare.
+
+## About Me
+Beatrix Cendana is a business student, UX designer/Writer, and tech writer based in Seattle, WA, US. She got a bachelor's degree in medicine from Indonesia and an Associate degree in Mathematics from Pierce College. She decided to switch her career path to tech after graduating from Pierce. She is passionate about fast-paced career development, which inspires the way the world functions and lives. 
+
+## Behind the scenes
+I made two flowcharts. In case the Tasty API doesn't work (sometimes it has an issue with the key), I can use another API which is called Spoonacular Food API.
+
+![](https://i.imgur.com/4Sbe6n6.png)
+
+### The two reminders (breakfast and lunch)
+Based on the timezone that people choose, they can get notifications when to prepare the meals.
+
+![](https://i.imgur.com/Qfllfaz.png)
+
+
+### Choose one ingredient you would like to have
+You can type any ingredients that you would like to have and get one random recipe (including the name of the recipe, description, and link). 
+
+### Satisfied or not?
+You can type either Y (it means you are satisfied with the recipe that the system generates for you) or N (it means you are not satisfied) and the first question will pop up again.
+
+
+## The Technologies
+### Azure Functions
+- **Timer trigger:** to give the reminder to the user when it is time to cook/eat. ![](https://i.imgur.com/x33zFwe.png)
+
+### APIs
+- **Food API:** Search and understand the users' food preferences by pulling out relevant and detailed food recipes. ![](https://i.imgur.com/lakRuVy.png) 
+
+- **Twilio SMS API and Webhook:** Users will receive the reminders (and the links or images) on their phones. By saving the environment variable in Azure configuration, I can call the timer trigger function to send a message to my phone ![](https://i.imgur.com/yrH0P0n.png)
+
+### Front-end Languages
+- **Node.js and Javascript:** Creating time-based reminders.
+
+## Moving forward
+Thanks to BitProject for giving me such a huge opportunity to learn more about API or serverless function, participate in the tech conferences, and practice my presentation skills. I never thought that I would work on the development process or backend stuff. 
+
+I hope in the future that this feature can be useful for people that have problem with eating schedule and problem to choose food recipe. 
+
+I will probably embed this feature in future apps after I successfully embed it in the SMS feature. It will require more work to do since I have to do more research and design, but I think this project will help me earn more experience working as a designer and developer at the same time.
+
+![](https://i.imgur.com/mRItqhG.jpg)
+Huge thanks to BitProject and Jonah for the opportunity! 

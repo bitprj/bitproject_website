@@ -13,9 +13,9 @@ export const HighlightBox = ({ title, companyLogo, image, link, cohort }) => {
     return (
         <Box
             overflow="hidden"
-            maxW="80vw"
             mx="auto"
             as="a"
+            w="375px"
             borderRadius="5px"
             href={link}
             bg="#363636"

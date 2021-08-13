@@ -15,7 +15,7 @@ export const HighlightBox = ({ title, companyLogo, image, link, cohort }) => {
             overflow="hidden"
             mx="auto"
             as="a"
-            w="375px"
+            w={{ sm: "100%" }} // width 100 when larger than sm
             borderRadius="5px"
             href={link}
             bg="#363636"

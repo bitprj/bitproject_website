@@ -126,7 +126,7 @@ export default function Serverless({ posts }) {
           maxW="container.xl"
           p="30px"
         >
-          <SimpleGrid minChildWidth="375px" spacing="40px" bg="black" justify="center">
+          <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing="40px" bg="black" justify="center">
             {filteredBlogPosts.map((frontMatter) => (
               <HighlightBox key={frontMatter.title} title={frontMatter.title} companyLogo={frontMatter.companyLogo} image={frontMatter.image} cohort={frontMatter.cohort} link={`projects/${frontMatter.slug}`} mx="auto" />
             ))}

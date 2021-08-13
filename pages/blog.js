@@ -51,9 +51,9 @@ export default function Workshops({ posts }) {
                     maxW="container.xl"
                     p="30px"
                 >
-                    <SimpleGrid minChildWidth="350px" spacing="40px" bg="black" justify="center" >
+                    <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing="40px" bg="black" justify="center" >
                         {filteredBlogPosts.map((frontMatter) => (
-                            <HighlightBox key={frontMatter.title} title={frontMatter.title} companyLogo={frontMatter.companyLogo} image={frontMatter.image} link={`${frontMatter.category}/${frontMatter.slug}`} mx="auto" />
+                            <HighlightBox key={frontMatter.title} title={frontMatter.title} companyLogo={frontMatter.companyLogo} image={frontMatter.image} link={`${frontMatter.category}/${frontMatter.slug}`} mx="auto" cohort={frontMatter.cohort} />
                         ))}
                     </SimpleGrid>
                 </Container>

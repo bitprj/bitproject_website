@@ -1,0 +1,160 @@
+---
+title: 'Ganning built CounselorBot and saves the day 🤖'
+publishedAt: '2021-08-12'
+summary: 'Using Azure Functions and Azure QnA Maker, Ganning created a new and improved version of CounselorBot, nicknamed, CounselorBot Serverless Pro Max.'
+category: 'projects'
+image: 'https://i.imgur.com/Mw4N9AJ.jpg'
+cohort: 'Serverless Camp S21'
+---
+
+# CounselorBot Saves The Day 🤖
+“I accidentally merged this branch. Why isn’t this bot opening a new issue? How do I resolve these merge conflicts?” 
+
+These words were said numerous times by countless students across the 2021 Summer Cohort of the Bit Project Serverless Camp. Throughout the curriculum, the Counselor, which is a Github bot deployed on Heroku, continuously opened new issues, tested code, and made sure that the student was learning.
+
+## Well the bot works... why rebuild it? 🌎
+You're right. The bot absolutely does work, but it does have a few annoying quirks (covered below). No product is perfect on its first iteration, and that's why even the largest of companies continously roll out updates for their services. That's where the idea of CounselorBot Saves The Day came from. 
+
+I wanted to help make the experience of students who use the CounselorBot in the future have an easy-to-use method of navigating the Serverless course. 
+
+With more features, bug fixes, and the latest technologies, CounselorBot Saves The Day is a new and improved version of the original CounselorBot. This results in a better user experience and more closely replicates the real-world experience of contributing to an open-source repository.
+
+## About Me 😊
+Hi there! I'm Ganning Xu (he/him), a junior at North Carolina's School of Science and Mathematics. I first got into programming after taking Python Programming I in ninth grade, and I fell I thought, "this is something that I WANTED to do." Outside of programming, some of my hobbies include swimming and trying new food (I love to eat).
+
+## The Problem 🛑
+- **Merge conflicts:** When trying to add code to the main branch of the course repository, the Bot would sometimes cause merge conflicts, which resulted in a whole mess of other problems occuring, such as:
+- **Steps and issues not opening:** This would prevent the student from moving on with the course, and need the help of a camp counselor, which not only wasted time, but added layers of frustration. 
+- **Long issue threads:** Each step would be an issue comment in an issue tread, resulting in issues with 8-9 comments, which is ridiculously long. 
+- **Hard to find what went wrong with each test run:** There would be tons to tabs to click through, and when you're new to GitHub (like I was when I started the serverless curriculum, it can get very overwhelming).
+- **Non-scalable:** Since CounselorBot used to be deployed as a node app, it isn't very good at handling a sudden burst of requests, which could lead many students being stranded, not knowing what to do.
+
+
+## The Solution ✅ 
+- I added **separate PR’s and issues** for each step (no more one long issue with a bunch of issue comments)
+- **Issues re-open** when accidentally closed by the user!
+- CounselorBot is deployed on **Serverless** using Azure functions, allowing for easier scalability when more students end up using this service.
+- **Main branch protection:** CounselorBot will protect the main branch and only approve PR’s when they are ready to be merged.
+- Removed dependency on .progress file, which **eliminates future merge conflicts**, which students had trouble with this cohort.
+- A [**Step Skipper** feature](https://counselor-steps.herokuapp.com/) that allows users to skip to any step within the curriculum they want! This can also be used for testing!
+- An **intelligent question and answer service** that allows students to comment a question they have, and the bot will respond with its knowledge base, or if that does not work, it will call a counselor.
+
+
+![](https://i.imgur.com/oSaj7sy.png)
+
+## Overview 🧠
+
+When a user installs `CounselorBot` on all of their repositories, the Bot is subscribed to EVERYTHING the user does (commits, new branch, pull request opening). 
+
+Therefore, when a user makes a commit, a workflow run will trigger, checking whether or not the code is valid. If the code is valid, the CounselorBot will approve the PR that was opened, and the user is allowed to move on to the next step.
+
+If the workflow does not pass, then the bot will comment what went wrong with the check!
+
+![](https://i.imgur.com/KkLbFpD.png)
+
+Woah, that was a giant flowchart... where do I start?
+
+Basically, whenever the user commits code to a branch in the Serverless Repo, the CounselorBot will call the Github API and trigger a workflow run.
+
+1. User commits code and makes a pull request.
+2. Workflow Run
+    a. If the workflow passes, approve the PR ✅
+    b. If the workflow fails, comment what was wrong ❌
+3. User commits code until the workflow run passes.
+4. User merges the pull request
+5. CounselorBot makes a post to Hasura (postgres database), recording the user's step #.
+6. Next issue is opened!
+
+## Tools Used 🔨
+
+#### NodeJS
+NodeJS was the language that the entire CounselorBot was written in. The Serverless Camp was my first time using NodeJS, and it allowed me to realize how I can *write my own API*.
+
+#### GitHub API
+Prior to the Serverless Camp, I've never even touched GitHub, much less using a bot to control repos, issues, and pull requests. Using the GitHub API allowed me to realize just how powerful APIs can be, and the sheer amount of data that GitHub actually collects from you 😲
+
+#### Octokit
+Octokit was the actual *interaction between the code and GitHub*, allowing us to create issues, run workflows, and approve pull requests. 
+
+#### Azure Functions
+Previously, CounselorBot was deployed on Heroku as a node app. This was slow, expensive, and didn't provide an ideal user experience. As a solution, CounselorBot saves the day is now deployed on Serverless, using Azure functions. This allows us to scale up CounselorBot easier, and use a "pay as you go" idea using Azure's serverless features.
+
+#### Azure QnA Maker
+Students are able to comment a question for the CounselorBot by typing `@counselorbot example help message`. CounselorBot detects this and uses the Azure QnA maker to generate a response based on commonly asked questions for my cohort of the serverless curriculum. 
+
+#### Heroku
+CounselorBot's step skipper feature is hosted on Heroku as a node app. Though it may seem counterintuitive, using Heroku allowed us to create an smooth sailing Oauth sign in experience. 
+
+## Behind the Scenes 🪜
+Each time a user with the CounselorBot installed makes a commit, a webhook payload is sent to the Azure endpoint: 
+
+![](https://i.imgur.com/fkkxvdr.png)
+
+In our Azure function code, we check for the type of event that was recieved via webhook:
+
+```js
+app.on('issues.closed', async (context) => {
+    // check if the bot closed the issue
+    console.log("issue has been closed");
+    if (context.payload.sender.login != "counselorbot-serverless-pro-max[bot]") {
+      // list all issue comments
+      const issuesComments = await context.octokit.issues.listComments({
+        owner: context.payload.repository.owner.login,
+        repo: context.payload.repository.name,
+        issue_number: context.payload.issue.number,
+      });
+
+
+      // reopen the issue of the last comment is not closed via oauth
+        if (issuesComments.data.length == 0 || issuesComments.data[issuesComments.data.length - 1].body != "closed via oauth") {
+          await context.octokit.issues.update({
+            owner: context.payload.repository.owner.login,
+            repo: context.payload.repository.name,
+            issue_number: context.payload.issue.number,
+            state: "open"
+          })
+        }
+    }
+  });
+```
+
+Within the `issues.closed` event, we check for who is closing the issue, and whether or not the most recent issue comment is "closed via oauth". 
+
+This actually allows us to re-open issues when they are closed by the student, and not our [Oauth step skipper app](https://bitprj.github.io/counselor-steps/pages/). 
+
+Speaking of which, that is also a new feature of CounselorBot Serverless Pro Max!
+
+**Step Skipper**
+Do you have a step that you REALLY want to skip to, without doing all the previous steps? Maybe the first couple of steps are too easy, or you just want to repeat a couple of prevoius steps without using the instructions.
+
+*Well do not fear, Step Skipper is here!* 
+
+Simply enter your `GitHub username` and `repo name`, and click `Next Step`
+![](https://i.imgur.com/IBUFgin.png)
+
+
+Choose from the dropdown which step you wanna skip to, and click `change`
+![](https://i.imgur.com/iSnyE9G.png)
+
+Make sure you `Sign in with GitHub` to make sure you aren't impersonating someone else!
+![](https://i.imgur.com/uCmJllP.png)
+
+
+We just skipped to the chosen step!
+![](https://i.imgur.com/oJgtr5S.png)
+
+**Backend**
+1. User enters repo name and username
+2. Get the `config.yml` file from their repo, and populate steps into the dropdown.
+3. When the user clicks "sign in with GitHub", we update Hasura, the Postgres database with the step number, and open the issue the user chose. 
+
+## Moving Forward ⏩
+Adding these new features to CounselorBot opens countless doors for its use. Here are a couple of ideas that I would love to implement in the future:
+
+- Allowing CounselorBot to be added to any existing course repo (all the new repo would need to have is a config.yml file detailing all the steps!)
+- Having CounselorBot be a guide that helps new hires at tech companies solve their first issues and create their first pull requests in the companies codebase. 
+
+## Thanks and Acknowledgements 🙏 
+Creating CounselorBot Saves The Day would not have been possible without the help of the Bit Project Team (especially Emily & Daniel). 
+
+Additionally, this entire project would not have been possible without my awesome mentors *Anthony Chu (Sr. PM at Microsoft)* and *Gouthami Kamalnath (Software Engineer II at Microsoft)*. Thank you to both, Anthony and Gouthami for not only answering my technical questions, but also helping me figure out the tech industry as a whole 😊

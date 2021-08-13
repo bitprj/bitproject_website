@@ -32,16 +32,16 @@ export default function Serverless({ posts }) {
   return (
     <div>
       <Head>
-                <title>Serverless</title>
-                <meta name="description" content="In our 8-week boot camp, build awesome apps with Serverless functions, JavaScript, and APIs. From IoT heartbeat monitors to face mask detectors, you can build anything with Serverless!" />
-                <meta property="og:title" content="Serverless - Bit Project" />
-                <meta property="og:image" content="https://www.bitproject.org/_next/image?url=%livecode.png&w=2048&q=75" /> 
-                <meta property="og:description" content="Build awesome apps with Serverless functions, JavaScript, and APIs." />
-                <meta property="og:url" content="https://www.bitproject.org/serverless" />
-                <meta property="og:site_name" content="bitproject.org" />
-                <meta property="og:type" content="website" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
+        <title>Serverless</title>
+        <meta name="description" content="In our 8-week boot camp, build awesome apps with Serverless functions, JavaScript, and APIs. From IoT heartbeat monitors to face mask detectors, you can build anything with Serverless!" />
+        <meta property="og:title" content="Serverless - Bit Project" />
+        <meta property="og:image" content="https://www.bitproject.org/_next/image?url=%livecode.png&w=2048&q=75" />
+        <meta property="og:description" content="Build awesome apps with Serverless functions, JavaScript, and APIs." />
+        <meta property="og:url" content="https://www.bitproject.org/serverless" />
+        <meta property="og:site_name" content="bitproject.org" />
+        <meta property="og:type" content="website" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Navbar />
       <GraphicTabBottom
         heading="Serverless Camp"
@@ -126,9 +126,9 @@ export default function Serverless({ posts }) {
           maxW="container.xl"
           p="30px"
         >
-          <SimpleGrid minChildWidth="350px" spacing="40px" bg="black" justify="center" >
+          <SimpleGrid minChildWidth="350px" spacing="40px" bg="black" justify="center">
             {filteredBlogPosts.map((frontMatter) => (
-              <HighlightBox key={frontMatter.title} title={frontMatter.title} companyLogo={frontMatter.companyLogo} image={frontMatter.image} link={`projects/${frontMatter.slug}`} mx="auto" />
+              <HighlightBox key={frontMatter.title} title={frontMatter.title} companyLogo={frontMatter.companyLogo} image={frontMatter.image} cohort={frontMatter.cohort} link={`projects/${frontMatter.slug}`} mx="auto" />
             ))}
           </SimpleGrid>
         </Container>

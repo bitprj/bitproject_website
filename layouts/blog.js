@@ -22,17 +22,8 @@ const tweetUrl = (slug) =>
     `https://twitter.com/intent/tweet?text=https://benjamincarlson.io/blog${slug} by @bjmncrlsn`
 
 export default function BlogLayout({ children, frontMatter }) {
-    const { colorMode } = useColorMode()
-    const textColor = {
-        light: 'gray.700',
-        dark: 'gray.400'
-    }
-    const iconColor = {
-        light: 'gray.600',
-        dark: 'gray.300'
-    }
+
     const router = useRouter();
-    const slug = router.asPath.replace('/blog', '')
 
 
     const [width, setWidth] = useState(1)
@@ -100,7 +91,7 @@ export default function BlogLayout({ children, frontMatter }) {
                                 {frontMatter.companyLogo && <>
                                     <Text fontSize="md" color="#CCCDCE" mt="3" display="inline" mr="3">
                                         In Collaboration with
-                            </Text>
+                                    </Text>
                                     <Img src={frontMatter.companyLogo} h="50px" display="inline" />
                                 </>}
                             </Flex>

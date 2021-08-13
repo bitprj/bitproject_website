@@ -53,7 +53,7 @@ export default function Workshops({ posts }) {
                 >
                     <SimpleGrid minChildWidth="350px" spacing="40px" bg="black" justify="center" >
                         {filteredBlogPosts.map((frontMatter) => (
-                            <HighlightBox key={frontMatter.title} title={frontMatter.title} companyLogo={frontMatter.companyLogo} image={frontMatter.image} link={`${frontMatter.category}/${frontMatter.slug}`} mx="auto" />
+                            <HighlightBox key={frontMatter.title} title={frontMatter.title} companyLogo={frontMatter.companyLogo} image={frontMatter.image} link={`${frontMatter.category}/${frontMatter.slug}`} mx="auto" cohort={frontMatter.cohort} />
                         ))}
                     </SimpleGrid>
                 </Container>

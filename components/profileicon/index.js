@@ -10,12 +10,12 @@ import * as React from 'react'
 import styles from './ProfileIcon.module.css';
 import Image from 'next/image'
 
-export const ProfileIcon = ({ pic, name, title }) => {
+export const ProfileIcon = (props) => {
 
-   
+
     // var direct;
     // useEffect(() => {
-        
+
     //     window.addEventListener('resize', () => {
     //         const myWidth = window.innerWidth;
     //         if (myWidth <= 600) {
@@ -31,12 +31,12 @@ export const ProfileIcon = ({ pic, name, title }) => {
     return (
 
         // <Stack color="white" px="0.5rem" borderRadius="15px" alignItems="center" direction={undefined}>
-         <Flex color="white" px="0.5rem" borderRadius="15px" alignItems="center">
+        <Flex color="white" px="0.5rem" borderRadius="15px" alignItems="center" {...props}>
             <Box className={styles.pfp}>
                 <Square size="">
                     <Img
                         mr="1.2rem"
-                        src={pic}
+                        src={props.pic}
                         height="50px"
                         width="50px"
                         objectFit="cover"
@@ -47,10 +47,10 @@ export const ProfileIcon = ({ pic, name, title }) => {
             {/* <Box textAlign="left" ml="1.2rem" className={styles.textBox}> */}
             <Box textAlign="left">
                 <Text fontSize="xl" mx="auto" fontWeight="bold">
-                    {name}
+                    {props.name}
                 </Text>
                 <Text fontSize="md" mx="auto" >
-                    {title}
+                    {props.title}
                 </Text>
             </Box>
         </Flex>

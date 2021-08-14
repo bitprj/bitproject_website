@@ -11,6 +11,9 @@ import {
 } from '@chakra-ui/react'
 import { jsx } from '@emotion/react'
 import NextLink from 'next/link'
+import React from "react"
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
+import { dracula } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 const CustomLink = (props) => {
     const { colorMode } = useColorMode()
@@ -112,6 +115,11 @@ const Hr = () => {
 
     return <Divider borderColor={borderColor[colorMode]} my={4} w="100%" />
 }
+
+
+
+
+
 
 const MDXComponents = {
     h1: (props) => <Heading as="h1" size="xl" my={4} {...props} />,

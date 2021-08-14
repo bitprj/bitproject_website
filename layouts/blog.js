@@ -23,8 +23,17 @@ const tweetUrl = (slug) =>
 
 export default function BlogLayout({ children, frontMatter }) {
 
+    const { colorMode } = useColorMode()
+    const textColor = {
+        light: 'gray.700',
+        dark: 'gray.400'
+    }
+    const iconColor = {
+        light: 'gray.600',
+        dark: 'gray.300'
+    }
     const router = useRouter();
-
+    const slug = router.asPath.replace('/blog', '')
 
     const [width, setWidth] = useState(1)
     const handleScroll = () => {
@@ -44,7 +53,9 @@ export default function BlogLayout({ children, frontMatter }) {
     })
 
     return (
+
         <>
+
             <Head>
                 <title>Bit Project - {frontMatter.title}</title>
                 <meta property="og:title" content={`Bit Project - ${frontMatter.title}`} />
@@ -103,6 +114,9 @@ export default function BlogLayout({ children, frontMatter }) {
                 </Container>
                 <Footer />
             </Box>
+
         </>
     )
 }
+
+

@@ -92,7 +92,7 @@ Each time a user with the CounselorBot installed makes a commit, a webhook paylo
 
 In our Azure function code, we check for the type of event that was recieved via webhook:
 
-```js
+```javascript
 app.on('issues.closed', async (context) => {
     // check if the bot closed the issue
     console.log("issue has been closed");

@@ -114,17 +114,13 @@ export default function Serverless({ posts }) {
       <CenterDualCol
         heading="Build your Own Project"
         description="Demonstrate your new competence with cloud computing by developing your own project: it can solve problems, be fun, or do all of the above!"
-        cta1="Sample Projects"
-        cta2="Learn More"
         image="/feature.svg"
         logoImage="/serverlessLogo.svg"
-        cta1link={' https://www.notion.so/bitproject/Welcome-to-Serverless-Camp-e218f86daf4248509350709cd9fa8017'}
-        cta2link={'https://airtable.com/shr9hT8pEXpAAM00Z'}
       />
       <Box as="section" bg="black" color="white">
         <Container
           maxW="container.xl"
-          p="30px"
+        // p="30px"
         >
           <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing="40px" bg="black" justify="center">
             {filteredBlogPosts.map((frontMatter) => (

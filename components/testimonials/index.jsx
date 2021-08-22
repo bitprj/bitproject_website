@@ -5,6 +5,9 @@ import { Testimonial } from './Testimonial'
 import Quotes from './quotes.json'
 import { Stack } from "@chakra-ui/react"
 export const Testimonials = ({ heading, desc }) => {
+  let total = Quotes.length;
+  let half = Math.floor(total / 2);
+
   return (
     <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white">
       <Container
@@ -33,28 +36,9 @@ export const Testimonials = ({ heading, desc }) => {
           <Box p="4" maxW={{
             lg: "50%"
           }}>
-            {Quotes.map((quote, i) => {
-              if (i >= 2) {
-                return;
-              }
-              return (
-                <Testimonial
-                  key={i}
-                  name={quote.name}
-                  company={quote.title}
-                  image={quote.img_url}
-                >
-                  {quote.text}
-                </Testimonial>
-              )
-            })}
-          </Box>
-          <Box p="4" maxW={{
-            lg: "50%"
-          }}>
             {
               Quotes.map((quote, i) => {
-                if (i < 2) {
+                if (i < half) {
                   return;
                 }
 
@@ -70,6 +54,27 @@ export const Testimonials = ({ heading, desc }) => {
                 )
               })}
           </Box>
+
+          <Box p="4" maxW={{
+            lg: "50%"
+          }}>
+            {Quotes.map((quote, i) => {
+              if (i >= half) {
+                return;
+              }
+              return (
+                <Testimonial
+                  key={i}
+                  name={quote.name}
+                  company={quote.title}
+                  image={quote.img_url}
+                >
+                  {quote.text}
+                </Testimonial>
+              )
+            })}
+          </Box>
+
 
         </Stack>
       </Container>

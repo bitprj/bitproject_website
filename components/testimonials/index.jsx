@@ -26,7 +26,7 @@ export const Testimonials = ({ heading, desc }) => {
           {desc}
         </Text>
 
-        <Stack align="start" justify="center" spacing={{ lg: "-4", sm: "-8" }} columns="1" direction={{
+        <Stack mt="8" align="start" justify="center" spacing={{ lg: "-4", sm: "-8" }} columns="1" direction={{
           lg: "row",
           sm: "column"
         }}>

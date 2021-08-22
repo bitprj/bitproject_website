@@ -118,10 +118,10 @@ export const GraphicTabBottom = ({ heading, desc, logoImage, name1, pic1, title1
                                     url={graphic1}
                                     playing="true"
                                     volume="0"
-                                    controls="true"
-                                    width="100%"
+                                    controls={true}
+                                    // width="100%"
                                     m="0 auto"
-                                    // loop="true"
+                                // loop="true"
                                 />
                             </TabPanel>
                             <TabPanel>
@@ -130,8 +130,7 @@ export const GraphicTabBottom = ({ heading, desc, logoImage, name1, pic1, title1
                                     // playing="true"
                                     volume="0"
                                     controls="true"
-                                    width="100%"
-                                    // loop="true"
+                                // loop="true"
                                 />
                             </TabPanel>
                             <TabPanel>
@@ -140,8 +139,7 @@ export const GraphicTabBottom = ({ heading, desc, logoImage, name1, pic1, title1
                                     // playing="true"
                                     volume="0"
                                     controls="true"
-                                    width="100%"
-                                    // loop="true"
+                                // loop="true"
                                 />
                             </TabPanel>
                         </TabPanels>

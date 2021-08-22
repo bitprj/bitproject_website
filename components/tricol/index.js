@@ -15,7 +15,7 @@ export const TriCol = ({ heading1, para1, heading2, para2, heading3, para3 }) =>
                 maxW="container.lg"
                 p="15px"
             >
-                <SimpleGrid columns={4} spacing={10} minChildWidth="200px">
+                <SimpleGrid columns={3} spacing={10} minChildWidth="200px">
                     <Box>
                         <Heading
                             as="h1"
@@ -25,7 +25,7 @@ export const TriCol = ({ heading1, para1, heading2, para2, heading3, para3 }) =>
                             mx="auto"
                             lineHeight="1.2"
                             letterSpacing="tight"
-                            >
+                        >
                             {heading1}
                         </Heading>
                         <Text fontSize="sm" mt="4" maxW="xl" mx="auto" >
@@ -41,7 +41,7 @@ export const TriCol = ({ heading1, para1, heading2, para2, heading3, para3 }) =>
                             mx="auto"
                             lineHeight="1.2"
                             letterSpacing="tight"
-                            >
+                        >
                             {heading2}
                         </Heading>
                         <Text fontSize="sm" mt="4" maxW="xl" mx="auto" >
@@ -57,7 +57,7 @@ export const TriCol = ({ heading1, para1, heading2, para2, heading3, para3 }) =>
                             mx="auto"
                             lineHeight="1.2"
                             letterSpacing="tight"
-                            >
+                        >
                             {heading3}
                         </Heading>
                         <Text fontSize="sm" mt="4" maxW="xl" mx="auto" >

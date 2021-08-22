@@ -94,76 +94,75 @@ export const Landing = ({ heading, description, cta1, cta2, image, logoImage, pl
                   {cta1 &&
 
                     // <motion.div whileHover={{ scale: 1.1 }} textAlign="center" width="100rem">
-                      <Button
-                        as="a"
-                        href={cta1link}
-                        target="_blank"
-                        size="lg"
-                        color="#fee761"
-                        border="1px solid #fee761"
-                        bg="transparent"
-                        px="8"
-                        fontWeight="bold"
-                        fontSize="md"
-                        _hover={{
-                          color: "black",
-                          background: "#fee761",
-                          px: "12"
-                        }}
-                      >
-                        {cta1}
-                      </Button>
+                    <Button
+                      as="a"
+                      href={cta1link}
+                      target="_blank"
+                      size="lg"
+                      color="#fee761"
+                      border="1px solid #fee761"
+                      bg="transparent"
+                      px="8"
+                      fontWeight="bold"
+                      fontSize="md"
+                      _hover={{
+                        color: "black",
+                        background: "#fee761",
+                        px: "12"
+                      }}
+                    >
+                      {cta1}
+                    </Button>
                     // </motion.div>
 
                   }
                   {cta2 &&
                     // <motion.span whileHover={{ scale: 1.1 }}>
-                      <Button
-                        as="a"
-                        href={cta2link}
-                        target="_blank"
-                        size="lg"
-                        border="1px solid #3583CE"
-                        color="#3583CE"
-                        bg="transparent"
-                        px="8"
-                        fontWeight="bold"
-                        fontSize="md"
-                        _hover={{
-                          color: "white",
-                          background: "#3583CE",
-                          px: "12"
-                        }}
-                      >
-                        {cta2}
-                      </Button>
+                    <Button
+                      as="a"
+                      href={cta2link}
+                      target="_blank"
+                      size="lg"
+                      border="1px solid #3583CE"
+                      color="#3583CE"
+                      bg="transparent"
+                      px="8"
+                      fontWeight="bold"
+                      fontSize="md"
+                      _hover={{
+                        color: "white",
+                        background: "#3583CE",
+                        px: "12"
+                      }}
+                    >
+                      {cta2}
+                    </Button>
                     // </motion.span>
 
                   }
 
                   {formActionButton && <> <Box display="flex" alignItems="center">
                     <FormControl mr="1rem" isRequired>
-                      <Input id="email" placeholder="email" border="1px" borderColor="#FEE761" bg="transparent" _hover=""
-                        _focus="" color="#FEE761" _placeholder={{ color: '#FEE761' }} />
+                      <Input id="email" placeholder="email" border="1px" borderColor="#404040" bg="#404040" _hover=""
+                        _focus="" color="white" _placeholder={{ color: 'white' }} />
 
                     </FormControl>
-                      <Button
-                        id="signup"
-                        onClick={subscribeEmail}
-                        bg="transparent"
-                        border="1px solid #2B6CB0"
-                        px="8"
-                        color="#2B6CB0"
-                        fontWeight="bold"
-                        fontSize="md"
-                        _hover={{
-                          color: "white",
-                          background: "#2B6CB0",
-                          px: "12"
-                        }}
-                      >
-                        {formActionButton}
-                      </Button>
+                    <Button
+                      id="signup"
+                      onClick={subscribeEmail}
+                      bg="#2B6CB0"
+                      border="1px solid #2B6CB0"
+                      px="8"
+                      color="white"
+                      fontWeight="bold"
+                      fontSize="md"
+                      _hover={{
+                        color: "white",
+                        background: "#4e8dcf",
+                      }}
+                    >
+                      {formActionButton}
+                    </Button>
                   </Box>
                     <Box textAlign="center">
                       <Text id="formResponse" fontSize="lg" mt="4" maxW="xl" mx="auto" />

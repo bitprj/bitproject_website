@@ -66,16 +66,15 @@ export const GraphicTabBottom = ({ heading, desc, logoImage, name1, pic1, title1
                                     href={cta1link}
                                     target="_blank"
                                     size="lg"
-                                    color="#fee761"
-                                    border="1px solid #fee761"
-                                    bg="transparent"
+                                    color="white"
+                                    border="1px solid #2B6CB0"
+                                    bg="#2B6CB0"
                                     px="8"
                                     fontWeight="bold"
                                     fontSize="md"
                                     _hover={{
-                                        color: "black",
-                                        background: "#fee761",
-                                        px: "12"
+                                        color: "white",
+                                        background: "#4e8dcf",
                                     }}
                                 >
                                     {cta1}
@@ -88,16 +87,14 @@ export const GraphicTabBottom = ({ heading, desc, logoImage, name1, pic1, title1
                                     href={cta2link}
                                     target="_blank"
                                     size="lg"
-                                    border="1px solid #3583CE"
-                                    color="#3583CE"
+                                    color="white"
                                     bg="transparent"
                                     px="8"
                                     fontWeight="bold"
                                     fontSize="md"
                                     _hover={{
                                         color: "white",
-                                        background: "#3583CE",
-                                        px: "12"
+                                        background: "#404040",
                                     }}
                                 >
                                     {cta2}

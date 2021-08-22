@@ -1,0 +1,26 @@
+[
+    {
+      "text": "Through the Serverless Camp, I have gained valuable experiences with JavaScript, learned about the concept of Serverless, and gotten to write and use HTTP trigger functions.",
+      "title": "Student, Case Western Reserve University",
+      "name": "Grace",
+      "img_url": "/grace.jpg"
+    },
+    {
+      "text": "The Serverless Camp helped me connect with other students/instructors, finish the homework, and understand the basics of serverless. The program encourages other students to test their knowledge and get feedback from the instructors. It is such a fantastic program!",
+      "title": "Student, Pierce College",
+      "name": "Beatrix",
+      "img_url": "/beatrix.jpg"
+    },
+    {
+      "text": "The instructors really took our feedback to heart. Github itself is very tricky, but again, the instructors really made sure that we practiced the commands in our course over and over and over; repetition is the best teacher.",
+      "title": "Student, Western Governor's University",
+      "name": "Parys",
+      "img_url": "/parys.jpg"
+    },
+    {
+      "text": "Bit Project has been an amazing learning experience. The GitHub course is packed with learning material that has expanded my understanding of Azure, building projects, using VS Code, and more.",
+      "title": "Student, CUNY Hunter College",
+      "name": "Christina",
+      "img_url": "/christina.jpg"
+    }
+  ]

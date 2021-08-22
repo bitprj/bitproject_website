@@ -11,7 +11,7 @@ import * as React from 'react'
 import { HighlightBox } from '../dualcol/_box'
 
 export const Carousel = ({ title1, link1, companyLogo1, img1, title2, link2, companyLogo2, img2, title3, link3, companyLogo3, img3 }) => {
-  
+
   return (
     <Box as="section" bg="black" color="white">
       <Container
@@ -20,45 +20,45 @@ export const Carousel = ({ title1, link1, companyLogo1, img1, title2, link2, com
       >
         <SimpleGrid minChildWidth="300px" spacing="20px" bg="black">
           <Link href={link1} _hover="none">
-            <HighlightBox 
+            <HighlightBox
               title={title1}
-              companyLogo = {companyLogo1}
-              image = {img1}
+              companyLogo={companyLogo1}
+              image={img1}
             />
           </Link>
 
-            <Link href={link2} _hover="none">
-            <HighlightBox 
+          <Link href={link2} _hover="none">
+            <HighlightBox
               title={title2}
-              companyLogo = {companyLogo2}
-              image = {img2}
+              companyLogo={companyLogo2}
+              image={img2}
             />
-            </Link>
+          </Link>
 
-            <Link href={link3} _hover="none">
-            <HighlightBox 
+          <Link href={link3} _hover="none">
+            <HighlightBox
               title={title3}
-              companyLogo = {companyLogo3}
-              image = {img3}
+              companyLogo={companyLogo3}
+              image={img3}
             />
-            </Link>
+          </Link>
 
-            <Link href={link3} _hover="none">
-            <HighlightBox 
+          <Link href={link3} _hover="none">
+            <HighlightBox
               title={title3}
-              companyLogo = {companyLogo3}
-              image = {img3}
+              companyLogo={companyLogo3}
+              image={img3}
             />
-            </Link>
+          </Link>
 
-            <Link href={link3} _hover="none">
-            <HighlightBox 
+          <Link href={link3} _hover="none">
+            <HighlightBox
               title={title3}
-              companyLogo = {companyLogo3}
-              image = {img3}
+              companyLogo={companyLogo3}
+              image={img3}
             />
-            </Link>
-          </SimpleGrid>
+          </Link>
+        </SimpleGrid>
       </Container>
     </Box>
 

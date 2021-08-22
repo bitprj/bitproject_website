@@ -13,7 +13,7 @@ export default function HomePage() {
         <title>Bit Project</title>
         <meta name="description" content="We provide cutting-edge, open source learning experiences to prepare students for careers in tech." />
         <meta property="og:title" content="Bit Project" />
-        <meta property="og:image" content="https://www.bitproject.org/_next/image?url=%livecode.png&w=2048&q=75" /> 
+        <meta property="og:image" content="https://www.bitproject.org/_next/image?url=%livecode.png&w=2048&q=75" />
         <meta property="og:description" content="We provide cutting-edge, open source learning experiences to prepare students for careers in tech." />
         <meta property="og:url" content="https://www.bitproject.org/" />
         <meta property="og:site_name" content="bitproject.org" />
@@ -64,7 +64,7 @@ export default function HomePage() {
         desc="Take a look at what our students have to say."
       />
 
-      <Footer/>
+      <Footer />
 
     </div>
   )

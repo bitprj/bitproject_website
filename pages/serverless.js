@@ -52,21 +52,21 @@ export default function Serverless({ posts }) {
         cta1link={'https://airtable.com/shrdXQvSljJYIpbHy'}
         cta2link={'https://www.notion.so/Serverless-Camp-adfa3d82f8f540039035b4259a6c4430'}
 
-        pic1="/fifi.jpeg"
-        name1="Saving $ on Amazon"
-        title1="Fifi Teklemedhin"
-        graphic1="https://vimeo.com/570820559" // we need to change fifi's
+        pic1="/ganning-profile.jpg"
+        name1="CounselorBot"
+        title1="Ganning Xu"
+        graphic1="https://www.youtube.com/watch?v=Xn-tfkn5Gr0" // we need to change fifi's
 
-        pic2="/emily.png"
-        name2="File Sharing for Exams"
-        title2="Emily Chen"
-        graphic2="https://vimeo.com/572255574"
+        pic2="https://i.imgur.com/026vZiA.png"
+        name2="Vehicle Telemetry"
+        title2="Jakub Manda"
+        graphic2="https://www.youtube.com/watch?v=jmsb95tgBRk"
 
 
-        pic3="/anita.jpeg"
-        name3="Dine the Distance"
-        title3="Anita Padman"
-        graphic3="https://vimeo.com/572033757"
+        pic3="https://i.imgur.com/XRh3uQb.jpg"
+        name3="QnA Bot"
+        title3="David Tetreau"
+        graphic3="https://www.youtube.com/watch?v=FU1pzbgG3nA"
       />
 
       <Textblock

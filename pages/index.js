@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { Landing } from '../components/landing.jsx'
 import { TriCol } from '../components/tricol'
 import { GraphicTab } from '../components/graphictab'
-import { Testimonials } from '../components/testimonials_'
+import { Testimonials } from '../components/testimonials'
 import { Navbar } from '../components/navbar'
 import { Footer } from '../components/footer'
 

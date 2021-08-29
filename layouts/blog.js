@@ -15,6 +15,7 @@ import { useRouter } from 'next/router'
 import { DescDualCol } from '../components/dualcol/descriptive'
 import { Navbar } from '../components/navbar'
 import { Footer } from '../components/footer'
+import Image from "next/image"
 
 const editUrl = (slug) =>
     `https://github.com/bjcarlson42/benjamincarlson.io/edit/main/pages/blog${slug}.mdx`
@@ -103,7 +104,7 @@ export default function BlogLayout({ children, frontMatter }) {
                                     <Text fontSize="md" color="#CCCDCE" mt="3" display="inline" mr="3">
                                         In Collaboration with
                                     </Text>
-                                    <Img src={frontMatter.companyLogo} h="50px" display="inline" />
+                                    <Image border="2px solid red" height="50px" width="50px" src={frontMatter.companyLogo} alt={frontMatter.companyLogo} display="inline" />
                                 </>}
                             </Flex>
 

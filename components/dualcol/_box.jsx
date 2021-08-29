@@ -6,7 +6,6 @@ import {
 } from '@chakra-ui/react'
 import * as React from 'react'
 import Image from 'next/image'
-import { ProfileIcon } from '../profileicon/index'
 
 export const HighlightBox = ({ title, companyLogo, image, link, cohort }) => {
     let bkgUrl = `url(${image})`
@@ -23,6 +22,16 @@ export const HighlightBox = ({ title, companyLogo, image, link, cohort }) => {
             pb="6"
             _hover={{ bg: '#4a4a4a' }}
         >
+
+            <style jsx global>
+                {`
+                    .companyLogo { 
+                        margin-top: 1rem !important; 
+                    }
+                    
+                `}
+            </style>
+
             <Box h="15rem" bgImage={bkgUrl} bgPosition="center"
                 bgRepeat="no-repeat" backgroundSize="cover">
             </Box>
@@ -31,6 +40,7 @@ export const HighlightBox = ({ title, companyLogo, image, link, cohort }) => {
                 lineHeight="tight"
                 mx="4"
                 mt="6"
+
             >
 
                 <Text fontSize="2xl" fontWeight="800" color="white">
@@ -41,18 +51,20 @@ export const HighlightBox = ({ title, companyLogo, image, link, cohort }) => {
 
             </Box>
 
-            {companyLogo && <>
-                <Text fontSize="md" color="#CCCDCE" display="inline" mr="3" mt="2" ml="4">
+            {companyLogo && <Box d="flex">
+
+                <Text fontSize="md" color="#CCCDCE" display="inline" mr="3" mt="2" ml="4" alignItems="center">
                     In Collaboration with
                 </Text>
-                <Img src={companyLogo} h="40px" w="40px" display="inline" />
-            </>}
+                <Image src={companyLogo} height="40px" width="40px" display="inline" alt={companyLogo} className="" />
+            </Box>}
 
-            {cohort && <Box mt="2" mx="4" fontWeight="semibold">
-                <Text fontSize="sm" color="grey">
-                    {cohort}
-                </Text>
-            </Box>
+            {
+                cohort && <Box mt="2" mx="4" fontWeight="semibold">
+                    <Text fontSize="sm" color="grey">
+                        {cohort}
+                    </Text>
+                </Box>
             }
 
             {/* <Box mx="4"
@@ -68,7 +80,7 @@ export const HighlightBox = ({ title, companyLogo, image, link, cohort }) => {
                 />
             </Box> */}
 
-        </Box>
+        </Box >
 
     )
 }

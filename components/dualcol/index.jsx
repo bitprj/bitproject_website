@@ -12,6 +12,8 @@ import {
 } from '@chakra-ui/react'
 import Fade from 'react-reveal/Fade';
 import * as React from 'react'
+import Image from "next/image";
+
 export const DualCol = ({ preheading, heading, para1, para2, li1, li2, li3, img, action, actionLink }) => {
   return (
     <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white">
@@ -79,21 +81,20 @@ export const DualCol = ({ preheading, heading, para1, para2, li1, li2, li3, img,
                   </Link>
                 </Text>
               </Box>
-              <Img
-                margin="3rem auto"
-                src={img}
-                alt="Counselorbot picture"
-                maxW={{
-                  lg: '50%',
-                  md: '30%'
-                }}
-              />
+              <Box margin="3rem auto">
+                <Image
+                  src={img}
+                  alt="Counselorbot picture"
+                  width="400px"
+                  height="300px"
+                />
+              </Box>
             </Flex>
           </Fade>
 
         </Box>
       </Container>
-    </Box>
+    </Box >
 
   )
 }

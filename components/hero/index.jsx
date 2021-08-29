@@ -91,11 +91,7 @@ export const Hero = () => {
             rounded="lg"
             overflow="hidden"
           >
-            <Img
-              alt="Screenshot of Envelope App"
-              src="https://res.cloudinary.com/chakra-ui-pro/image/upload/v1621085270/pro-website/app-screenshot-light_kit2sp.png"
-            />
-           
+
           </Box>
         </Box>
       </Box>

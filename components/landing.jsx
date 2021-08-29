@@ -15,6 +15,7 @@ import {
 import * as React from 'react'
 import Fade from 'react-reveal/Fade';
 import * as fetch from 'node-fetch'
+import Image from 'next/image'
 
 export const Landing = ({ heading, description, cta1, cta2, image, logoImage, play, cta1link, cta2link, formResponse, formActionButton, formDesc }) => {
   const subscribeEmail = async event => {
@@ -59,10 +60,11 @@ export const Landing = ({ heading, description, cta1, cta2, image, logoImage, pl
             <Box maxW={{ base: 'xl', md: '7xl' }} mx="auto" px={{ base: '6', md: '8' }}>
               <Box textAlign="center">
 
-                {logoImage && <Img
+                {logoImage && <Image
                   alt="Page icon"
                   src={logoImage}
-                  width="100px"
+                  width="125px"
+                  height="125px"
                   m="0 auto"
                 />}
 
@@ -175,11 +177,13 @@ export const Landing = ({ heading, description, cta1, cta2, image, logoImage, pl
 
             </Box>
             {image &&
-              <Img
+              <Image
+                alt="maingif"
                 src={image}
-                width="100%"
                 m="0 auto"
                 mt="2rem"
+                height="400px"
+                width="1000px"
               />}
 
           </Box>

@@ -30,17 +30,26 @@ export const ProfileIcon = (props) => {
 
     return (
 
+
         // <Stack color="white" px="0.5rem" borderRadius="15px" alignItems="center" direction={undefined}>
         <Flex color="white" px="0.5rem" borderRadius="15px" alignItems="center" {...props}>
+            <style jsx global>
+                {`
+            .profileImage { 
+                border-radius: 50%;
+                object-fit: cover !important;
+            }
+                    
+            `}
+            </style>
             <Box className={styles.pfp}>
-                <Square size="">
-                    <Img
-                        mr="1.2rem"
+                <Square>
+                    <Image
+                        className="profileImage"
+                        alt={props.pic}
                         src={props.pic}
                         height="50px"
                         width="50px"
-                        objectFit="cover"
-                        borderRadius="50px"
                     />
                 </Square>
             </Box>

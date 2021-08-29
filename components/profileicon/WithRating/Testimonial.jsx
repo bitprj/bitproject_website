@@ -1,5 +1,6 @@
 import { Box, Flex, HStack, Img, Stack, Text, useColorModeValue as mode } from '@chakra-ui/react'
 import * as React from 'react'
+import Image from "next/image";
 
 export const Testimonial = (props) => {
   const { image, company, name, children, ...rest } = props
@@ -21,6 +22,17 @@ export const Testimonial = (props) => {
       color={mode('gray.800', 'gray.300')}
       {...rest}
     >
+
+      <style jsx global>
+        {`
+                    .profileIcon { 
+                      border-radius: 50%;
+                      object-fit: cover;
+                    }
+                    
+                `}
+      </style>
+
       <Box
         fontSize={{
           base: 'md',
@@ -36,7 +48,7 @@ export const Testimonial = (props) => {
           md: 5,
         }}
       >
-        <Img objectFit="cover" rounded="full" boxSize={14} name={name} src={image} />
+        <Image alt={image} height="50px" width="50px" src={image} className="profileIcon" />
         <Flex direction="column">
           <Text fontWeight="bold">{name}</Text>
           <Text fontSize="sm" fontWeight="medium" opacity={0.7}>

@@ -29,17 +29,13 @@ export const ProfileIcon = (props) => {
     // })
 
     return (
-
-
-        // <Stack color="white" px="0.5rem" borderRadius="15px" alignItems="center" direction={undefined}>
-        <Flex color="white" px="0.5rem" borderRadius="15px" alignItems="center" {...props}>
+        <Flex color="white" px="0.5rem" borderRadius="15px" alignItems="center" justifyContent="center" {...props} >
             <style jsx global>
                 {`
-            .profileImage { 
-                border-radius: 50%;
-                object-fit: cover !important;
-            }
-                    
+                .profileImage { 
+                    border-radius: 50%;
+                    object-fit: cover !important;
+                }
             `}
             </style>
             <Box className={styles.pfp}>

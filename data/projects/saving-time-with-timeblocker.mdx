@@ -1,0 +1,59 @@
+---
+title: 'Kaley developed TimeBlocker and Boosted Productivity 📚'
+publishedAt: '2021-09-06'
+summary: 'Using Azure Functions Grace built a web app to compare routes based on their carbon emissions!'
+category: 'projects'
+image: 'https://i.imgur.com/1OrLSRf.png'
+cohort: 'Serverless Camp S21'
+---
+
+TimeBlocker improves productivity by automating the time blocking productivity method.
+
+# Kaley built the TimeBlocker productivity app
+
+## Introduction
+
+As a student, I am always struggling with productivity and keeping myself from becoming overwhelmed. The TimeBlocker app is intended to help with that, by automating the "time blocking" productivity method for users. With this method, each task is allocated a certain amount, or block, of time to do. The user ends up with a concrete schedule for the day, instead of an open-ended to-do list. TimeBlocker would make it easy for the user to remember when a task's block of time starts and ends, by sending the user a text notification.
+
+## About Me
+
+My name is Kaley Kwan. I'm a senior in high school from the Bay Area. I am a swimmer and student journalist intending on majoring in computer science in college. I'm passionate about using technology to improve the environment and my community.
+
+## Behind the Scenes
+
+![Serverless Flowchart](https://user-images.githubusercontent.com/67166728/132081469-cfff45d7-0481-4d06-9710-ab9f41898944.jpg)
+
+### The Form
+
+First, you fill out a form with your name, the start time for your task, the end time, and your phone number. This information gets sent to an HTTP-Trigger Function, where it is then stored in Cosmos DB.
+
+### Text Notifications
+
+A Timer-Trigger Function runs every minute, checking the current time against the task start times and end times stored in Cosmos DB. When the current time matches the time you input for the start and end of your task, the Twilio API is used to send a text message to your phone notifying you. 
+
+## Technologies
+
+### Cosmos DB:
+![tb-database](https://user-images.githubusercontent.com/67166728/132080373-56469526-be34-4625-82dc-01aa7a8d9ced.PNG)
+
+Cosmos DB is a database to store user information from the form.
+
+### Azure Functions:
+
+* HTTP-Trigger Function: stores form data in Cosmos DB
+* Timer-Trigger Function: sends text notifications to users whenever their task starts or ends
+
+### Twilio API
+
+![twilio](https://user-images.githubusercontent.com/67166728/132080517-dd97a6c1-0a0a-4d65-a787-f584b43e3c6d.PNG)
+
+This API was used to send text notifications to users.
+
+## Moving Forward
+
+When I entered this program, I knew very little about coding and was a little bit intimidated. But over the course of the camp, I learned about web development, Serverless and Azure functions, and how to brainstorm and build my own project from scratch. I faced challenges and bumps along the way with the development of the idea and the implementation of the project, but that allowed me to grow as both a coder and as a person.
+
+There are a lot of features that can be added to expand the web app, including a field in the form for a task description, and a history of a user's tasks. Additionally, there are a lot of other potential uses for this web app outside of the time blocking productivity method!
+
+## Thanks and Acknowledgements
+Thank you to BitProject for hosting such a fun and educational camp, to my instructors for being patient and helpful whenever my code deigned not to work, and especially to my mentor Rohan for readily helping me debug every problem. Most of these tools were entirely new to me, so building this web app was a really fun challenge and a really great opportunity to learn more about Serverless and Azure functions!

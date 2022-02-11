@@ -49,8 +49,8 @@ export default function Serverless({ posts }) {
         cta1="Apply Now"
         cta2="Learn More"
         logoImage="/serverlessLogo.svg"
-        cta1link={'https://airtable.com/shrdXQvSljJYIpbHy'}
-        cta2link={'https://www.notion.so/Serverless-Camp-adfa3d82f8f540039035b4259a6c4430'}
+        cta1link={'https://jkfr7wbzytt.typeform.com/serverless-camp'}
+        cta2link={'https://plucky-singer-a26.notion.site/Serverless-Camp-2022-ec9dcf0a1ee8487d842aaf1fec23b1f1'}
 
         pic1="/ganning-profile.jpg"
         name1="CounselorBot"

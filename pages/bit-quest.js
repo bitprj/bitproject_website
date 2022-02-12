@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { Navbar } from '../components/navbar'
 import { Footer } from '../components/footer'
 import { Box, Img, Heading, Text } from '@chakra-ui/react'
-import { DualCol } from '../components/DualCol/index'
+import { DualCol } from '../components/dualcol'
 
 export default function BitQuest() {
     return (

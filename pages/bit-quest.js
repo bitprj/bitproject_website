@@ -1,11 +1,8 @@
 import Head from 'next/head'
-import { Landing } from '../components/landing.jsx'
-import { TriCol } from '../components/tricol'
-import { Testimonials } from '../components/testimonials'
 import { Navbar } from '../components/navbar'
 import { Footer } from '../components/footer'
 import { Box, Img, Heading, Text } from '@chakra-ui/react'
-import { DualCol } from '../components/DualCol'
+import { DualCol } from '../components/DualCol/index'
 
 export default function BitQuest() {
     return (

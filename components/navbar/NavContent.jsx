@@ -18,6 +18,11 @@ const links = [
     label: 'Serverless',
     href: '/serverless',
   },
+  ,
+  {
+    label: 'Bit Quest',
+    href: '/bit-quest',
+  },
   {
     label: 'Workshops',
     href: '/workshops',
@@ -29,7 +34,7 @@ const links = [
   {
     label: 'Blog',
     href: '/blog',
-  },
+  }
 ]
 
 const MobileNavContent = (props) => {
@@ -79,11 +84,11 @@ const DesktopNavContent = (props) => {
         // }}>
         //       {link.label}
         // </NavLink.Desktop>
-        
+
         // <motion.a key={index} whileHover={{ scale: 1.1  }}>
-          <NavLink.Desktop key={index} href={link.href} fontSize="xl" fontWeight="bold" _hover="">
-                {link.label}
-          </NavLink.Desktop>
+        <NavLink.Desktop key={index} href={link.href} fontSize="xl" fontWeight="bold" _hover="">
+          {link.label}
+        </NavLink.Desktop>
         // </motion.a>
       ))}
     </HStack>

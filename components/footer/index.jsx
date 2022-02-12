@@ -18,9 +18,9 @@ import Fade from 'react-reveal/Fade';
 import Image from 'next/image'
 import { motion } from "framer-motion"
 
-export const Footer = () => {
+export const Footer = ({ bg }) => {
   return (
-    <Box as="footer" color="#9e9d9d" bg="#181818">
+    <Box as="footer" color="#9e9d9d" bg={bg ? bg : "#181818"}>
       <Fade>
         <Box
           maxW={{
@@ -103,10 +103,10 @@ export const Footer = () => {
                 fontSize="xl"
               >
                 Subscribe to our newsletter!
-          </Text>
+              </Text>
               <Text mb="3" lineHeight="tall" fontSize="xl" color="#9e9d9d">
                 Stay up to date with all of our resources and opportunities. We promise we won&apos;t spam!
-          </Text>
+              </Text>
               <SubscribeForm />
             </Box>
           </Flex>

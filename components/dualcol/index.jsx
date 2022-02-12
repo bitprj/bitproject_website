@@ -8,13 +8,14 @@ import {
   Text,
   Badge,
   Link,
+  SimpleGrid,
   useColorModeValue as mode,
 } from '@chakra-ui/react'
 import Fade from 'react-reveal/Fade';
 import * as React from 'react'
-export const DualCol = ({ preheading, heading, para1, para2, li1, li2, li3, img, action, actionLink }) => {
+export const DualCol = ({ bg, preheading, heading, para1, para2, li1, li2, li3, img, action, actionLink }) => {
   return (
-    <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white">
+    <Box as="section" bg={bg ? bg : 'black'} pt="12" pb="6" overflow="hidden" color="white">
       <Container
         maxW="container.lg"
         p="15px"
@@ -25,25 +26,10 @@ export const DualCol = ({ preheading, heading, para1, para2, li1, li2, li3, img,
             md: '7xl',
           }}
           mx="auto"
-
         >
           <Fade>
-            <Flex
-              align="flex-start"
-              direction={{
-                base: 'column',
-                lg: 'row',
-              }}
-              justify="space-between"
-              mb="20"
-            >
-              <Box
-                flex="1"
-                maxW={{
-                  lg: 'xl'
-                }}
-                pt="6"
-              >
+            <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} alignItems='center'>
+              <Box>
                 <Badge px="2" fontSize="1em" colorScheme="blue">
                   {preheading}
                 </Badge>
@@ -67,33 +53,30 @@ export const DualCol = ({ preheading, heading, para1, para2, li1, li2, li3, img,
                 <Text mt="5" fontSize="xl">
                   {li3}
                 </Text>
-
-                <Text
-                  mt="5"
-                  fontSize="xl"
-                >
-                  <Link
-                    color="#0095E9"
-                    href={actionLink}
-                  >{action}
-                  </Link>
-                </Text>
               </Box>
-              <Img
-                margin="3rem auto"
-                src={img}
-                alt="Counselorbot picture"
+              <Box
                 maxW={{
-                  lg: '50%',
-                  md: '30%'
+                  base: 'xl',
+                  md: '7xl',
                 }}
-              />
-            </Flex>
+                mx="auto"
+              >
+                <Img
+                  margin="3rem auto"
+                  src={img}
+                  alt="Counselorbot picture"
+                />
+              </Box>
+
+            </SimpleGrid>
           </Fade>
-
         </Box>
-      </Container>
-    </Box>
 
+
+
+
+      </Container>
+
+    </Box>
   )
 }

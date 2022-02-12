@@ -53,7 +53,6 @@ export default function BitQuest() {
                 para1="Think like a scientist, start asking questions, and turn your curiosity into a hypothesis."
                 li1="🗓️ Requires 4 weeks"
                 li2="🌱 Monitor plants and discuss conclusions at end of program"
-                img="/week1.gif"
                 bg="#160C36"
             />
 
@@ -61,7 +60,6 @@ export default function BitQuest() {
                 preheading="week 2"
                 heading="Lava Lamp"
                 para1="Observe the world around you and record your observations, making connections of how variables and constants interact with each others."
-                img="/week1.gif"
                 bg="#160C36"
             />
 
@@ -69,7 +67,6 @@ export default function BitQuest() {
                 preheading="week 3"
                 heading="Hoop Glider"
                 para1="Turn your observations into data by creating a process to collect, visualize, and analyze data."
-                img="/week1.gif"
                 bg="#160C36"
             />
 
@@ -77,7 +74,6 @@ export default function BitQuest() {
                 preheading="week 4"
                 heading="Solar Systems"
                 para1="Break through your limitations and discover knowledge by researching other credible sources."
-                img="/week1.gif"
                 bg="#160C36"
             />
 
@@ -85,7 +81,6 @@ export default function BitQuest() {
                 preheading="week 5"
                 heading="Human Body Paper"
                 para1="Combine all of your steps into one “Scientific Method,” formulate conclusions, and present your findings with fellow scientists."
-                img="/week1.gif"
                 bg="#160C36"
             />
 

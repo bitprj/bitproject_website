@@ -21,7 +21,7 @@ const links = [
   ,
   {
     label: 'Bit Quest',
-    href: '/bit-quest',
+    href: '/quest',
   },
   {
     label: 'Workshops',

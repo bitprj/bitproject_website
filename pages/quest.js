@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { Navbar } from '../components/navbar'
 import { Footer } from '../components/footer'
-import { Box, Img, Heading, Text } from '@chakra-ui/react'
+import { Box, Img, Heading, Text, Container } from '@chakra-ui/react'
 import { DualCol } from '../components/dualcol'
 
 export default function BitQuest() {
@@ -10,7 +10,7 @@ export default function BitQuest() {
             <Head>
                 <title>Bit Quest</title>
                 <meta name="description" content="We provide cutting-edge, open source learning experiences to prepare students for careers in tech." />
-                <meta property="og:title" content="Bit Project" />
+                <meta property="og:title" content="Bit Quest" />
                 <meta property="og:image" content="https://www.bitproject.org/_next/image?url=%livecode.png&w=2048&q=75" />
                 <meta property="og:description" content="We provide cutting-edge, open source learning experiences to prepare students for careers in tech." />
                 <meta property="og:url" content="https://www.bitproject.org/" />
@@ -18,35 +18,39 @@ export default function BitQuest() {
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Navbar bg="#160C36" />
+            <Navbar bg="#140B34" />
 
-            <Box minH='100vh' bg="url('/bit-quest-bkg.png')center center" position='cover' d='flex' alignItems='center' justifyContent='center'>
-                <Box textAlign='center'>
-                    <Box d='flex' alignItems='center' justifyContent='center'>
-                        <Img
-                            src="/logo.png"
-                            h="9"
-                            display="inline"
-                            mr="3"
-                            mt="-1"
-                        />
-                        <Text
-                            as="h1"
-                            fontSize="3xl"
-                            fontWeight="extrabold"
-                            maxW="48rem"
-                            display="inline"
-                            color="white"
-                        >Bit Project</Text>
-                    </Box>
+            <Img src='/cloud_sky_bkg.png' alt='clouds' />
 
-                    <Heading color='#B5A0FF' fontSize={{ base: '5xl', md: '7xl', lg: '8xl' }}>Bit Quest</Heading>
-                    <Text fontWeight='bold' fontSize={{ base: 'xl', md: '3xl', lg: '5xl' }} color='#B5A0FF'>
-                        explore stem
-                    </Text>
-                </Box>
+            <Box textAlign='center' bg="#140B34">
+                <Heading color='white' fontSize={{ base: '5xl', md: '7xl' }}>Bit Quest</Heading>
+                <Text fontWeight='bold' fontSize={{ base: 'xl', md: '3xl', lg: '5xl' }} color='white'>
+                    explore the scientific method
+                </Text>
             </Box>
 
+            <Box bg='#140B34' pt='8'>
+                <Container
+                    maxW="container.lg"
+                    p="15px"
+                >
+                    <Heading color='white' fontSize='3xl'>Location</Heading>
+                    <Text color='white' fontSize='lg'>
+                        Davis, California.
+                    </Text>
+                </Container>
+            </Box>
+            <Box bg='#140B34' pt='3'>
+                <Container
+                    maxW="container.lg"
+                    px="15px"
+                >
+                    <Heading color='white' fontSize='3xl' mt='5'>Agenda</Heading>
+                    <Text color='white' fontSize='lg'>
+                        Each week is specifically designed to ensure students develop key skills that help them understand the “Scientific Method” and build projects that demonstrate what they have learned.
+                    </Text>
+                </Container>
+            </Box>
             <DualCol
                 preheading="week 1"
                 heading="Growing Beans"
@@ -91,6 +95,6 @@ export default function BitQuest() {
 
             {/* <Footer /> */}
 
-        </div>
+        </div >
     )
 }

@@ -16,7 +16,7 @@ import * as React from 'react'
 export const DualCol = ({ bg, preheading, heading, para1, para2, li1, li2, li3, img, action, actionLink }) => {
   if (img) {
     return (
-      <Box as="section" bg={bg ? bg : 'black'} pt="12" pb="6" overflow="hidden" color="white">
+      <Box as="section" bg={bg ? bg : 'black'} pt="6" pb="6" overflow="hidden" color="white">
         <Container
           maxW="container.lg"
           p="15px"
@@ -80,7 +80,7 @@ export const DualCol = ({ bg, preheading, heading, para1, para2, li1, li2, li3, 
   }
   else {
     return (
-      <Box as="section" bg={bg ? bg : 'black'} pt="12" pb="6" overflow="hidden" color="white">
+      <Box as="section" bg={bg ? bg : 'black'} pt="6" pb="6" overflow="hidden" color="white">
         <Container
           maxW="container.lg"
           p="15px"
@@ -99,7 +99,7 @@ export const DualCol = ({ bg, preheading, heading, para1, para2, li1, li2, li3, 
                   {preheading}
                 </Badge>
 
-                <Heading as="h2" size="xl" mt="8" fontWeight="extrabold">
+                <Heading as="h2" size="xl" mt="5" fontWeight="extrabold">
                   {heading}
                 </Heading>
                 <Text mt="5" fontSize="xl">

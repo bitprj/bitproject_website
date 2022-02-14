@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { Navbar } from '../components/navbar'
 import { Footer } from '../components/footer'
-import { Box, Img, Heading, Text, Container } from '@chakra-ui/react'
+import { Box, Img, Heading, Text, Container, Button } from '@chakra-ui/react'
 import { DualCol } from '../components/dualcol'
 
 export default function BitQuest() {
@@ -27,6 +27,28 @@ export default function BitQuest() {
                 <Text fontWeight='bold' fontSize={{ base: 'xl', md: '3xl', lg: '5xl' }} color='white'>
                     explore the scientific method
                 </Text>
+
+                <Button
+                    as="a"
+                    href='https://jkfr7wbzytt.typeform.com/bit-quest-s22'
+                    target="_blank"
+                    size="lg"
+                    color="white"
+                    border="1px solid #2B6CB0"
+                    bg="#9475ff"
+                    mt='4'
+                    px="8"
+                    fontWeight="bold"
+                    fontSize="md"
+                    _hover={{
+                        color: "white",
+                        background: "#693dff",
+                    }}
+                    isExternal
+                >
+                    Apply Now
+                </Button>
+
             </Box>
 
             <Box bg='#140B34' pt='8'>
@@ -49,6 +71,8 @@ export default function BitQuest() {
                     <Text color='white' fontSize='lg'>
                         Each week is specifically designed to ensure students develop key skills that help them understand the “Scientific Method” and build projects that demonstrate what they have learned.
                     </Text>
+
+
                 </Container>
             </Box>
             <DualCol

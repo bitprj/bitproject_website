@@ -47,10 +47,10 @@ export default function Serverless({ posts }) {
         heading="Serverless Camp"
         desc="In our 8-week boot camp, build awesome apps with Serverless functions, JavaScript, and APIs. From IoT heartbeat monitors to face mask detectors, you can build anything with Serverless!"
         cta1="Apply Now"
-        cta2="Learn More"
+        cta2="Join as a Mentor"
         logoImage="/serverlessLogo.svg"
         cta1link={'https://jkfr7wbzytt.typeform.com/serverless-camp'}
-        cta2link={'https://plucky-singer-a26.notion.site/Serverless-Camp-2022-ec9dcf0a1ee8487d842aaf1fec23b1f1'}
+        cta2link={'https://jkfr7wbzytt.typeform.com/camp-mentor'}
 
         pic1="/ganning-profile.jpg"
         name1="CounselorBot"

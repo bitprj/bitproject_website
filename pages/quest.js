@@ -8,12 +8,12 @@ export default function BitQuest() {
     return (
         <div>
             <Head>
-                <title>Bit Quest</title>
-                <meta name="description" content="We provide cutting-edge, open source learning experiences to prepare students for careers in tech." />
+                <title>Apply Now: Bit Quest Registration</title>
+                <meta name="description" content="Hands-on Summer STEM Camp for students in Grades 2-5." />
                 <meta property="og:title" content="Bit Quest" />
-                <meta property="og:image" content="https://www.bitproject.org/_next/image?url=%livecode.png&w=2048&q=75" />
-                <meta property="og:description" content="We provide cutting-edge, open source learning experiences to prepare students for careers in tech." />
-                <meta property="og:url" content="https://www.bitproject.org/" />
+                <meta property="og:image" content="https://i.imgur.com/kr1Szge.png" />
+                <meta property="og:description" content="Hands-on Summer STEM Camp for students in Grades 2-5." />
+                <meta property="og:url" content="https://www.bitproject.org/quest" />
                 <meta property="og:site_name" content="bitproject.org" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="/favicon.ico" />
@@ -25,7 +25,7 @@ export default function BitQuest() {
             <Box textAlign='center' bg="#140B34">
                 <Heading color='white' fontSize={{ base: '5xl', md: '7xl' }}>Bit Quest</Heading>
                 <Text fontWeight='bold' fontSize={{ base: 'xl', md: '3xl', lg: '5xl' }} color='white'>
-                    explore the scientific method
+                    Explore the Scientific Method
                 </Text>
 
                 <Button
@@ -48,14 +48,27 @@ export default function BitQuest() {
                 >
                     Apply Now
                 </Button>
-
             </Box>
+
+            <Box bg='#140B34' pt='3'>
+                <Container
+                    maxW="container.lg"
+                    px="15px"
+                >
+                    <Heading color='white' fontSize='3xl'>Program Dates</Heading>
+                    <Text color='white' fontSize='lg'>
+                        June 18-July 30 (7 week program)
+                    </Text>
+                </Container>
+            </Box>
+
 
             <Box bg='#140B34' pt='8'>
                 <Container
                     maxW="container.lg"
                     p="15px"
                 >
+
                     <Heading color='white' fontSize='3xl'>Location</Heading>
                     <Text color='white' fontSize='lg'>
                         Davis, California.
@@ -71,8 +84,6 @@ export default function BitQuest() {
                     <Text color='white' fontSize='lg'>
                         Each week is specifically designed to ensure students develop key skills that help them understand the “Scientific Method” and build projects that demonstrate what they have learned.
                     </Text>
-
-
                 </Container>
             </Box>
             <DualCol

@@ -34,9 +34,9 @@ export default function Serverless({ posts }) {
       <Head>
         <title>Serverless Camp Summer 2022</title>
         <meta name="description" content="Coding Bootcamp organized by the 501(c)(3) non-profit Bit Project." />
-        <meta property="og:title" content="Serverless - Bit Project" />
-        <meta property="og:image" content="https://i.imgur.com/Rk9Fiof.png?w=2048&q=75" />
-        <meta property="og:description" content="Build awesome apps with Serverless functions, JavaScript, and APIs." />
+        <meta property="og:title" content="Serverless Camp Summer 2022" />
+        <meta property="og:image" content="https://i.imgur.com/Rk9Fiof.png" />
+        <meta property="og:description" content="Coding Bootcamp organized by the 501(c)(3) non-profit Bit Project." />
         <meta property="og:url" content="https://www.bitproject.org/serverless" />
         <meta property="og:site_name" content="bitproject.org" />
         <meta property="og:type" content="website" />

@@ -10,11 +10,14 @@ export default function BitQuest() {
             <Head>
                 <title>Apply Now: Bit Quest Registration</title>
                 <meta name="description" content="Hands-on Summer STEM Camp for students in Grades 2-5." />
-                <meta property="og:title" content="Bit Quest" />
+                <meta property="og:title" content="Apply Now: Bit Quest Registration" />
                 <meta property="og:image" content="https://i.imgur.com/kr1Szge.png" />
                 <meta property="og:description" content="Hands-on Summer STEM Camp for students in Grades 2-5." />
                 <meta property="og:url" content="https://www.bitproject.org/quest" />
                 <meta property="og:site_name" content="bitproject.org" />
+                <meta name="twitter:card" content="Hands-on Summer STEM Camp for students in Grades 2-5." />
+                <meta name="twitter:site" content="@bitprj" />
+                <meta name="twitter:creator" content="@bitprj" />
                 <meta property="og:type" content="website" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>

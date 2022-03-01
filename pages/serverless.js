@@ -44,7 +44,8 @@ export default function Serverless({ posts }) {
       </Head>
       <Navbar />
       <GraphicTabBottom
-        heading="Serverless Camp"
+        heading="Serverless Camp 2022"
+        bold='June 13 - Aug 31'
         desc="In our 8-week boot camp, build awesome apps with Serverless functions, JavaScript, and APIs. From IoT heartbeat monitors to face mask detectors, you can build anything with Serverless!"
         cta1="Apply Now"
         cta2="Join as a Mentor"

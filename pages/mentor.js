@@ -22,10 +22,8 @@ export default function Mentor() {
         heading="Make a Difference. Mentor."
         desc="We pair awesome engineers with students to give back to their communities."
         cta1="Apply Now"
-        cta2="Learn More"
         logoImage="/counselor.png"
         cta1link={' https://jkfr7wbzytt.typeform.com/camp-mentor'}
-        cta2link={'https://www.notion.so/For-Mentors-78a1066a384d4ad397e7b39166959579'}
 
         pic1="/mentor/anthony.jpeg"
         name1="Anthony Chu"

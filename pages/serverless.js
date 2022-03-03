@@ -8,6 +8,7 @@ import { GraphicTabBottom } from '../components/graphictab/bottom'
 import { Footer } from '../components/footer'
 import { HighlightBox } from '../components/dualcol/_box'
 import { getAllFilesFrontMatter } from '../lib/mdx'
+import { ServerlessCompare } from '@/components/ServerlessCompare'
 import {
   SimpleGrid,
   Container,
@@ -73,8 +74,19 @@ export default function Serverless({ posts }) {
       <Textblock
         title="What is Serverless Camp?"
         para1="Serverless involves harnessing the power of cloud computing and building large applications quickly without having to manage servers."
-        para2="Camp is an 8-week interactive coding bootcamp designed to help you gain real-world technical skills through project-based learning and build awesome professional connections."
+        para2="The Serverless Camp is an 8-week interactive coding bootcamp designed to help you gain real-world technical skills through project-based learning and build awesome professional connections. We will be offering two programs this summer: the Mentorship Program and the Global Student Community"
       />
+
+      <ServerlessCompare
+        title1='Mentorship Program'
+        items1={['Learn to build with serverless from seasoned software engineers', 'Get direct access to coding workshops and tech talks', 'Develop resume-worthy projects using the actual tools of the industry', 'Receive 1:1 mentorship from seasoned software engineers from the industry to learn about cutting edge technology', 'Present a talk at the Serverless Days: Student Edition Conference']}
+        astrick1='*Limited seats available'
+
+        title2='Global Student Community'
+        items2={['Learn to build with serverless from seasoned software engineers', 'Get direct access to coding workshops and tech talks', 'Develop resume-worthy projects using the actual tools of the industry', 'Compete in a global serverless hackathon to win prizes and present at the annual Serverless Days: Student Edition Conference']}
+
+      />
+
       <DualCol
         preheading="week 1"
         heading="Git & Serverless Basics"

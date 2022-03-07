@@ -19,10 +19,10 @@ const links = [
     href: '/serverless',
   },
   ,
-  {
-    label: 'Bit Quest',
-    href: '/quest',
-  },
+  // {
+  //   label: 'Bit Quest',
+  //   href: '/quest',
+  // },
   {
     label: 'Workshops',
     href: '/workshops',

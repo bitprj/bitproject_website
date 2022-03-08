@@ -25,10 +25,10 @@ const links = [
     label: 'Mentor',
     href: '/mentor',
   },
-  {
-    label: 'Counselor',
-    href: '/counselor',
-  },
+  // {
+  //   label: 'Counselor',
+  //   href: '/counselor',
+  // },
   {
     label: 'Blog',
     href: '/blog',

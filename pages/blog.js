@@ -49,6 +49,7 @@ export default function Workshops({ posts }) {
             <Box as="section" bg="black" color="white">
                 <Container
                     maxW="container.xl"
+                    pb="10"
                 >
                     <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing="40px" bg="black" justify="center" >
                         {filteredBlogPosts.map((frontMatter) => (

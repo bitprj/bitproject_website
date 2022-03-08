@@ -8,6 +8,7 @@ import { GraphicTabBottom } from '../components/graphictab/bottom'
 import { Footer } from '../components/footer'
 import { HighlightBox } from '../components/dualcol/_box'
 import { getAllFilesFrontMatter } from '../lib/mdx'
+import { ServerlessCompare } from '@/components/ServerlessCompare'
 import {
   SimpleGrid,
   Container,
@@ -32,11 +33,11 @@ export default function Serverless({ posts }) {
   return (
     <div>
       <Head>
-        <title>Serverless</title>
-        <meta name="description" content="In our 8-week boot camp, build awesome apps with Serverless functions, JavaScript, and APIs. From IoT heartbeat monitors to face mask detectors, you can build anything with Serverless!" />
-        <meta property="og:title" content="Serverless - Bit Project" />
-        <meta property="og:image" content="https://www.bitproject.org/_next/image?url=%livecode.png&w=2048&q=75" />
-        <meta property="og:description" content="Build awesome apps with Serverless functions, JavaScript, and APIs." />
+        <title>Serverless Camp Summer 2022</title>
+        <meta name="description" content="Coding Bootcamp organized by the 501(c)(3) non-profit Bit Project." />
+        <meta property="og:title" content="Serverless Camp Summer 2022" />
+        <meta property="og:image" content="https://i.imgur.com/Rk9Fiof.png" />
+        <meta property="og:description" content="Coding Bootcamp organized by the 501(c)(3) non-profit Bit Project." />
         <meta property="og:url" content="https://www.bitproject.org/serverless" />
         <meta property="og:site_name" content="bitproject.org" />
         <meta property="og:type" content="website" />
@@ -44,13 +45,14 @@ export default function Serverless({ posts }) {
       </Head>
       <Navbar />
       <GraphicTabBottom
-        heading="Serverless Camp"
+        heading="Serverless Camp 2022"
+        bold='June 13 - Aug 31'
         desc="In our 8-week boot camp, build awesome apps with Serverless functions, JavaScript, and APIs. From IoT heartbeat monitors to face mask detectors, you can build anything with Serverless!"
         cta1="Apply Now"
-        cta2="Learn More"
+        cta2="Join as a Mentor"
         logoImage="/serverlessLogo.svg"
-        cta1link={'https://airtable.com/shrdXQvSljJYIpbHy'}
-        cta2link={'https://www.notion.so/Serverless-Camp-adfa3d82f8f540039035b4259a6c4430'}
+        cta1link={'https://jkfr7wbzytt.typeform.com/serverless-camp'}
+        cta2link={'https://jkfr7wbzytt.typeform.com/camp-mentor'}
 
         pic1="/ganning-profile.jpg"
         name1="CounselorBot"
@@ -72,8 +74,19 @@ export default function Serverless({ posts }) {
       <Textblock
         title="What is Serverless Camp?"
         para1="Serverless involves harnessing the power of cloud computing and building large applications quickly without having to manage servers."
-        para2="Camp is an 8-week interactive coding bootcamp designed to help you gain real-world technical skills through project-based learning and build awesome professional connections."
+        para2="The Serverless Camp is an 8-week interactive coding bootcamp designed to help you gain real-world technical skills through project-based learning and build awesome professional connections. We will be offering two programs this summer: the Mentorship Program and the Global Student Community"
       />
+
+      <ServerlessCompare
+        title1='Mentorship Program'
+        items1={['Learn to build with serverless from seasoned software engineers', 'Get direct access to coding workshops and tech talks', 'Develop resume-worthy projects using the actual tools of the industry', 'Receive 1:1 mentorship from seasoned software engineers from the industry to learn about cutting edge technology', 'Present a talk at the Serverless Days: Student Edition Conference*']}
+        astrick1='*Limited seats available'
+
+        title2='Global Student Community'
+        items2={['Learn to build with serverless from seasoned software engineers', 'Get direct access to coding workshops and tech talks', 'Develop resume-worthy projects using the actual tools of the industry', 'Compete in a global serverless hackathon to win prizes and present at the annual Serverless Days: Student Edition Conference']}
+
+      />
+
       <DualCol
         preheading="week 1"
         heading="Git & Serverless Basics"

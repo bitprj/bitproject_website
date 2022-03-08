@@ -22,7 +22,7 @@ import { ProfileIcon } from '../profileicon'
 import { motion } from "framer-motion"
 import Image from 'next/image'
 
-export const GraphicTabBottom = ({ heading, desc, logoImage, name1, pic1, title1, graphic1, name2, pic2, title2, graphic2, name3, pic3, title3, graphic3, name4, title4, pic4, graphic4, cta1, cta2, cta1link, cta2link }) => {
+export const GraphicTabBottom = ({ bold, heading, desc, logoImage, name1, pic1, title1, graphic1, name2, pic2, title2, graphic2, name3, pic3, title3, graphic3, name4, title4, pic4, graphic4, cta1, cta2, cta1link, cta2link }) => {
     return (
         <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white">
             <Fade>
@@ -53,6 +53,10 @@ export const GraphicTabBottom = ({ heading, desc, logoImage, name1, pic1, title1
                     >
                         {heading}
                     </Heading>
+
+                    <Text fontSize="xl" mx="auto" textAlign="center" fontWeight='bold'>
+                        {bold}
+                    </Text>
 
                     <Text fontSize="lg" my="15px" mx="auto" textAlign="center" maxW="40rem">
                         {desc}

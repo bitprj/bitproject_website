@@ -17,6 +17,11 @@ const links = [
     label: 'Serverless',
     href: '/serverless',
   },
+  ,
+  // {
+  //   label: 'Bit Quest',
+  //   href: '/quest',
+  // },
   {
     label: 'Workshops',
     href: '/workshops',
@@ -32,8 +37,7 @@ const links = [
   {
     label: 'Blog',
     href: '/blog',
-  },
-
+  }
 ]
 
 const MobileNavContent = (props) => {

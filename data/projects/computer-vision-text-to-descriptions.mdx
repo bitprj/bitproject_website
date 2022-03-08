@@ -1,0 +1,78 @@
+---
+title: 'Derek Used Computer Vision to Analyze Images 👀'
+publishedAt: '2020-09-06'
+summary: 'While everyone is different in many ways, that should not stop certain types of people from living normal lives. My project, Seeing It, aims to target individuals with visual impairment and improve their quality of life.'
+category: 'projects'
+image: 'https://i.imgur.com/ururmMI.png'
+cohort: 'Serverless Camp S21'
+---
+
+## About Me
+My name is Derek Lam (he/him), and I am a third-year Computer Science student at the University of California, Irvine. Outside of school, I like to play tennis, go on hikes, work out, and learn about new technologies. I hope to build technical solutions that can impact diverse audiences.
+
+## The Premise
+While everyone is different in many ways, that should not stop certain types of people from living normal lives. My project, Seeing It, aims to target individuals with visual impairment and improve their quality of life. This tool allows the blind to "see" the world through just a click of a button. Seeing It works by first capturing a photo, then analyzes what's going on in the image to obtain a textual output, and finally reads it to the user through a built-in speech algorithm.
+
+## Project Structure
+
+![](https://i.imgur.com/Y6VuSWb.png)
+
+### Tools and Technologies
+Seeing It is built upon 3 main components:
+
+#### 1) Uploading a file
+
+![](https://i.imgur.com/9cXweLE.png)
+
+In order to upload an image to the UI, we must have an input that accepts a file and a form that will hold the data to later be processed. From there, we get the id's from both of these HTML elements and create a variable that will store a File object containing the file name. After that, a FormData object is made since we're uploading an image as the body of the request we're going to make. Finally, take the File object and append it to the FormData object as a key-value pair (the key can be named anything).
+
+#### 2) Image Analyzer API
+
+![](https://i.imgur.com/ea9X9bu.png)
+
+Since we want a textual description of an image, we will be using the Computer Vision service. The Image Analyzer API is in the form of an HTTP Trigger, where the backend code is covered since we are using Microsoft's Azure Serverless Functions.
+To begin, install and import node-fetch (used to make requests to API) and parse-multipart (parses raw data for simplified usage). It is crucial to also include the subscription key and endpoint (from the Computer Vision resource) because we will need them to make the API call.
+
+![](https://i.imgur.com/dfhW6dy.png)
+
+Next, set the header to content-type because we're using form-data to make a POST request (don't forget to set the body!). Using the "body" and "boundary" variables, we use multipart to parse the data and obtain two lists of information: the file name and type of file. Since we want the file name, we access the first index of "parts" and get the data attribute. Now that we have obtained the image, it will be used as a parameter for the function that calls the Computer Vision API (I will explain how the method is made shortly). Finally, the image's description and confidence (how certain the algorithm is in being correct, usually in the form of a percentage) are both outputted in the form of text.
+Let's talk about how the function is made. Since we're making a call to the Computer Vision API and looking specifically for the image analysis feature, we create a variable that holds both the endpoint and added extension. The parameters are then established to look for what information we need from the API. Following that, a POST request is made with the image and key being utilized. Finally, we return the information as a JSON object and receive the data containing the description attribute.
+
+#### 2.5) Steps 1 + 2
+
+![](https://i.imgur.com/ud3cJZk.png)
+
+
+With our files being able to properly upload and our Image Analyzer API working, it's time to put it all together. In order to make a request from a web page to an API, we must use the XMLHttpRequest object. After creating it, we use the XMLHttpRequest.open() method to make a POST request to the Image Analyzer API and XMLHttpRequest.send() to attach the file as the request body. Finally, the XMLHttpRequest.onload() method is called to get our response, where JQuery is used. If everything ends up running smoothly, output the desired response, but if not, show that an error occurred.
+
+
+
+#### 3) Text-to-Speech API
+
+![](https://i.imgur.com/Ns7BtTT.png)
+
+Since we're using a button to activate the Text-to-Speech API, we have to make a reference to it somehow, so in this case, by the element's id. The fifth line is where we are setting the inner HTML to "volumeOn," which is for styling purposes. Next, we need to store the output description as a variable since we need to translate it to speech. We do so by referencing the id labeled output (remember that "#output" was what we used to get the image description when using XMLHttpRequest.onload()) and access its textContent attribute. Finally, make it so that you can't click the button again while the translation is active.
+
+![](https://i.imgur.com/sUFuDXj.png)
+
+We will be using Microsoft's Speech SDK to construct our API. First, create a SpeakerAudioDestination object to establish where the audio will be played. Then use SpeakerAudioDestination().onAudioEnd() (the code above is formatted differently, but works the same way) to add events while the speech is active. In this case, once the audio has been completed, make the button clickable and have the "volumeOff" icon displayed.
+
+After completing those steps, we have to get our credentials (e.g. Speech resource's subscription key and location) and indicate where the speech should be produced. From there, make a SpeechSynthesizer object that takes the credentials and speaker output as parameters. Finally, use the SpeechSynthesizer().speakTextAsync() method to activate the speech, where the parameters are the text itself and functions that can display the result and error.
+
+## Challenges + Lessons Learned
+The main challenges I faced when building my software were calling the Image Analyzer API to output the result to my UI and getting the Text-to-Speech API to emit audio.
+
+I ran into this problem of calling the Image Analyzer API to produce output on my website because I thought the idea of using "fetch" to call APIs in Http Trigger functions would apply to my project. This was because working with Http Triggers were the only reference experience I had when it came to dealing with APIs during my time at the Serverless Camp. I soon realized that there had to be a different way of executing this problem since I was dealing with a plain script file. However, after doing some research, I found that making an XMLHttpRequest was a common way of listening to events during requests made to servers. Through implementing the ".open()," ".send()," and ".onload()" methods from the XMLHttpRequest object, I was able to successfully analyze a given image and output its textual description.
+
+Additionally, the audio did not emit from the Text-to-Speech API because following the Microsoft documentation on how to translate text to speech, I found that using the ".fromDefaultSpeakerOutput()" method to configure the audio would be the way to do so. However, it ended up not working because this function is not supported on browsers, according to several forums. In the end, I asked my mentor Sanket about this issue and he helped me reach a solution.
+
+## Moving Forward
+I hope to take my project and implement it in hardware so that it can be utilized in any setting. Check out my Github repository to view the code that made up my website!
+
+
+## Thanks and Acknowledgements
+I would like to thank Bit Project for giving me the opportunity to join the Serverless Camp and learn about cloud computing with Microsoft! Everyone in the camp was very supportive of one another and it felt great to learn in an environment where people came from various experience levels.
+
+I want to give a huge token of appreciation to my mentor Sanket! He has supported me so much throughout the camp and helped pique my interest in working with Azure and web development.
+
+Overall, I am thankful to have gone through this experience as it was a great way to learn new skills while being surrounded by like-minded individuals.

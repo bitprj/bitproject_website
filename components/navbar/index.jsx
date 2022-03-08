@@ -4,18 +4,9 @@ import { NavContent } from './NavContent'
 import { motion, MotionConfig } from "framer-motion"
 import Image from "next/image";
 
-export const Navbar = () => (
-  <Box bg="black" color="white" pt="1" position="sticky" top="0" zIndex="100">
-    {/* <style jsx global>
-      {`
-                    .logo { 
-                        margin-right: 1rem !important; 
-                        margin-top: -1rem !important; 
-                        display: inline !important;
-                    }
-                    
-                `}
-    </style> */}
+
+export const Navbar = ({ bg }) => (
+  <Box bg={bg ? bg : "black"} color="white" pt="1" position="sticky" top="0" zIndex="100">
     <Box as="header" height="16" position="relative" color="white">
       <Box
         height="100%"
@@ -39,11 +30,8 @@ export const Navbar = () => (
           <motion.a href="/" whileHover={{ scale: 1.1 }}>
             <Img
               src="/logo.png"
-              height="9"
-              // width="50px"
-              alt="logo"
+              h="9"
               display="inline"
-              // className="logo"
               mr="3"
               mt="-1"
             />

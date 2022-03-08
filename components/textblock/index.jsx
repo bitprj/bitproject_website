@@ -22,47 +22,47 @@ export const Textblock = ({ title, para1, para2 }) => (
   <Box
     bg="black"
     color="white"
-    >
-      <Fade>
-    <Container
-      maxW="container.lg"
-      p="15px"
-    >
-            <Box
-        maxW={{
-          base: 'xl',
-          md: '7xl',
-        }}
-        mx="auto"
-        
+  >
+    <Fade>
+      <Container
+        maxW="container.lg"
+        p="15px"
       >
-      <Heading
-      as="h1"
-      size="xl"
-      fontWeight="extrabold"
-      maxW="48rem"
-      lineHeight="1.2"
-      letterSpacing="tight"
-    >
-      {title}
-    </Heading>
-        <Flex
-          align="flex-start"
-          direction={{
-            base: 'column',
-            lg: 'row',
+        <Box
+          maxW={{
+            base: 'xl',
+            md: '7xl',
           }}
-          justify="space-between"
-          my="2rem"
-        > 
-          <Text fontSize="lg" mr="3rem">{para1}</Text>
-          <br></br>
-          <Text fontSize="lg" mr="3rem">{para2}</Text>
-      {/* <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, error! Eaque quia natus ipsa suscipit cumque, praesentium cupiditate delectus architecto?</p> */}
-    </Flex>
-    </Box>
-    
-    </Container>
+          mx="auto"
+
+        >
+          <Heading
+            as="h1"
+            size="xl"
+            fontWeight="extrabold"
+            maxW="48rem"
+            lineHeight="1.2"
+            letterSpacing="tight"
+          >
+            {title}
+          </Heading>
+          <Flex
+            align="flex-start"
+            direction={{
+              base: 'column',
+              lg: 'row',
+            }}
+            justify="space-between"
+            my="2rem"
+          >
+            <Text fontSize="lg" mr="3rem">{para1}</Text>
+            <br></br>
+            <Text fontSize="lg" mr="3rem">{para2}</Text>
+            {/* <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis, error! Eaque quia natus ipsa suscipit cumque, praesentium cupiditate delectus architecto?</p> */}
+          </Flex>
+        </Box>
+
+      </Container>
     </Fade>
   </Box>
 )

@@ -13,6 +13,7 @@ import {
 } from '@chakra-ui/react'
 import Fade from 'react-reveal/Fade';
 import * as React from 'react'
+
 export const DualCol = ({ bg, preheading, heading, para1, para2, li1, li2, li3, img, action, actionLink }) => {
   if (img) {
     return (
@@ -119,7 +120,6 @@ export const DualCol = ({ bg, preheading, heading, para1, para2, li1, li2, li3, 
                   {li3}
                 </Text>
               </Box>
-
 
             </Fade>
           </Box>

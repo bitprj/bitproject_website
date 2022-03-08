@@ -17,6 +17,7 @@
     "apollo-link-context": "^1.0.20",
     "apollo-link-http": "^1.5.17",
     "chakra-ui-markdown-renderer": "^1.1.0",
+    "cloudinary-build-url": "^0.2.1",
     "date-fns": "^2.11.1",
     "framer-motion": "^3.10.6",
     "graphql": "^15.5.0",

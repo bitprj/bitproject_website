@@ -1,6 +1,7 @@
 import { Box, Flex, HStack, Img, Stack, Text, useColorModeValue as mode } from '@chakra-ui/react'
 import * as React from 'react'
 import { SimpleGrid } from "@chakra-ui/react"
+import Image from "next/image";
 
 export const Testimonial = (props) => {
   const { image, company, name, children, ...rest } = props
@@ -20,13 +21,22 @@ export const Testimonial = (props) => {
       color="white"
       {...rest}
     >
+      <style jsx global>
+        {`
+                    .profileImage { 
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                    
+                `}
+      </style>
       <HStack
         spacing={{
           base: 3,
           md: 5,
         }}
       >
-        <Img objectFit="cover" rounded="full" boxSize={14} name={name} src={image} />
+        <Image src={image} className="profileImage" border="2px solid red" height="60px" width="60px" alt={image} />
         <Flex direction="column">
           <Text fontWeight="bold">{name}</Text>
           <Text fontSize="sm" fontWeight="medium" opacity={0.7}>

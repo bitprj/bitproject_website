@@ -20,18 +20,24 @@ import * as React from 'react'
 import Fade from 'react-reveal/Fade';
 import { ProfileIcon } from '../profileicon'
 import { motion } from "framer-motion"
+import Image from 'next/image'
 
 export const GraphicTabBottom = ({ bold, heading, desc, logoImage, name1, pic1, title1, graphic1, name2, pic2, title2, graphic2, name3, pic3, title3, graphic3, name4, title4, pic4, graphic4, cta1, cta2, cta1link, cta2link }) => {
     return (
         <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white">
             <Fade>
                 <Container
-                    maxW="container.lg">
+                    maxW="container.lg"
+                    p="15px"
+                    textAlign="center"
+                >
 
-                    {logoImage && <Img
+                    {logoImage && <Image
                         alt="Page icon"
                         src={logoImage}
-                        width="10%"
+                        width="125px"
+                        height="125px"
+                        border="2px solid red"
                         m="0 auto"
                         my="15px"
                     />}
@@ -119,8 +125,9 @@ export const GraphicTabBottom = ({ bold, heading, desc, logoImage, name1, pic1, 
                                     url={graphic1}
                                     playing="true"
                                     volume="0"
+
                                     controls={true}
-                                    // width="100%"
+                                    width="80%"
                                     m="0 auto"
                                 // loop="true"
                                 />
@@ -131,6 +138,7 @@ export const GraphicTabBottom = ({ bold, heading, desc, logoImage, name1, pic1, 
                                     // playing="true"
                                     volume="0"
                                     controls="true"
+                                    width="80%"
                                 // loop="true"
                                 />
                             </TabPanel>
@@ -139,6 +147,7 @@ export const GraphicTabBottom = ({ bold, heading, desc, logoImage, name1, pic1, 
                                     url={graphic3}
                                     // playing="true"
                                     volume="0"
+                                    width="80%"
                                     controls="true"
                                 // loop="true"
                                 />

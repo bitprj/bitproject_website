@@ -5,8 +5,22 @@ import { GraphicTab } from '../components/graphictab'
 import { Testimonials } from '../components/testimonials'
 import { Navbar } from '../components/navbar'
 import { Footer } from '../components/footer'
+import { buildUrl } from 'cloudinary-build-url';
+
 
 export default function HomePage() {
+  const url = buildUrl('/main.gif', {
+    cloud: {
+      cloudName: 'dozq22ont',
+    },
+    transformations: {
+      effect: {
+        name: 'pixelate',
+        value: 40
+      }
+    }
+  });
+
   return (
     <div>
       <Head>

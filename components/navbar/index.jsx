@@ -2,6 +2,8 @@ import { Box, Flex, Text, Img } from '@chakra-ui/react'
 import * as React from 'react'
 import { NavContent } from './NavContent'
 import { motion, MotionConfig } from "framer-motion"
+import Image from "next/image";
+
 
 export const Navbar = ({ bg }) => (
   <Box bg={bg ? bg : "black"} color="white" pt="1" position="sticky" top="0" zIndex="100">

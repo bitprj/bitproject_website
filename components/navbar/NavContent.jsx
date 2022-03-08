@@ -11,7 +11,6 @@ import { HiOutlineMenu, HiX } from 'react-icons/hi'
 import { NavLink } from './NavLink'
 import { NavList } from './NavList'
 import { NavListItem } from './NavListItem'
-import { motion } from "framer-motion"
 
 const links = [
   {
@@ -31,6 +30,10 @@ const links = [
     label: 'Mentor',
     href: '/mentor',
   },
+  // {
+  //   label: 'Counselor',
+  //   href: '/counselor',
+  // },
   {
     label: 'Blog',
     href: '/blog',
@@ -77,7 +80,7 @@ const MobileNavContent = (props) => {
 
 const DesktopNavContent = (props) => {
   return (
-    <HStack spacing="8" align="stretch" {...props}>
+    <HStack spacing="6" align="stretch" {...props}>
       {links.map((link, index) => (
         // <NavLink.Desktop key={index} href={link.href} fontSize="xl" fontWeight="bold" _hover={{
         //   color: "grey",
@@ -86,7 +89,9 @@ const DesktopNavContent = (props) => {
         // </NavLink.Desktop>
 
         // <motion.a key={index} whileHover={{ scale: 1.1  }}>
-        <NavLink.Desktop key={index} href={link.href} fontSize="xl" fontWeight="bold" _hover="">
+        <NavLink.Desktop key={index} href={link.href} fontSize="xl" fontWeight="bold" _hover={{
+          color: "#808080"
+        }}>
           {link.label}
         </NavLink.Desktop>
         // </motion.a>

@@ -46,7 +46,7 @@ export default function Serverless({ posts }) {
       <Navbar />
       <GraphicTabBottom
         heading="Serverless Camp 2022"
-        bold='June 13 - Aug 31'
+        bold='June 13 - August 31'
         desc="In our 8-week boot camp, build awesome apps with Serverless functions, JavaScript, and APIs. From IoT heartbeat monitors to face mask detectors, you can build anything with Serverless!"
         cta1="Apply Now"
         cta2="Join as a Mentor"
@@ -74,7 +74,7 @@ export default function Serverless({ posts }) {
       <Textblock
         title="What is Serverless Camp?"
         para1="Serverless involves harnessing the power of cloud computing and building large applications quickly without having to manage servers."
-        para2="The Serverless Camp is an 8-week interactive coding bootcamp designed to help you gain real-world technical skills through project-based learning and build awesome professional connections. We will be offering two programs this summer: the Mentorship Program and the Global Student Community"
+        para2="The Serverless Camp is an 8-week interactive coding bootcamp designed to help you gain real-world technical skills through project-based learning and build awesome professional connections. We will be offering two programs this summer: the Mentorship Program and the Global Student Community."
       />
 
       <ServerlessCompare

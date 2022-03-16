@@ -79,7 +79,7 @@ export default function Serverless({ posts }) {
 
       <ServerlessCompare
         title1='Mentorship Program*'
-        items1={['Learn to build with serverless from seasoned software engineers', 'Get direct access to coding workshops and tech talks', 'Develop resume-worthy projects using the actual tools of the industry', 'Receive 1:1 mentorship from seasoned software engineers from the industry to learn about cutting edge technology', 'Present a talk at the Serverless Days: Student Edition Conference*']}
+        items1={['Learn to build with serverless from seasoned software engineers', 'Get direct access to coding workshops and tech talks', 'Develop resume-worthy projects using the actual tools of the industry', 'Receive 1:1 mentorship from seasoned software engineers from the industry to learn about cutting edge technology', 'Present a talk at the Serverless Days: Student Edition Conference']}
         astrick1='*Limited seats available'
 
         title2='Global Student Community'

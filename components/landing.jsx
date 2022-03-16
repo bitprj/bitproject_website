@@ -51,12 +51,12 @@ export const Landing = ({ heading, description, cta1, cta2, image, logoImage, pl
   }
 
   return (
-    <Box as="section" bg="black" pt="24" pb="12" overflow="hidden" color="white">
+    <Box as="section" pt="24" pb="12" overflow="hidden" color="white">
       <Container
         maxW="container.lg"
       >
         <Fade>
-          <Box as="section" bg="black" pb="12" overflow="hidden" color="white">
+          <Box as="section" pb="12" overflow="hidden" color="white">
             <Box maxW={{ base: 'xl', md: '7xl' }} mx="auto" px={{ base: '6', md: '8' }}>
               <Box textAlign="center">
 

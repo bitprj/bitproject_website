@@ -6,7 +6,7 @@ import Image from "next/image";
 
 
 export const Navbar = ({ bg }) => (
-  <Box bg={bg ? bg : "black"} color="white" pt="1" position="sticky" top="0" zIndex="100">
+  <Box bg={bg ? bg : "black.off"} color="white" pt="1" position="sticky" top="0" zIndex="100">
     <Box as="header" height="16" position="relative" color="white">
       <Box
         height="100%"

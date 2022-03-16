@@ -5,22 +5,10 @@ import { GraphicTab } from '../components/graphictab'
 import { Testimonials } from '../components/testimonials'
 import { Navbar } from '../components/navbar'
 import { Footer } from '../components/footer'
-import { buildUrl } from 'cloudinary-build-url';
+import { MainHead } from '@/components/headings/MainHead.jsx'
 
 
 export default function HomePage() {
-  const url = buildUrl('/main.gif', {
-    cloud: {
-      cloudName: 'dozq22ont',
-    },
-    transformations: {
-      effect: {
-        name: 'pixelate',
-        value: 40
-      }
-    }
-  });
-
   return (
     <div>
       <Head>
@@ -36,14 +24,29 @@ export default function HomePage() {
       </Head>
       <Navbar />
       <Landing
-        heading="We equip students with technical superpowers"
-        description="We provide cutting-edge, open source learning experiences to prepare students for careers in tech."
+        heading="Free and open source coding bootcamps"
+        description="Learn the skills of a software engineer through our free programs!"
         formActionButton="Sign Up"
         image="/main.gif"
         formResponse="Thanks! See you soon 👋"
       />
 
+
+
+
+
       <TriCol
+        title='Our programs'
+        heading1="Serverless Camp (self-paced & mentorship program)"
+        para1="A 8-week program where you'll learn how to use Microsoft Azure and Node.js to create serverless apps."
+        heading2="JavaScript & GitHub (self-paced)"
+        para2="Learn the basics of GitHub and JavaScript using CounselorBot and our learning lab course."
+        heading3="APIs (coming soon)"
+        para3="Don't reinvent the wheel! Learn how to call and use other people's code in this program!"
+      />
+
+      <TriCol
+        title='Our beliefs'
         heading1="Free & Open Source"
         para1="Our courses are open source and free for all because we believe in the power of accessible technical education."
         heading2="Built with the Industry"

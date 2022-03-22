@@ -130,7 +130,7 @@ export default function Serverless({ posts }) {
         image="/feature.svg"
         logoImage="/serverlessLogo.svg"
       />
-      <Box as="section" bg="black" color="white">
+      <Box as="section" bg="black" color="white" pb='30px'>
         <Container
           maxW="container.xl"
         // p="30px"

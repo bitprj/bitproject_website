@@ -13,16 +13,27 @@ export const TextWithPic = ({ pic, title, items1, bgColor }) => {
                 <SimpleGrid columns={{ base: 1, md: 2 }} spacing={20} mx="auto" justifyContent="start" alignItems="center" bg='black' pt={8}>
                     <Box maxW="500px">
                         <UnorderedList spacing={3} fontSize='lg' color='gray.300'>
-                            {
-                                items1.map((item, index) => (
-                                    <ListItem key={index} >
-
-                                        <Text textAlign='left'>
-                                            {item}
-                                        </Text>
-                                    </ListItem>
-                                ))
-                            }
+                            <ListItem>
+                                <Text textAlign='left'>Knowledge of tech industry & familiarity with:</Text>
+                            </ListItem>
+                            <UnorderedList>
+                                <ListItem>
+                                    <Text textAlign='left'>Serverless technology, especially Azure Portal and VS Code Azure extension</Text>
+                                    <Text textAlign='left'>Azure use cases (e.g., Function Apps, Logic Apps, etc.)</Text>
+                                    <Text>Basic web dev (frontend and backend)</Text>
+                                    <Text>Experience with NodeJS, HTML/CSS, NoSQL</Text>
+                                    <Text>Working with APIs & reading documentation</Text>
+                                </ListItem>
+                            </UnorderedList>
+                            <ListItem>
+                                <Text>Willing to commit 1-3 hours per week during program</Text>
+                            </ListItem>
+                            <ListItem>
+                                <Text>Commit to completing course (assignments not required, but mentors must at least look through curriculum & solutions) before course start date</Text>
+                            </ListItem>
+                            <ListItem>
+                                <Text>Excitement about tech and eagerness to help future engineers!</Text>
+                            </ListItem>
                         </UnorderedList>
                     </Box>
 

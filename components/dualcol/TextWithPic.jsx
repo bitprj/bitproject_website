@@ -19,10 +19,19 @@ export const TextWithPic = ({ pic, title, items1, bgColor }) => {
                             <UnorderedList>
                                 <ListItem>
                                     <Text textAlign='left'>Serverless technology, especially Azure Portal and VS Code Azure extension</Text>
-                                    <Text textAlign='left'>Azure use cases (e.g., Function Apps, Logic Apps, etc.)</Text>
-                                    <Text>Basic web dev (frontend and backend)</Text>
-                                    <Text>Experience with NodeJS, HTML/CSS, NoSQL</Text>
-                                    <Text>Working with APIs & reading documentation</Text>
+                                    <ListItem>
+                                        <Text textAlign='left'>Azure use cases (e.g.
+                                            , Function Apps, Logic Apps, etc.)</Text>
+                                    </ListItem>
+                                    <ListItem>
+                                        <Text>Basic web dev (frontend and backend)</Text>
+                                    </ListItem>
+                                    <ListItem>
+                                        <Text>Experience with NodeJS, HTML/CSS, NoSQL</Text>
+                                    </ListItem>
+                                    <ListItem>
+                                        <Text>Working with APIs & reading documentation</Text>
+                                    </ListItem>
                                 </ListItem>
                             </UnorderedList>
                             <ListItem>

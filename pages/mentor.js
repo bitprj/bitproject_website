@@ -5,7 +5,8 @@ import { Footer } from '../components/footer'
 import { Textblock } from '@/components/textblock'
 import { ServerlessCompare } from '@/components/ServerlessCompare'
 import { TextWithPic } from '@/components/dualcol/TextWithPic'
-import { UnorderedList, ListItem, Container, Button, Box, Text, Heading } from '@chakra-ui/react'
+import { List, ListItem, Container, Button, Box, Text, Heading, ListIcon } from '@chakra-ui/react'
+import { MdCheckCircle } from 'react-icons/md'
 export default function Mentor() {
   let items = [
     "Expand your network by connecting with likeminded individuals",
@@ -32,7 +33,7 @@ export default function Mentor() {
         heading="Make a Difference. Mentor."
         desc="We’re building a community of mentors who are passionate about sharing knowledge, experience, and guidance with the next generation of engineers. Choose between a Global Student Community (GSC) mentor and a individual mentor!"
         cta1="Apply Now"
-        logoImage="/counselor.png"
+        // logoImage="/counselor.png"
         cta1link='https://jkfr7wbzytt.typeform.com/camp-mentor'
 
         pic1="/mentor/anthony.jpeg"
@@ -59,7 +60,7 @@ export default function Mentor() {
 
       <ServerlessCompare
         title1='Global Student Community Track'
-        items1={['Engage in technical and/or interest-based conversations [on Discord] in communication channels', 'Lead a weekly AMA/discussion on curriculum-based topic links to resources for students to learn more (text based)', 'Contribute to answering curriculum - based questions on the Forum.']}
+        items1={['Engage in technical and/or interest-based conversations [on Discord] in communication channels', 'Lead a weekly AMA/discussion on curriculum-based topic links to resources for students to learn more (text based)', 'Contribute to answering curriculum-based questions on the Forum.']}
 
         title2='Individual Track'
         items2={['Meet with assigned student 1:1 at least once a week to discuss the following points:', 'Weeks 1-4: discuss weekly lesson topics, answer conceptual questions, provide context on how topics are used in industry (”real world” applications)', 'Weeks 5-8: guide student in their final project, help with planning, design, debugging, etc.', 'Throughout: career advice, interview prep, anything else you want!', 'Actively check communication channel to schedule meetings with student and provide async help.']}
@@ -73,41 +74,45 @@ export default function Mentor() {
 
       <Box bg='black' color='white'>
         <Container maxW='container.lg' p={15}>
-          <Heading>
-            Still not convinced? As a mentor you will:
-          </Heading>
-          <UnorderedList spacing={3} fontSize='lg' color='gray.300' pt={8}>
-            {
-              items.map((item, index) => (
-                <ListItem key={index} >
 
-                  <Text textAlign='left'>
-                    {item}
-                  </Text>
-                </ListItem>
-              ))
-            }
-          </UnorderedList>
+          <Box textAlign='center'>
+            <Heading>
+              Still not convinced? As a mentor you will:
+            </Heading>
+            <List spacing={3} fontSize='lg' color='gray.300' pt={8} textAlign='center' justifyContent='center'>
+              {
+                items.map((item, index) => (
+                  <ListItem key={index} textAlign='center' mx='auto'>
+                    <ListIcon as={MdCheckCircle} color='green.500' />
+                    <Text textAlign='center' d='inline' >
+                      {item}
+                    </Text>
+                  </ListItem>
+                ))
+              }
+            </List>
 
-          <Button
-            my={15}
-            as="a"
-            href='https://jkfr7wbzytt.typeform.com/camp-mentor'
-            target="_blank"
-            size="lg"
-            color="white"
-            border="1px solid #2B6CB0"
-            bg="#2B6CB0"
-            px="8"
-            fontWeight="bold"
-            fontSize="md"
-            _hover={{
-              color: "white",
-              background: "#4e8dcf",
-            }}
-          >
-            Apply to Mentor!
-          </Button>
+
+            <Button
+              my={15}
+              as="a"
+              href='https://jkfr7wbzytt.typeform.com/camp-mentor'
+              target="_blank"
+              size="lg"
+              color="white"
+              border="1px solid #2B6CB0"
+              bg="#2B6CB0"
+              px="8"
+              fontWeight="bold"
+              fontSize="md"
+              _hover={{
+                color: "white",
+                background: "#4e8dcf",
+              }}
+            >
+              Apply to Mentor!
+            </Button>
+          </Box>
         </Container>
       </Box>
 

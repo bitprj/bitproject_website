@@ -5,14 +5,14 @@ import { Footer } from '../components/footer'
 import { Textblock } from '@/components/textblock'
 import { ServerlessCompare } from '@/components/ServerlessCompare'
 import { TextWithPic } from '@/components/dualcol/TextWithPic'
-import { List, ListItem, Container, Button, Box, Text, Heading, ListIcon } from '@chakra-ui/react'
+import { List, ListItem, Container, Button, Box, Text, SimpleGrid, Heading, ListIcon } from '@chakra-ui/react'
 import { MdCheckCircle } from 'react-icons/md'
 export default function Mentor() {
   let items = [
-    "Expand your network by connecting with likeminded individuals",
+    "Expand your network and connect with like-minded individuals",
     "Learn from students and other mentors with different perspectives",
     "Develop your communication and leadership skills",
-    "Gain confidence in your technical and interpersonal skillset",
+    "Gain confidence in your technical and interpersonal skill set",
     "Get a sense of satisfaction and fulfillment by directly helping aspiring engineers"
   ]
   return (
@@ -29,6 +29,7 @@ export default function Mentor() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
+
       <GraphicTabBottom
         heading="Make a Difference. Mentor."
         desc="We’re building a community of mentors who are passionate about sharing knowledge, experience, and guidance with the next generation of engineers. Choose between a Global Student Community (GSC) mentor and a individual mentor!"
@@ -52,19 +53,106 @@ export default function Mentor() {
         graphic3="https://vimeo.com/570824340"
       />
 
-      <Textblock
-        title="What Do Serverless Mentors Do?"
-        para1="With our Serverless camp, you'll be able to contribute to our fully open-source curriculum, build interactive and value-driven educational experiences for the Global Student Community (GSC), and create a new model for non-traditional education in tech."
-        para2="As a mentor, you'll be able host tech talks and workshops during our Serverless camp, meet with the Bit Project team before, during, and after the camp for feedback, and help us build a community of mentors who are passionate about sharing knowledge, experience, and guidance with the next generation of engineers."
-      />
+      <Container
+        maxW="container.lg"
+        p="15px"
+        bg='black'
+      >
+        <Box
+          maxW={{
+            base: 'xl',
+            md: '7xl',
+          }}
+          mx="auto"
+          bg='black'
+          color='white'
+        >
+          <Heading
+            as="h1"
+            size="xl"
+            fontWeight="extrabold"
+            maxW="48rem"
+            lineHeight="1.2"
+            letterSpacing="tight"
+          >
+            What Do Serverless Mentors Do?
+          </Heading>
+          <Box my="1rem">
+            <Text fontSize="lg" mr="3rem">
+              With our Serverless camp, you&apos;ll be able to contribute to our fully open-source curriculum, build interactive and value-driven educational experiences for the Global Student Community (GSC), and create a new model for non-traditional education in tech.
+            </Text>
+            <br />
+            <Text fontSize="lg" mr="3rem">
+              As a mentor, you&apos;ll be able host tech talks and workshops during our Serverless camp, meet with the Bit Project team before, during, and after the camp for feedback, and help us build a community of mentors who are passionate about sharing knowledge, experience, and guidance with the next generation of engineers.
+            </Text>
+          </Box>
+        </Box>
+      </Container>
 
-      <ServerlessCompare
-        title1='Global Student Community Track'
-        items1={['Engage in technical and/or interest-based conversations [on Discord] in communication channels', 'Lead a weekly AMA/discussion on curriculum-based topic links to resources for students to learn more (text based)', 'Contribute to answering curriculum-based questions on the Forum.']}
+      <Box bg='black' color='white'>
+        <Container
+          maxW="container.lg"
+          p="15px"
+        >
+          <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
+            <Box>
+              <Box bg='gray.900' p={4} rounded='md'>
+                <Heading as="h2" size="lg" fontWeight="semibold" mb="4">
+                  Global Student Community Track
+                </Heading>
+                <List spacing={3} fontSize='lg' color='gray.300'>
 
-        title2='Individual Track'
-        items2={['Meet with assigned student 1:1 at least once a week to discuss the following points:', 'Weeks 1-4: discuss weekly lesson topics, answer conceptual questions, provide context on how topics are used in industry (”real world” applications)', 'Weeks 5-8: guide student in their final project, help with planning, design, debugging, etc.', 'Throughout: career advice, interview prep, anything else you want!', 'Actively check communication channel to schedule meetings with student and provide async help.']}
-      />
+                  <ListItem>
+                    <ListIcon as={MdCheckCircle} color='green.500' />
+                    Engage in technical and/or interest-based conversations [on Discord] in communication channels
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon as={MdCheckCircle} color='green.500' />
+                    Lead a weekly AMA/discussion on curriculum-based topic links to resources for students to learn more (text based)
+                  </ListItem>
+                  <ListItem>
+                    <ListIcon as={MdCheckCircle} color='green.500' />
+                    Contribute to answering curriculum-based questions on the Forum
+                  </ListItem>
+                </List>
+              </Box>
+            </Box>
+
+
+            <Box>
+              <Box bg='gray.900' p={4} rounded='md'>
+                <Heading as="h2" size="lg" fontWeight="semibold" mb="4">
+                  Individual Track                       </Heading>
+                <List spacing={3} fontSize='lg' color='gray.300'>
+
+                  <ListItem>
+                    <ListIcon as={MdCheckCircle} color='green.500' />
+                    Meet with assigned student 1:1 at least once a week to discuss the following points:
+                  </ListItem>
+                  <List spacing={3} fontSize='lg' color='gray.300' ml={4}>
+                    <ListItem>
+                      <ListIcon as={MdCheckCircle} color='green.500' />
+                      Weeks 1-4: discuss weekly lesson topics, answer conceptual questions, provide context on how topics are used in industry (”real world” applications)
+                    </ListItem>
+                    <ListItem>
+                      <ListIcon as={MdCheckCircle} color='green.500' />
+                      Weeks 5-8: guide student in their final project, help with planning, design, debugging, etc.
+                    </ListItem>
+                    <ListItem>
+                      <ListIcon as={MdCheckCircle} color='green.500' />
+                      Throughout: career advice, interview prep, anything else you want!
+                    </ListItem>
+                  </List>
+                  <ListItem>
+                    <ListIcon as={MdCheckCircle} color='green.500' />
+                    Actively check communication channel to schedule meetings with student and provide async help
+                  </ListItem>
+                </List>
+              </Box>
+            </Box>
+          </SimpleGrid>
+        </Container>
+      </Box>
 
       <TextWithPic
         title='Requirements'
@@ -79,7 +167,7 @@ export default function Mentor() {
             <Heading>
               Still not convinced? As a mentor you will:
             </Heading>
-            <List spacing={3} fontSize='lg' color='gray.300' pt={8} textAlign='center' justifyContent='center'>
+            <List spacing={3} fontSize='lg' color='gray.300' pt={4} textAlign='center' justifyContent='center'>
               {
                 items.map((item, index) => (
                   <ListItem key={index} textAlign='center' mx='auto'>

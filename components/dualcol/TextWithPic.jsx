@@ -38,7 +38,7 @@ export const TextWithPic = ({ pic, title, items1, bgColor }) => {
                                 <Text>Willing to commit 1-3 hours per week during program</Text>
                             </ListItem>
                             <ListItem>
-                                <Text>Commit to completing course (assignments not required, but mentors must at least look through curriculum & solutions) before course start date</Text>
+                                <Text>Commit to auditing course (mentors must go through the curriculum and solutions; assignments and final project not required) before course start date</Text>
                             </ListItem>
                             <ListItem>
                                 <Text>Excitement about tech and eagerness to help future engineers!</Text>

@@ -79,11 +79,11 @@ export default function Mentor() {
           </Heading>
           <Box my="1rem">
             <Text fontSize="lg" mr="3rem">
-              With our Serverless camp, you&apos;ll be able to contribute to our fully open-source curriculum, build interactive and value-driven educational experiences for the Global Student Community (GSC), and create a new model for non-traditional education in tech.
+              As a mentor, you will be able to directly help students build their technical and engineering skills. You will also have the opportunity to host technical talks and workshops, give valuable feedback to the Bit Project team, and help us build a community of mentors who are passionate about sharing knowledge, experience, and guidance with the next generation of engineers.
             </Text>
             <br />
             <Text fontSize="lg" mr="3rem">
-              As a mentor, you&apos;ll be able host tech talks and workshops during our Serverless camp, meet with the Bit Project team before, during, and after the camp for feedback, and help us build a community of mentors who are passionate about sharing knowledge, experience, and guidance with the next generation of engineers.
+              We also welcome and encourage mentors to contribute to our fully open-source curriculum! By doing so, you will be able to create interactive and unique educational experiences for our student community and aid us in building a new model for non-traditional tech education.
             </Text>
           </Box>
         </Box>

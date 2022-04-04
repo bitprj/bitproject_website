@@ -6,6 +6,9 @@ import { DefaultSeo } from 'next-seo'
 import { prismLightTheme, prismDarkTheme } from '../styles/prism'
 import MDXComponents from '../components/MDXComponents'
 import { ChakraProvider } from '@chakra-ui/react'
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
+
 
 const GlobalStyle = ({ children }) => {
   const { colorMode } = useColorMode()
@@ -34,6 +37,24 @@ const GlobalStyle = ({ children }) => {
 
 
 function MyApp({ Component, pageProps }) {
+
+  const router = useRouter()
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      ga.pageview(url)
+    }
+    //When the component is mounted, subscribe to router changes
+    //and log those page views
+    router.events.on('routeChangeComplete', handleRouteChange)
+
+    // If the component is unmounted, unsubscribe
+    // from the event with the `off` method
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
+
   return (
     <ChakraProvider>
       <ColorModeProvider

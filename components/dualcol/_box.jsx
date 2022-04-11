@@ -1,14 +1,18 @@
 import {
+    Badge,
     Box,
-    Img,
     Text,
     useColorModeValue as mode,
 } from '@chakra-ui/react'
 import * as React from 'react'
 import Image from 'next/image'
 
-export const HighlightBox = ({ title, companyLogo, image, link, cohort }) => {
+export const HighlightBox = ({ title, companyLogo, image, link, cohort, category }) => {
     let bkgUrl = `url(${image})`
+    let colors = {
+        'projects': 'blue.800',
+        'workshops': 'purple.800',
+    }
     return (
         <Box
             overflow="hidden"
@@ -42,6 +46,9 @@ export const HighlightBox = ({ title, companyLogo, image, link, cohort }) => {
                 mt="6"
 
             >
+                {category && <Badge bg={colors[category]} color='gray.300'>
+                    {category}
+                    </Badge>}
 
                 <Text fontSize="2xl" fontWeight="800" color="white">
                     {title}

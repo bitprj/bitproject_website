@@ -1,39 +1,37 @@
-import Head from 'next/head'
+// import Head from 'next/head'
 import { Landing } from '../components/landing.jsx'
 import { TriCol } from '../components/tricol'
 import { GraphicTab } from '../components/graphictab'
 import { Testimonials } from '../components/testimonials'
 import { Navbar } from '../components/navbar'
 import { Footer } from '../components/footer'
-import { buildUrl } from 'cloudinary-build-url';
+import { NextSeo } from 'next-seo'
 
+
+const title = "Bit Project"
+const description = "We provide cutting-edge, open source learning experiences to prepare students for careers in tech."
+const url = "https://www.bitproject.org/"
 
 export default function HomePage() {
-  const url = buildUrl('/main.gif', {
-    cloud: {
-      cloudName: 'dozq22ont',
-    },
-    transformations: {
-      effect: {
-        name: 'pixelate',
-        value: 40
-      }
-    }
-  });
-
   return (
-    <div>
-      <Head>
-        <title>Bit Project</title>
-        <meta name="description" content="We provide cutting-edge, open source learning experiences to prepare students for careers in tech." />
-        <meta property="og:title" content="Bit Project" />
-        <meta property="og:image" content="https://www.bitproject.org/_next/image?url=%livecode.png&w=2048&q=75" />
-        <meta property="og:description" content="We provide cutting-edge, open source learning experiences to prepare students for careers in tech." />
-        <meta property="og:url" content="https://www.bitproject.org/" />
-        <meta property="og:site_name" content="bitproject.org" />
-        <meta property="og:type" content="website" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <>
+        <NextSeo
+          title={title}
+          description={description}
+          canonical={url}
+          openGraph={{
+            url,
+            title,
+            description,
+            images: [
+              {
+                url: 'https://www.bitproject.org/_next/image?url=%livecode.png&w=2048&q=75',
+                alt: 'Bit Project Live Coding',
+                type: 'image/png',
+              },
+            ],
+          }}
+        />
       <Navbar />
       <Landing
         heading="We equip students with technical superpowers"
@@ -80,6 +78,6 @@ export default function HomePage() {
 
       <Footer />
 
-    </div>
+    </>
   )
 }

@@ -11,7 +11,7 @@ export const Card = ({ name, quote, title, image }) => {
 
   return (
 
-    <Box mx="6" mt="5" border="1px solid #7F7F7F" borderRadius="20px">
+    <Box mx="6" mt="5" border="1px solid #7F7F7F" borderRadius="0">
 
       <Box p="6">
         <Text fontSize="md" color="gray.200" mx="auto" mt="2" fontWeight="bold" mb="1rem">

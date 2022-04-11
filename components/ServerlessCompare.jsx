@@ -16,7 +16,7 @@ export const ServerlessCompare = ({ title1, items1, title2, items2, astrick1 }) 
             >
                 <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8}>
                     <Box>
-                        <Box bg='gray.900' p={4} rounded='md'>
+                        <Box bg='gray.900' p={4} >
                             <Heading as="h2" size="lg" fontWeight="semibold" mb="4">
                                 {title1}
                             </Heading>
@@ -34,7 +34,7 @@ export const ServerlessCompare = ({ title1, items1, title2, items2, astrick1 }) 
                         </Box>
                     </Box>
                     <Box>
-                        <Box bg='gray.900' p={4} rounded='md'>
+                        <Box bg='gray.900' p={4} >
                             <Heading as="h2" size="lg" fontWeight="semibold" mb="4">
                                 {title2}                        </Heading>
                             <List spacing={3} fontSize='lg' color='gray.300'>

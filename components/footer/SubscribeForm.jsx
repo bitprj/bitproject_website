@@ -77,6 +77,7 @@ export const SubscribeForm = () => {
             color="#9e9d9d"
             _focus=""
             _hover=""
+            rounded='0'
           />
         </FormControl>
           <Button 
@@ -88,6 +89,7 @@ export const SubscribeForm = () => {
             }}
             fontSize="sm"
             px="8"
+            rounded='0'
             roundedStart={{
               md: '0',
             }}

@@ -70,6 +70,7 @@ export default function Mentor() {
           <Heading
             as="h1"
             size="xl"
+            
             fontWeight="extrabold"
             maxW="48rem"
             lineHeight="1.2"
@@ -191,6 +192,7 @@ export default function Mentor() {
               border="1px solid #2B6CB0"
               bg="#2B6CB0"
               px="8"
+              rounded='0'
               fontWeight="bold"
               fontSize="md"
               _hover={{

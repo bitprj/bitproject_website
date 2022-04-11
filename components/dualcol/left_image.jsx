@@ -64,7 +64,7 @@ export const DualColLeftImage = ({ heading, desc, tab1Graphic, tab2Graphic, tab3
                         </TabPanels>
                         <TabList border="0px">
                             <motion.div whileHover={{ scale: 1.1 }}>
-                                <Tab mx="0.5rem" p="0.3rem" borderRadius="10px" mb="1rem" _selected={{ bg: "#1C1D25" }}
+                                <Tab mx="0.5rem" p="0.3rem" borderRadius="0" mb="1rem" _selected={{ bg: "#1C1D25" }}
                                 >
                                     <Box textAlign="left">
                                         <Heading
@@ -83,7 +83,7 @@ export const DualColLeftImage = ({ heading, desc, tab1Graphic, tab2Graphic, tab3
                             </motion.div>
 
                             <motion.div whileHover={{ scale: 1.1 }}>
-                                <Tab mx="0.5rem" p="0.3rem" borderRadius="10px" mb="1rem" _selected={{ bg: "#1C1D25" }}
+                                <Tab mx="0.5rem" p="0.3rem" borderRadius="0" mb="1rem" _selected={{ bg: "#1C1D25" }}
                                 ><Box textAlign="left">
                                         <Heading
                                             as="h4"
@@ -101,7 +101,7 @@ export const DualColLeftImage = ({ heading, desc, tab1Graphic, tab2Graphic, tab3
                             </motion.div>
 
                             <motion.div whileHover={{ scale: 1.1 }}>
-                                <Tab mx="0.5rem" p="0.3rem" borderRadius="10px" _selected={{ bg: "#1C1D25" }}
+                                <Tab mx="0.5rem" p="0.3rem" borderRadius="0" _selected={{ bg: "#1C1D25" }}
                                 ><Box textAlign="left">
                                         <Heading
                                             as="h4"

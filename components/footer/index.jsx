@@ -157,6 +157,7 @@ export const Footer = ({ bg }) => {
                   src="/logo.png"
                   height={43.51}
                   width={48}
+                  alt="Logo"
                 />
               </motion.a>
               <HStack

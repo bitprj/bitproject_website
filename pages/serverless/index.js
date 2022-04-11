@@ -1,20 +1,20 @@
 import Head from 'next/head'
 import React, { useState } from 'react'
-import { Textblock } from '../components/textblock'
-import { DualCol } from '../components/dualcol'
-import { CenterDualCol } from '../components/dualcol/center'
-import { Navbar } from '../components/navbar'
-import { GraphicTabBottom } from '../components/graphictab/bottom'
-import { Footer } from '../components/footer'
-import { HighlightBox } from '../components/dualcol/_box'
-import { getAllFilesFrontMatter } from '../lib/mdx'
+import { Textblock } from '../../components/textblock'
+import { DualCol } from '../../components/dualcol'
+import { CenterDualCol } from '../../components/dualcol/center'
+import { Navbar } from '../../components/navbar'
+import { GraphicTabBottom } from '../../components/graphictab/bottom'
+import { Footer } from '../../components/footer'
+import { HighlightBox } from '../../components/dualcol/_box'
+import { getAllFilesFrontMatter } from '../../lib/mdx'
 import { ServerlessCompare } from '@/components/ServerlessCompare'
 import {
   SimpleGrid,
   Container,
   Box,
 } from '@chakra-ui/react'
-import BlogLayout from '../layouts/blog'
+import BlogLayout from '../../layouts/blog'
 
 export default function Serverless({ posts }) {
 
@@ -52,7 +52,7 @@ export default function Serverless({ posts }) {
         cta2="Join as a Mentor"
         logoImage="/serverlessLogo.svg"
         cta1link={'https://jkfr7wbzytt.typeform.com/serverless-camp'}
-        cta2link={'https://jkfr7wbzytt.typeform.com/camp-mentor'}
+        cta2link={'/mentor'}
 
         pic1="/ganning-profile.jpg"
         name1="CounselorBot"

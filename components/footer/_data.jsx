@@ -27,6 +27,10 @@ export const links = [
         label: 'Blog',
         href: '/blog',
       },
+      {
+        label: 'Discord',
+        href: 'https://discord.gg/XYzw9HPr',
+      },
     ],
   },
   

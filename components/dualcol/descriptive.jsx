@@ -45,7 +45,7 @@ export const DescDualCol = ({ categoryLogo, heading, desc, profile, profileLogo,
                             zIndex="1"
                             maxH="400px" // change this line for the image height
                             objectFit="cover"
-                            borderRadius="5px"
+                            rounded='0'
                             src={pic}
                         />}
 

@@ -15,9 +15,9 @@ export const HighlightBox = ({ title, companyLogo, image, link, cohort }) => {
             mx="auto"
             as="a"
             w={{ sm: "100%" }} // width 100 when larger than sm
-            borderRadius="5px"
             href={link}
             bg="#363636"
+            rounded='0'
             transition="all 0.2s"
             pb="6"
             _hover={{ bg: '#4a4a4a' }}

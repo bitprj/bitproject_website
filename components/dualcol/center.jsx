@@ -18,7 +18,7 @@ import { motion } from "framer-motion"
 
 export const CenterDualCol = ({ heading, description, cta1, cta2, cta1link, cta2link }) => {
   return (
-    <Box as="section" bg="black" pb="12" overflow="hidden" color="white">
+    <Box as="section" bg="black" overflow="hidden" color="white">
       <Container
         maxW="container.lg"
         p="15px"
@@ -27,7 +27,7 @@ export const CenterDualCol = ({ heading, description, cta1, cta2, cta1link, cta2
           <Box as="section" bg="black" color="white">
             <Box maxW={{ base: 'xl', md: '7xl' }} mx="auto" px={{ base: '6', md: '8' }}>
               <Box textAlign="center">
-                <Badge px="2" fontSize="1em" colorScheme="blue">
+                <Badge px="2" fontSize="1em" colorScheme="blue" rounded='0'>
                   WEEK 5-8
             </Badge>
                 <Heading as="h2" size="xl" mt="8" fontWeight="extrabold">
@@ -42,7 +42,6 @@ export const CenterDualCol = ({ heading, description, cta1, cta2, cta1link, cta2
                 justify="center"
                 direction={{ base: 'column', md: 'row' }}
                 mt="10"
-                mb="20"
                 spacing="4"
               >
                 <LightMode>

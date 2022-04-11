@@ -79,6 +79,7 @@ export const GraphicTabBottom = ({ bold, heading, desc, logoImage, name1, pic1, 
                                     color="white"
                                     border="1px solid #2B6CB0"
                                     bg="#2B6CB0"
+                                    rounded='0'
                                     px="8"
                                     fontWeight="bold"
                                     fontSize="md"
@@ -98,6 +99,7 @@ export const GraphicTabBottom = ({ bold, heading, desc, logoImage, name1, pic1, 
                                     target="_blank"
                                     size="lg"
                                     color="white"
+                                    rounded='0'
                                     bg="transparent"
                                     px="8"
                                     fontWeight="bold"
@@ -153,9 +155,9 @@ export const GraphicTabBottom = ({ bold, heading, desc, logoImage, name1, pic1, 
                                 />
                             </TabPanel>
                         </TabPanels>
-                        <TabList border="0px" my="15px">
+                        <TabList border="0px" my="15px" >
                             <motion.div whileHover={{ scale: 1.1 }}>
-                                <Tab mx="0.3rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
+                                <Tab mx="0.3rem" p="0.5rem" borderRadius="0" mb="2rem" _selected={{ bg: "#1C1D25" }} rounded='0'
                                 ><ProfileIcon
                                         pic={pic1}
                                         name={name1}
@@ -164,7 +166,7 @@ export const GraphicTabBottom = ({ bold, heading, desc, logoImage, name1, pic1, 
                             </motion.div>
 
                             <motion.div whileHover={{ scale: 1.1 }}>
-                                <Tab mx="0.3rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
+                                <Tab mx="0.3rem" p="0.5rem" borderRadius="0" mb="2rem" _selected={{ bg: "#1C1D25" }} rounded='0'
                                 ><ProfileIcon
                                         pic={pic2}
                                         name={name2}
@@ -174,7 +176,7 @@ export const GraphicTabBottom = ({ bold, heading, desc, logoImage, name1, pic1, 
                             </motion.div>
 
                             <motion.div whileHover={{ scale: 1.1 }}>
-                                <Tab mx="0.3rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
+                                <Tab mx="0.3rem" p="0.5rem" borderRadius="0" mb="2rem" _selected={{ bg: "#1C1D25" }} rounded='0'
                                 ><ProfileIcon
                                         pic={pic3}
                                         name={name3}

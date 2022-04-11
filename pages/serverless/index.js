@@ -133,7 +133,6 @@ export default function Serverless({ posts }) {
       <Box as="section" bg="black" color="white" pb='30px'>
         <Container
           maxW="container.xl"
-        // p="30px"
         >
           <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing="40px" bg="black" justify="center">
             {filteredBlogPosts.map((frontMatter) => (

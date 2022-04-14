@@ -1,4 +1,4 @@
-import Head from 'next/head'
+// import Head from 'next/head'
 import React, { useState } from 'react'
 import { Textblock } from '../../components/textblock'
 import { DualCol } from '../../components/dualcol'
@@ -15,6 +15,12 @@ import {
   Box,
 } from '@chakra-ui/react'
 import BlogLayout from '../../layouts/blog'
+import { NextSeo } from 'next-seo'
+
+const title = "Serverless Camp Summer 2022"
+const description = "Coding Bootcamp organized by the 501(c)(3) non-profit Bit Project."
+const url = "https://www.bitproject.org/serverless"
+
 
 export default function Serverless({ posts }) {
 
@@ -31,18 +37,24 @@ export default function Serverless({ posts }) {
 
 
   return (
-    <div>
-      <Head>
-        <title>Serverless Camp Summer 2022</title>
-        <meta name="description" content="Coding Bootcamp organized by the 501(c)(3) non-profit Bit Project." />
-        <meta property="og:title" content="Serverless Camp Summer 2022" />
-        <meta property="og:image" content="https://i.imgur.com/Rk9Fiof.png" />
-        <meta property="og:description" content="Coding Bootcamp organized by the 501(c)(3) non-profit Bit Project." />
-        <meta property="og:url" content="https://www.bitproject.org/serverless" />
-        <meta property="og:site_name" content="bitproject.org" />
-        <meta property="og:type" content="website" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <>
+      <NextSeo
+          title={title}
+          description={description}
+          canonical={url}
+          openGraph={{
+            url,
+            title,
+            description,
+            images: [
+              {
+                url: 'https://i.imgur.com/Rk9Fiof.png',
+                alt: "This year's theme is 'Serverless'",
+                type: 'image/png',
+              },
+            ],
+          }}
+        />
       <Navbar />
       <GraphicTabBottom
         heading="Serverless Camp 2022"
@@ -145,7 +157,7 @@ export default function Serverless({ posts }) {
       <Footer />
 
 
-    </div>
+    </>
   )
 }
 

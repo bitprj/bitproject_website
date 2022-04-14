@@ -1,12 +1,17 @@
-import Head from 'next/head'
+// import Head from 'next/head'
 import { GraphicTabBottom } from '../components/graphictab/bottom'
 import { Navbar } from '../components/navbar'
 import { Footer } from '../components/footer'
-import { Textblock } from '@/components/textblock'
-import { ServerlessCompare } from '@/components/ServerlessCompare'
 import { TextWithPic } from '@/components/dualcol/TextWithPic'
 import { List, ListItem, Container, Button, Box, Text, SimpleGrid, Heading, ListIcon } from '@chakra-ui/react'
 import { MdCheckCircle } from 'react-icons/md'
+import { NextSeo } from 'next-seo'
+
+const title = "Mentor"
+const description = "We pair awesome engineers with students to give back to their communities."
+const url = "https://www.bitproject.org/mentor"
+
+
 export default function Mentor() {
   let items = [
     "Expand your network and connect with like-minded individuals",
@@ -16,18 +21,25 @@ export default function Mentor() {
     "Get a sense of satisfaction and fulfillment by directly helping aspiring engineers"
   ]
   return (
-    <div>
-      <Head>
-        <title>Mentor</title>
-        <meta name="description" content="We pair awesome engineers with students to give back to their communities." />
-        <meta property="og:title" content="Mentor - Bit Project" />
-        <meta property="og:image" content="https://www.bitproject.org/_next/image?url=%livecode.png&w=2048&q=75" />
-        <meta property="og:description" content="We pair awesome engineers with students to give back to their communities." />
-        <meta property="og:url" content="https://www.bitproject.org/mentor" />
-        <meta property="og:site_name" content="bitproject.org" />
-        <meta property="og:type" content="website" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <>
+      <NextSeo
+          title={title}
+          description={description}
+          canonical={url}
+          openGraph={{
+            url,
+            title,
+            description,
+            images: [
+              {
+                url: 'https://www.bitproject.org/_next/image?url=%livecode.png&w=2048&q=75',
+                alt: 'Bit Project Live Coding',
+                type: 'image/png',
+              },
+            ],
+          }}
+        />
+
       <Navbar />
 
       <GraphicTabBottom
@@ -207,6 +219,6 @@ export default function Mentor() {
       </Box>
 
       <Footer />
-    </div >
+    </>
   )
 }

@@ -1,4 +1,4 @@
-import Head from 'next/head'
+// import Head from 'next/head'
 import React, { useState } from 'react'
 import { Landing } from '../components/landing.jsx'
 import { Navbar } from '../components/navbar'
@@ -21,6 +21,11 @@ import {
     SimpleGrid
 } from '@chakra-ui/react'
 import BlogLayout from '../layouts/blog'
+import { NextSeo } from 'next-seo'
+
+const title = "Blog"
+const description = "Like reading? Feel free to explore all of our awesome tech blogs!"
+const url = "https://www.bitproject.org/blog"
 
 export default function Workshops({ posts }) {
     const [searchValue, setSearchValue] = useState('')
@@ -36,18 +41,24 @@ export default function Workshops({ posts }) {
         )
 
     return (
-        <div>
-            <Head>
-                <title>Blog</title>
-                <meta name="description" content="Like reading? Feel free to explore all of our awesome tech blogs!" />
-                <meta property="og:title" content="Blog - Bit Project" />
-                <meta property="og:image" content="https://www.bitproject.org/_next/image?url=%livecode.png&w=2048&q=75" />
-                <meta property="og:description" content="Like reading? Feel free to explore all of our awesome tech blogs!" />
-                <meta property="og:url" content="https://www.bitproject.org/blog" />
-                <meta property="og:site_name" content="bitproject.org" />
-                <meta property="og:type" content="website" />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
+        <>
+            <NextSeo
+                title={title}
+                description={description}
+                canonical={url}
+                openGraph={{
+                url,
+                title,
+                description,
+                images: [
+                    {
+                    url: 'https://www.bitproject.org/_next/image?url=%livecode.png&w=2048&q=75',
+                    alt: 'Bit Project Live Coding',
+                    type: 'image/png',
+                    },
+                ],
+                }}
+            />
             <Navbar />
             <Landing
                 heading="Blogs"
@@ -84,7 +95,7 @@ export default function Workshops({ posts }) {
 
             <Footer />
 
-        </div>
+        </>
     )
 }
 

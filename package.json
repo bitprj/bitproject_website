@@ -36,7 +36,7 @@
     "next-compose-plugins": "^2.2.1",
     "next-mdx-remote": "^2.1.4",
     "next-optimized-images": "^2.6.2",
-    "next-seo": "^4.26.0",
+    "next-seo": "^4.29.0",
     "npm": "^7.6.2",
     "prism-react-renderer": "^1.2.0",
     "prismjs": "^1.24.1",

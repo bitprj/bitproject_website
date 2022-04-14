@@ -145,7 +145,7 @@ export const Landing = ({ heading, description, cta1, cta2, image, logoImage, pl
 
                   {formActionButton && <> <Box display="flex" alignItems="center">
                     <FormControl mr="1rem" isRequired>
-                      <Input id="email" placeholder="email" border="1px" borderColor="#404040" bg="#404040" _hover=""
+                      <Input id="email" rounded='0' placeholder="email" border="1px" borderColor="#404040" bg="#404040" _hover=""
                         _focus="" color="white" _placeholder={{ color: 'white' }} />
 
                     </FormControl>
@@ -155,6 +155,7 @@ export const Landing = ({ heading, description, cta1, cta2, image, logoImage, pl
                       bg="#2B6CB0"
                       border="1px solid #2B6CB0"
                       px="8"
+                      rounded='0'
                       color="white"
                       fontWeight="bold"
                       fontSize="md"

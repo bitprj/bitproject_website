@@ -32,7 +32,7 @@ export const DualCol = ({ bg, preheading, heading, para1, para2, li1, li2, li3, 
             <Fade>
               <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10} alignItems='center'>
                 <Box>
-                  <Badge px="2" fontSize="1em" colorScheme="blue">
+                  <Badge px="2" fontSize="1em" colorScheme="blue" rounded='0'>
                     {preheading}
                   </Badge>
 

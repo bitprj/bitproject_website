@@ -51,7 +51,7 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
                     >
                         <TabList border="0px" >
                             <motion.div whileHover={{ scale: 1.1 }}>
-                                <Tab mx="1rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
+                                <Tab mx="1rem" p="0.5rem" borderRadius="0" mb="2rem" _selected={{ bg: "#1C1D25" }} rounded='0'
                                 ><ProfileIcon
                                         pic={pic1}
                                         name={name1}
@@ -59,7 +59,7 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
                                     /></Tab>
                             </motion.div>
                             <motion.div whileHover={{ scale: 1.1 }}>
-                                <Tab mx="1rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
+                                <Tab mx="1rem" p="0.5rem" borderRadius="0" mb="2rem" _selected={{ bg: "#1C1D25" }} rounded='0'
                                 ><ProfileIcon
                                         pic={pic2}
                                         name={name2}
@@ -68,7 +68,7 @@ export const GraphicTab = ({ heading, desc, name1, pic1, title1, graphic1, name2
                             </motion.div>
 
                             <motion.div whileHover={{ scale: 1.1 }}>
-                                <Tab mx="1rem" p="0.5rem" borderRadius="10px" mb="2rem" _selected={{ bg: "#1C1D25" }}
+                                <Tab mx="1rem" p="0.5rem" borderRadius="0" mb="2rem" _selected={{ bg: "#1C1D25" }} rounded='0'
                                 ><ProfileIcon
                                         pic={pic3}
                                         name={name3}

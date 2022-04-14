@@ -29,7 +29,7 @@ export const ProfileIcon = (props) => {
     // })
 
     return (
-        <Flex color="white" px="0.5rem" borderRadius="15px" alignItems="center" justifyContent="center" {...props} >
+        <Flex color="white" px="0.5rem" borderRadius="0" alignItems="center" justifyContent="center" {...props} >
             <style jsx global>
                 {`
                 .profileImage { 

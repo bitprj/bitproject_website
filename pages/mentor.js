@@ -13,9 +13,13 @@ import {
   Text,
   SimpleGrid,
   Heading,
+  Img,
   ListIcon,
 } from "@chakra-ui/react";
 import { MdCheckCircle } from "react-icons/md";
+import { TeamCard } from "@/components/TeamCard";
+import Fade from "react-reveal/Fade";
+
 export default function Mentor() {
   let items = [
     "Expand your network and connect with like-minded individuals",
@@ -23,6 +27,51 @@ export default function Mentor() {
     "Develop your communication and leadership skills",
     "Gain confidence in your technical and interpersonal skill set",
     "Get a sense of satisfaction and fulfillment by directly helping aspiring engineers",
+  ];
+
+  let mentors = [
+    {
+      name: "Christian Lechner",
+      title: "Development Architect",
+      company: "SAP SE",
+      img: "/pic-christian.jpeg",
+      twitter: "https://twitter.com/lechnerc77",
+      linkedin: "https://www.linkedin.com/in/christian-lechner-963b7017/",
+    },
+
+    {
+      name: "John Kilmister",
+      title: "Software Architect",
+      company: "",
+      img: "/pic-john.jpeg",
+      twitter: "https://twitter.com/johnkilmister",
+      linkedin: "https://www.linkedin.com/in/johnkilmister/",
+    },
+
+    {
+      name: "Johan Eriksson",
+      title: "Solutions Architect",
+      company: "CDON AB",
+      img: "/pic-johan.jpeg",
+      twitter: "https://twitter.com/jedjohan",
+      linkedin: "https://www.linkedin.com/in/jedjohaneriksson/",
+    },
+
+    {
+      name: "Adham Bishr",
+      title: "Senior Software Engineer",
+      company: "Jeeves",
+      img: "/pic-adham.jpeg",
+      linkedin: "https://www.linkedin.com/in/abishr12/",
+    },
+
+    {
+      name: "Tejas Kumthekar",
+      title: "Courier",
+      company: "SAP SE",
+      img: "/pic-tejas.jpeg",
+      linkedin: "https://www.linkedin.com/in/tejaskumthekar/",
+    },
   ];
   return (
     <div>
@@ -245,6 +294,48 @@ export default function Mentor() {
             >
               Apply to Mentor!
             </Button>
+          </Box>
+
+          <Box bg="black" color="white" mx="auto" mt={16}>
+            <Fade>
+              <Box
+                maxW={{
+                  base: "xl",
+                  md: "7xl",
+                }}
+              >
+                <Heading
+                  as="h1"
+                  size="xl"
+                  fontWeight="extrabold"
+                  lineHeight="1.2"
+                  letterSpacing="tight"
+                  textAlign="center"
+                >
+                  Serverless Mentors
+                </Heading>
+
+                <SimpleGrid
+                  columns={{ base: 1, md: 2, lg: 3 }}
+                  mt={8}
+                  spacing={12}
+                >
+                  {mentors.map((item, index) => {
+                    return (
+                      <TeamCard
+                        key={index}
+                        name={item.name}
+                        title={item.title}
+                        img={item.img}
+                        company={item.company}
+                        twitter={item.twitter}
+                        linkedin={item.linkedin}
+                      />
+                    );
+                  })}
+                </SimpleGrid>
+              </Box>
+            </Fade>
           </Box>
         </Container>
       </Box>

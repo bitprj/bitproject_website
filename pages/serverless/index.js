@@ -1,44 +1,49 @@
-import Head from 'next/head'
-import React, { useState } from 'react'
-import { Textblock } from '../../components/textblock'
-import { DualCol } from '../../components/dualcol'
-import { CenterDualCol } from '../../components/dualcol/center'
-import { Navbar } from '../../components/navbar'
-import { GraphicTabBottom } from '../../components/graphictab/bottom'
-import { Footer } from '../../components/footer'
-import { HighlightBox } from '../../components/dualcol/_box'
-import { getAllFilesFrontMatter } from '../../lib/mdx'
-import { ServerlessCompare } from '@/components/ServerlessCompare'
-import {
-  SimpleGrid,
-  Container,
-  Box,
-} from '@chakra-ui/react'
-import BlogLayout from '../../layouts/blog'
-
+import Head from "next/head";
+import React, { useState } from "react";
+import { Textblock } from "../../components/textblock";
+import { DualCol } from "../../components/dualcol";
+import { CenterDualCol } from "../../components/dualcol/center";
+import { Navbar } from "../../components/navbar";
+import { GraphicTabBottom } from "../../components/graphictab/bottom";
+import { Footer } from "../../components/footer";
+import { HighlightBox } from "../../components/dualcol/_box";
+import { getAllFilesFrontMatter } from "../../lib/mdx";
+import { ServerlessCompare } from "@/components/ServerlessCompare";
+import { SimpleGrid, Container, Box, Button } from "@chakra-ui/react";
+import BlogLayout from "../../layouts/blog";
+import { ServerlessSponsors } from "../../components/ServerlessSponsors";
 export default function Serverless({ posts }) {
+  const [searchValue] = useState("");
+  const [showText, setShowText] = useState("Show More");
+  const [poststoShow, setPostsToShow] = useState(posts.slice(0, 3));
 
-  const [searchValue] = useState('')
-  const filteredBlogPosts = posts
-    .sort(
-      (a, b) =>
-        Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
-    )
-    .filter((frontMatter) =>
-      frontMatter.title.toLowerCase().includes(searchValue.toLowerCase()) ||
-      frontMatter.summary.toLowerCase().includes(searchValue.toLowerCase())
-    )
-
-
+  const handleShowMore = () => {
+    if (poststoShow.length != posts.length) {
+      setPostsToShow(posts.slice(0, posts.length));
+      setShowText("Show Less");
+    } else {
+      setPostsToShow(posts.slice(0, 3));
+      setShowText("Show More");
+    }
+  };
   return (
     <div>
       <Head>
         <title>Serverless Camp Summer 2022</title>
-        <meta name="description" content="Coding Bootcamp organized by the 501(c)(3) non-profit Bit Project." />
+        <meta
+          name="description"
+          content="Coding Bootcamp organized by the 501(c)(3) non-profit Bit Project."
+        />
         <meta property="og:title" content="Serverless Camp Summer 2022" />
         <meta property="og:image" content="https://i.imgur.com/Rk9Fiof.png" />
-        <meta property="og:description" content="Coding Bootcamp organized by the 501(c)(3) non-profit Bit Project." />
-        <meta property="og:url" content="https://www.bitproject.org/serverless" />
+        <meta
+          property="og:description"
+          content="Coding Bootcamp organized by the 501(c)(3) non-profit Bit Project."
+        />
+        <meta
+          property="og:url"
+          content="https://www.bitproject.org/serverless"
+        />
         <meta property="og:site_name" content="bitproject.org" />
         <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
@@ -46,25 +51,21 @@ export default function Serverless({ posts }) {
       <Navbar />
       <GraphicTabBottom
         heading="Serverless Camp 2022"
-        bold='June 13 - August 31'
+        bold="June 13 - August 31"
         desc="In our 8-week boot camp, build awesome apps with Serverless functions, JavaScript, and APIs. From IoT heartbeat monitors to face mask detectors, you can build anything with Serverless!"
         cta1="Apply Now"
         cta2="Join as a Mentor"
         logoImage="/serverlessLogo.svg"
-        cta1link={'https://jkfr7wbzytt.typeform.com/serverless-camp'}
-        cta2link={'/mentor'}
-
+        cta1link={"https://jkfr7wbzytt.typeform.com/serverless-camp"}
+        cta2link={"/mentor"}
         pic1="/ganning-profile.jpg"
         name1="CounselorBot"
         title1="Ganning Xu"
         graphic1="https://www.youtube.com/watch?v=Xn-tfkn5Gr0" // we need to change fifi's
-
         pic2="https://i.imgur.com/026vZiA.png"
         name2="Vehicle Telemetry"
         title2="Jakub Manda"
         graphic2="https://www.youtube.com/watch?v=jmsb95tgBRk"
-
-
         pic3="https://i.imgur.com/XRh3uQb.jpg"
         name3="QnA Bot"
         title3="David Tetreau"
@@ -78,13 +79,22 @@ export default function Serverless({ posts }) {
       />
 
       <ServerlessCompare
-        title1='Mentorship Program*'
-        items1={['Learn to build with serverless from seasoned software engineers', 'Get direct access to coding workshops and tech talks', 'Develop resume-worthy projects using the actual tools of the industry', 'Receive 1:1 mentorship from seasoned software engineers from the industry to learn about cutting edge technology', 'Present a talk at the Serverless Days: Student Edition Conference']}
-        astrick1='*Application closed on 3/31, but our GSC program is still open!'
-
-        title2='Global Student Community'
-        items2={['Learn to build with serverless from seasoned software engineers', 'Get direct access to coding workshops and tech talks', 'Develop resume-worthy projects using the actual tools of the industry', 'Compete in a global serverless hackathon to win prizes and present at the annual Serverless Days: Student Edition Conference']}
-
+        title1="Mentorship Program*"
+        items1={[
+          "Learn to build with serverless from seasoned software engineers",
+          "Get direct access to coding workshops and tech talks",
+          "Develop resume-worthy projects using the actual tools of the industry",
+          "Receive 1:1 mentorship from seasoned software engineers from the industry to learn about cutting edge technology",
+          "Present a talk at the Serverless Days: Student Edition Conference",
+        ]}
+        astrick1="*Application closed on 3/31, but our GSC program is still open!"
+        title2="Global Student Community"
+        items2={[
+          "Learn to build with serverless from seasoned software engineers",
+          "Get direct access to coding workshops and tech talks",
+          "Develop resume-worthy projects using the actual tools of the industry",
+          "Compete in a global serverless hackathon to win prizes and present at the annual Serverless Days: Student Edition Conference",
+        ]}
       />
 
       <DualCol
@@ -130,34 +140,64 @@ export default function Serverless({ posts }) {
         image="/feature.svg"
         logoImage="/serverlessLogo.svg"
       />
-      <Box as="section" bg="black" color="white" pb='30px'>
-        <Container
-          maxW="container.xl"
-        >
-          <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing="40px" bg="black" justify="center">
-            {filteredBlogPosts.map((frontMatter) => (
-              <HighlightBox key={frontMatter.title} title={frontMatter.title} companyLogo={frontMatter.companyLogo} image={frontMatter.image} cohort={frontMatter.cohort} link={`projects/${frontMatter.slug}`} mx="auto" />
+      <Box as="section" bg="black" color="white" pb="30px">
+        <Container maxW="container.xl">
+          <SimpleGrid
+            columns={{ sm: 1, md: 2, lg: 3 }}
+            spacing="40px"
+            bg="black"
+            justify="center"
+          >
+            {poststoShow.map((frontMatter) => (
+              <HighlightBox
+                key={frontMatter.title}
+                title={frontMatter.title}
+                companyLogo={frontMatter.companyLogo}
+                image={frontMatter.image}
+                cohort={frontMatter.cohort}
+                link={`projects/${frontMatter.slug}`}
+                mx="auto"
+              />
             ))}
           </SimpleGrid>
+          <Box textAlign="center">
+            <Button
+              mt={4}
+              size="md"
+              color="white"
+              border="1px solid #2B6CB0"
+              bg="#2B6CB0"
+              rounded="0"
+              fontWeight="bold"
+              fontSize="md"
+              _hover={{
+                color: "white",
+                background: "#4e8dcf",
+              }}
+              onClick={handleShowMore}
+            >
+              {showText}
+            </Button>
+          </Box>
         </Container>
       </Box>
 
+      <ServerlessSponsors title="Sponsors" />
+
       <Footer />
-
-
     </div>
-  )
+  );
 }
 
 export function Blog({ mdxSource, frontMatter }) {
   const content = hydrate(mdxSource, {
-    components: MDXComponents
-  })
+    components: MDXComponents,
+  });
 
-  return <BlogLayout frontMatter={frontMatter}>{content}</BlogLayout>
+  return <BlogLayout frontMatter={frontMatter}>{content}</BlogLayout>;
 }
 
 export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter('projects')
-  return { props: { posts } }
+  const posts = await getAllFilesFrontMatter("projects");
+  return { props: { posts } };
 }

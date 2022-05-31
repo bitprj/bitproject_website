@@ -29,7 +29,7 @@ export default function Mentor() {
     "Get a sense of satisfaction and fulfillment by directly helping aspiring engineers",
   ];
 
-  let mentors = [
+  const mentors = [
     {
       name: "Christian Lechner",
       title: "Development Architect",
@@ -42,7 +42,7 @@ export default function Mentor() {
     {
       name: "John Kilmister",
       title: "Software Architect",
-      company: "",
+      company: "NICE Ltd",
       img: "/pic-john.jpeg",
       twitter: "https://twitter.com/johnkilmister",
       linkedin: "https://www.linkedin.com/in/johnkilmister/",
@@ -67,8 +67,8 @@ export default function Mentor() {
 
     {
       name: "Tejas Kumthekar",
-      title: "Courier",
-      company: "SAP SE",
+      title: "Software Engineer",
+      company: "Courier",
       img: "/pic-tejas.jpeg",
       linkedin: "https://www.linkedin.com/in/tejaskumthekar/",
     },
@@ -115,6 +115,7 @@ export default function Mentor() {
         name3="John Kilmister"
         title3="PureGym"
         graphic3="https://vimeo.com/570824340"
+        mutedText="*Currently seeking additional GSC mentors; limited spots remaining for individual track"
       />
 
       <Container maxW="container.lg" p="15px" bg="black">
@@ -312,7 +313,7 @@ export default function Mentor() {
                   letterSpacing="tight"
                   textAlign="center"
                 >
-                  Serverless Mentors
+                  Meet our Serverless Mentors!
                 </Heading>
 
                 <SimpleGrid

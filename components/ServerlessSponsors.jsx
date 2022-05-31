@@ -28,8 +28,8 @@ export const ServerlessSponsors = ({ title }) => (
         >
           <Heading
             as="h1"
-            size="xl"
-            fontWeight="extrabold"
+            size="md"
+            // fontWeight="extrabold"
             lineHeight="1.2"
             letterSpacing="tight"
             textAlign="left"
@@ -37,9 +37,9 @@ export const ServerlessSponsors = ({ title }) => (
             {title}
           </Heading>
 
-          <Box textAlign="left">
+          <Box textAlign="center">
             <Link href="https://www.microsoft.com/en-us/" isExternal>
-              <Img src="/Microsoft-Logo.png" h="150px" />
+              <Img src="/Microsoft-Logo.png" h="150px" mx="auto" />
             </Link>
           </Box>
         </Box>

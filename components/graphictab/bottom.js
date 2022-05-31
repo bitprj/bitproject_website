@@ -50,14 +50,7 @@ export const GraphicTabBottom = ({
   mutedText,
 }) => {
   return (
-    <Box
-      as="section"
-      bg="black"
-      pt="24"
-      pb="12"
-      overflow="hidden"
-      color="white"
-    >
+    <Box as="section" bg="black" pt="24" pb="8" overflow="hidden" color="white">
       <Fade>
         <Container maxW="container.lg" p="15px" textAlign="center">
           {logoImage && (
@@ -164,7 +157,7 @@ export const GraphicTabBottom = ({
               <TabPanel>
                 <ReactPlayer
                   url={graphic1}
-                  playing="true"
+                  playing={true}
                   volume="0"
                   controls={true}
                   width="80%"
@@ -175,7 +168,6 @@ export const GraphicTabBottom = ({
               <TabPanel>
                 <ReactPlayer
                   url={graphic2}
-                  // playing="true"
                   volume="0"
                   controls="true"
                   width="80%"
@@ -185,7 +177,6 @@ export const GraphicTabBottom = ({
               <TabPanel>
                 <ReactPlayer
                   url={graphic3}
-                  // playing="true"
                   volume="0"
                   width="80%"
                   controls="true"

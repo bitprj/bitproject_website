@@ -72,6 +72,8 @@ export default function Serverless({ posts }) {
         graphic3="https://www.youtube.com/watch?v=FU1pzbgG3nA"
       />
 
+      <ServerlessSponsors title="Sponsors" />
+
       <Textblock
         title="What is Serverless Camp?"
         para1="Serverless involves harnessing the power of cloud computing and building large applications quickly without having to manage servers."
@@ -181,8 +183,6 @@ export default function Serverless({ posts }) {
           </Box>
         </Container>
       </Box>
-
-      <ServerlessSponsors title="Sponsors" />
 
       <Footer />
     </div>

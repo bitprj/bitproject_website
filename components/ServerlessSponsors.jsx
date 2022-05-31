@@ -17,7 +17,7 @@ import * as React from "react";
 import Fade from "react-reveal/Fade";
 
 export const ServerlessSponsors = ({ title }) => (
-  <Box bg="black" color="white" mx="auto" mt={8}>
+  <Box bg="black" color="white" mx="auto">
     <Fade>
       <Container maxW="container.lg" p="15px">
         <Box
@@ -28,18 +28,18 @@ export const ServerlessSponsors = ({ title }) => (
         >
           <Heading
             as="h1"
-            size="3xl"
+            size="xl"
             fontWeight="extrabold"
             lineHeight="1.2"
             letterSpacing="tight"
-            textAlign="center"
+            textAlign="left"
           >
             {title}
           </Heading>
 
-          <Box textAlign="center">
+          <Box textAlign="left">
             <Link href="https://www.microsoft.com/en-us/" isExternal>
-              <Img src="/Microsoft-Logo.png" h="150px" mx="auto" />
+              <Img src="/Microsoft-Logo.png" h="150px" />
             </Link>
           </Box>
         </Box>

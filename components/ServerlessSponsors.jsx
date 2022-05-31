@@ -32,7 +32,7 @@ export const ServerlessSponsors = ({ title }) => (
             // fontWeight="extrabold"
             lineHeight="1.2"
             letterSpacing="tight"
-            textAlign="left"
+            textAlign="center"
           >
             {title}
           </Heading>

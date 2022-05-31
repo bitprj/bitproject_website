@@ -169,7 +169,7 @@ export const GraphicTabBottom = ({
                 <ReactPlayer
                   url={graphic2}
                   volume="0"
-                  controls="true"
+                  controls={true}
                   width="80%"
                   // loop="true"
                 />
@@ -179,7 +179,7 @@ export const GraphicTabBottom = ({
                   url={graphic3}
                   volume="0"
                   width="80%"
-                  controls="true"
+                  controls={true}
                   // loop="true"
                 />
               </TabPanel>

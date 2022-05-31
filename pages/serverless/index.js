@@ -72,7 +72,7 @@ export default function Serverless({ posts }) {
         graphic3="https://www.youtube.com/watch?v=FU1pzbgG3nA"
       />
 
-      <ServerlessSponsors title="Sponsors" />
+      <ServerlessSponsors title="Sponsored By" />
 
       <Textblock
         title="What is Serverless Camp?"

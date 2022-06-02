@@ -116,7 +116,7 @@ export const GraphicTab = ({
                 <ReactPlayer
                   url={graphic1}
                   playing={true}
-                  volume="0"
+                  volume={0}
                   controls={true}
                   width="100%"
                   m="0 auto"
@@ -127,7 +127,7 @@ export const GraphicTab = ({
                 <ReactPlayer
                   url={graphic2}
                   // playing="true"
-                  volume="0"
+                  volume={0}
                   controls={true}
                   width="100%"
                   // loop="true"
@@ -137,7 +137,7 @@ export const GraphicTab = ({
                 <ReactPlayer
                   url={graphic3}
                   // playing="true"
-                  volume="0"
+                  volume={0}
                   controls={true}
                   width="100%"
                   // loop="true"

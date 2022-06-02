@@ -1,5 +1,5 @@
-import { chakra, useColorModeValue } from '@chakra-ui/react'
-import * as React from 'react'
+import { chakra, useColorModeValue } from "@chakra-ui/react";
+import * as React from "react";
 
 const DesktopNavLink = (props) => {
   return (
@@ -11,14 +11,15 @@ const DesktopNavLink = (props) => {
       borderBottom="2px"
       borderColor="transparent"
       transition="all 0.2s"
+      target={props.href.charAt(0) == "/" ? "_self" : "_blank"}
       _hover={{
-        borderColor: 'currentcolor',
-        color: useColorModeValue('blue.600', 'blue.200'),
+        borderColor: "currentcolor",
+        color: useColorModeValue("blue.600", "blue.200"),
       }}
       {...props}
     />
-  )
-}
+  );
+};
 
 const MobileNavLink = (props) => {
   return (
@@ -31,14 +32,14 @@ const MobileNavLink = (props) => {
       color="white"
       w="full"
       _hover={{
-        bg: 'blackAlpha.200',
+        bg: "blackAlpha.200",
       }}
       {...props}
     />
-  )
-}
+  );
+};
 
 export const NavLink = {
   Mobile: MobileNavLink,
   Desktop: DesktopNavLink,
-}
+};

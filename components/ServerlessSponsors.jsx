@@ -9,7 +9,7 @@ import {
   Badge,
   Grid,
   Link,
-  GridItem,
+  SimpleGrid,
   useColorModeValue as mode,
 } from "@chakra-ui/react";
 
@@ -36,12 +36,23 @@ export const ServerlessSponsors = ({ title }) => (
           >
             {title}
           </Heading>
+          <SimpleGrid
+            columns={{ base: 1, md: 2, lg: 3 }}
+            alignItems="center"
+            spacing={24}
+          >
+            <Box textAlign="center">
+              <Link href="https://www.microsoft.com/en-us/" isExternal>
+                <Img src="/Microsoft-Logo.png" mx="auto" />
+              </Link>
+            </Box>
 
-          <Box textAlign="center">
-            <Link href="https://www.microsoft.com/en-us/" isExternal>
-              <Img src="/Microsoft-Logo.png" h="150px" mx="auto" />
-            </Link>
-          </Box>
+            <Box textAlign="center">
+              <Link href="https://www.courier.com/" isExternal>
+                <Img src="/courier.png" mx="auto" />
+              </Link>
+            </Box>
+          </SimpleGrid>
         </Box>
       </Container>
     </Fade>

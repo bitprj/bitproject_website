@@ -48,6 +48,7 @@ export const GraphicTabBottom = ({
   cta1link,
   cta2link,
   mutedText,
+  underBold,
 }) => {
   return (
     <Box as="section" bg="black" pt="24" pb="8" overflow="hidden" color="white">
@@ -80,6 +81,12 @@ export const GraphicTabBottom = ({
           <Text fontSize="xl" mx="auto" textAlign="center" fontWeight="bold">
             {bold}
           </Text>
+
+          {underBold && (
+            <Text color="gray.500" mt={"4px"}>
+              {underBold}
+            </Text>
+          )}
 
           <Text
             fontSize="lg"
@@ -158,7 +165,7 @@ export const GraphicTabBottom = ({
                 <ReactPlayer
                   url={graphic1}
                   playing={true}
-                  volume="0"
+                  volume={0}
                   controls={true}
                   width="80%"
                   m="0 auto"
@@ -168,7 +175,7 @@ export const GraphicTabBottom = ({
               <TabPanel>
                 <ReactPlayer
                   url={graphic2}
-                  volume="0"
+                  volume={0}
                   controls={true}
                   width="80%"
                   // loop="true"
@@ -177,7 +184,7 @@ export const GraphicTabBottom = ({
               <TabPanel>
                 <ReactPlayer
                   url={graphic3}
-                  volume="0"
+                  volume={0}
                   width="80%"
                   controls={true}
                   // loop="true"

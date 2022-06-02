@@ -5,52 +5,49 @@ import {
   Stack,
   StackDivider,
   useDisclosure,
-} from '@chakra-ui/react'
-import * as React from 'react'
-import { HiOutlineMenu, HiX } from 'react-icons/hi'
-import { NavLink } from './NavLink'
-import { NavList } from './NavList'
-import { NavListItem } from './NavListItem'
+} from "@chakra-ui/react";
+import * as React from "react";
+import { HiOutlineMenu, HiX } from "react-icons/hi";
+import { NavLink } from "./NavLink";
+import { NavList } from "./NavList";
+import { NavListItem } from "./NavListItem";
 
 const links = [
   {
-    label: 'Serverless',
-    href: '/serverless',
+    label: "Serverless",
+    href: "/serverless",
   },
-  ,
+  {
+    label: "Conference",
+    href: "https://student.serverlessdays.io",
+  },
   // {
   //   label: 'Bit Quest',
   //   href: '/quest',
   // },
   {
-    label: 'Workshops',
-    href: '/workshops',
+    label: "Workshops",
+    href: "/workshops",
   },
   {
-    label: 'Mentor',
-    href: '/mentor',
+    label: "Mentor",
+    href: "/mentor",
   },
   // {
   //   label: 'Counselor',
   //   href: '/counselor',
   // },
   {
-    label: 'Blog',
-    href: '/blog',
-  }
-]
+    label: "Blog",
+    href: "/blog",
+  },
+];
 
 const MobileNavContent = (props) => {
-  const { isOpen, onToggle } = useDisclosure()
+  const { isOpen, onToggle } = useDisclosure();
   return (
     <Box {...props}>
-      <Center
-        as="button"
-        p="2"
-        fontSize="2xl"
-        onClick={onToggle}
-        color="white"
-      >
+      <Center as="button" p="2" fontSize="2xl" onClick={onToggle} color="white">
         {isOpen ? <HiX /> : <HiOutlineMenu />}
       </Center>
       <NavList
@@ -58,25 +55,24 @@ const MobileNavContent = (props) => {
         insetX="0"
         bg="black"
         top="64px"
-        animate={isOpen ? 'enter' : 'exit'}
+        animate={isOpen ? "enter" : "exit"}
       >
         <Stack spacing="0" divider={<StackDivider borderColor="black" />}>
           {links.map((link, index) => (
-            <NavListItem key={index} >
+            <NavListItem key={index}>
               <NavLink.Mobile href={link.href}>{link.label}</NavLink.Mobile>
             </NavListItem>
           ))}
           <NavListItem
             style={{
-              flex: '1',
+              flex: "1",
             }}
-          >
-          </NavListItem>
+          ></NavListItem>
         </Stack>
       </NavList>
     </Box>
-  )
-}
+  );
+};
 
 const DesktopNavContent = (props) => {
   return (
@@ -89,18 +85,24 @@ const DesktopNavContent = (props) => {
         // </NavLink.Desktop>
 
         // <motion.a key={index} whileHover={{ scale: 1.1  }}>
-        <NavLink.Desktop key={index} href={link.href} fontSize="xl" fontWeight="bold" _hover={{
-          color: "#808080"
-        }}>
+        <NavLink.Desktop
+          key={index}
+          href={link.href}
+          fontSize="xl"
+          fontWeight="bold"
+          _hover={{
+            color: "#808080",
+          }}
+        >
           {link.label}
         </NavLink.Desktop>
         // </motion.a>
       ))}
     </HStack>
-  )
-}
+  );
+};
 
 export const NavContent = {
   Mobile: MobileNavContent,
   Desktop: DesktopNavContent,
-}
+};

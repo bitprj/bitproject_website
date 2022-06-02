@@ -1,16 +1,16 @@
 import Head from "next/head";
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import { Landing } from "../components/landing.jsx";
 import { Navbar } from "../components/navbar";
 import { Footer } from "../components/footer";
-import { HighlightBox } from "../components/dualcol/_box";
-import { getAllFilesFrontMatter } from "../lib/mdx";
+// import { HighlightBox } from "../components/dualcol/_box";
+// import { getAllFilesFrontMatter } from "../lib/mdx";
 import { SimpleGrid, Container, Box } from "@chakra-ui/react";
-import BlogLayout from "../layouts/blog";
+// import BlogLayout from "../layouts/blog";
 import { WorkshopCard } from "../components/cards/WorkshopCard";
 
 export default function Workshops({ posts }) {
-  const [searchValue, setSearchValue] = useState("");
+  // const [searchValue, setSearchValue] = useState("");
   // const filteredBlogPosts = posts
   //   .sort(
   //     (a, b) =>

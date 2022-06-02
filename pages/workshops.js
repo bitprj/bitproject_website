@@ -11,16 +11,16 @@ import { WorkshopCard } from "../components/cards/WorkshopCard";
 
 export default function Workshops({ posts }) {
   const [searchValue, setSearchValue] = useState("");
-  const filteredBlogPosts = posts
-    .sort(
-      (a, b) =>
-        Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
-    )
-    .filter(
-      (frontMatter) =>
-        frontMatter.title.toLowerCase().includes(searchValue.toLowerCase()) ||
-        frontMatter.summary.toLowerCase().includes(searchValue.toLowerCase())
-    );
+  // const filteredBlogPosts = posts
+  //   .sort(
+  //     (a, b) =>
+  //       Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt))
+  //   )
+  //   .filter(
+  //     (frontMatter) =>
+  //       frontMatter.title.toLowerCase().includes(searchValue.toLowerCase()) ||
+  //       frontMatter.summary.toLowerCase().includes(searchValue.toLowerCase())
+  //   );
 
   return (
     <div>
@@ -96,15 +96,15 @@ export default function Workshops({ posts }) {
   );
 }
 
-export function Blog({ mdxSource, frontMatter }) {
-  const content = hydrate(mdxSource, {
-    components: MDXComponents,
-  });
+// export function Blog({ mdxSource, frontMatter }) {
+//   const content = hydrate(mdxSource, {
+//     components: MDXComponents,
+//   });
 
-  return <BlogLayout frontMatter={frontMatter}>{content}</BlogLayout>;
-}
+//   return <BlogLayout frontMatter={frontMatter}>{content}</BlogLayout>;
+// }
 
-export async function getStaticProps() {
-  const posts = await getAllFilesFrontMatter("workshops");
-  return { props: { posts } };
-}
+// export async function getStaticProps() {
+//   const posts = await getAllFilesFrontMatter("workshops");
+//   return { props: { posts } };
+// }

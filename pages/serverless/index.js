@@ -12,6 +12,10 @@ import { ServerlessCompare } from "@/components/ServerlessCompare";
 import { SimpleGrid, Container, Box, Button } from "@chakra-ui/react";
 import BlogLayout from "../../layouts/blog";
 import { ServerlessSponsors } from "../../components/ServerlessSponsors";
+import { MedSep } from "@/components/separators/MedSep";
+import { SmSep } from "@/components/separators/SmSep";
+import { XsSep } from "@/components/separators/XsSep";
+
 export default function Serverless({ posts }) {
   const [searchValue] = useState("");
   const [showText, setShowText] = useState("Show More");
@@ -135,6 +139,9 @@ export default function Serverless({ posts }) {
         li2="🐈 twoCatz: The App"
         img="/week4.gif"
       />
+
+      <MedSep />
+
       <CenterDualCol
         heading="Build your Own Project"
         description="Demonstrate your new competence with cloud computing by developing your own project: it can solve problems, be fun, or do all of the above!"
@@ -161,6 +168,7 @@ export default function Serverless({ posts }) {
               />
             ))}
           </SimpleGrid>
+
           <Box textAlign="center">
             <Button
               my={4}
@@ -180,6 +188,8 @@ export default function Serverless({ posts }) {
               {showText}
             </Button>
           </Box>
+
+          <MedSep />
 
           <ServerlessSponsors title="Sponsored By" />
         </Container>

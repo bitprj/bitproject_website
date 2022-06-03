@@ -6,7 +6,7 @@ import {
   Img,
   Container,
   Text,
-  Badge,
+  HStack,
   Grid,
   Link,
   SimpleGrid,
@@ -53,6 +53,47 @@ export const ServerlessSponsors = ({ title }) => (
               </Link>
             </Box>
           </SimpleGrid>
+
+          <HStack justifyContent="center">
+            <Button
+              as="a"
+              href="mailto:info@bitproject.org"
+              target="_blank"
+              size="lg"
+              color="white"
+              rounded="0"
+              bg="transparent"
+              px="8"
+              fontWeight="bold"
+              fontSize="md"
+              _hover={{
+                color: "white",
+                background: "#404040",
+              }}
+            >
+              Email Us
+            </Button>
+
+            <Button
+              as="a"
+              href="https://plucky-singer-a26.notion.site/Serverless-Camp-Sponsorship-Prospectus-1659e155cc0c4c03bb16d865e1feed5f"
+              target="_blank"
+              size="lg"
+              color="white"
+              border="1px solid #2B6CB0"
+              bg="#2B6CB0"
+              rounded="0"
+              px="8"
+              fontWeight="bold"
+              fontSize="md"
+              _hover={{
+                color: "white",
+                background: "#4e8dcf",
+              }}
+            >
+              Interested in Sponsoring?
+            </Button>
+          </HStack>
         </Box>
       </Container>
     </Fade>

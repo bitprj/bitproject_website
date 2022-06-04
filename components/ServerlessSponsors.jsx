@@ -39,6 +39,7 @@ export const ServerlessSponsors = ({ title }) => (
             columns={{ base: 1, md: 2, lg: 3 }}
             alignItems="center"
             spacing={24}
+            mb={{ base: 8, lg: 4 }}
           >
             <Box textAlign="center">
               <Link href="https://www.microsoft.com/en-us/" isExternal>

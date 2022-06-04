@@ -41,6 +41,10 @@ const links = [
     label: "Blog",
     href: "/blog",
   },
+  {
+    label: "Sponsors",
+    href: "/serverless#sponsors",
+  },
 ];
 
 const MobileNavContent = (props) => {

@@ -17,7 +17,7 @@ import * as React from "react";
 import Fade from "react-reveal/Fade";
 
 export const ServerlessSponsors = ({ title }) => (
-  <Box bg="black" color="white" mx="auto">
+  <Box bg="black" color="white" mx="auto" id="sponsors">
     <Fade>
       <Container maxW="container.lg" p="15px">
         <Box
@@ -27,11 +27,10 @@ export const ServerlessSponsors = ({ title }) => (
           }}
         >
           <Heading
-            as="h1"
-            size="md"
-            // fontWeight="extrabold"
-            lineHeight="1.2"
-            letterSpacing="tight"
+            as="h2"
+            size="xl"
+            mt="8"
+            fontWeight="extrabold"
             textAlign="center"
           >
             {title}

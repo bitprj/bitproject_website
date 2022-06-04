@@ -191,7 +191,7 @@ export default function Serverless({ posts }) {
 
           <MedSep />
 
-          <ServerlessSponsors title="Sponsored By" />
+          <ServerlessSponsors title="Sponsors" />
         </Container>
       </Box>
 

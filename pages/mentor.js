@@ -56,7 +56,6 @@ export default function Mentor() {
       twitter: "https://twitter.com/jedjohan",
       linkedin: "https://www.linkedin.com/in/jedjohaneriksson/",
     },
-
     {
       name: "Adham Bishr",
       title: "Senior Software Engineer",
@@ -70,7 +69,37 @@ export default function Mentor() {
       title: "Software Engineer",
       company: "Courier",
       img: "/pic-tejas.jpeg",
-      linkedin: "https://www.linkedin.com/in/tejaskumthekar/",
+      linkedin: "https://www.linkedin.com/in/tejaskumthekar",
+    },
+    {
+      name: "Anthony Chu",
+      title: "Product Manager",
+      company: "Microsoft",
+      img: "/mentor/anthony.jpeg",
+      linkedin: "https://www.linkedin.com/in/chuanthony/",
+      twitter: "https://twitter.com/nthonyChu",
+    },
+    {
+      name: "Gareth Williams",
+      title: "Cloud Solution Architect",
+      company: "Microsoft",
+      img: "/mentor/gareth.png",
+    },
+    {
+      name: "Daron Yondem",
+      title: "Azure Developer Lead",
+      company: "Microsoft",
+      img: "/mentor/daron.jpeg",
+      linkedin: "https://www.linkedin.com/in/daronyondem/",
+      twitter: "https://twitter.com/daronyondem",
+    },
+    {
+      name: "Kumar Gaurav",
+      title: "Senior Software Engineer",
+      company: "Quizizz",
+      img: "/mentor/kumar.jpeg",
+      linkedin: "https://www.linkedin.com/in/ikmrgrv/",
+      twitter: "https://twitter.com/ikmrgrv",
     },
   ];
   return (
@@ -179,13 +208,10 @@ export default function Mentor() {
                 <List spacing={3} fontSize="lg" color="gray.300">
                   <ListItem>
                     <ListIcon as={MdCheckCircle} color="green.500" />
-                    Engage in technical and/or interest-based conversations [on
-                    Discord] in communication channels
-                  </ListItem>
-                  <ListItem>
-                    <ListIcon as={MdCheckCircle} color="green.500" />
-                    Lead a weekly AMA/discussion on curriculum-based topic links
-                    to resources for students to learn more (text based)
+                    Participate in weekly AMA/discussion on curriculum-based
+                    topics on the Forum; includes answering questions,
+                    facilitating discussion about the topic and your experience
+                    with it, and sharing resources for students to learn more
                   </ListItem>
                   <ListItem>
                     <ListIcon as={MdCheckCircle} color="green.500" />

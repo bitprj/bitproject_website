@@ -12,6 +12,10 @@ import { ServerlessCompare } from "@/components/ServerlessCompare";
 import { SimpleGrid, Container, Box, Button } from "@chakra-ui/react";
 import BlogLayout from "../../layouts/blog";
 import { ServerlessSponsors } from "../../components/ServerlessSponsors";
+import { MedSep } from "@/components/separators/MedSep";
+import { SmSep } from "@/components/separators/SmSep";
+import { XsSep } from "@/components/separators/XsSep";
+
 export default function Serverless({ posts }) {
   const [searchValue] = useState("");
   const [showText, setShowText] = useState("Show More");
@@ -51,7 +55,7 @@ export default function Serverless({ posts }) {
       <Navbar />
       <GraphicTabBottom
         heading="Serverless Camp 2022"
-        bold="June 13 - August 31"
+        bold="June 13 - August 14"
         desc="In our 8-week boot camp, build awesome apps with Serverless functions, JavaScript, and APIs. From IoT heartbeat monitors to face mask detectors, you can build anything with Serverless!"
         cta1="Apply Now"
         cta2="Join as a Mentor"
@@ -70,6 +74,7 @@ export default function Serverless({ posts }) {
         name3="QnA Bot"
         title3="David Tetreau"
         graphic3="https://www.youtube.com/watch?v=FU1pzbgG3nA"
+        underBold="Sponsored by Microsoft"
       />
 
       <Textblock
@@ -134,6 +139,9 @@ export default function Serverless({ posts }) {
         li2="🐈 twoCatz: The App"
         img="/week4.gif"
       />
+
+      <MedSep />
+
       <CenterDualCol
         heading="Build your Own Project"
         description="Demonstrate your new competence with cloud computing by developing your own project: it can solve problems, be fun, or do all of the above!"
@@ -160,9 +168,10 @@ export default function Serverless({ posts }) {
               />
             ))}
           </SimpleGrid>
+
           <Box textAlign="center">
             <Button
-              mt={4}
+              my={4}
               size="md"
               color="white"
               border="1px solid #2B6CB0"
@@ -179,10 +188,12 @@ export default function Serverless({ posts }) {
               {showText}
             </Button>
           </Box>
+
+          <MedSep />
+
+          <ServerlessSponsors title="Sponsors" />
         </Container>
       </Box>
-
-      <ServerlessSponsors title="Sponsors" />
 
       <Footer />
     </div>

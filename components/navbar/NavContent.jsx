@@ -14,7 +14,7 @@ import { NavListItem } from "./NavListItem";
 
 const links = [
   {
-    label: "Serverless",
+    label: "Students",
     href: "/serverless",
   },
   {

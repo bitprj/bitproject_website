@@ -87,6 +87,11 @@ export default function Workshops({ posts }) {
               image="https://i.imgur.com/TgJOtDN.jpg"
               link="https://www.youtube.com/watch?v=gFpfZ9XaB0M"
             />
+            <WorkshopCard
+              title="Build a Dynamic Image (Sticker) Generator with Azure"
+              image="https://i.imgur.com/y3tSJgK.jpg"
+              link="https://www.youtube.com/watch?v=JVulJtDktjk"
+            />
           </SimpleGrid>
         </Container>
       </Box>

@@ -74,7 +74,7 @@ export default function Workshops({ posts }) {
                 image={frontMatter.image}
                 link={`workshops/${frontMatter.slug}`}
                 mx="auto"
-              />
+              /> 
             ))} */}
             <WorkshopCard
               title="Personal Branding Workshop"

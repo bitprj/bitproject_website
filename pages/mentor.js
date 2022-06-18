@@ -101,6 +101,22 @@ export default function Mentor() {
       linkedin: "https://www.linkedin.com/in/ikmrgrv/",
       twitter: "https://twitter.com/ikmrgrv",
     },
+    {
+      name: "Vladimir Serykh",
+      title: "Software and Application Architect",
+      company: "Salta Group",
+      img: "/mentor/vladimir.jpeg",
+      linkedin: "https://www.linkedin.com/in/vladimirserykh/",
+      twitter: "https://www.instagram.com/vlad_dev_experience/",
+    },
+    {
+      name: "Skyler Hartle",
+      title: "Senior Product Manager",
+      company: "Microsoft",
+      img: "/mentor/skyler.jpeg",
+      linkedin: "https://www.linkedin.com/in/skylerhartle/",
+      twitter: "https://twitter.com/skylerhartle",
+    },
   ];
   return (
     <div>

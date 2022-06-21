@@ -9,7 +9,7 @@ superpowers by providing cutting-edge, open source learning
 experiences to prepare students for careers in tech. 
 
 
-## Bit Project Sponsors
+## Serverless Camp (A Bit Project Program) Sponsors
 
  - ⭐️ [Microsoft](https://www.microsoft.com/en-us/)
  - ⭐️ [Courier](https://www.courier.com/)
@@ -29,63 +29,26 @@ feel free to check out some student projects from
 
 ## Meet the Team!
 
-- 💙 Shreya Gupta, Founder (Operations) [Github Link](https://www.github.com/octokatherine)
+- 💙 Shreya Gupta, Founder (Operations) [Github Link](https://github.com/shreythecray)
 
-- 💙 Daniel Kim, Founder (Technology) [Github Link](https://www.github.com/octokatherine)
-- 💙 Ganning Xu, Director of Engineering [Github Link](https://www.github.com/octokatherine)
-- 💙 Emily Chen, Director of Engineering [Github Link](https://www.github.com/octokatherine)
+- 💙 Daniel Kim, Founder (Technology) [Github Link](https://github.com/lazyplatypus)
+- 💙 Ganning Xu, Director of Engineering [Github Link](https://github.com/ganning127)
+- 💙 Emily Chen, Director of Engineering [Github Link](https://github.com/emsesc)
 - 💙 Misha Patel, Director of Partnerships [Github Link](https://www.github.com/octokatherine)
-- 💜 Beatrix Cendana, Student Community Manager [Github Link](https://www.github.com/octokatherine)
-
-
-
-## API Reference
-
-#### Get all items
-
-```http
-  GET /api/items
-```
-
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Required**. Your API key |
-
-#### Get item
-
-```http
-  GET /api/items/${id}
-```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Required**. Id of item to fetch |
-
-#### add(num1, num2)
-
-Takes two numbers and returns the sum.
-
-## Media Toolkit - Color Codes
-
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Example Color | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) #0a192f |
-| Example Color | ![#f8f8f8](https://via.placeholder.com/10/f8f8f8?text=+) #f8f8f8 |
-| Example Color | ![#00b48a](https://via.placeholder.com/10/00b48a?text=+) #00b48a |
-| Example Color | ![#00d1a0](https://via.placeholder.com/10/00b48a?text=+) #00d1a0 |
+- 💜 Beatrix Cendana, Student Community Manager [Github Link](https://github.com/beatrixcendana)
 
 
 ## FAQ
 
-#### Question 1
+#### Are your programs free?
 
-Answer 1
+Yes! Both our mentorship program and global student community are free for all members to join. However, the mentorship program is highly selective and requires an application.
 
-#### Question 2
+#### How can I contribute?
 
-Answer 2
+Email us at info@bitproject.org and we'll be happy to work with you!
 
 
 ## Feedback
 
-If you have any feedback, please reach out to us at fake@fake.com
+If you have any feedback, please reach out to us at info@bitproject.org

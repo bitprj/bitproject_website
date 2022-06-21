@@ -36,7 +36,7 @@ export default function HomePage() {
       </Head>
       <Navbar />
       <Landing
-        heading="We equip students with technical superpowers"
+        heading="test"
         description="We provide cutting-edge, open source learning experiences to prepare students for careers in tech."
         formActionButton="Sign Up"
         image="/main.gif"

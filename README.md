@@ -29,24 +29,28 @@ feel free to check out some student projects from
 
 ## Meet the Team!
 
-- 💙 Shreya Gupta, Founder (Operations) [Github Link](https://github.com/shreythecray)
+- 💙 Shreya Gupta [(@shreythecray)](https://github.com/shreythecray), Founder (Operations) 
 
-- 💙 Daniel Kim, Founder (Technology) [Github Link](https://github.com/lazyplatypus)
-- 💙 Ganning Xu, Director of Engineering [Github Link](https://github.com/ganning127)
-- 💙 Emily Chen, Director of Engineering [Github Link](https://github.com/emsesc)
-- 💙 Misha Patel, Director of Partnerships [Github Link](https://www.github.com/octokatherine)
-- 💜 Beatrix Cendana, Student Community Manager [Github Link](https://github.com/beatrixcendana)
+- 💙 Daniel Kim [(@lazyplatypus)](https://github.com/lazyplatypus), Founder (Technology) 
+- 💙 Ganning Xu [(@ganning127)](https://github.com/ganning127), Director of Engineering 
+- 💙 Emily Chen [(@emsesc)](https://github.com/emsesc), Director of Engineering 
+- 💙 Misha Patel, Director of Partnerships 
+- 💜 Beatrix Cendana [(@beatrixcendana](https://github.com/beatrixcendana), Student Community Manager 
 
 
 ## FAQ
 
-#### Are your programs free?
+<details>
+  <summary>Are your programs free?</summary>
+  <br>
+  Yes! Both our mentorship program and global student community are free for all members to join. However, the mentorship program is highly selective and requires an application.
+</details>
 
-Yes! Both our mentorship program and global student community are free for all members to join. However, the mentorship program is highly selective and requires an application.
-
-#### How can I contribute?
-
-Email us at info@bitproject.org and we'll be happy to work with you!
+<details>
+  <summary>How can I contribute?</summary>
+  <br>
+  Email us at info@bitproject.org and we'll be happy to work with you!
+</details>
 
 
 ## Feedback

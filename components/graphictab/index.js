@@ -118,7 +118,7 @@ export const GraphicTab = ({
                   playing={true}
                   volume={0}
                   controls={true}
-                  width="100%"
+                  width="80%"
                   m="0 auto"
                   // loop="true"
                 />
@@ -129,7 +129,7 @@ export const GraphicTab = ({
                   // playing="true"
                   volume={0}
                   controls={true}
-                  width="100%"
+                  width="80%"
                   // loop="true"
                 />
               </TabPanel>
@@ -139,7 +139,7 @@ export const GraphicTab = ({
                   // playing="true"
                   volume={0}
                   controls={true}
-                  width="100%"
+                  width="80%"
                   // loop="true"
                 />
               </TabPanel>

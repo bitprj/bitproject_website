@@ -36,7 +36,7 @@ export default function HomePage() {
       </Head>
       <Navbar />
       <Landing
-        heading="test"
+        heading="We equip students with technical superpowers"
         description="We provide cutting-edge, open source learning experiences to prepare students for careers in tech."
         formActionButton="Sign Up"
         image="/main.gif"
@@ -58,19 +58,16 @@ export default function HomePage() {
         pic1="/fifi.jpeg"
         name1="Fifi Teklemedhin"
         title1="11th Grade"
-        graphic1="https://vimeo.com/570820559"
-
+        graphic1="https://www.youtube.com/watch?v=Xn-tfkn5Gr0" // we need to change fifi's
         pic2="/anita.jpeg"
         name2="Anita Padman" // need to change to promo video. this one is about serverless
         title2="Junior at UIC"
-        graphic2="https://vimeo.com/572033757"
-
-
+        graphic2="https://www.youtube.com/watch?v=jmsb95tgBRk"
         pic3="/emily.png"
         name3="Emily Chen"
         title3="11th Grade"
-        graphic3="https://vimeo.com/572255574"
-
+        graphic3="https://www.youtube.com/watch?v=FU1pzbgG3nA"
+        underBold="Sponsored by Microsoft"
       />
 
       <Testimonials

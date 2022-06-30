@@ -70,6 +70,9 @@ export const GraphicTab = ({
             mt="2rem"
             align="center"
             border="0px"
+            _focus={{
+              border: "2px solid white",
+            }}
           >
             <TabList border="0px">
               <motion.div whileHover={{ scale: 1.1 }}>
@@ -80,6 +83,9 @@ export const GraphicTab = ({
                   mb="2rem"
                   _selected={{ bg: "#1C1D25" }}
                   rounded="0"
+                  _focus={{
+                    border: "2px solid white",
+                  }}
                 >
                   <ProfileIcon pic={pic1} name={name1} title={title1} />
                 </Tab>

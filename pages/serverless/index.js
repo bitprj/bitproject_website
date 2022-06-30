@@ -75,6 +75,9 @@ export default function Serverless({ posts }) {
         title3="David Tetreau"
         graphic3="https://www.youtube.com/watch?v=FU1pzbgG3nA"
         underBold="Sponsored by Microsoft"
+        _focus={{
+          border: "2px solid white",
+        }}
       />
 
       <Textblock

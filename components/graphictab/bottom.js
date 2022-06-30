@@ -200,6 +200,9 @@ export const GraphicTabBottom = ({
                   mb="2rem"
                   _selected={{ bg: "#1C1D25" }}
                   rounded="0"
+                  _focus={{
+                    border: "2px solid white",
+                  }}
                 >
                   <ProfileIcon pic={pic1} name={name1} title={title1} />
                 </Tab>
@@ -213,6 +216,9 @@ export const GraphicTabBottom = ({
                   mb="2rem"
                   _selected={{ bg: "#1C1D25" }}
                   rounded="0"
+                  _focus={{
+                    border: "2px solid white",
+                  }}
                 >
                   <ProfileIcon pic={pic2} name={name2} title={title2} />
                 </Tab>
@@ -226,6 +232,9 @@ export const GraphicTabBottom = ({
                   mb="2rem"
                   _selected={{ bg: "#1C1D25" }}
                   rounded="0"
+                  _focus={{
+                    border: "2px solid white",
+                  }}
                 >
                   <ProfileIcon pic={pic3} name={name3} title={title3} />
                 </Tab>

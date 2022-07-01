@@ -70,6 +70,9 @@ export const GraphicTab = ({
             mt="2rem"
             align="center"
             border="0px"
+            _focus={{
+              border: "2px solid white",
+            }}
           >
             <TabList border="0px">
               <motion.div whileHover={{ scale: 1.1 }}>
@@ -80,6 +83,9 @@ export const GraphicTab = ({
                   mb="2rem"
                   _selected={{ bg: "#1C1D25" }}
                   rounded="0"
+                  _focus={{
+                    border: "2px solid white",
+                  }}
                 >
                   <ProfileIcon pic={pic1} name={name1} title={title1} />
                 </Tab>
@@ -92,6 +98,9 @@ export const GraphicTab = ({
                   mb="2rem"
                   _selected={{ bg: "#1C1D25" }}
                   rounded="0"
+                  _focus={{
+                    border: "2px solid white",
+                  }}
                 >
                   <ProfileIcon pic={pic2} name={name2} title={title2} />
                 </Tab>
@@ -105,6 +114,9 @@ export const GraphicTab = ({
                   mb="2rem"
                   _selected={{ bg: "#1C1D25" }}
                   rounded="0"
+                  _focus={{
+                    border: "2px solid white",
+                  }}
                 >
                   <ProfileIcon pic={pic3} name={name3} title={title3} />
                 </Tab>
@@ -118,7 +130,7 @@ export const GraphicTab = ({
                   playing={true}
                   volume={0}
                   controls={true}
-                  width="100%"
+                  width="80%"
                   m="0 auto"
                   // loop="true"
                 />
@@ -129,7 +141,7 @@ export const GraphicTab = ({
                   // playing="true"
                   volume={0}
                   controls={true}
-                  width="100%"
+                  width="80%"
                   // loop="true"
                 />
               </TabPanel>
@@ -139,7 +151,7 @@ export const GraphicTab = ({
                   // playing="true"
                   volume={0}
                   controls={true}
-                  width="100%"
+                  width="80%"
                   // loop="true"
                 />
               </TabPanel>

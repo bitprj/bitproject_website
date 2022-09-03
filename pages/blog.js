@@ -21,6 +21,9 @@ import {
   SimpleGrid,
 } from "@chakra-ui/react";
 import BlogLayout from "../layouts/blog";
+import { NextSeo } from "next-seo";
+const URL = "https://www.bitproject.org/blog";
+const DESC = "Like reading? Feel free to explore all of our awesome blogs!";
 
 export default function BlogPage({ posts }) {
   const [searchValue, setSearchValue] = useState("");
@@ -37,25 +40,34 @@ export default function BlogPage({ posts }) {
     );
 
   return (
-    <div>
+    <>
+      <NextSeo
+        title="Blogs | Bit Project"
+        description={DESC}
+        canonical={URL}
+        openGraph={{
+          url: URL,
+          title: "Bit Project",
+          description: DESC,
+          images: [
+            {
+              url: "blogs.png",
+              width: 800,
+              height: 600,
+              alt: "Screenshot of blogs page",
+              type: "image/png",
+            },
+          ],
+          site_name: "bitproject.org/blog",
+        }}
+        twitter={{
+          handle: "@bitprj",
+          site: "Bit Project",
+          cardType: "summary_large_image",
+        }}
+      />
+
       <Head>
-        <title>Blog</title>
-        <meta
-          name="description"
-          content="Like reading? Feel free to explore all of our awesome tech blogs!"
-        />
-        <meta property="og:title" content="Blog - Bit Project" />
-        <meta
-          property="og:image"
-          content="https://www.bitproject.org/_next/image?url=%livecode.png&w=2048&q=75"
-        />
-        <meta
-          property="og:description"
-          content="Like reading? Feel free to explore all of our awesome tech blogs!"
-        />
-        <meta property="og:url" content="https://www.bitproject.org/blog" />
-        <meta property="og:site_name" content="bitproject.org" />
-        <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
@@ -105,7 +117,7 @@ export default function BlogPage({ posts }) {
       </Box>
 
       <Footer />
-    </div>
+    </>
   );
 }
 

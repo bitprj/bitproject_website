@@ -8,6 +8,7 @@ import { Footer } from "../components/footer";
 import { SimpleGrid, Container, Box } from "@chakra-ui/react";
 // import BlogLayout from "../layouts/blog";
 import { WorkshopCard } from "../components/cards/WorkshopCard";
+import { NextSeo } from "next-seo";
 
 export default function Workshops({ posts }) {
   // const [searchValue, setSearchValue] = useState("");
@@ -22,29 +23,40 @@ export default function Workshops({ posts }) {
   //       frontMatter.summary.toLowerCase().includes(searchValue.toLowerCase())
   //   );
 
+  const URL = "https://www.bitproject.org/workshops";
+  const DESC =
+    "We make fun, interactive workshops to give students hands-on experience with cutting edge tools.";
+
   return (
-    <div>
+    <>
+      <NextSeo
+        title="Workshops | Bit Project"
+        description={DESC}
+        canonical={URL}
+        openGraph={{
+          url: URL,
+          title: "Bit Project",
+          description: DESC,
+          images: [
+            {
+              url: "https://pbs.twimg.com/profile_banners/1174856501204111360/1586338003/1500x500",
+              width: 1500,
+              height: 500,
+              alt: "MongoDB workshop",
+              type: "image/png",
+            },
+          ],
+          site_name: "bitproject.org/workshops",
+        }}
+        twitter={{
+          handle: "@bitprj",
+          site: "Bit Project",
+          cardType: "summary_large_image",
+        }}
+      />
+
       <Head>
         <title>Workshops</title>
-        <meta
-          name="description"
-          content="We make fun, interactive workshops to give students hands-on experience with cutting edge tools."
-        />
-        <meta property="og:title" content="Workshops - Bit Project" />
-        <meta
-          property="og:image"
-          content="https://www.bitproject.org/_next/image?url=%livecode.png&w=2048&q=75"
-        />
-        <meta
-          property="og:description"
-          content="We make fun, interactive workshops to give students hands-on experience with cutting edge tools."
-        />
-        <meta
-          property="og:url"
-          content="https://www.bitproject.org/workshops"
-        />
-        <meta property="og:site_name" content="bitproject.org" />
-        <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
@@ -97,7 +109,7 @@ export default function Workshops({ posts }) {
       </Box>
 
       <Footer />
-    </div>
+    </>
   );
 }
 

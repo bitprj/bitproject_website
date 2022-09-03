@@ -13,9 +13,11 @@ import { SimpleGrid, Container, Box, Button } from "@chakra-ui/react";
 import BlogLayout from "../../layouts/blog";
 import { ServerlessSponsors } from "../../components/ServerlessSponsors";
 import { MedSep } from "@/components/separators/MedSep";
-import { SmSep } from "@/components/separators/SmSep";
-import { XsSep } from "@/components/separators/XsSep";
+import { NextSeo } from "next-seo";
 
+const URL = "https://www.bitproject.org/serverless";
+const DESC =
+  "A free mentorship program & coding bootcamp organized by the 501(c)(3) non-profit Bit Project.";
 export default function Serverless({ posts }) {
   const [searchValue] = useState("");
   const [showText, setShowText] = useState("Show More");
@@ -31,25 +33,34 @@ export default function Serverless({ posts }) {
     }
   };
   return (
-    <div>
+    <>
+      <NextSeo
+        title="Serverless Camp | Bit Project"
+        description={DESC}
+        canonical={URL}
+        openGraph={{
+          url: URL,
+          title: "Bit Project",
+          description: DESC,
+          images: [
+            {
+              url: "https://www.bitproject.org/team.png",
+              width: 800,
+              height: 600,
+              alt: "Picture of our team",
+              type: "image/png",
+            },
+          ],
+          site_name: "bitproject.org",
+        }}
+        twitter={{
+          handle: "@bitprj",
+          site: "Bit Project",
+          cardType: "summary_large_image",
+        }}
+      />
+
       <Head>
-        <title>Serverless Camp Summer 2022</title>
-        <meta
-          name="description"
-          content="Coding Bootcamp organized by the 501(c)(3) non-profit Bit Project."
-        />
-        <meta property="og:title" content="Serverless Camp Summer 2022" />
-        <meta property="og:image" content="https://i.imgur.com/Rk9Fiof.png" />
-        <meta
-          property="og:description"
-          content="Coding Bootcamp organized by the 501(c)(3) non-profit Bit Project."
-        />
-        <meta
-          property="og:url"
-          content="https://www.bitproject.org/serverless"
-        />
-        <meta property="og:site_name" content="bitproject.org" />
-        <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
@@ -199,7 +210,7 @@ export default function Serverless({ posts }) {
       </Box>
 
       <Footer />
-    </div>
+    </>
   );
 }
 

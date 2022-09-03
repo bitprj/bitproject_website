@@ -13,12 +13,16 @@ import {
   Text,
   SimpleGrid,
   Heading,
-  Img,
   ListIcon,
 } from "@chakra-ui/react";
 import { MdCheckCircle } from "react-icons/md";
 import { TeamCard } from "@/components/TeamCard";
 import Fade from "react-reveal/Fade";
+import { NextSeo } from "next-seo";
+
+const URL = "https://www.bitproject.org/mentor";
+const DESC =
+  "We pair awesome engineers with students to give back to their communities.";
 
 export default function Mentor() {
   let items = [
@@ -119,25 +123,34 @@ export default function Mentor() {
     },
   ];
   return (
-    <div>
+    <>
+      <NextSeo
+        title="Mentor | Bit Project"
+        description={DESC}
+        canonical={URL}
+        openGraph={{
+          url: URL,
+          title: "Bit Project",
+          description: DESC,
+          images: [
+            {
+              url: "https://www.bitproject.org/mongoScaled.png",
+              width: 800,
+              height: 600,
+              alt: "MongoDB mentor",
+              type: "image/png",
+            },
+          ],
+          site_name: "bitproject.org/mentor",
+        }}
+        twitter={{
+          handle: "@bitprj",
+          site: "Bit Project",
+          cardType: "summary_large_image",
+        }}
+      />
+
       <Head>
-        <title>Mentor</title>
-        <meta
-          name="description"
-          content="We pair awesome engineers with students to give back to their communities."
-        />
-        <meta property="og:title" content="Mentor - Bit Project" />
-        <meta
-          property="og:image"
-          content="https://www.bitproject.org/_next/image?url=%livecode.png&w=2048&q=75"
-        />
-        <meta
-          property="og:description"
-          content="We pair awesome engineers with students to give back to their communities."
-        />
-        <meta property="og:url" content="https://www.bitproject.org/mentor" />
-        <meta property="og:site_name" content="bitproject.org" />
-        <meta property="og:type" content="website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
@@ -384,6 +397,6 @@ export default function Mentor() {
       </Box>
 
       <Footer />
-    </div>
+    </>
   );
 }

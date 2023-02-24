@@ -7,6 +7,13 @@ import MDXComponents from "../components/MDXComponents";
 import { ChakraProvider } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import { StepsTheme as Steps } from "chakra-ui-steps";
+
+const theme = extendTheme({
+  components: {
+    Steps,
+  },
+});
 
 const GlobalStyle = ({ children }) => {
   const { colorMode } = useColorMode();
@@ -52,7 +59,7 @@ function MyApp({ Component, pageProps }) {
   }, [router.events]);
 
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <ColorModeProvider
         options={{
           useSystemColorMode: false,

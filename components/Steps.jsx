@@ -463,7 +463,7 @@ export const Basic = ({ variant = "circle" }) => {
   });
   const isLastStep = activeStep === steps.length - 1;
   const hasCompletedAllSteps = activeStep === steps.length;
-  const bg = useColorModeValue("gray.200", "gray.800");
+  const bg = "gray.800";
 
   return (
     <Flex flexDir="column" width="100%">

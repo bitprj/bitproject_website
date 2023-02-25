@@ -1,5 +1,5 @@
 import React from "react";
-import { useColorMode, ColorModeProvider } from "@chakra-ui/react";
+import { useColorMode, ColorModeProvider, extendTheme } from "@chakra-ui/react";
 import { MDXProvider } from "@mdx-js/react";
 import { Global, css } from "@emotion/react";
 import { prismLightTheme, prismDarkTheme } from "../styles/prism";
@@ -7,13 +7,25 @@ import MDXComponents from "../components/MDXComponents";
 import { ChakraProvider } from "@chakra-ui/react";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { StepsTheme as Steps } from "chakra-ui-steps";
+import { StepsStyleConfig as Steps } from "chakra-ui-steps";
 
 const theme = extendTheme({
   components: {
     Steps,
   },
 });
+
+function ForceDarkMode({ children }) {
+  // force light mode b/c of ChakraUI bug
+  const { colorMode, toggleColorMode } = useColorMode();
+
+  useEffect(() => {
+    if (colorMode === "dark") return;
+    toggleColorMode();
+  }, [colorMode, toggleColorMode]);
+
+  return children;
+}
 
 const GlobalStyle = ({ children }) => {
   const { colorMode } = useColorMode();
@@ -60,17 +72,19 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <ChakraProvider theme={theme}>
-      <ColorModeProvider
-        options={{
-          useSystemColorMode: false,
-        }}
-      >
-        <MDXProvider components={MDXComponents}>
-          <GlobalStyle>
-            <Component {...pageProps} />
-          </GlobalStyle>
-        </MDXProvider>
-      </ColorModeProvider>
+      <ForceDarkMode>
+        <ColorModeProvider
+          options={{
+            useSystemColorMode: false,
+          }}
+        >
+          <MDXProvider components={MDXComponents}>
+            <GlobalStyle>
+              <Component {...pageProps} />
+            </GlobalStyle>
+          </MDXProvider>
+        </ColorModeProvider>
+      </ForceDarkMode>
     </ChakraProvider>
   );
 }

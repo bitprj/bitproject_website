@@ -1,80 +1,93 @@
-import {
-    Badge,
-    Box,
-    Text,
-    useColorModeValue as mode,
-} from '@chakra-ui/react'
-import * as React from 'react'
-import Image from 'next/image'
+import { Badge, Box, Text, useColorModeValue as mode } from "@chakra-ui/react";
+import * as React from "react";
+import Image from "next/image";
 
-export const HighlightBox = ({ title, companyLogo, image, link, cohort, category }) => {
-    let bkgUrl = `url(${image})`
-    let colors = {
-        'projects': 'blue.800',
-        'workshops': 'purple.800',
-    }
-    return (
-        <Box
-            overflow="hidden"
-            mx="auto"
-            as="a"
-            w={{ sm: "100%" }} // width 100 when larger than sm
-            href={link}
-            bg="#363636"
-            rounded='0'
-            transition="all 0.2s"
-            pb="6"
-            _hover={{ bg: '#4a4a4a' }}
-        >
+export const HighlightBox = ({
+  title,
+  companyLogo,
+  image,
+  link,
+  cohort,
+  category,
+}) => {
+  let bkgUrl = `url(${image})`;
+  let colors = {
+    projects: "blue.800",
+    workshops: "purple.800",
+  };
+  return (
+    <Box
+      overflow="hidden"
+      mx="auto"
+      as="a"
+      w={{ sm: "100%" }} // width 100 when larger than sm
+      href={link}
+      bg="#363636"
+      rounded="0"
+      transition="all 0.2s"
+      pb="6"
+      _hover={{ bg: "#4a4a4a" }}
+    >
+      <style jsx global>
+        {`
+          .companyLogo {
+            margin-top: 1rem !important;
+          }
+        `}
+      </style>
 
-            <style jsx global>
-                {`
-                    .companyLogo { 
-                        margin-top: 1rem !important; 
-                    }
-                    
-                `}
-            </style>
+      <Box
+        h="15rem"
+        bgImage={bkgUrl}
+        bgPosition="center"
+        bgRepeat="no-repeat"
+        backgroundSize="cover"
+      ></Box>
+      <Box fontWeight="semibold" lineHeight="tight" mx="4" mt="6">
+        {category && (
+          <Badge bg={colors[category]} color="gray.300">
+            {category}
+          </Badge>
+        )}
 
-            <Box h="15rem" bgImage={bkgUrl} bgPosition="center"
-                bgRepeat="no-repeat" backgroundSize="cover">
-            </Box>
-            <Box
-                fontWeight="semibold"
-                lineHeight="tight"
-                mx="4"
-                mt="6"
+        <Text fontSize="2xl" fontWeight="800" color="white">
+          {title}
+        </Text>
+      </Box>
 
-            >
-                {category && <Badge bg={colors[category]} color='gray.300'>
-                    {category}
-                    </Badge>}
+      {companyLogo && (
+        <Box d="flex">
+          <Text
+            fontSize="md"
+            color="#CCCDCE"
+            display="inline"
+            mr="3"
+            mt="2"
+            ml="4"
+            alignItems="center"
+          >
+            In Collaboration with
+          </Text>
+          <Image
+            src={companyLogo}
+            height="40px"
+            width="40px"
+            display="inline"
+            alt={companyLogo}
+            className=""
+          />
+        </Box>
+      )}
 
-                <Text fontSize="2xl" fontWeight="800" color="white">
-                    {title}
-                </Text>
+      {cohort && (
+        <Box mt="2" mx="4" fontWeight="semibold">
+          <Text fontSize="sm" color="grey">
+            {cohort}
+          </Text>
+        </Box>
+      )}
 
-
-
-            </Box>
-
-            {companyLogo && <Box d="flex">
-
-                <Text fontSize="md" color="#CCCDCE" display="inline" mr="3" mt="2" ml="4" alignItems="center">
-                    In Collaboration with
-                </Text>
-                <Image src={companyLogo} height="40px" width="40px" display="inline" alt={companyLogo} className="" />
-            </Box>}
-
-            {
-                cohort && <Box mt="2" mx="4" fontWeight="semibold">
-                    <Text fontSize="sm" color="grey">
-                        {cohort}
-                    </Text>
-                </Box>
-            }
-
-            {/* <Box mx="4"
+      {/* <Box mx="4"
                 mt="5">
                 <ProfileIcon
                     color="grey"
@@ -86,8 +99,6 @@ export const HighlightBox = ({ title, companyLogo, image, link, cohort, category
                     title="Cohort 2"
                 />
             </Box> */}
-
-        </Box >
-
-    )
-}
+    </Box>
+  );
+};

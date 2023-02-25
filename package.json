@@ -20,7 +20,7 @@
     "apollo-link-context": "^1.0.20",
     "apollo-link-http": "^1.5.17",
     "chakra-ui-markdown-renderer": "^1.1.0",
-    "chakra-ui-steps": "^2.0.4",
+    "chakra-ui-steps": "^1.6.1",
     "cloudinary-build-url": "^0.2.1",
     "date-fns": "^2.11.1",
     "framer-motion": "^3.10.6",

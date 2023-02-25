@@ -13,19 +13,26 @@ import {
   Text,
   SimpleGrid,
   Heading,
+  Flex,
+  LoremIpsum,
   ListIcon,
 } from "@chakra-ui/react";
 import { MdCheckCircle } from "react-icons/md";
 import { TeamCard } from "@/components/TeamCard";
 import Fade from "react-reveal/Fade";
 import { NextSeo } from "next-seo";
-// import { Step, Steps, useSteps } from "chakra-ui-steps";
+import { useColorModeValue } from "@chakra-ui/color-mode";
+import { Basic } from "@/components/Steps";
+
+const steps = [{ label: "Step 1" }, { label: "Step 2" }, { label: "Step 3" }];
+
+const content = <Flex py={4}>test test test</Flex>;
 
 const URL = "https://www.bitproject.org/mentor";
 const DESC =
   "We pair awesome engineers with students to give back to their communities.";
 
-export default function Mentor() {
+export default function ArtHeistInstructions() {
   return (
     <>
       <NextSeo
@@ -85,6 +92,7 @@ export default function Mentor() {
             </Text>
           </Box>
         </Box>
+        <Basic />
       </Container>
 
       <Footer />

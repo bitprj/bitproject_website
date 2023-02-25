@@ -22,7 +22,7 @@ const steps = [
   { label: "API Gateway" },
   { label: "Code the Function" },
   { label: "Test" },
-  { label: "Restore the FT" },
+  { label: "Restore the NFT" },
 ];
 
 const CustomList = ({ children }) => (

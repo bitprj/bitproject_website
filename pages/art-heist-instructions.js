@@ -28,9 +28,8 @@ const steps = [{ label: "Step 1" }, { label: "Step 2" }, { label: "Step 3" }];
 
 const content = <Flex py={4}>test test test</Flex>;
 
-const URL = "https://www.bitproject.org/mentor";
-const DESC =
-  "We pair awesome engineers with students to give back to their communities.";
+const URL = "https://www.bitproject.org/art-heist-instructions";
+const DESC = "Instructions for Bit Project's NFT Art Heist Workshop.";
 
 export default function ArtHeistInstructions() {
   return (
@@ -45,7 +44,7 @@ export default function ArtHeistInstructions() {
           description: DESC,
           images: [
             {
-              url: "https://www.bitproject.org/mongoScaled.png",
+              url: "https://i.imgur.com/Bhst46s.png",
               width: 800,
               height: 600,
               alt: "MongoDB mentor",

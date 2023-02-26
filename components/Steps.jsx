@@ -112,7 +112,7 @@ const Step2TheTask = () => (
     </CustomList>
 
     <CustomText>
-      In short, a serverless function is a way to run code without worrying about how to host a server. It allows developers to run small snippets of code meant to be executed over and over again on servers they don't need to manage.
+      In short, a serverless function is a way to run code without worrying about how to host a server. It allows developers to run small snippets of code meant to be executed over and over again on servers they don't need to manage.{" "}
       <Link
         href="https://www.redhat.com/en/topics/cloud-native-apps/what-is-serverless"
         isExternal
@@ -162,7 +162,7 @@ const Step4ServerlessFunction = () => (
 
     <CustomText>
       Leave the default settings as is and name the function whatever you want!
-      (Ideally, it should be something identifiable later.) Press the Create
+      (Ideally, it should be something identifiable later.) Press the <Code>Create</Code>
       function button at the bottom right corner to create the function.
     </CustomText>
   </>
@@ -277,29 +277,33 @@ const Step6CodeTheFunction = () => (
       </ListItem>
     </CustomList>
 
-    <Code whiteSpace={"pre"} d="block" pl={4} overflowX="scroll">{`
-    import json
+    <CustomText>
+      <b>Starter Code</b>
+    </CustomText>
 
-    def lambda_handler(event, context):
-        # Get the RGB value from the event object (parameter)
-        rgb = event["queryStringParameters"]["rgb"]
-        # Split the RGB value into separate red, green, and blue values
-        split_rgb = rgb.split(',')
-        
-        # Access each hex value by indexes (make sure to convert to integer!)
-        red = # Your code here
-        green = # Your code here
-        blue = # Your code here
-        # Convert the red, green, blue color values to hex representation
-        hex_red = # Your code here
-        hex_green = # Your code here
-        hex_blue = # Your code here
-        
-        # Concatenate hex values
-        hex_value = # Your code here
-        
-        # Return the hex value
-        return { 'hex': hex_value}
+    <Code whiteSpace={"pre"} d="block" pl={4} overflowX="scroll">{`
+import json
+
+def lambda_handler(event, context):
+    # Get the RGB value from the event object (parameter)
+    rgb = event["queryStringParameters"]["rgb"]
+    # Split the RGB value into separate red, green, and blue values
+    split_rgb = rgb.split(',')
+    
+    # Access each hex value by indexes (make sure to convert to integer!)
+    red = # Your code here
+    green = # Your code here
+    blue = # Your code here
+    # Convert the red, green, blue color values to hex representation
+    hex_red = # Your code here
+    hex_green = # Your code here
+    hex_blue = # Your code here
+    
+    # Concatenate hex values
+    hex_value = # Your code here
+    
+    # Return the hex value
+    return { 'hex': hex_value}
     `}</Code>
 
     <CustomText>
@@ -366,8 +370,8 @@ const Step6CodeTheFunction = () => (
     <CustomText>
 
       <Code whiteSpace={"pre"} d="block" pl={4} overflowX="scroll">{`
-      split_rgb = rgb.split(',')
-      # Example value of split_rgb: [1, 1, 1]
+split_rgb = rgb.split(',')
+# Example value of split_rgb: [1, 1, 1]
       `}
       </Code>
     </CustomText>
@@ -378,9 +382,9 @@ const Step6CodeTheFunction = () => (
 
     <CustomText>
       <Code whiteSpace={"pre"} d="block" pl={4} overflowX="scroll">{`
-      red = # Your code here
-      green = # Your code here
-      blue = # Your code here
+red = # Your code here
+green = # Your code here
+blue = # Your code here
       `}
       </Code>
     </CustomText>
@@ -391,9 +395,9 @@ const Step6CodeTheFunction = () => (
 
     <CustomText>
       <Code whiteSpace={"pre"} d="block" pl={4} overflowX="scroll">{`
-      hex_red = # Your code here
-      hex_green = # Your code here
-      hex_blue = # Your code here
+hex_red = # Your code here
+hex_green = # Your code here
+hex_blue = # Your code here
       `}
       </Code>
     </CustomText>
@@ -404,7 +408,7 @@ const Step6CodeTheFunction = () => (
 
     <CustomText>
       <Code whiteSpace={"pre"} d="block" pl={4} overflowX="scroll">{`
-      hex_value = # Your code here
+hex_value = # Your code here
       `}
       </Code>
     </CustomText>
@@ -420,11 +424,12 @@ const Step6CodeTheFunction = () => (
 
     <CustomText>
       <Code whiteSpace={"pre"} d="block" pl={4} overflowX="scroll">{`
-      return { 'hex': hex_value}`}</Code>
+return { 'hex': hex_value}
+      `}</Code>
     </CustomText>
 
     <CustomQuote>
-    💡 <b>Where is this returning to?</b> If you're confused about where the function is returning its information to, head to the next section to see your lambda function in action.
+      💡 <b>Where is this returning to?</b> If you're confused about where the function is returning its information to, head to the next section to see your lambda function in action.
     </CustomQuote>
   </>
 );

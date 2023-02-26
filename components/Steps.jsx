@@ -161,9 +161,7 @@ const Step4ServerlessFunction = () => (
     <Img src="/art-heist/step_4_serverless.png" />
 
     <CustomText>
-      Leave the default settings as is and name the function whatever you want!
-      (Ideally, it should be something identifiable later.) Press the <Code>Create</Code>
-      function button at the bottom right corner to create the function.
+      Leave the default settings as is and name the function whatever you want! (Ideally, it should be something identifiable later.) Press the <Code>Create function</Code> button at the bottom right corner to create the function.
     </CustomText>
   </>
 );

@@ -88,7 +88,15 @@ export default function ArtHeistInstructions() {
           </Heading>
           <Box my="1rem">
             <Text fontSize="lg" mr="3rem">
-              asdfasdf
+              Instructions for the{" "}
+              <Link
+                href="https://art-heist-bitprj.vercel.app/"
+                isExternal
+                color="blue.300"
+              >
+                Bit Project Art Heist Workshop
+              </Link>
+              .
             </Text>
           </Box>
         </Box>

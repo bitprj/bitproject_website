@@ -66,7 +66,7 @@ const Step1Premise = () => (
     </Text>
 
     <Text color="blue.300" mt={2}>
-      P.S. Scroll down and click "next" to advance to the next step!
+      P.S. Click "next" to advance to the next step!
     </Text>
   </>
 );
@@ -483,38 +483,42 @@ export const Basic = ({ variant = "circle" }) => {
             >
               {items[index] && items[index]({ activeStep, index })}
             </Box>
+            <Flex width="100%" justify="flex-end" gap={4}>
+              {!hasCompletedAllSteps && (
+                <>
+                  <Button
+                    isDisabled={activeStep === 0}
+                    onClick={prevStep}
+                    size="md"
+                    bg="transparent"
+                    color="blue.300"
+                  >
+                    Prev
+                  </Button>
+                  <Button
+                    size="md"
+                    onClick={nextStep}
+                    color="white"
+                    bg="blue.400"
+                  >
+                    {isLastStep ? "Finish" : "Next"}
+                  </Button>
+                </>
+              )}
+            </Flex>
           </Step>
         ))}
       </Steps>
       {hasCompletedAllSteps && (
-        <Box sx={{ bg, my: 8, p: 8, rounded: "md" }}>
+        <Box sx={{ bg, my: 8, p: 8, rounded: "md" }} textAlign="center">
           <Heading fontSize="xl" textAlign={"center"} color="white">
             Woohoo! All steps completed! 🎉
           </Heading>
-        </Box>
-      )}
-      <Flex width="100%" justify="flex-end" gap={4}>
-        {hasCompletedAllSteps ? (
-          <Button size="sm" onClick={reset} color="white" bg="blue.400">
+          <Button size="md" onClick={reset} color="white" bg="blue.400" mt={4}>
             Reset
           </Button>
-        ) : (
-          <>
-            <Button
-              isDisabled={activeStep === 0}
-              onClick={prevStep}
-              size="md"
-              bg="transparent"
-              color="blue.300"
-            >
-              Prev
-            </Button>
-            <Button size="md" onClick={nextStep} color="white" bg="blue.400">
-              {isLastStep ? "Finish" : "Next"}
-            </Button>
-          </>
-        )}
-      </Flex>
+        </Box>
+      )}
     </Flex>
   );
 };

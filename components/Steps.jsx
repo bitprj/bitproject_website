@@ -112,9 +112,14 @@ const Step2TheTask = () => (
     </CustomList>
 
     <CustomText>
-      In short, a serverless function is a way to run code without worrying
-      about how to host a server. It's a way to run small snippets of code meant
-      to be executed over and over again.
+      In short, a serverless function is a way to run code without worrying about how to host a server. It allows developers to run small snippets of code meant to be executed over and over again on servers they don't need to manage.
+      <Link
+        href="https://www.redhat.com/en/topics/cloud-native-apps/what-is-serverless"
+        isExternal
+        color="blue.300"
+      >
+        A deeper dive into what "serverless" is.
+      </Link>
     </CustomText>
 
     <Heading fontSize="xl" mt={4}>
@@ -272,6 +277,31 @@ const Step6CodeTheFunction = () => (
       </ListItem>
     </CustomList>
 
+    <Code whiteSpace={"pre"} d="block" pl={4} overflowX="scroll">{`
+    import json
+
+    def lambda_handler(event, context):
+        # Get the RGB value from the event object (parameter)
+        rgb = event["queryStringParameters"]["rgb"]
+        # Split the RGB value into separate red, green, and blue values
+        split_rgb = rgb.split(',')
+        
+        # Access each hex value by indexes (make sure to convert to integer!)
+        red = # Your code here
+        green = # Your code here
+        blue = # Your code here
+        # Convert the red, green, blue color values to hex representation
+        hex_red = # Your code here
+        hex_green = # Your code here
+        hex_blue = # Your code here
+        
+        # Concatenate hex values
+        hex_value = # Your code here
+        
+        # Return the hex value
+        return { 'hex': hex_value}
+    `}</Code>
+
     <CustomText>
       <b>1. Parameters</b>
     </CustomText>
@@ -289,36 +319,94 @@ const Step6CodeTheFunction = () => (
     </CustomText>
 
     <CustomText>
-      To receive the value of, let's say, <Code>parameter1</Code>, you would put
-      this in your code:
-      <Code>const param = event["queryStringParameters"]["parameter1"]</Code>
+      In our case, we put this line in our code to receive the "rgb" parameter.
+      <Code>rgb = event["queryStringParameters"]["rgb"]</Code>
     </CustomText>
 
     <CustomText>
       <b>2. Converting Values</b>
     </CustomText>
 
+    <CustomList>
+      <ListItem>
+        <Link
+          href="https://users.cs.utah.edu/~germain/PPS/Topics/color.html"
+          color="blue.300"
+          isExternal
+        >
+          What are RGB and hex values and how do they relate to each other?
+        </Link>
+      </ListItem>
+
+      <ListItem>
+        <Link
+          href="https://imagecolorpicker.com/en"
+          color="blue.300"
+          isExternal
+        >
+          Experimenting with hex and RGB values
+        </Link>
+      </ListItem>
+    </CustomList>
+
     <CustomText>
       First, keep in mind that the input type of the RGB value is a string and
       that it is formatted like <Code>r,g,b</Code>.
     </CustomText>
 
-    <CustomText>Here are some resources to look into:</CustomText>
+    <CustomText>A user would've passed it in the URL like so, where the red, green, and blue values are all 1.</CustomText>
 
-    <CustomList>
-      <ListItem>
-        <Code>.split()</Code> JS method
-      </ListItem>
-
-      <ListItem>
-        <Code>parseInt()</Code> JS method
-      </ListItem>
-
-      <ListItem>StackOverflow</ListItem>
-    </CustomList>
+    <CustomText><Code>
+      www.test.com?rgb=1,1,1
+    </Code></CustomText>
 
     <CustomText>
-      Remember that the hex value should be formatted like <Code>ffffff</Code>!
+      The next line of code splits the user's input into a Python List with the separated red, green, and blue values.
+    </CustomText>
+    <CustomText>
+
+      <Code whiteSpace={"pre"} d="block" pl={4} overflowX="scroll">{`
+      split_rgb = rgb.split(',')
+      # Example value of split_rgb: [1, 1, 1]
+      `}
+      </Code>
+    </CustomText>
+
+    <CustomText>
+      Using <Code>split_rgb</Code>, assign the red, green, and blue values from the List to their own variables. Be sure to convert them to integers!
+    </CustomText>
+
+    <CustomText>
+      <Code whiteSpace={"pre"} d="block" pl={4} overflowX="scroll">{`
+      red = # Your code here
+      green = # Your code here
+      blue = # Your code here
+      `}
+      </Code>
+    </CustomText>
+
+    <CustomText>
+      Format strings in Python can come in handy when you're converting between data values. Using this format string <Code>{`f'{your_variable:02x}'`}</Code>, format the <Code>red</Code>, <Code>green</Code>, and <Code>blue</Code> RGB values in hex.
+    </CustomText>
+
+    <CustomText>
+      <Code whiteSpace={"pre"} d="block" pl={4} overflowX="scroll">{`
+      hex_red = # Your code here
+      hex_green = # Your code here
+      hex_blue = # Your code here
+      `}
+      </Code>
+    </CustomText>
+
+    <CustomText>
+      Finally, concatenate the values (now in hex) together in order of red, green, and blue to create a full color hex code.
+    </CustomText>
+
+    <CustomText>
+      <Code whiteSpace={"pre"} d="block" pl={4} overflowX="scroll">{`
+      hex_value = # Your code here
+      `}
+      </Code>
     </CustomText>
 
     <CustomText>
@@ -332,13 +420,12 @@ const Step6CodeTheFunction = () => (
 
     <CustomText>
       <Code whiteSpace={"pre"} d="block" pl={4} overflowX="scroll">{`
-const response = {
-  statusCode: 200,
-  body: JSON.stringify({"hex": hex}),
-};
-return response;
-                      `}</Code>
+      return { 'hex': hex_value}`}</Code>
     </CustomText>
+
+    <CustomQuote>
+    💡 <b>Where is this returning to?</b> If you're confused about where the function is returning its information to, head to the next section to see your lambda function in action.
+    </CustomQuote>
   </>
 );
 
@@ -403,7 +490,7 @@ const Step7Test = () => (
 
 const Step8RestoreTheFt = () => (
   <>
-    <Heading fontSize="xl">Restore the FT</Heading>
+    <Heading fontSize="xl">Restore the NFT</Heading>
     <Img src="/art-heist/step_8_img1.png" />
 
     <CustomText>

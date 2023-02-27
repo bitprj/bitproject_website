@@ -21,7 +21,6 @@ import { MdCheckCircle } from "react-icons/md";
 import { TeamCard } from "@/components/TeamCard";
 import Fade from "react-reveal/Fade";
 import { NextSeo } from "next-seo";
-import { useColorModeValue } from "@chakra-ui/color-mode";
 import { Basic } from "@/components/Steps";
 
 const steps = [{ label: "Step 1" }, { label: "Step 2" }, { label: "Step 3" }];
